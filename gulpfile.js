@@ -47,7 +47,7 @@ gulp.task('sass', () => {
   return gulp.src(config.sass.src)
     .pipe(sourcemaps.init())
     .pipe(sass({
-      outputStyle: 'compact',
+      outputStyle: 'compressed',
       includePaths: ['node_modules/susy/sass']
     }).on('error', sass.logError))
     .pipe(sourcemaps.write())
