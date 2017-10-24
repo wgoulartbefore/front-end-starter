@@ -1,5 +1,4 @@
 // Clearlist
-
 %clearlist {
   display: block;
   padding: 0;
@@ -13,8 +12,8 @@
     list-style: none;
   }
 }
-// Clearlist
 
+// Clearfix
 %clearfix {
   &::after,
   &::before {
@@ -26,8 +25,10 @@
   }
 }
 
-// Responsive Image
 
+
+
+// Responsive Image
 %responsive-image {
   img {
     width: 100%;

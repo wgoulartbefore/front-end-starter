@@ -1,15 +1,15 @@
-.main-title {
+
+.title-main {
   display: block;
   @include adjust-font-size-to(42px);
   color: $color-grey-900;
-  margin-bottom: $size-components-margin;
+  font-weight: 700;
 }
 
 .gen-text {
   display: block;
   @include adjust-font-size-to(16px);
   color: $color-text-gen;
-  margin-bottom: $size-components-margin;
 
   a {
     color: $color-pl-4;

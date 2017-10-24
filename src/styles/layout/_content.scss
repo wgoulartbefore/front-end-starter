@@ -1,22 +1,37 @@
 .main-content {
   @extend %clearfix;
+  @include span(full);
   padding: $size-components-margin 0;
+
+  @include susy-breakpoint($screen-small, 8) {
+    @include span(full);
+  }
+
+  @include susy-breakpoint($screen-medium, 12) {
+    @include span(full);
+  }
+
+  @include susy-breakpoint($screen-big, 16) {
+    @include span(full);
+  }
 }
 
-// .main-container {
-//   @include container();
-//   @extend %clearfix()
-//
-//   @include susy-breakpoint($screen-small, 8) {
-//     @include container();
-//   }
-//   @include susy-breakpoint($screen-medium, 12) {
-//     @include container();
-//   }
-//   @include susy-breakpoint($screen-big, 16) {
-//     @include container();
-//   }
-// }
+.container {
+  @include container();
+  @extend %clearfix;
+
+  @include susy-breakpoint($screen-small, 8) {
+    @include container(8);
+  }
+
+  @include susy-breakpoint($screen-medium, 12) {
+    @include container(12);
+  }
+
+  @include susy-breakpoint($screen-big, 16) {
+    @include container(16);
+  }
+}
 
 // .full-span {
 //   @include span(full);

@@ -3,12 +3,20 @@
   background: none;
   border: none;
   @include adjust-font-size-to(16px);
+  font-weight: 500;
   line-height: $size-components-height;
   height: $size-components-height;
   padding: 0 $size-components-padding;
   text-align: center;
   text-transform: uppercase;
   color: $color-grey-0;
+  vertical-align: top;
+  border: 0;
+  margin: 5px 3px;
+
+  &.half-bt {
+    width: calc((100% / 2) - 8px);
+  }
 
   &.full-bt {
     width: 100%;
@@ -18,11 +26,31 @@
     padding: 0 $size-components-margin;
   }
 }
-// buttons create
 
+// buttons create
 .bt-main {
   @extend %std-button;
   @include createButton($color-base-main);
+}
+
+.bt-alter {
+  @extend %std-button;
+  @include createButton($color-base-darken);
+}
+
+.bt-neutral {
+  @extend %std-button;
+  @include createButton($color-base-neutral);
+}
+
+.bt-alter-2 {
+  @extend %std-button;
+  @include createButtonAlter($color-base-main);
+}
+
+.bt-alter-3 {
+  @extend %std-button;
+  @include createButtonAlter($color-base-darken);
 }
 
 .bt-confirm {
@@ -30,7 +58,17 @@
   @include createButton($color-base-success);
 }
 
-.bt-neutral {
+.bt-error {
   @extend %std-button;
-  @include createButton($color-base-neutral);
+  @include createButton($color-base-error);
+}
+
+.bt-confirm-alter {
+  @extend %std-button;
+  @include createButtonAlter($color-base-success);
+}
+
+.bt-error-alter {
+  @extend %std-button;
+  @include createButtonAlter($color-base-error);
 }

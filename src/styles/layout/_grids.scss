@@ -4,10 +4,10 @@ $susy: (
     gutters: 1/4,
     gutter-position: split,
     global-box-sizing: $box-model,
-    debug: (
-      image: show-columns,
-		  color: blue
-	  )
+    // debug: (
+    //   image: show-columns,
+		//   color: blue
+	  // )
 );
 
 @import "susy";

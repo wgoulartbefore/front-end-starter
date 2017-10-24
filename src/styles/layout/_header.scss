@@ -1,6 +1,8 @@
-#main-header {
+.header {
+  display: block;
   position: relative;
-  height: $size-components-height;
+  background: $color-base-header;
+  height: $size-components-height + 12;
   transition: all $time-std-transition;
 
   // @include susy-breakpoint($screen-big, 16) {

@@ -6,7 +6,7 @@
 }
 
 @mixin adjust-font-size-to($font-size){
-  return: ($font-size / 16 * 1) + 'rem';
+  font-size: ($font-size / 16px * 1) + rem;
 }
 
 // Mixin para Query Responsivas com Susy
@@ -19,8 +19,25 @@
 // Mixin para Criar Botões;
 @mixin createButton($bg-color) {
   background: $bg-color;
+  border: 0;
 
   &:hover {
     background: shade($bg-color, 10%);
+  }
+}
+
+@mixin createButtonAlter($bg-color) {
+  background: rgba($bg-color, 0.08);
+  border: 1px solid $bg-color;
+  color: shade($bg-color, 20%);
+
+  &:hover {
+    background: tint(rgba($bg-color, 0.1), 10%);
+  }
+}
+
+@mixin placeholderColor($color, $percentage) {
+  &::placeholder {
+    color: shade($color, $percentage);
   }
 }
