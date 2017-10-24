@@ -1,0 +1,116 @@
+.sale-page-step-list {
+    
+    @extend %clearlist;
+    padding-top: rhythm(0.125);
+    
+    li {
+        display: none;
+        text-align: center;
+        
+        &.active {
+            display: block;
+            
+            .title {
+                color: darken($color-pl-5, 20%);
+            }
+            
+        }
+    }
+    
+    .numerical {
+        @include adjust-font-size-to(14px);
+        display: block;
+        color: $color-grey-400;
+    }
+    
+    .title {
+        display: block;
+        @include adjust-font-size-to(20px);
+        color: $color-grey-400;
+        text-transform: uppercase;
+    }
+    
+    @include susy-breakpoint($screen-big, 16){
+        
+        li {
+            &, &.active {
+                display: inline-block;
+            }
+            
+            width: (100% / 5);
+            position: relative;            
+            border-top: rhythm(0.125) solid $color-grey-300;
+            
+            &:after {
+                content: "";
+                display: block;
+                position: absolute;
+                top: -(rhythm(0.3125));
+                left: 50%;
+                margin-left: -(rhythm(0.25));
+                width: rhythm(0.5);
+                height: rhythm(0.5);
+                background: $color-grey-400;
+                border-radius: 50%;
+            }
+            
+            &.active,
+            &.done {
+                border-color: $color-pl-5;
+            }
+            
+            &.active {
+                &:after {
+                    background: darken($color-pl-5, 20%);
+                }
+                
+            }
+            
+        }
+        
+        .numerical {
+            display: none;
+        }
+        
+        .title {
+            @include adjust-font-size-to(16px);
+            padding-top: $size-components-padding;
+        }
+        
+    }
+    
+}
+
+.sale-map-mobile-button {
+    text-align: center;
+    margin-bottom: $size-components-margin;
+    
+    @include susy-breakpoint($screen-medium, 12){
+        display: none;
+    } 
+    
+}
+
+#sale-map-area {
+    display: none;
+    text-align: center;
+    
+    @include susy-breakpoint($screen-medium, 12){
+        display: block;
+    }
+ 
+}
+
+.sale-map-image {
+    display: block;
+    border: 1px solid $color-grey-400;
+    margin-bottom: $size-components-margin;
+    
+    img {
+        display: block;
+        margin: 0;
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+    }
+}

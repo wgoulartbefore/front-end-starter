@@ -1,0 +1,37 @@
+.main-title {
+  display: block;
+  @include adjust-font-size-to(42px);
+  color: $color-grey-900;
+  margin-bottom: $size-components-margin;
+}
+
+.gen-text {
+  display: block;
+  @include adjust-font-size-to(16px);
+  color: $color-text-gen;
+  margin-bottom: $size-components-margin;
+
+  a {
+    color: $color-pl-4;
+    text-decoration: underline;
+  }
+}
+
+.small-text {
+  display: block;
+  @include adjust-font-size-to(14px);
+  margin-bottom: $size-components-padding;
+  color: $color-grey-600;
+
+  a {
+    color: $color-pl-4;
+    text-decoration: underline;
+  }
+}
+
+ul.gen-text {
+  li {
+    display: list-item;
+    list-style: disc inside;
+  }
+}

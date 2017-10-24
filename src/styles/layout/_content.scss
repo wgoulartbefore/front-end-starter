@@ -1,0 +1,57 @@
+.main-content {
+  @extend %clearfix;
+  padding: $size-components-margin 0;
+}
+
+// .main-container {
+//   @include container();
+//   @extend %clearfix()
+//
+//   @include susy-breakpoint($screen-small, 8) {
+//     @include container();
+//   }
+//   @include susy-breakpoint($screen-medium, 12) {
+//     @include container();
+//   }
+//   @include susy-breakpoint($screen-big, 16) {
+//     @include container();
+//   }
+// }
+
+// .full-span {
+//   @include span(full);
+//
+//   @include susy-breakpoint($screen-small, 8) {
+//     @include span(full);
+//   }
+//   @include susy-breakpoint($screen-medium, 12) {
+//     @include span(full);
+//   }
+//   @include susy-breakpoint($screen-big, 16) {
+//     @include span(full);
+//   }
+// }
+
+// .column-container {
+//   display: block;
+//   @extend %clearfix;
+//
+//   .half-column {
+//     display: block;
+//     margin-bottom: $size-components-margin;
+//   }
+//   @include susy-breakpoint($screen-medium, 12) {
+//     .half-column {
+//       float: left;
+//       width: 50%;
+//
+//       &:nth-child(1) {
+//         padding-right: $size-components-margin;
+//       }
+//
+//       &:nth-child(2) {
+//         padding-left: $size-components-margin;
+//       }
+//     }
+//   }
+// }

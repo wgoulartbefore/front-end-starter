@@ -1,0 +1,87 @@
+.list-tickets {
+    
+    @extend %clearlist;
+    margin-bottom: $size-components-margin;
+    
+    li {
+        display: block;
+        font-size: 0;
+        line-height: 0;
+        border-top: 1px dotted $color-base-border;
+        padding: $size-components-padding 0;
+        text-align: center;
+        
+        &:first-child {
+            padding-top: 0;
+            border-top: 0;
+        }
+    }
+    
+    .bt-area {
+        font-size: 0;
+        margin-top: rhythm(0.25);
+        
+        a {
+            @include ellipsis;
+            width: 48%;
+            
+            &:first-child {
+                margin-right: 4%;
+            }
+        }
+        
+    }
+    
+    .title,
+    .date {
+        display: block;
+        @include ellipsis;
+    }
+    
+    .title {
+        @include adjust-font-size-to(20px);
+        color: $color-pl-2;
+        font-weight: bold;
+        margin-bottom: rhythm(0.25);
+    }
+    
+    .date {
+        @include adjust-font-size-to(16px);
+        color: $color-grey-600;
+        text-transform: uppercase;
+    }
+    
+    @include susy-breakpoint($screen-medium, 12) {
+        
+        li {
+            text-align: left;
+        }
+        
+        .event-data,
+        .bt-area {
+            display: inline-block;
+            margin: 0;
+            vertical-align: middle;
+        }
+        
+        .event-data {
+            width: 60%;
+        }
+        
+        .bt-area {
+            width: 40%;
+        }
+    }
+    
+    @include susy-breakpoint($screen-big, 16) {
+        .event-data {
+            width: 70%;
+        }
+        
+        .bt-area {
+            width: 30%;
+        }
+    }
+    
+    
+}

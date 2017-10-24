@@ -1,0 +1,26 @@
+//Mixin para Cálculo de proporções de imagens
+@mixin padding-proportion($w-value, $h-value, $target-element:"") {
+  &.padding-proportion-#{$w-value}-#{$h-value} #{$target-element} {
+    padding-bottom: ($h-value / $w-value) * 100%;
+  }
+}
+
+@mixin adjust-font-size-to($font-size){
+  return: ($font-size / 16 * 1) + 'rem';
+}
+
+// Mixin para Query Responsivas com Susy
+@mixin susy-breakpoint($query, $container){
+  @media (min-width: $query) {
+    @content;
+  }
+}
+
+// Mixin para Criar Botões;
+@mixin createButton($bg-color) {
+  background: $bg-color;
+
+  &:hover {
+    background: shade($bg-color, 10%);
+  }
+}

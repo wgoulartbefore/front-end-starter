@@ -1,0 +1,54 @@
+table {
+	max-width: 100%;
+	background-color: transparent;
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.std-table {
+
+    width: 100%;
+
+    tr:nth-child(even) {
+        background: $color-grey-100;
+    }
+
+    td, th {
+        @include adjust-font-size-to(14px);
+        color: $color-grey-800;
+        padding: ($size-components-padding / 2);
+    }
+
+    th {
+        color: $color-grey-1000;
+        background: $color-grey-200;
+        font-weight: bold;
+    }
+
+
+    @include susy-breakpoint($screen-big, 16){
+        td, th {
+            @include adjust-font-size-to(16px);
+            padding: $size-components-padding;
+        }
+    }
+
+}
+
+.table-wrapper {
+    display: block;
+    overflow: hidden;
+    overflow-x: auto;
+    width: 100%;
+    max-width: 100%;
+}
+
+.table-ticket-view {
+    
+    min-width: $screen-medium;
+    
+    td, th {
+        text-align: center;
+    }
+    
+}

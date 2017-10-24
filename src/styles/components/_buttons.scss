@@ -1,0 +1,36 @@
+%std-button {
+  display: inline-block;
+  background: none;
+  border: none;
+  @include adjust-font-size-to(16px);
+  line-height: $size-components-height;
+  height: $size-components-height;
+  padding: 0 $size-components-padding;
+  text-align: center;
+  text-transform: uppercase;
+  color: $color-grey-0;
+
+  &.full-bt {
+    width: 100%;
+  }
+
+  @include susy-breakpoint($screen-big, 16) {
+    padding: 0 $size-components-margin;
+  }
+}
+// buttons create
+
+.bt-main {
+  @extend %std-button;
+  @include createButton($color-base-main);
+}
+
+.bt-confirm {
+  @extend %std-button;
+  @include createButton($color-base-success);
+}
+
+.bt-neutral {
+  @extend %std-button;
+  @include createButton($color-base-neutral);
+}

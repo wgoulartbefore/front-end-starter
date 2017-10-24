@@ -1,0 +1,59 @@
+//Margins
+
+.bm-bottom {
+  @extend %bm-bottom;
+}
+
+.bm-top {
+  @extend %bm-top;
+}
+
+.bm-bottom-small {
+  @extend %bm-bottom-small;
+}
+
+.bm-top-small {
+  @extend %bm-top-small;
+}
+
+.bm-bottom-tiny {
+  @extend %bm-bottom-tiny;
+}
+
+.bm-top-tiny {
+  @extend %bm-top-tiny;
+}
+
+.bm-horizontal {
+  @extend %bm-horizontal;
+}
+//Text Align
+
+.text-justify {
+  @extend %text-justify;
+}
+
+.text-center {
+  @extend %text-center;
+}
+
+.text-right {
+  @extend %text-right;
+}
+
+.text-left {
+  @extend %text-left;
+}
+// Float
+.to-left {
+  @extend %to-left;
+}
+
+.to-right {
+  @extend %to-right;
+}
+/* text-hover */
+
+.underline-hover {
+  @extend %underline-hover;
+}

@@ -1,0 +1,123 @@
+.std-form {
+  @extend %clearfix;
+
+  .form-line {
+    margin-top: $size-components-margin;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  label {
+    display: block;
+    @include adjust-font-size-to(16px);
+    color: $color-base-main;
+    text-transform: uppercase;
+    margin-bottom: rhythm(0.25);
+  }
+
+  .label-inline-input {
+    a {
+      text-decoration: underline;
+    }
+  }
+
+  .input-multiline,
+  .input-singleline {
+    display: block;
+    width: 100%;
+    @include adjust-font-size-to(16px);
+    height: $size-components-height;
+    background: $color-grey-0;
+    border: 1px solid $color-grey-400;
+    padding: (($size-components-height - rhythm(1)) / 2) $size-components-padding;
+
+    &:focus {
+      border-color: $color-pl-4;
+      box-shadow: 0 0 2px $color-pl-4;
+    }
+
+    &:disabled {
+      background: $color-grey-200;
+    }
+  }
+
+  // @include susy-breakpoint($screen-big, 16) {
+  //   .half-input {
+  //     display: inline-block;
+  //     width: 48%;
+  //     margin-bottom: 0;
+  //
+  //     &:first-child {
+  //       margin-right: 4%;
+  //     }
+  //   }
+  // }
+}
+
+.fancy-select {
+  display: inline-block;
+  position: relative;
+  height: $size-components-height;
+  background: linear-gradient($color-grey-100, $color-grey-300);
+  cursor: pointer;
+  border: 1px solid $color-grey-400;
+
+  .label {
+    @include adjust-font-size-to(14px);
+    display: block;
+    height: $size-components-height;
+    line-height: $size-components-height;
+    padding: 0 $size-components-height 0 $size-components-padding;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: $color-grey-800;
+  }
+
+  &:after {
+    display: block;
+    position: absolute;
+    width: $size-components-height;
+    height: 20px;
+    margin-top: -10px;
+    top: 50%;
+    right: 0;
+    content: "\f078";
+    font-family: 'FontAwesome';
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    z-index: 2;
+    color: $color-grey-800;
+  }
+
+  select {
+    opacity: 0;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100%;
+    cursor: pointer;
+    z-index: 3;
+  }
+
+  option {
+    color: $color-grey-900;
+  }
+
+  &.full {
+    width: 100%;
+
+    .label {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+#main-header {
+  position: relative;
+  height: $size-components-height;
+  transition: all $time-std-transition;
+
+  // @include susy-breakpoint($screen-big, 16) {
+  //   @extend %clearfix;
+  //   position: absolute;
+  //   z-index: 10;
+  //   top: 0;
+  //   left: 0;
+  //   width: 100%;
+  //   height: auto;
+  //   padding: (2 * $size-components-padding) 0;
+  //
+  //   .holder {
+  //     @include container();
+  //   }
+  //
+  //   &.fixed,
+  //   &.internal {
+  //     position: fixed;
+  //     padding: (1.5 * $size-components-padding) 0;
+  //     background: rgba($color-grey-900, 0.9);
+  //   }
+  //
+  //   &.internal {
+  //     background: rgba($color-grey-100, 0.9);
+  //   }
+  // }
+}

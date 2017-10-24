@@ -1,0 +1,27 @@
+.feedback-box {
+  display: block;
+  padding: $size-components-padding;
+  margin-bottom: $size-components-margin;
+  @include adjust-font-size-to(16px);
+  background: $color-grey-200;
+  color: $color-grey-800;
+
+  &.alert {
+    background: $color-base-warning;
+  }
+
+  &.info {
+    background: $color-base-main;
+    color: $color-grey-0;
+  }
+
+  &.success {
+    background: $color-base-success;
+    color: $color-grey-0;
+  }
+
+  &.error {
+    background: $color-base-error;
+    color: $color-grey-0;
+  }
+}

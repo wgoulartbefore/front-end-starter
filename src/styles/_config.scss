@@ -1,0 +1,83 @@
+$IMG_PATH: "/images/";
+
+// Screen Sizes
+$screen-small: 30em; // 480px
+$screen-medium: 45em; // 720px;
+$screen-big: 70em; // 1120px;
+
+//Box Model
+$box-model: border-box;
+
+// Sizes
+$size-components-height: 48px;
+$size-components-margin: 30px;
+$size-components-padding: 15px;
+
+// Fonts Base
+$base-font-size: 16px;
+$base-line-height: 24px;
+
+// Font Stack Variable
+$font-stack: ('Hind', 'Open Sans', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif);
+$font-alter: ('Bitter', 'Open Sans', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif);
+
+// Generic Variables
+$size-main-menu: 15rem; //  240px
+$time-std-transition: 0.5s;
+
+//  Greyscale
+$color-grey-0: #ffffff;
+$color-grey-50: #fafafa;
+$color-grey-100: #F6F7FA;
+$color-grey-200: #eeeeee;
+$color-grey-300: #DFE6EE;
+$color-grey-400: #B0BAC5;
+$color-grey-500: #9e9e9e;
+$color-grey-600: #727682;
+$color-grey-700: #616161;
+$color-grey-800: #424242;
+$color-grey-900: #313541;
+$color-grey-1000: #000000;
+
+// Paleta de Cores
+$color-pl-1: #136FE0;
+$color-pl-2: #004691;
+$color-pl-3: #268EF9;
+$color-pl-4: #41ACF5;
+
+// Base Colors
+$color-base-main: $color-pl-1;
+$color-base-darken: $color-pl-2;
+$color-base-background: $color-grey-0;
+$color-base-border: $color-grey-300;
+$color-base-focus: $color-pl-3;
+$color-base-error: #E55D64;
+$color-base-warning: #F7B422;
+$color-base-success: #56BD5B;
+$color-base-neutral: #CCD5DB;
+
+// Text Colors
+$color-text-main: $color-grey-900;
+$color-text-gen: $color-grey-800;
+
+// Header Colors
+// $color-header-mobile-opts-bg: $color-pl-3;
+// $color-header-mobile-opts-text: $color-grey-0;
+// $color-header-mobile-search-bg: $color-grey-0;
+// $color-header-mobile-search-border: $color-grey-300;
+// $color-header-mobile-search-text: $color-grey-800;
+
+// Main Menu Colors
+// $color-main-menu-bg: $color-pl-4;
+// $color-main-menu-text: tint($color-base-main, 90%);
+// $color-main-menu-text-desktop: #273967;
+
+// Footer Colors
+// $color-footer-bg: #1B4178;
+
+// Modal Colors
+// $color-modal-bg: $color-grey-0;
+// $color-modal-header-bg: $color-grey-100;
+// $color-modal-footer-bg: $color-grey-100;
+// $color-modal-title: $color-text-main;
+// $color-modal-close: $color-grey-600;

@@ -1,0 +1,117 @@
+#main-menu {
+    display: block;
+    position: fixed;
+    z-index: 10;
+    width: $size-main-menu;
+    height: 100%;
+    top: 0;
+    left: 0;
+    text-align: left;
+    background: $color-main-menu-bg;
+    overflow-y: auto;
+    @include transition(transform $time-std-transition);
+    @include translateX(-100%);
+    
+    .bt-back {
+        display: block;
+        @include adjust-font-size-to(16px);
+        min-height: $size-components-height;
+        padding: $size-components-padding (($size-components-height - rhythm(1)) / 2);
+        color: darken($color-main-menu-bg, 60%);
+        background: rgba($color-grey-0, 0.1);
+        
+        .fa {
+            margin-right: $size-components-padding;
+        }
+        
+    }
+    
+    @at-root {         
+        .mobile-menu-active #{&} {
+            @include translateX(0);
+            box-shadow: 1px 0 10px $color-grey-1000;
+        }
+    }
+    
+    @include susy-breakpoint($screen-big, 16){
+        @include translateX(0);
+        position: relative;
+        float: right;
+        top: inherit;
+        left: inherit;
+        width: auto;
+        background: none;
+        box-shadow: none;
+        margin-right: gutters();
+        overflow: visible;
+        
+        .bt-back {
+            display: none;
+        }
+        
+    }
+ 
+}
+
+.main-menu-list {
+    
+    @extend %clearlist;
+    
+    li {
+        display: block;
+        border-top: 1px solid darken($color-main-menu-bg, 10%);
+    }
+    
+    a {
+        @include transition(all $time-std-transition);
+        display: block;
+        padding: (($size-components-height - rhythm(1)) / 2) $size-components-padding;
+        text-transform: uppercase;
+        color: $color-main-menu-text;  
+        
+        &:hover {
+            color: $color-pl-5;
+        }
+        
+    }
+    
+    @include susy-breakpoint($screen-big, 16){
+        
+        li {
+            display: inline-block;
+            border: none;
+        }
+        
+        a {
+            @include adjust-font-size-to(18px);
+        }
+        
+        .internal & {
+            a {
+                color: $color-base-main;
+                
+                &:hover {
+                    color: $color-pl-5;
+                }
+                
+            }
+        }
+        
+        .internal &,
+        .fixed & {
+            a.singup {
+                background: $color-base-success;
+                color: $color-grey-0;
+                
+                &:hover {
+                    background: darken($color-base-success, 10%);
+                    color: $color-grey-0;
+                }
+                
+            }
+        }
+        
+    }
+    
+    
+}
