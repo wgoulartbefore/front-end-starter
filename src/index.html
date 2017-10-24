@@ -6,6 +6,7 @@
 <!--[if gt IE 9]><!-->
 <html class="no-js" lang="en">
 <!--<![endif]-->
+
 <head>
   <meta charset="utf-8">
 
@@ -35,7 +36,7 @@
   <link rel="shortcut icon" href="favicon.ico" />
 
   <!-- concatenate and minify for production -->
-  <link rel="stylesheet" href="/styles/app.css" />
+  <link rel="stylesheet" href="/styles/main.css" />
   <link href="https://fonts.googleapis.com/css?family=Bitter:400,700|Hind:400,500,700" rel="stylesheet">
 
   <!-- Twitter: see https://dev.twitter.com/docs/cards/types/summary-card for details -->
@@ -51,20 +52,170 @@
   <meta property="og:url" content="" />
   <meta property="og:image" content="" />
 </head>
+
 <body>
 
   <header class="header">
     <div class="container">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta tempore excepturi quasi rem impedit quo, beatae deleniti voluptatum expedita iusto, omnis accusamus possimus nobis itaque ipsum dolore nulla recusandae molestiae!
+      <h1>Mercurio</h1>
     </div>
   </header>
 
-  <section class="content">
-    <div class="container">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus at, vero, ducimus quisquam saepe dicta est tenetur, animi, atque velit beatae? Iste corporis ullam quae provident illum ad repellendus sit.
+  <section class="section container">
+    <div class="main-content">
+      <h2 class="title-main">Colors</h2>
+      <div class="card">
+        <span style="background:#FFFFFF"></span>
+        <p class="gen-text text-center">#FFFFFF</p>
+      </div>
+      <div class="card">
+        <span style="background:#DFE6EE"></span>
+        <p class="gen-text text-center">#DFE6EE</p>
+      </div>
+      <div class="card">
+        <span style="background:#B0BAC5;"></span>
+        <p class="gen-text text-center">#B0BAC5</p>
+      </div>
+      <div class="card">
+        <span style="background:#727682;"></span>
+        <p class="gen-text text-center">#727682</p>
+      </div>
+      <div class="card">
+        <span style="background:#8091A5;"></span>
+        <p class="gen-text text-center">#8091A5</p>
+      </div>
+      <div class="card">
+        <span style="background:#8091A5;"></span>
+        <p class="gen-text text-center">#8091A5</p>
+      </div>
+      <div class="card">
+        <span style="background:#313541;"></span>
+        <p class="gen-text text-center">#313541</p>
+      </div>
+      <div class="card">
+        <span style="background:#16181E;"></span>
+        <p class="gen-text text-center">#16181E</p>
+      </div>
+
+      <div class="card">
+        <span style="background:#136fe0;"></span>
+        <p class="gen-text text-center">#136fe0</p>
+      </div>
+      <div class="card">
+        <span style="background:#004691"></span>
+        <p class="gen-text text-center">#004691</p>
+      </div>
+      <div class="card card-medium">
+        <span style="background: linear-gradient(to right, #136fe0, #004691)"></span>
+        <p class="gen-text text-center">#136fe0 --- #004691</p>
+      </div>
+      <div class="card">
+        <span style="background:#56BD5B;"></span>
+        <p class="gen-text text-center">#56BD5B</p>
+      </div>
+      <div class="card">
+        <span style="background:#F7B422;"></span>
+        <p class="gen-text text-center">#F7B422</p>
+      </div>
+      <div class="card">
+        <span style="background:#E55D64;"></span>
+        <p class="gen-text text-center">#E55D64</p>
+      </div>
+    </div>
+    <div class="main-content">
+      <h2 class="title-main">Buttons</h2>
+
+      <div class="gen-box">
+        <a class="bt-main">Próximo</a>
+        <a class="bt-alter">Próximo</a>
+        <a class="bt-neutral">Próximo</a>
+        <a class="bt-confirm">Próximo</a>
+        <a class="bt-error">Próximo</a>
+
+        <a class="bt-alter-2">Próximo</a>
+        <a class="bt-alter-3">Próximo</a>
+        <a class="bt-confirm-alter">Próximo</a>
+        <a class="bt-error-alter">Próximo</a>
+
+        <hr>
+        <button class="bt-main half-bt">Próximo</button>
+        <input type="submit" class="bt-alter half-bt" value="Próximo">
+        <hr>
+        <button class="bt-main full-bt">Próximo</button>
+      </div>
+    </div>
+    <div class="main-content">
+      <h2 class="title-main">Form</h2>
+      <form action="" class="std-form">
+        <div class="form-line">
+          <label for="">Label:</label>
+          <input type="text" class="input-singleline" placeholder="Digite seu nome...">
+        </div>
+
+        <div class="form-line">
+          <label for="">Label:</label>
+          <input type="text" class="input-singleline focus" placeholder="Digite seu nome...">
+        </div>
+
+        <div class="form-line">
+          <label for="">Label:</label>
+          <input type="text" class="input-singleline sucess" placeholder="Digite seu nome...">
+        </div>
+
+        <div class="form-line">
+          <label for="">Label:</label>
+          <input type="text" class="input-singleline warning" placeholder="Digite seu nome...">
+        </div>
+
+        <div class="form-line">
+          <label for="">Label:</label>
+          <input type="text" class="input-singleline error" placeholder="Digite seu nome...">
+        </div>
+
+        <div class="form-line">
+          <label for="">Label:</label>
+          <textarea type="text" class="input-multiline" placeholder="Digite seu nome..."></textarea>
+        </div>
+
+        <div class="form-line">
+          <div class="half-input">
+            <label for="">Label:</label>
+            <input type="text" class="input-singleline" placeholder="Digite seu nome...">
+          </div>
+
+          <div class="half-input">
+            <label for="">Label:</label>
+            <input type="text" class="input-singleline" placeholder="Digite seu nome...">
+          </div>
+        </div>
+
+        <div class="form-line">
+          <div class="half-input">
+            <div class="half-input">
+              <label for="">Label:</label>
+              <input type="text" class="input-singleline" placeholder="Digite seu nome...">
+            </div>
+            <div class="half-input">
+              <label for="">Label:</label>
+              <input type="text" class="input-singleline" placeholder="Digite seu nome...">
+            </div>
+          </div>
+
+          <div class="half-input">
+            <div class="half-input">
+              <label for="">Label:</label>
+              <input type="text" class="input-singleline" placeholder="Digite seu nome...">
+            </div>
+            <div class="half-input">
+              <label for="">Label:</label>
+              <input type="text" class="input-singleline" placeholder="Digite seu nome...">
+            </div>
+          </div>
+        </div>
+      </form>
     </div>
   </section>
 
-<script src="/scripts/app.js"></script>
+  <script src="/scripts/app.js"></script>
 </body>
 </html>
