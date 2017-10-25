@@ -122,21 +122,20 @@
         <p class="gen-text text-center">#E55D64</p>
       </div>
     </div>
-    <div class="main-content">
-      <h2 class="title-main">Buttons</h2>
+    <!-- ./Colors -->
 
+    <div class="main-content">
+      <h2 class="title-main">Titulos e Textos</h2>
       <div class="gen-box">
         <a class="bt-main">Próximo</a>
         <a class="bt-alter">Próximo</a>
         <a class="bt-neutral">Próximo</a>
         <a class="bt-confirm">Próximo</a>
         <a class="bt-error">Próximo</a>
-
         <a class="bt-alter-2">Próximo</a>
         <a class="bt-alter-3">Próximo</a>
         <a class="bt-confirm-alter">Próximo</a>
         <a class="bt-error-alter">Próximo</a>
-
         <hr>
         <button class="bt-main half-bt">Próximo</button>
         <input type="submit" class="bt-alter half-bt" value="Próximo">
@@ -144,6 +143,22 @@
         <button class="bt-main full-bt">Próximo</button>
       </div>
     </div>
+    <!-- ./Typography -->
+
+    <div class="main-content">
+      <h2 class="title-main">Buttons</h2>
+      <h1 class="title-main">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias quis, vitae libero dolor!</h1>
+      <h2 class="title-big">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias quis, vitae libero dolor!</h2>
+      <h3 class="title-medium">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias quis, vitae libero dolor!</h3>
+      <h4 class="title-small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias quis, vitae libero dolor!</h4>
+      <h4 class="title-gen">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias quis, vitae libero dolor!</h4>
+      <p class="gen-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias quis, vitae libero dolor! Assumenda tempora sit doloremque nobis quisquam ipsam qui voluptate ab dolor! Ab, iure et dicta eveniet maxime!</p>
+      <p class="small-text">Lorem <em>sum dolor sit amet, consectetur adipisicing elit.</em> <strong>Alias quis, vitae libero dolor! Assumenda tempora sit </strong>doloremque nobis quisquam ipsam qui voluptate ab dolor! Ab, iure et dicta eveniet maxime!</p>
+      <a href="">link de outside text</a>
+      <p class="small-text">Lorem ipsum dolor sit amet, <a href="">link de inside text</a> Assumenda tempora sit doloremque nobis quisquam ipsam qui voluptate ab dolor! Ab, iure et dicta eveniet maxime!</p>
+    </div>
+    <!-- ./buttons -->
+
     <div class="main-content">
       <h2 class="title-main">Form</h2>
       <form action="" class="std-form">
@@ -154,22 +169,27 @@
 
         <div class="form-line">
           <label for="">Label:</label>
-          <input type="text" class="input-singleline focus" placeholder="Digite seu nome...">
+          <input type="text" class="input-singleline input-singleline--focus" placeholder="Digite seu nome...">
         </div>
 
         <div class="form-line">
           <label for="">Label:</label>
-          <input type="text" class="input-singleline sucess" placeholder="Digite seu nome...">
+          <input type="text" class="input-singleline input-singleline--sucess" placeholder="Digite seu nome...">
         </div>
 
         <div class="form-line">
           <label for="">Label:</label>
-          <input type="text" class="input-singleline warning" placeholder="Digite seu nome...">
+          <input type="text" class="input-singleline input-singleline--warning" placeholder="Digite seu nome...">
         </div>
 
         <div class="form-line">
           <label for="">Label:</label>
-          <input type="text" class="input-singleline error" placeholder="Digite seu nome...">
+          <input type="text" class="input-singleline input-singleline--error" placeholder="Digite seu nome...">
+        </div>
+
+        <div class="form-line">
+          <label for="">Label:</label>
+          <input type="text" class="input-singleline input-singleline--disable" disabled placeholder="Digite seu nome...">
         </div>
 
         <div class="form-line">
@@ -180,12 +200,12 @@
         <div class="form-line">
           <div class="half-input">
             <label for="">Label:</label>
-            <input type="text" class="input-singleline" placeholder="Digite seu nome...">
+            <input type="email" class="input-singleline" placeholder="Digite seu E-mail...">
           </div>
 
           <div class="half-input">
             <label for="">Label:</label>
-            <input type="text" class="input-singleline" placeholder="Digite seu nome...">
+            <input type="password" class="input-singleline" placeholder="Digite seu password...">
           </div>
         </div>
 
@@ -212,10 +232,82 @@
             </div>
           </div>
         </div>
+
+        <div class="form-line">
+          <div class="half-input">
+            <div class="half-input">
+              <label for="">Label:</label>
+              <div class="fancy-select fancy-select--full">
+                <div class="label">Selecione uma opção</div>
+                <select name="" id="">
+                  <option>Selecione uma opção</option>
+                  <option>Selecione uma opção</option>
+                  <option>Selecione uma opção</option>
+                </select>
+              </div>
+            </div>
+            <div class="half-input">
+              <label for="">Label:</label>
+              <div class="fancy-select fancy-select--full">
+                <div class="label">Selecione uma opção</div>
+                <select name="" id="">
+                  <option>Selecione uma opção</option>
+                  <option>Selecione uma opção</option>
+                  <option>Selecione uma opção</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="half-input">
+            <label for="">Label:</label>
+            <div class="fancy-select fancy-select--full">
+              <div class="label">Selecione uma opção</div>
+              <select name="" id="">
+                <option>Selecione uma opção</option>
+                <option>Selecione uma opção</option>
+                <option>Selecione uma opção</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-line">
+          <div class="half-input">
+            <label class="form-checkbox">
+              <input type="checkbox" checked>
+              <span>Pessoa Física</span>
+            </label>
+            <label class="form-checkbox">
+              <input type="checkbox">
+              <span>Pessoa Juridica</span>
+            </label>
+            <label class="form-checkbox">
+              <input type="checkbox">
+              <span>I agree to the terms</span>
+            </label>
+          </div>
+          <div class="half-input">
+            <label class="form-radio">
+              <input type="radio" name="person">
+              <span>Pessoa Física</span>
+            </label>
+            <label class="form-radio">
+              <input type="radio" name="person">
+              <span>Pessoa Juridica</span>
+            </label>
+            <label class="form-radio">
+              <input type="radio" name="person">
+              <span>I agree to the terms</span>
+            </label>
+          </div>
+        </div>
       </form>
     </div>
+    <!-- ./Forms -->
+
   </section>
 
   <script src="/scripts/app.js"></script>
 </body>
+
 </html>

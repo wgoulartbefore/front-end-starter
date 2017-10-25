@@ -5,7 +5,7 @@ $screen-small: 30em; // 480px
 $screen-medium: 45em; // 720px;
 $screen-big: 70em; // 1120px;
 
-//Box Model
+// Box Model
 $box-model: border-box;
 
 // Sizes
@@ -40,6 +40,7 @@ $color-grey-900: #313541;
 $color-grey-1000: #000000;
 
 // Paleta de Cores
+// $color-pl-1: #136FE0;
 $color-pl-1: #136FE0;
 $color-pl-2: #004691;
 $color-pl-3: #268EF9;
@@ -61,7 +62,7 @@ $color-text-main: $color-grey-900;
 $color-text-gen: $color-grey-800;
 
 // Header Colors
-$color-base-header: $color-base-darken;
+$color-base-header: $color-base-error;
 
 // $color-header-mobile-opts-text: $color-grey-0;
 // $color-header-mobile-search-bg: $color-grey-0;

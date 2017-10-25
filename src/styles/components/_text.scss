@@ -1,4 +1,4 @@
-
+/* Titles */
 .title-main {
   display: block;
   @include adjust-font-size-to(42px);
@@ -6,10 +6,35 @@
   font-weight: 700;
 }
 
+.title-big {
+  @include adjust-font-size-to(36px);
+  color: $color-grey-900;
+  font-weight: 700;
+}
+.title-medium {
+  @include adjust-font-size-to(30px);
+  color: $color-grey-900;
+  font-weight: 700;
+}
+
+.title-small {
+  @include adjust-font-size-to(24px);
+  color: $color-grey-900;
+  font-weight: 700;
+}
+
+.title-gen {
+  @include adjust-font-size-to(20px);
+  color: $color-grey-900;
+  font-weight: 700;
+}
+
+/* Texts */
 .gen-text {
   display: block;
   @include adjust-font-size-to(16px);
   color: $color-text-gen;
+  margin-bottom: $size-components-padding;
 
   a {
     color: $color-pl-4;
@@ -21,7 +46,7 @@
   display: block;
   @include adjust-font-size-to(14px);
   margin-bottom: $size-components-padding;
-  color: $color-grey-600;
+  color: $color-text-gen;
 
   a {
     color: $color-pl-4;
