@@ -24,6 +24,7 @@ gulp.task('js', () => {
     .pipe(gulp.dest(config.js.dist))
     .pipe(browsersync.stream());
 });
+
 gulp.task('js-watch', ['js'], () => {
   return watch([config.js.src], () => {
     gulp.start(['js']);
@@ -36,6 +37,7 @@ gulp.task('html', () => {
     .pipe(gulp.dest(config.html.dist))
     .pipe(browsersync.stream());
 });
+
 gulp.task('html-watch', ['html'], () => {
   return watch([config.html.src], () => {
     gulp.start(['html']);
@@ -49,9 +51,7 @@ gulp.task('sass', () => {
     .pipe(sass({
       outputStyle: 'compressed',
       includePaths: ['node_modules/susy/sass']
-    }).on('error', error => {
-      console.log(error.message);
-    }))
+    }).on('error', error.message))
     .pipe(sourcemaps.write())
     .pipe(gulp.dest(config.sass.dist))
     .pipe(browsersync.stream());
