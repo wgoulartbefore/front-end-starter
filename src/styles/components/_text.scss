@@ -22,7 +22,6 @@
 .title-small {
   @include adjust-font-size-to(24px);
   color: $color-base-darken;
-  font-weight: 700;
   margin-bottom: $size-components-padding;
 }
 

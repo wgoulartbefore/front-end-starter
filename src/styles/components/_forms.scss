@@ -26,9 +26,9 @@
 }
 
 .form-line {
-  margin-top: $size-components-margin;
+  margin-bottom: $size-components-margin;
 
-  &:first-child {
+  &:first-last {
     margin-top: 0;
   }
 }
