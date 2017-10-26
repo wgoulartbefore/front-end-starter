@@ -1,3 +1,21 @@
 body {
   background: $color-base-background;
 }
+
+body.modal-active .global-barrier {
+    z-index: 1000
+}
+
+#global-holder {
+    -moz-transition: -moz-transform .5s;
+    -o-transition: -o-transform .5s;
+    -webkit-transition: -webkit-transform .5s;
+    transition: transform .5s
+}
+
+.mobile-menu-active #global-holder {
+    -moz-transform: translateX(240px);
+    -ms-transform: translateX(240px);
+    -webkit-transform: translateX(240px);
+    transform: translateX(240px)
+}

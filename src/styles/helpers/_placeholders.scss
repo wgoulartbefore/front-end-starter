@@ -92,6 +92,10 @@
   float: left;
 }
 
+%text-underline {
+  text-decoration: underline;
+}
+
 %underline-hover {
   &:hover {
     text-decoration: underline;

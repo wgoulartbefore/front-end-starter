@@ -2,31 +2,35 @@
 .title-main {
   display: block;
   @include adjust-font-size-to(42px);
-  color: $color-grey-900;
+  color: $color-base-darken;
   font-weight: 700;
 }
 
 .title-big {
   @include adjust-font-size-to(36px);
-  color: $color-grey-900;
+  color: $color-base-darken;
   font-weight: 700;
 }
+
 .title-medium {
   @include adjust-font-size-to(30px);
   color: $color-grey-900;
   font-weight: 700;
+  margin-bottom: $size-components-padding;
 }
 
 .title-small {
   @include adjust-font-size-to(24px);
-  color: $color-grey-900;
+  color: $color-base-darken;
   font-weight: 700;
+  margin-bottom: $size-components-padding;
 }
 
 .title-gen {
   @include adjust-font-size-to(20px);
-  color: $color-grey-900;
+  color: $color-base-darken;
   font-weight: 700;
+  margin-bottom: $size-components-padding;
 }
 
 /* Texts */

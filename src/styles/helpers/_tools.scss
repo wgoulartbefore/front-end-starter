@@ -54,6 +54,9 @@
 }
 /* text-hover */
 
+.text-underline{
+  @extend %text-underline;
+}
 .underline-hover {
   @extend %underline-hover;
 }

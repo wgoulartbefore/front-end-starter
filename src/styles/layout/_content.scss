@@ -17,6 +17,8 @@
 }
 
 .container {
+  display: flex;
+  width: 100%;
   @include container();
   @extend %clearfix;
 

@@ -1,9 +1,45 @@
 .header {
-  display: block;
+  display: flex;
   position: relative;
   background: $color-base-header;
   height: $size-components-height + 12;
   transition: all $time-std-transition;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 $size-components-padding;
+
+  &-opts {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+  }
+
+  &-search {
+    margin-left: auto;
+    margin-right: auto;
+
+    .search-submit {}
+    .search-back {}
+  }
+
+  @include susy-breakpoint($screen-big, 16) {
+    &-opts {
+      // width: 65%;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      margin-left: auto;
+    }
+
+    &-search {
+      margin-right: auto;
+
+      .search-submit {
+      }
+
+      .search-back {}
+    }
+  }
 
   // @include susy-breakpoint($screen-big, 16) {
   //   @extend %clearfix;
@@ -30,4 +66,79 @@
   //     background: rgba($color-grey-100, 0.9);
   //   }
   // }
+}
+
+.logo {
+  font-family: $font-stack;
+  @include adjust-font-size-to(26px);
+  font-weight: 700;
+  color: $color-grey-0;
+  text-transform: uppercase;
+
+  .header-#{&}{
+    background: #000;
+  }
+}
+
+.list-opts {
+  &__link {
+    position: relative;
+    @include adjust-font-size-to(14px);
+    color: $color-grey-0;
+    margin-left: $size-components-padding;
+    transition: color $time-std-transition;
+
+    .fa {
+      @include adjust-font-size-to(22px);
+      color: $color-grey-0;
+      font-weight: 400;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.search {
+  display: flex;
+  position: relative;
+  width: 500px;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+
+
+  &-submit {
+    position: absolute;
+    width: 60px;
+    height: 34px;
+    right: 10px;
+    top: 0;
+    background: transparent;
+    border: 0;
+    border-radius: 0 20px 20px 0;
+    font-size: 18px;
+    color: $color-grey-500;
+
+    span {
+      display: none;
+    }
+  }
+}
+
+.input-container {
+  width: 100%;
+}
+
+.input-search {
+  width: 100%;
+  height: $size-components-height - 14px;
+  padding: 0 $size-components-padding;
+  // border: 1px solid $color-grey-300;
+  border: 1px solid $color-base-main;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: inset 0 1px 2px rgba($color-base-darken, 0.2);
+  padding-right: 60px;
 }

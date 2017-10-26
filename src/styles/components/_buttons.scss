@@ -2,6 +2,7 @@
   display: inline-block;
   background: none;
   border: none;
+  font-family: $font-stack;
   @include adjust-font-size-to(16px);
   font-weight: 500;
   line-height: $size-components-height;
@@ -13,6 +14,7 @@
   vertical-align: top;
   border: 0;
   margin: 5px 3px;
+  border-radius: 3px;
 
   &.half-bt {
     width: calc((100% / 2) - 8px);
@@ -27,10 +29,21 @@
   }
 }
 
+.area-buttons {
+  display: block;
+  width: 100%;
+  padding: $size-components-padding 0;
+  @extend %clearfix;
+  clear: both;
+}
+
+
 // buttons create
 .bt-main {
   @extend %std-button;
   @include createButton($color-base-main);
+  font-size: 18px;
+  text-transform: none;
 }
 
 .bt-alter {
@@ -41,6 +54,11 @@
 .bt-neutral {
   @extend %std-button;
   @include createButton($color-base-neutral);
+}
+
+.bt-neutral-alter {
+  @extend %std-button;
+  @include createButtonAlter($color-base-neutral);
 }
 
 .bt-alter-2 {
