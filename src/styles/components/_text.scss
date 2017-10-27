@@ -8,7 +8,7 @@
 
   @include susy-breakpoint($screen-big, 16) {
     @include adjust-font-size-to(42px);
-    text-align-last: auto;
+    text-align: left;
   }
 }
 
@@ -19,7 +19,7 @@
 
   @include susy-breakpoint($screen-big, 16) {
     @include adjust-font-size-to(36px);
-    text-align-last: auto;
+    text-align: left;
   }
 }
 
@@ -31,7 +31,7 @@
 
   @include susy-breakpoint($screen-big, 16) {
     @include adjust-font-size-to(30px);
-    text-align-last: auto;
+    text-align: left;
   }
 }
 
@@ -42,7 +42,7 @@
 
   @include susy-breakpoint($screen-big, 16) {
     @include adjust-font-size-to(24px);
-    text-align-last: auto;
+    text-align: left;
   }
 }
 
