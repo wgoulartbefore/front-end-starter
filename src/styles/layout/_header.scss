@@ -2,17 +2,16 @@
   display: flex;
   position: relative;
   background: $color-base-header;
-  height: $size-components-height + 12;
+  // height: $size-components-height + 12;
   transition: all $time-std-transition;
   justify-content: space-between;
   align-items: center;
   padding: 0 $size-components-padding;
 
   &-opts {
-    display: flex;
-    align-items: center;
-    margin-left: auto;
+    display: none;
   }
+
 
   &-search {
     margin-left: auto;
@@ -22,7 +21,14 @@
     .search-back {}
   }
 
+  @include susy-breakpoint($screen-medium, 12) {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+  }
   @include susy-breakpoint($screen-big, 16) {
+    height: 60px;
+
     &-opts {
       // width: 65%;
       width: 100%;
@@ -53,7 +59,7 @@
   //
   //   .holder {
   //     @include container();
-  //   }
+  //   }*
   //
   //   &.fixed,
   //   &.internal {
@@ -141,4 +147,72 @@
   text-align: center;
   box-shadow: inset 0 1px 2px rgba($color-base-darken, 0.2);
   padding-right: 60px;
+}
+
+.header-mobile-opts {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: $size-components-height;
+  padding: 0 106px 0 58px;
+  box-shadow: 0 1px 2px #9e9e9e;
+  background: $color-base-darken;
+  transition: left .5s;
+  z-index: 9;
+
+  @at-root .mobile-menu-active #{&}{
+    left: $size-main-menu-width;
+  }
+}
+
+
+.header-mobile-opts  {
+  .opt-mobile-menu,
+  .opt-search {
+    display: block;
+    position: absolute;
+    top: 0;
+    width: $size-components-height;
+    height: $size-components-height;
+    font-size: 18px;
+    line-height: $size-components-height;
+    text-align: center;
+    color: $color-grey-0;
+  }
+
+  @include susy-breakpoint($screen-medium, 12) {
+    display: none;
+  }
+}
+
+.header-mobile-opts .opt-mobile-menu {
+    left: 0
+}
+
+.header-mobile-opts .opt-shop-cart {
+    right: $size-components-height
+}
+
+.header-mobile-opts .opt-search {
+    right: 0
+}
+
+.header-mobile-opts .page-title {
+    white-space: nowrap;
+    overflow: hidden;
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    display: block;
+    font-size: 16px;
+    line-height: $size-components-height;
+    color: $color-grey-0;
+}
+
+@media (min-width: 1280px) {
+    .header-mobile-opts {
+        display:none
+    }
 }

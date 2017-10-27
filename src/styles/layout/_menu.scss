@@ -1,4 +1,24 @@
 #main-menu {
+  display: block;
+  position: fixed;
+  z-index: 10;
+  width: $size-main-menu-width;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: $color-grey-0;
+  // overflow: hidden;
+  // overflow-y: auto;
+  transform: translateX(-100%);
+  transition: transform 0.5s;
+  border: 0;
+
+  @at-root {
+    .mobile-menu-active #{&} {
+      transform: translateX(0);
+    }
+  }
+
   @include susy-breakpoint($screen-big, 16)  {
     display: flex;
     height: 60px;
@@ -7,165 +27,182 @@
     border-bottom: 1px solid $color-grey-200;
     justify-content: space-between;
     align-items: center;
+    transform: translateX(0);
+    position: relative;
+    top: inherit;
+    left: inherit;
+    overflow: visible;
   }
 }
 
 .menu {
   &-list {
-    display: flex;
-    height: 60px;
+    display: block;
     width: 100%;
-    // justify-content: space-between;
-    justify-content: center;
-    align-items: center;
+    height: 60px;
 
     &__item {
-      display: flex;
-      align-self: center;
-      height: 100%;
-      border-left: 1px solid $color-grey-300;
-      // padding: 0 $size-components-padding;
-
-      &:hover {
-        background: $color-grey-100;
-      }
-
-      &:first-child {
-        border: 0;
-      }
+      display: block;
+      position: relative;
+      height: $size-components-height;
+      @include adjust-font-size-to(14px);
+      line-height: $size-components-height;
+      color: $color-grey-0;
+      border-top: $color-grey-100;
     }
 
     &__link {
-      display: flex;
+      display: block;
+      position: relative;
+      height: $size-components-height;
       @include adjust-font-size-to(14px);
-      color: $color-text-main;
+      line-height: $size-components-height;
+      color: $color-grey-900;
       font-weight: 500;
       text-transform: uppercase;
-      align-items: center;
-      align-self: center;
-      width: 100%;
-      height: 100%;
       padding: 0 $size-components-padding;
+      vertical-align: middle;
+
+      &:hover {
+        background: $color-base-main;
+        color: $color-grey-0;
+
+        .fa {
+          color: $color-grey-0;
+        }
+      }
     }
 
     .fa {
       @include adjust-font-size-to(20px);
       color: $color-base-main;
-      margin-right: 5px;
+      vertical-align: middle;
+      margin-right: 10px;
     }
+  }
 
-    ul {
-      display: none;
+  @include susy-breakpoint($screen-big, 16) {
+    &-list {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &__item {
+        position: relative;
+        display: flex;
+        align-self: center;
+        height: 59px;
+        border: 0;
+        border-left: 1px solid $color-grey-300;
+        // padding: 0 $size-components-padding;
+
+        &:hover {
+          .submenu-list {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(0) translateY(0);
+          }
+        }
+
+        &:first-child {
+          border: 0;
+        }
+      }
+
+      &__link {
+        display: flex;
+        @include adjust-font-size-to(14px);
+        color: $color-text-main;
+        font-weight: 500;
+        text-transform: uppercase;
+        align-items: center;
+        align-self: center;
+        width: 100%;
+        height: 100%;
+        padding: 0 $size-components-padding;
+
+        &:hover {
+          &,
+          .fa {
+            background: $color-grey-100;
+            color: $color-base-main;
+          }
+        }
+      }
+
+      .fa {
+        @include adjust-font-size-to(20px);
+        color: $color-base-main;
+        margin-right: 5px;
+      }
     }
   }
 }
 
+.submenu-list {
+  display: block;
+  position: absolute;
+  top: calc(100% + 1px);
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: auto;
+  min-width: $size-main-menu-width;
+  box-shadow: 0 0 1px $color-grey-300, 0 1px 2px rgba($color-grey-700, 0.2);
+  overflow: hidden;
+  background: $color-grey-100;
+  transform: translateX(0) translateY(-5%);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s cubic-bezier(0.17, 1.26, 0.92, 1);
 
+  @include  susy-breakpoint($screen-big, 16) {
+    // display: block;
+    // position: absolute;
+    // top: calc(100% + 1px);
+    // left: 0;
+    // right: 0;
+    // width: 100%;
+    // height: auto;
+    // min-width: $size-main-menu-width;
+    // // border-bottom: 1px solid $color-grey-300;
+    // // border-right: 1px solid $color-grey-300;
+    // // border-left: 1px solid $color-grey-300;
+    // box-shadow: 0 0 1px $color-grey-300, 0 1px 4px rgba($color-grey-500, 0.2);
+    // overflow: hidden;
+    // background: $color-grey-100;
+    // transform: translateX(0) translateY(-5%);
+    // opacity: 0;
+    // visibility: hidden;
+    // transition: all 0.5s cubic-bezier(0.17, 1.26, 0.92, 1);
 
+    li {
+      @include adjust-font-size-to(14px);
+      color: $color-text-main;
+      font-weight: 500;
+      text-transform: uppercase;
+      padding: size-components-padding 0;
+      line-height: 48px;
+      border-top: 1px solid tint($color-grey-0, 5%);
+      border-bottom: 1px solid shade($color-grey-300, 15%);
 
-// #main-menu {
-//   display: block;
-//   position: fixed;
-//   z-index: 10;
-//   width: $size-main-menu;
-//   height: 100%;
-//   top: 0;
-//   left: 0;
-//   text-align: left;
-//   background: $color-main-menu-bg;
-//   overflow-y: auto;
-//   transition: transform $time-std-transition;
-//   transform: translateX(100%);
-//
-//   .bt-back {
-//     display: block;
-//     @include adjust-font-size-to(16px);
-//     min-height: $size-components-height;
-//     padding: $size-components-padding (($size-components-height - rhythm(1)) / 2);
-//     color: darken($color-main-menu-bg, 60%);
-//     background: rgba($color-grey-0, 0.1);
-//
-//     .fa {
-//       margin-right: $size-components-padding;
-//     }
-//   }
-//
-//   @at-root {
-//     .mobile-menu-active #{ &} {
-//       transform: translateX(0);
-//       box-shadow: 1px 0 10px $color-grey-1000;
-//     }
-//   }
-//
-//   @include susy-breakpoint($screen-big, 16) {
-//     transform: translateX(0);
-//     position: relative;
-//     float: right;
-//     top: inherit;
-//     left: inherit;
-//     width: auto;
-//     background: none;
-//     box-shadow: none;
-//     margin-right: gutters();
-//     overflow: visible;
-//
-//     .bt-back {
-//       display: none;
-//     }
-//   }
-// }
-//
-// .main-menu-list {
-//   @extend %clearlist;
-//
-//   li {
-//     display: block;
-//     border-top: 1px solid darken($color-main-menu-bg, 10%);
-//   }
-//
-//   a {
-//     transition: all $time-std-transition;
-//     display: block;
-//     padding: (($size-components-height - rhythm(1)) / 2) $size-components-padding;
-//     text-transform: uppercase;
-//     color: $color-main-menu-text;
-//
-//     &:hover {
-//       color: $color-pl-4;
-//     }
-//   }
-//
-//   @include susy-breakpoint($screen-big, 16) {
-//     li {
-//       display: inline-block;
-//       border: none;
-//     }
-//
-//     a {
-//       @include adjust-font-size-to(18px);
-//     }
-//
-//     .internal & {
-//       a {
-//         color: $color-base-main;
-//
-//         &:hover {
-//           color: $color-pl-4;
-//         }
-//       }
-//     }
-//
-//     .fixed &,
-//     .internal & {
-//       a.singup {
-//         background: $color-base-success;
-//         color: $color-grey-0;
-//
-//         &:hover {
-//           background: darken($color-base-success, 10%);
-//           color: $color-grey-0;
-//         }
-//       }
-//     }
-//   }
-// }
+      &:first-child {
+        border-top: none;
+      }
+    }
+
+    a {
+      display: block;
+      @include adjust-font-size-to(14px);
+      color: $color-text-main;
+      font-weight: 500;
+      text-transform: uppercase;
+      padding: 0 $size-components-padding;
+
+      &:hover {
+        background: $color-grey-200;
+        color: $color-base-main;
+      }
+    }
+  }
+}

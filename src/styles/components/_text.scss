@@ -1,35 +1,60 @@
 /* Titles */
 .title-main {
   display: block;
-  @include adjust-font-size-to(42px);
+  @include adjust-font-size-to(32px);
   color: $color-base-darken;
   font-weight: 700;
+  text-align: center;
+
+  @include susy-breakpoint($screen-big, 16) {
+    @include adjust-font-size-to(42px);
+    text-align-last: auto;
+  }
 }
 
 .title-big {
-  @include adjust-font-size-to(36px);
+  @include adjust-font-size-to(30px);
   color: $color-base-darken;
   font-weight: 700;
+
+  @include susy-breakpoint($screen-big, 16) {
+    @include adjust-font-size-to(36px);
+    text-align-last: auto;
+  }
 }
 
 .title-medium {
-  @include adjust-font-size-to(30px);
+  @include adjust-font-size-to(24px);
   color: $color-grey-900;
   font-weight: 700;
   margin-bottom: $size-components-padding;
+
+  @include susy-breakpoint($screen-big, 16) {
+    @include adjust-font-size-to(30px);
+    text-align-last: auto;
+  }
 }
 
 .title-small {
-  @include adjust-font-size-to(24px);
+  @include adjust-font-size-to(20px);
   color: $color-base-darken;
   margin-bottom: $size-components-padding;
+
+  @include susy-breakpoint($screen-big, 16) {
+    @include adjust-font-size-to(24px);
+    text-align-last: auto;
+  }
 }
 
 .title-gen {
-  @include adjust-font-size-to(20px);
+  @include adjust-font-size-to(18px);
   color: $color-base-darken;
   font-weight: 700;
   margin-bottom: $size-components-padding;
+
+  @include susy-breakpoint($screen-big, 16) {
+    @include adjust-font-size-to(20px);
+  }
 }
 
 /* Texts */
