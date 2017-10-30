@@ -24,7 +24,11 @@
 
 /* card style color */
 .card {
-  @extend .gen-box;
+  background: $color-grey-0;
+  padding: $size-components-padding;
+  border: 1px solid $color-grey-300;
+  border-radius: 2px;
+  box-shadow: 0 1px 4px rgba($color-grey-500, 0.2);
   @include span(3);
   margin-bottom: $size-components-padding;
 

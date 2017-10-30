@@ -58,22 +58,44 @@ $color-base-success: #56BD5B;
 $color-base-neutral: #CCD5DB;
 
 // Text Colors
-$color-text-main: $color-grey-900;
-$color-text-gen: $color-grey-800;
+// $color-text-main: $color-grey-900;
+// $color-text-gen: $color-grey-800;
+
+// Text Colors
+$color-text-main: darken($color-base-main , 60%);
+$color-text-gen: $color-grey-600;
 
 // Header Colors
 $color-base-header: $color-base-main;
 
-// $color-header-mobile-opts-text: $color-grey-0;
-// $color-header-mobile-search-bg: $color-grey-0;
-// $color-header-mobile-search-border: $color-grey-300;
-// $color-header-mobile-search-text: $color-grey-800;
+$color-main-header-bg: $color-base-main;
+$color-main-header-border: #CCC;
+$color-main-header-opts: $color-grey-700;
+$color-main-header-opts-hover: $color-base-main;
+$color-main-header-submenus-bg: $color-grey-300;
+$color-main-header-submenus-title: $color-text-main;
+$color-main-header-submenus-body: $color-grey-0;
+
+$color-header-mobile-opts-bg: $color-base-darken;
+$color-header-mobile-opts-text: $color-grey-0;
+$color-header-mobile-search-bg: $color-grey-0;
+$color-header-mobile-search-border: $color-grey-300;
+$color-header-mobile-search-text: $color-grey-800;
 
 // Main Menu Colors
 $size-main-menu-width: 240px;
-$color-main-menu-bg: $color-pl-4;
-$color-main-menu-text: tint($color-base-main, 90%);
-$color-main-menu-text-desktop: #273967;
+$color-main-menu-bg: $color-grey-100;
+// $color-main-menu-text: tint($color-base-main, 90%);
+$color-main-menu-text: $color-base-main;
+$color-main-menu-text-desktop: $color-base-main;
+// $color-main-menu-text-desktop: #273967;
+// $color-main-menu-bg: $color-base-main;
+// $color-main-menu-border: darken($color-main-menu-bg, 10%);
+// $color-main-menu-text: $color-grey-0;
+// $color-main-menu-hover: darken($color-main-menu-bg, 20%);
+// $color-main-menu-arrows: tint($color-main-menu-bg, 80%);
+
+
 
 // Footer Colors
 // $color-footer-bg: #1B4178;
