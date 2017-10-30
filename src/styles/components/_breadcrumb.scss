@@ -1,0 +1,12 @@
+.breadcrumb {
+  display: block;
+  @extend %clearfix;
+
+  &__link {
+    color: $color-base-neutral;
+
+    &:last-child {
+      color: $color-base-main;
+    }
+  }
+}
