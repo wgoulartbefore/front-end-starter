@@ -1,68 +1,184 @@
 <!doctype html>
-<!--[if lt IE 7 ]> <html class="ie ie6 ie-lt10 ie-lt9 ie-lt8 ie-lt7 no-js" lang="en"> <![endif]-->
-<!--[if IE 7 ]>    <html class="ie ie7 ie-lt10 ie-lt9 ie-lt8 no-js" lang="en"> <![endif]-->
-<!--[if IE 8 ]>    <html class="ie ie8 ie-lt10 ie-lt9 no-js" lang="en"> <![endif]-->
-<!--[if IE 9 ]>    <html class="ie ie9 ie-lt10 no-js" lang="en"> <![endif]-->
-<!--[if gt IE 9]><!-->
-<html class="no-js" lang="en">
-<!--<![endif]-->
+<html lang="pt-br">
 
 <head>
   <meta charset="utf-8">
-
-  <!-- Always force latest IE rendering engine (even in intranet) -->
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-  <!-- Important stuff for SEO, don't neglect. (And don't dupicate values across your site!) -->
   <title>Mercurio</title>
-  <meta name="author" content="" />
-  <meta name="description" content="" />
 
-  <!-- Don't forget to set your site up: http://google.com/webmasters -->
-  <meta name="google-site-verification" content="" />
+  <!-- IE Edge !-->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-  <!-- Who owns the content of this site? -->
-  <meta name="Copyright" content="" />
+  <!-- Mobile Viewport !-->
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
-  <!--  Mobile Viewport
-  http://j.mp/mobileviewport & http://davidbcalhoun.com/2010/viewport-metatag
-  device-width : Occupy full width of the screen in its current orientation
-  initial-scale = 1.0 retains dimensions instead of zooming out if page height > device height
-  maximum-scale = 1.0 retains dimensions instead of zooming in if page width < device width (wrong for most sites)
-  -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Android Theme !-->
+  <meta name="theme-color" content="#4a245d">
 
-  <!-- Use Iconifyer to generate all the favicons and touch icons you need: http://iconifier.net -->
-  <link rel="shortcut icon" href="favicon.ico" />
-
-  <!-- concatenate and minify for production -->
-  <link rel="stylesheet" href="/styles/main.css" />
+  <!-- Google Fonts !-->
   <link href="https://fonts.googleapis.com/css?family=Bitter:400,700|Hind:400,500,700" rel="stylesheet">
 
-  <!-- Twitter: see https://dev.twitter.com/docs/cards/types/summary-card for details -->
-  <meta name="twitter:card" content="">
-  <meta name="twitter:site" content="">
-  <meta name="twitter:title" content="">
-  <meta name="twitter:description" content="">
-  <meta name="twitter:url" content="">
-
-  <!-- Facebook (and some others) use the Open Graph protocol: see http://ogp.me/ for details -->
-  <meta property="og:title" content="" />
-  <meta property="og:description" content="" />
-  <meta property="og:url" content="" />
-  <meta property="og:image" content="" />
+  <!-- Estilos Padrão !-->
+  <link rel="stylesheet" href="/styles/main.css" type="text/css" media="screen, projection">
 </head>
 
 <body>
+  <div id="top-section">
+    <header id="main-header">
+      <h1 id="main-logo">
+					<span>Mercurio</span>
+					<a><img src="/images/main-logo.svg" alt=""/></a>
+				</h1>
 
-  <header class="header">
-    <div class="container">
-      <h1>Mercurio</h1>
+      <div class="main-header-opts">
+        <div class="main-header-second-line">
+          <form class="main-header-search" role="search">
+            <div class="input-container">
+              <input type="text" class="input-search" placeholder="O que você procura?">
+            </div>
+            <button class="search-submit" type="submit"><i class="fa fa-search"></i><span>Buscar</span></button>
+            <a id="bt-mobile-search-back" class="search-back"><i class="fa fa-arrow-left"></i></a>
+          </form>
+        </div>
+      </div>
+      <!-- ./header-opts  !-->
+    </header>
+    <!-- ./header-mobile-opts  !-->
+
+    <div class="header-mobile-opts">
+      <a id="bt-mobile-menu" class="opt-mobile-menu">
+				<i class="fa fa fa-bars"></i>
+			</a>
+      <a id="bt-mobile-search" class="opt-search">
+				<i class="fa fa-search"></i>
+			</a>
+      <h2 class="page-title">Home</h2>
     </div>
-  </header>
+    <!-- ./header-mobile-opts  !-->
 
-  <section class="section container">
-    <div class="main-content">
+    <nav id="main-menu">
+      <ul class="menu-list">
+        <li class="menu-list__item submenu">
+          <a class="menu-list__link">
+            <i class="fa fa-tag"></i>
+            Acesso rápido
+          </a>
+
+          <ul class="submenu-list">
+            <li><a>Cliente</a></li>
+            <li><a>Compras</a></li>
+            <li><a>Fornecedor</a></li>
+            <li><a>Usuários</a></li>
+            <li><a>Valor Aparelho Vivo</a></li>
+            <li><a>Venda</a></li>
+          </ul>
+
+        </li>
+        <li class="menu-list__item">
+          <a class="menu-list__link">
+            <i class="fa fa-home"></i>
+            Início
+          </a>
+        </li>
+        <li class="menu-list__item submenu ">
+          <a class="menu-list__link">
+            <i class="fa fa-question-circle"></i>
+            Ajuda
+          </a>
+          <ul class="submenu-list">
+            <li><a>Atendimento</a></li>
+            <li><a>Manual</a></li>
+          </ul>
+        </li>
+        <li class="menu-list__item submenu ">
+          <a class="menu-list__link">
+            <i class="fa fa-shopping-cart"></i>
+            Venda
+          </a>
+
+          <ul class="submenu-list">
+            <li><a>Venda</a></li>
+            <li><a>Gestão documental</a></li>
+            <li><a>Campanhas</a></li>
+          </ul>
+        </li>
+        <li class="menu-list__item submenu ">
+          <a class="menu-list__link">
+            <i class="fa fa-archive"></i>
+            Gestão de Estoque
+          </a>
+
+          <ul class="submenu-list">
+            <li><a>Acessório</a></li>
+            <li><a>Estoque</a></li>
+            <li><a>Produtos Open</a></li>
+            <li><a>Uso e Consumo</a></li>
+            <li><a>Valores</a></li>
+          </ul>
+        </li>
+        <li class="menu-list__item submenu ">
+          <a class="menu-list__link">
+            <i class="fa fa-usd"></i>
+            Financeiro
+          </a>
+
+          <ul class="submenu-list">
+            <li><a>Baixa de títulos</a></li>
+            <li><a>Caixa</a></li>
+            <li><a>Contas a Pagar</a></li>
+            <li><a>Contas a Receber</a></li>
+            <li><a>Contas Bancárias</a></li>
+          </ul>
+        </li>
+        <li class="menu-list__item submenu ">
+          <a class="menu-list__link">
+            <i class="fa fa-bar-chart"></i>
+            Relatórios
+          </a>
+
+          <ul class="submenu-list">
+            <li><a>Comissões</a></li>
+            <li><a>Estoque</a></li>
+            <li><a>Financeiro</a></li>
+            <li><a>Gerencial</a></li>
+            <li><a>Movimento</a></li>
+            <li><a>Pessoas</a></li>
+            <li><a>Remuneração</a></li>
+            <li><a>Vendas</a></li>
+            <li><a>Vivo GO</a></li>
+          </ul>
+        </li>
+        <li class="menu-list__item submenu ">
+          <a class="menu-list__link">
+            <i class="fa fa-cog"></i>
+            Configurações
+          </a>
+          <ul class="submenu-list">
+            <li><a>Alíquotas</a></li>
+            <li><a>Comunicação</a></li>
+            <li><a>Metas e Comissões</a></li>
+            <li><a>Rede</a></li>
+            <li><a>Usuários</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <!-- ./main-menu  !-->
+
+  <section class="main-content">
+    <div class="container">
+      <nav class="breadcrumb">
+        <ul class="breadcrumb__list">
+          <li class="breadcrumb__item"><a href="" class="breadcrumb__link">Início</a></li>
+          <li class="breadcrumb__item"><a href="" class="breadcrumb__link">Venda</a></li>
+        </ul>
+      </nav>
+    </div>
+  </section>
+  <!-- ./breadcrumb -->
+
+  <section class="main-content">
+    <div class="container">
       <h2 class="title-main">Colors</h2>
       <div class="card">
         <span style="background:#FFFFFF"></span>
@@ -122,10 +238,12 @@
         <p class="gen-text text-center">#E55D64</p>
       </div>
     </div>
-    <!-- ./Colors -->
+  </section>
+  <!-- ./Colors -->
 
-    <div class="main-content">
-      <h2 class="title-main">Titulos e Textos</h2>
+  <section class="main-content">
+    <div class="container">
+      <h2 class="title-main">Buttons</h2>
       <div class="gen-box">
         <a class="bt-main">Próximo</a>
         <a class="bt-alter">Próximo</a>
@@ -143,10 +261,12 @@
         <button class="bt-main full-bt">Próximo</button>
       </div>
     </div>
-    <!-- ./Typography -->
+  </section>
+  <!-- ./Buttons -->
 
-    <div class="main-content">
-      <h2 class="title-main">Buttons</h2>
+  <section class="main-content">
+    <div class="container">
+      <h2 class="title-main">Titulos e Textos</h2>
       <h1 class="title-main">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias quis, vitae libero dolor!</h1>
       <h2 class="title-big">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias quis, vitae libero dolor!</h2>
       <h3 class="title-medium">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias quis, vitae libero dolor!</h3>
@@ -158,8 +278,9 @@
       <p class="small-text">Lorem ipsum dolor sit amet, <a href="">link de inside text</a> Assumenda tempora sit doloremque nobis quisquam ipsam qui voluptate ab dolor! Ab, iure et dicta eveniet maxime!</p>
     </div>
     <!-- ./buttons -->
-
-    <div class="main-content">
+  </section>
+  <section class="main-content">
+    <div class="container">
       <h2 class="title-main">Form</h2>
       <form action="" class="std-form">
         <div class="form-line">
@@ -306,6 +427,101 @@
     <!-- ./Forms -->
 
   </section>
+
+  <section class="main-content">
+    <div class="container">
+      <div class="widget-container std-form">
+        <div class="widget-line">
+          <div class="full-widget">
+            <h4 class="widget-title">Boxes de Retorno</h4>
+            <div class="widget-content">
+
+              <div class="feedback-box bm-bottom">
+                <div class="header">
+                  <h4 class="title">Box Principal</h4>
+                  <a class="bt-close feedback-box-close"><i class="fa fa-times"></i></a>
+                </div>
+                <div class="content">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut imperdiet dolor diam, non tempor ipsum laoreet et. Duis ac tincidunt justo.</p>
+                </div>
+              </div>
+
+              <div class="feedback-box-neutral bm-bottom">
+                <div class="header">
+                  <h4 class="title">Box Neutro</h4>
+                  <a class="bt-close feedback-box-close"><i class="fa fa-times"></i></a>
+                </div>
+                <div class="content">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut imperdiet dolor diam, non tempor ipsum laoreet et. Duis ac tincidunt justo.</p>
+                </div>
+              </div>
+
+              <div class="feedback-box-success bm-bottom">
+                <div class="header">
+                  <h4 class="title">Box Sucesso</h4>
+                  <a class="bt-close feedback-box-close"><i class="fa fa-times"></i></a>
+                </div>
+                <div class="content">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut imperdiet dolor diam, non tempor ipsum laoreet et. Duis ac tincidunt justo.</p>
+                </div>
+              </div>
+
+              <div class="feedback-box-error">
+                <div class="header">
+                  <h4 class="title">Box de Erro</h4>
+                  <a class="bt-close feedback-box-close"><i class="fa fa-times"></i></a>
+                </div>
+                <div class="content">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut imperdiet dolor diam, non tempor ipsum laoreet et. Duis ac tincidunt justo.</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <div class="widget-line">
+          <div class="full-widget">
+            <h4 class="widget-title">Casos Especiais</h4>
+            <div class="widget-content">
+
+              <div class="feedback-box bm-bottom">
+                <div class="header">
+                  <h4 class="title">Título Muito Grande - Etiam tincidunt vehicula purus, et ullamcorper augue dapibus quis. Proin interdum porta vulputate. Etiam quis ornare dolor, ut faucibus tortor. Morbi varius nisi nibh, eu aliquet ligula pretium facilisis. Nam efficitur lectus ut arcu malesuada congue. Vestibulum a ornare magna. Nullam in aliquam leo, non pretium quam.</h4>
+                  <a class="bt-close feedback-box-close"><i class="fa fa-times"></i></a>
+                </div>
+                <div class="content">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut imperdiet dolor diam, non tempor ipsum laoreet et. Duis ac tincidunt justo.</p>
+                </div>
+              </div>
+
+              <div class="feedback-box bm-bottom">
+                <div class="header">
+                  <h4 class="title">Texto Grande</h4>
+                  <a class="bt-close feedback-box-close"><i class="fa fa-times"></i></a>
+                </div>
+                <div class="content">
+                  <p>Cras lorem turpis, condimentum quis magna a, dignissim ornare nunc. In sed molestie ipsum. Proin venenatis dui in augue dapibus, quis fringilla elit ultrices. Quisque porttitor fringilla eros, sed mattis nibh interdum ac. Donec eget
+                    ullamcorper sapien. Etiam ut nulla vitae massa luctus venenatis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Phasellus vel purus porttitor nisl laoreet egestas sit amet at neque. Nullam
+                    eleifend tristique justo, eu ultrices ligula feugiat id. Maecenas venenatis non diam vitae imperdiet. Donec fringilla leo leo. Nunc sed sem sollicitudin, scelerisque felis eu, vulputate quam. Donec et sodales ligula, eget mollis ante.</p>
+                </div>
+              </div>
+
+              <div class="feedback-box bm-bottom">
+                <div class="header">
+                  <h4 class="title">Box sem texto</h4>
+                  <a class="bt-close feedback-box-close"><i class="fa fa-times"></i></a>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
 
   <script src="/scripts/app.js"></script>
 </body>

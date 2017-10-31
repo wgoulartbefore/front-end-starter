@@ -55,40 +55,27 @@
 </head>
 <body class="">
 
-  <div class="top-section">
-    <header class="header">
-      <!-- <div class="container"> -->
-        <h1 class="header-logo">
-          <a href="#" class="logo">
-            Mercurio
-          </a>
+  <div id="top-section">
+    <header id="main-header">
+        <h1 id="main-logo">
+          <span>Mercurio</span>
+          <a><img src="/images/main-logo.svg" alt=""/></a>
         </h1>
-        <!-- ./logo -->
 
-        <div class="header-opts">
-          <div class="header-search">
-            <form class="search" role="search">
+        <div class="main-header-opts">
+          <div class="main-header-second-line">
+            <form class="main-header-search" role="search">
               <div class="input-container">
-                <input type="search" class="input-search" name="q" placeholder="Digite aqui o que procura...">
+                <input type="text" class="input-search" placeholder="O que você procura?">
               </div>
               <button class="search-submit" type="submit"><i class="fa fa-search"></i><span>Buscar</span></button>
               <a id="bt-mobile-search-back" class="search-back"><i class="fa fa-arrow-left"></i></a>
             </form>
           </div>
-
-          <nav class="header-opts__list">
-            <!-- <a href="" class="list-opts__link"><i class="fa fa-info-circle"></i> Informações</a>
-            <a href="" class="list-opts__link"><i class="fa fa-bell"></i> Notificações</a>
-            <a href="" class="list-opts__link"><i class="fa fa-user-circle-o"></i> Profile</a> -->
-            <a href="" class="list-opts__link"><i class="fa fa-info-circle"></i></a>
-            <a href="" class="list-opts__link"><i class="fa fa-bell"></i></a>
-            <a href="" class="list-opts__link"><i class="fa fa-user-circle-o"></i></a>
-          </nav>
         </div>
-        <!-- ./list-opts -->
-
-      <!-- </div>; -->
+        <!-- ./header-opts  !-->
     </header>
+    <!-- ./header-mobile-opts  !-->
 
     <div class="header-mobile-opts">
       <a id="bt-mobile-menu" class="opt-mobile-menu">
@@ -99,134 +86,138 @@
       </a>
       <h2 class="page-title">Home</h2>
     </div>
-    <!-- ./header -->
+    <!-- ./header-mobile-opts  !-->
 
     <nav id="main-menu">
-      <div class="container">
-        <ul class="menu-list">
-          <li class="menu-list__item">
-            <a href="" class="menu-list__link">
-              <i class="fa fa-tag"></i>
-              Acesso rápido
-            </a>
+      <ul class="menu-list">
+        <li class="menu-list__item submenu">
+          <a class="menu-list__link">
+            <i class="fa fa-tag"></i>
+            Acesso rápido
+          </a>
 
-            <ul class="submenu-list">
-              <li><a href="">Cliente</a></li>
-              <li><a href="">Compras</a></li>
-              <li><a href="">Fornecedor</a></li>
-              <li><a href="">Usuários</a></li>
-              <li><a href="">Valor Aparelho Vivo</a></li>
-              <li><a href="">Venda</a></li>
-            </ul>
+          <ul class="submenu-list">
+            <li><a>Cliente</a></li>
+            <li><a>Compras</a></li>
+            <li><a>Fornecedor</a></li>
+            <li><a>Usuários</a></li>
+            <li><a>Valor Aparelho Vivo</a></li>
+            <li><a>Venda</a></li>
+          </ul>
 
-          </li>
-          <li class="menu-list__item">
-            <a href="" class="menu-list__link">
-              <i class="fa fa-home"></i>
-              Início
-            </a>
-          </li>
-          <li class="menu-list__item">
-            <a href="" class="menu-list__link">
-              <i class="fa fa-question-circle fa-fw"></i>
-              Ajuda
-            </a>
-            <ul class="submenu-list">
-            <li><a href="">Atendimento</a></li>
-              <li><a href="">Manual</a></li>
-            </ul>
-          </li>
-          <li class="menu-list__item">
-            <a href="" class="menu-list__link">
-              <i class="fa fa-shopping-cart fa-fw"></i>
-              Venda
-            </a>
+        </li>
+        <li class="menu-list__item">
+          <a class="menu-list__link">
+            <i class="fa fa-home"></i>
+            Início
+          </a>
+        </li>
+        <li class="menu-list__item submenu ">
+          <a class="menu-list__link">
+            <i class="fa fa-question-circle"></i>
+            Ajuda
+          </a>
+          <ul class="submenu-list">
+            <li><a>Atendimento</a></li>
+              <li><a>Manual</a></li>
+          </ul>
+        </li>
+        <li class="menu-list__item submenu ">
+          <a class="menu-list__link">
+            <i class="fa fa-shopping-cart"></i>
+            Venda
+          </a>
 
-            <ul class="submenu-list">
-              <li><a href="">Venda</a></li>
-              <li><a href="">Gestão documental</a></li>
-              <li><a href="">Campanhas</a></li>
-            </ul>
-          </li>
-          <li class="menu-list__item">
-            <a href="" class="menu-list__link">
-              <i class="fa fa-archive fa-fw"></i>
-              Gestão de Estoque
-            </a>
+          <ul class="submenu-list">
+            <li><a>Venda</a></li>
+            <li><a>Gestão documental</a></li>
+            <li><a>Campanhas</a></li>
+          </ul>
+        </li>
+        <li class="menu-list__item submenu ">
+          <a class="menu-list__link">
+            <i class="fa fa-archive"></i>
+            Gestão de Estoque
+          </a>
 
-            <ul class="submenu-list">
-              <li><a href="">Acessório</a></li>
-              <li><a href="">Estoque</a></li>
-              <li><a href="">Produtos Open</a></li>
-              <li><a href="">Uso e Consumo</a></li>
-              <li><a href="">Valores</a></li>
-            </ul>
-          </li>
-          <li class="menu-list__item">
-            <a href="" class="menu-list__link">
-              <i class="fa fa-usd fa-fw"></i>
-              Financeiro
-            </a>
+          <ul class="submenu-list">
+            <li><a>Acessório</a></li>
+            <li><a>Estoque</a></li>
+            <li><a>Produtos Open</a></li>
+            <li><a>Uso e Consumo</a></li>
+            <li><a>Valores</a></li>
+          </ul>
+        </li>
+        <li class="menu-list__item submenu ">
+          <a class="menu-list__link">
+            <i class="fa fa-usd"></i>
+            Financeiro
+          </a>
 
-            <ul class="submenu-list">
-              <li><a href="">Baixa de títulos</a></li>
-              <li><a href="">Caixa</li>
-              <li><a href="">Contas a Pagar</a></li>
-              <li><a href="">Contas a Receber</a></li>
-              <li><a href="">Contas Bancárias</a></li>
-            </ul>
-          </li>
-          <li class="menu-list__item">
-            <a href="" class="menu-list__link">
-              <i class="fa fa-bar-chart fa-fw"></i>
-              Relatórios
-            </a>
+          <ul class="submenu-list">
+            <li><a>Baixa de títulos</a></li>
+            <li><a>Caixa</a></li>
+            <li><a>Contas a Pagar</a></li>
+            <li><a>Contas a Receber</a></li>
+            <li><a>Contas Bancárias</a></li>
+          </ul>
+        </li>
+        <li class="menu-list__item submenu ">
+          <a class="menu-list__link">
+            <i class="fa fa-bar-chart"></i>
+            Relatórios
+          </a>
 
-            <ul class="submenu-list">
-              <li><a href="">Comissões</a></li>
-              <li><a href="">Estoque</a></li>
-              <li><a href="">Financeiro</a></li>
-              <li><a href="">Gerencial</a></li>
-              <li><a href="">Movimento</a></li>
-              <li><a href="">Pessoas</a></li>
-              <li><a href="">Remuneração</a></li>
-              <li><a href="">Vendas</a></li>
-              <li><a href="">Vivo GO</a></li>
-            </ul>
-          </li>
-          <li class="menu-list__item">
-            <a href="" class="menu-list__link">
-              <i class="fa fa-cog fa-fw"></i>
-              Configurações
-            </a>
-            <ul class="submenu-list">
-              <li><a href="">Alíquotas</a></li>
-              <li><a href="">Comunicação</a></li>
-              <li><a href="">Metas e Comissões</a></li>
-              <li><a href="">Rede</a></li>
-              <li><a href="">Usuários</a></li>
-            </ul>
-          </li>
-          <!-- <li class="menu-list__item">
-            <a href="" class="menu-list__link">
-              <i class="fa fa-power-off"></i>
-              Sair
-            </a>
-          </li> -->
-        </ul>
-      </div>
+          <ul class="submenu-list">
+            <li><a>Comissões</a></li>
+            <li><a>Estoque</a></li>
+            <li><a>Financeiro</a></li>
+            <li><a>Gerencial</a></li>
+            <li><a>Movimento</a></li>
+            <li><a>Pessoas</a></li>
+            <li><a>Remuneração</a></li>
+            <li><a>Vendas</a></li>
+            <li><a>Vivo GO</a></li>
+          </ul>
+        </li>
+        <li class="menu-list__item submenu ">
+          <a class="menu-list__link">
+            <i class="fa fa-cog"></i>
+            Configurações
+          </a>
+          <ul class="submenu-list">
+            <li><a>Alíquotas</a></li>
+            <li><a>Comunicação</a></li>
+            <li><a>Metas e Comissões</a></li>
+            <li><a>Rede</a></li>
+            <li><a>Usuários</a></li>
+          </ul>
+        </li>
+      </ul>
     </nav>
-    <!-- ./main-menu -->
   </div>
-  <div class="global-holder">
+  <!-- ./main-menu  !-->
 
-    <section class="section container">
-      <div class="main-content">
+  <div class="global-holder">
+    <section class="main-content">
+      <div class="container">
+        <nav class="breadcrumb">
+          <ul class="breadcrumb__list">
+            <li class="breadcrumb__item"><a href="" class="breadcrumb__link">Início</a></li>
+            <li class="breadcrumb__item"><a href="" class="breadcrumb__link">Venda</a></li>
+            <li class="breadcrumb__item"><a href="" class="breadcrumb__link">Cliente</a></li>
+          </ul>
+        </nav>
+        <!-- ./breadcrumb -->
+
         <h2 class="title-main">Cadastro de Usuário</h2>
 
-        <div class="gen-box">
-          <h3 class="title-medium">Dados Pessoais</h3>
-          <form class="std-form">
+        <div class="widget-full">
+          <h4 class="widget-title">Dados Pessoais</h4>
+          <div class="widget-content">
+            <div class="widget-full">
+              <h4 class="widget-title">Dados Pessoais</h4>
+            <form class="std-form">
             <div class="form-line">
               <div class="half-input">
                 <label for="">Nome Completo: <a href="">*</a></label>
@@ -276,7 +267,9 @@
                 </div>
               </div>
             </div>
-
+          </form>
+</div>
+</div>
             <fieldset>
               <h4 class="title-small">Dados para Contato</h4>
               <div class="form-line">
