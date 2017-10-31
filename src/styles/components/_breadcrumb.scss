@@ -1,12 +1,43 @@
 .breadcrumb {
   display: block;
+  @extend %clearlist;
   @extend %clearfix;
+  margin-bottom: $size-components-margin;
 
-  &__link {
-    color: $color-base-neutral;
+  &__item {
+    display: block;
+    position: relative;
+    padding-right: $size-components-padding;
+    color: $color-grey-600;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &::before {
+      content: "/";
+      position: absolute;
+      top: 0;
+      right: $size-components-padding / 3;
+      font-size: 16px;
+      color: $color-grey-700;
+    }
 
     &:last-child {
       color: $color-base-main;
+
+      &:hover {
+        text-decoration: none;
+
+      }
+
+      &::before {
+        display: none;
+      }
     }
+  }
+
+  &__link {
+    color: inherit;
   }
 }

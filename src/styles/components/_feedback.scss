@@ -1,27 +1,98 @@
-.feedback-box {
+%base-feedback-box {
   display: block;
-  padding: $size-components-padding;
-  margin-bottom: $size-components-margin;
-  @include adjust-font-size-to(16px);
-  background: $color-grey-200;
-  color: $color-grey-800;
+  padding: ($size-components-padding / 2);
+  border: 1px solid;
 
-  &.alert {
-    background: $color-base-warning;
+  .content,
+  .header {
+    display: block;
+    padding: ($size-components-padding / 2);
   }
 
-  &.info {
-    background: $color-base-main;
-    color: $color-grey-0;
+  .header {
+    position: relative;
+    padding-right: ($size-components-height + ($size-components-padding / 2));
   }
 
-  &.success {
-    background: $color-base-success;
-    color: $color-grey-0;
+  .title {
+    display: block;
+    font-size: 14px;
+    line-height: ($size-components-height - $size-components-padding);
+    font-weight: bold;
   }
 
-  &.error {
-    background: $color-base-error;
-    color: $color-grey-0;
+  .bt-close {
+    display: block;
+    position: absolute;
+    width: $size-components-height;
+    height: $size-components-height;
+    font-size: 16px;
+    line-height: $size-components-height;
+    top: 0;
+    right: 0;
+    text-align: center;
+    color: inherit;
+  }
+
+  .content {
+    p {
+      display: block;
+      font-size: 12px;
+      line-height: 18px;
+    }
+  }
+  @include susy-breakpoint($screen-medium, 12) {
+    .title {
+      font-size: 16px;
+    }
+
+    .content {
+      p {
+        font-size: 14px;
+        line-height: 20px;
+      }
+    }
+  }
+  @include susy-breakpoint($screen-big, 16) {
+    .title {
+      line-height: 22px;
+    }
+
+    .bt-close {
+      width: 32px;
+      height: 32px;
+      line-height: 32px;
+    }
   }
 }
+
+@mixin feedbackBox($box-name, $base-color) {
+  .#{$box-name} {
+    @extend %base-feedback-box;
+    border-color: $base-color;
+    background: tint($base-color, 80%);
+    color: shade($base-color, 50%);
+  }
+
+  .#{$box-name} {
+    @include span(6);
+
+    @include susy-breakpoint($screen-small, 8) {
+      @include span(8);
+    }
+
+    @include susy-breakpoint($screen-medium, 12) {
+      @include span(12);
+    }
+
+    @include susy-breakpoint($screen-big, 16) {
+      @include span(16);
+    }
+  }
+}
+
+@include feedbackBox('feedback-box', $color-base-main);
+@include feedbackBox('feedback-box-neutral', $color-grey-800);
+@include feedbackBox('feedback-box-success', $color-base-success);
+@include feedbackBox('feedback-box-error', $color-base-error);
+@include feedbackBox('feedback-box-warning', $color-base-warning);
