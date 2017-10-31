@@ -10,6 +10,10 @@ const notify = require('gulp-notify');
 
 gulp.task('browsersync-run', () => {
   browsersync.init(config.browsersync.options);
+
+  gulp.watch(`${config.js.src}`, ['js']);
+  gulp.watch(`${config.sass.src}`, ['sass']);
+  gulp.watch(`${config.html.src}`, ['html']);
 });
 
 gulp.task('js', () => {
@@ -65,7 +69,7 @@ gulp.task('sass-watch', ['sass'], () => {
 
 gulp.task('vendors', () => {
   return gulp.src(config.vendors.src)
-  .pipe(gulp.dest(config.vendors.dist))
+    .pipe(gulp.dest(config.vendors.dist))
 });
 
 gulp.task('development', [
@@ -75,4 +79,12 @@ gulp.task('development', [
   'browsersync-run',
 ]);
 
+gulp.task('dev', [
+  'html',
+  'js',
+  'sass',
+  'browsersync-run',
+]);
+
+gulp.task('dev', ['browsersync-run']);
 gulp.task('default', ['development']);
