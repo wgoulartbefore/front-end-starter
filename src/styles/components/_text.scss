@@ -57,6 +57,20 @@
   }
 }
 
+
+.title-medium--underline {
+  display: block;
+  @include adjust-font-size-to(18px);
+  color: $color-base-darken;
+  margin-bottom: $size-components-padding;
+  border-bottom: 1px solid $color-base-darken;
+  padding-bottom: $size-components-padding;
+
+  @include susy-breakpoint($screen-big, 16) {
+    @include adjust-font-size-to(20px);
+  }
+}
+
 /* Texts */
 .gen-text {
   display: block;

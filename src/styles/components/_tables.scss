@@ -1,54 +1,82 @@
 table {
-	max-width: 100%;
-	background-color: transparent;
-	border-collapse: collapse;
-	border-spacing: 0;
+  max-width: 100%;
+  background-color: transparent;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: 1px solid $color-grey-300;
 }
 
 .std-table {
+  width: 100%;
+  background: $color-grey-0;
+  border: 1px solid $color-grey-300;
 
-    width: 100%;
+  td,
+  th {
+    @include adjust-font-size-to(14px);
+    color: $color-grey-800;
+    padding: ($size-components-padding / 2);
+  }
 
-    tr:nth-child(even) {
-        background: $color-grey-100;
-    }
+  th {
+    text-align: left;
+    font-weight: 500;
+    color: $color-grey-1000;
+    background: $color-grey-100;
+    border-bottom: 1px solid $color-grey-300;
+  }
 
-    td, th {
-        @include adjust-font-size-to(14px);
-        color: $color-grey-800;
-        padding: ($size-components-padding / 2);
-    }
-
+  @include susy-breakpoint($screen-big, 16) {
+    td,
     th {
-        color: $color-grey-1000;
-        background: $color-grey-200;
-        font-weight: bold;
+      @include adjust-font-size-to(16px);
+      padding: $size-components-padding;
     }
+  }
 
+}
 
-    @include susy-breakpoint($screen-big, 16){
-        td, th {
-            @include adjust-font-size-to(16px);
-            padding: $size-components-padding;
-        }
+.table-striped {
+  @extend .std-table;
+
+  tr:nth-child(even) {
+    background: $color-grey-100;
+  }
+
+  th,
+  td {
+    border-bottom: 1px solid $color-grey-300;
+    border-right: 1px solid $color-grey-300;
+    text-align: center;
+
+    &:last-child {
+      border-right: 0;
     }
+  }
 
+  th {
+    font-weight: 700;
+    background: $color-grey-200;
+
+    &:last-child {
+      border-right: 0;
+    }
+  }
 }
 
 .table-wrapper {
-    display: block;
-    overflow: hidden;
-    overflow-x: auto;
-    width: 100%;
-    max-width: 100%;
+  display: block;
+  overflow: hidden;
+  overflow-x: auto;
+  width: 100%;
+  max-width: 100%;
 }
 
 .table-ticket-view {
-    
-    min-width: $screen-medium;
-    
-    td, th {
-        text-align: center;
-    }
-    
+  min-width: $screen-medium;
+
+  td,
+  th {
+    text-align: center;
+  }
 }

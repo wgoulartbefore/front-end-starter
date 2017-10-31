@@ -19,6 +19,8 @@
 // }
 
 body {
+  background: $color-base-background;
+
   .global-barrier {
     transition: opacity $time-std-transition;
     content: "";

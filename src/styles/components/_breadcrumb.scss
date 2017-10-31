@@ -2,7 +2,7 @@
   display: block;
   @extend %clearlist;
   @extend %clearfix;
-  margin-bottom: $size-components-margin;
+  margin-bottom: $size-components-padding;
 
   &__item {
     display: block;
@@ -39,5 +39,9 @@
 
   &__link {
     color: inherit;
+  }
+
+  @include susy-breakpoint($screen-big, 16) {
+    margin-bottom: $size-components-padding;
   }
 }
