@@ -22,6 +22,16 @@ module.exports = {
     dist: base.dist,
     del: [base.dist + '/**/*.css'],
   },
+  images: {
+    src: base.src + '/images/**/*.*',
+    dist: base.dist + '/',
+    del: [base.dist + '/images/**/*.*'],
+  },
+  vendors: {
+    src: base.src + '/**/*.*',
+    dist: base.dist + '/',
+    del: [base.dist + '/**/*.*'],
+  },
   browsersync: {
     options: {
       server: {

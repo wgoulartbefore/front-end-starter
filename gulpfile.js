@@ -67,6 +67,11 @@ gulp.task('sass-watch', ['sass'], () => {
   });
 });
 
+gulp.task('images', () => {
+  return gulp.src(config.images.src)
+    .pipe(gulp.dest(config.images.dist))
+});
+
 gulp.task('vendors', () => {
   return gulp.src(config.vendors.src)
     .pipe(gulp.dest(config.vendors.dist))
@@ -83,6 +88,8 @@ gulp.task('dev', [
   'html',
   'js',
   'sass',
+  'vendors',
+  'images',
   'browsersync-run',
 ]);
 
