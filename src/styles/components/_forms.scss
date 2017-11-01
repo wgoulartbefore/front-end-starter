@@ -102,7 +102,7 @@
 
   &.input--search {
     float: left;
-    width: 80%;
+    width: 79%;
 
     & + [class^="bt-"] {
       margin: 0;
@@ -220,6 +220,15 @@
   option {
     font-size: 14px;
     color: $color-grey-900;
+  }
+
+  &--medium {
+    float: left;
+    width: 49%;
+
+    &:last-child {
+      float: right;
+    }
   }
 
   &--full {
