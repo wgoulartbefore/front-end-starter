@@ -33,6 +33,7 @@
   display: block;
   width: 100%;
   padding: $size-components-padding 0;
+  margin: $size-components-padding 0;
   @extend %clearfix;
   clear: both;
 }
@@ -89,4 +90,11 @@
 .bt-error-alter {
   @extend %std-button;
   @include createButtonAlter($color-base-error);
+}
+
+.bt--small {
+  padding-right: 10px;
+  padding-left: 10px;
+  line-height: 32px;
+  height: 30px;
 }

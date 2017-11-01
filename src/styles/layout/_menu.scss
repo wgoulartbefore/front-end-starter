@@ -347,7 +347,7 @@
     color: $color-base-main;
 
     &:hover {
-      background: shade($color-main-menu-bg, 5%);
+      background: tint($color-main-menu-bg, 5%);
     }
   }
 
@@ -388,9 +388,11 @@
 
         a {
           &:hover {
-            background: shade($color-main-menu-bg, 10%);
+            // background: tint($color-main-menu-bg, 10%);
+            background: $color-grey-50;
           }
         }
+
       }
     }
   }
@@ -442,7 +444,8 @@
       }
 
       &:hover {
-        background: shade($color-main-menu-bg, 5%);
+        // background: shade($color-main-menu-bg, 5%);
+        background: $color-grey-50;
       }
     }
   }

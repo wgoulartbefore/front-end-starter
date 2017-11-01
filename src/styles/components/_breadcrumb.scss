@@ -3,6 +3,7 @@
   @extend %clearlist;
   @extend %clearfix;
   // margin-bottom: $size-components-padding;
+  text-align: center;
 
   &__item {
     display: block;
@@ -43,5 +44,6 @@
 
   @include susy-breakpoint($screen-big, 16) {
     // margin-bottom: $size-components-padding;
+    text-align: left;
   }
 }

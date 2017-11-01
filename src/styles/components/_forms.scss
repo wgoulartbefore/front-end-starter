@@ -11,49 +11,74 @@
   }
 
   .half-input {
-    @include susy-breakpoint($screen-medium, 12) {
-      margin-bottom: $size-components-padding;
+    display: block;
+    margin-top: $size-components-padding;
 
+    &:first-child {
+      margin-top: 0;
+    }
+
+    @include susy-breakpoint($screen-small, 8) {
+      flex: 0 1 50%;
+      margin: 0;
+
+      .half-input {
+        margin-top: $size-components-padding;
+
+        &:first-child {
+          margin: 0;
+        }
+      }
+
+      // &:first-child {
+      //   margin-top: 0;
+      //   margin-right: $size-components-padding;
+      //
+      //   .half-input {
+      //     margin: 0;
+      //   }
+      // }
+      //
+      // .half-input {
+      //   margin: 0;
+      // }
+
+    }
+
+    @include susy-breakpoint($screen-medium, 12) {
       &:first-child {
-        // margin-right: 2%;
+        margin-right: $size-components-padding;
       }
     }
 
     @include susy-breakpoint($screen-big, 16) {
-      display: inline-block;
-      width: calc(49% - 2px);
-      margin-bottom: 0;
-      line-height: 0;
-      vertical-align: top;
 
-      &:first-child {
-        margin-right: 2%;
-      }
     }
   }
 
   fieldset {
     display: block;
     border: 1px solid $color-grey-200;
-    // border-radius: 3px;
-    padding: $size-components-padding;
-    margin-top: $size-components-padding;
-
-    &:first-child {
-      margin-top: 0;
-    }
+    padding: $size-components-padding $size-components-padding 0 $size-components-padding;
+    margin-bottom: $size-components-padding;
   }
 }
 
 .form-line {
+  display: block;
   margin-bottom: $size-components-padding;
+  @extend %clearfix;
 
   &:first-last {
     margin-top: 0;
   }
 
+  @include susy-breakpoint($screen-small, 8) {
+    display: flex;
+  }
+
   @include susy-breakpoint($screen-big, 16) {
-    margin-bottom: $size-components-margin;
+    margin-bottom: $size-components-padding;
   }
 }
 
