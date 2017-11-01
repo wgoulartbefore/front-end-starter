@@ -100,6 +100,17 @@
   padding: (($size-components-height - 24px) / 2) $size-components-padding;
   border-radius: 2px;
 
+  &.input--search {
+    float: left;
+    width: 80%;
+
+    & + [class^="bt-"] {
+      margin: 0;
+      width: 20%;
+      float: right;
+    }
+  }
+
   &--focus,
   &:focus {
     border-color: $color-pl-4;
