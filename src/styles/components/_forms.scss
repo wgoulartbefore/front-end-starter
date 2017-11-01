@@ -7,10 +7,18 @@
     line-height: 1.5;
     color: $color-grey-800;
     text-transform: uppercase;
-    margin-bottom: rhythm(0.25);
+    margin-bottom: $size-components-padding / 2;
   }
 
   .half-input {
+    @include susy-breakpoint($screen-medium, 12) {
+      margin-bottom: $size-components-padding;
+
+      &:first-child {
+        // margin-right: 2%;
+      }
+    }
+
     @include susy-breakpoint($screen-big, 16) {
       display: inline-block;
       width: calc(49% - 2px);
@@ -23,13 +31,29 @@
       }
     }
   }
+
+  fieldset {
+    display: block;
+    border: 1px solid $color-grey-200;
+    // border-radius: 3px;
+    padding: $size-components-padding;
+    margin-top: $size-components-padding;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
 }
 
 .form-line {
-  margin-bottom: $size-components-margin;
+  margin-bottom: $size-components-padding;
 
   &:first-last {
     margin-top: 0;
+  }
+
+  @include susy-breakpoint($screen-big, 16) {
+    margin-bottom: $size-components-margin;
   }
 }
 
@@ -40,6 +64,7 @@
 }
 
 .input-multiline,
+
 .input-singleline {
   display: block;
   width: 100%;
@@ -174,6 +199,7 @@
 }
 
 .form-checkbox,
+
 .form-radio {
   display: inline-block;
   position: relative;

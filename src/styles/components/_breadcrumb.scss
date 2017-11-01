@@ -2,7 +2,7 @@
   display: block;
   @extend %clearlist;
   @extend %clearfix;
-  margin-bottom: $size-components-padding;
+  // margin-bottom: $size-components-padding;
 
   &__item {
     display: block;
@@ -42,6 +42,6 @@
   }
 
   @include susy-breakpoint($screen-big, 16) {
-    margin-bottom: $size-components-padding;
+    // margin-bottom: $size-components-padding;
   }
 }

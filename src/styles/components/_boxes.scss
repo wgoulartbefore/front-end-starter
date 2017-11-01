@@ -37,8 +37,14 @@
   -o-transition: all .3s;
   transition: all .3s;
 
+  &.full--card {
+    width: 100%;
+    margin-right: 0;
+    margin-left: 0;
+  }
+
   @include susy-breakpoint($screen-big, 16) {
-    @include span(4 of 16 no-gutters);
+    @include span(4 of 16);
   }
 }
 
