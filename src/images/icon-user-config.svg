@@ -1,0 +1,16 @@
+<svg width="20" height="26" viewBox="0 0 20 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>user-black-close-up-shape</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(-4391 1139)">
+<g id="user-black-close-up-shape">
+<g id="Group">
+<g id="Vector">
+<use xlink:href="#path0_fill" transform="translate(4391 -1139)" fill="#0D4F97"/>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<path id="path0_fill" d="M 13.1648 10.7013C 14.7887 9.66722 15.867 7.86615 15.867 5.81224C 15.867 2.60247 13.24 0 10.0009 0C 6.76026 0 4.13394 2.60247 4.13394 5.81229C 4.13394 7.8662 5.21215 9.66761 6.83615 10.7013C 3.01001 11.0405 1.0309e-07 14.2337 1.0309e-07 18.1114L 1.0309e-07 24.1439L 0.0154264 24.2382L 0.435261 24.368C 4.38735 25.5912 7.82164 26 10.6483 26C 16.1685 26 19.3685 24.4399 19.5668 24.341L 19.9588 24.1439L 20 24.1439L 20 18.1114C 20.0005 14.234 16.9915 11.0413 13.1648 10.7013Z"/>
+</defs>
+</svg>
