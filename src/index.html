@@ -23,39 +23,65 @@
 
 <body>
   <div id="top-section">
-    <header id="main-header">
+
+    <!-- Main Header !-->
+    <header id="main-header" class="main-header main-header--white">
       <h1 id="main-logo">
-					<span>Mercurio</span>
-					<a><img src="/images/main-logo.svg" alt=""/></a>
-				</h1>
+        <span>Mercurio</span>
+        <a><img src="/images/main-logo.svg" alt="Logo Marca"/></a>
+      </h1>
 
       <div class="main-header-opts">
-        <div class="main-header-second-line">
-          <form class="main-header-search" role="search">
-            <div class="input-container">
-              <input type="text" class="input-search" placeholder="O que você procura?">
-            </div>
-            <button class="search-submit" type="submit"><i class="fa fa-search"></i><span>Buscar</span></button>
-            <a id="bt-mobile-search-back" class="search-back"><i class="fa fa-arrow-left"></i></a>
-          </form>
-        </div>
+        <form class="main-header-search main-header-search--grey" role="search">
+          <div class="input-container">
+            <input type="text" class="input-search" placeholder="O que você procura?">
+          </div>
+          <button class="search-submit" type="submit"><i class="fa fa-search"></i><span>Buscar</span></button>
+          <a id="bt-mobile-search-back" class="search-back"><i class="fa fa-arrow-left"></i></a>
+        </form>
+
+        <nav class="main-header-user-options">
+          <ul class="list-user-options">
+            <li>
+              <a href="">
+                Atendimento Online
+                <i class="icon-options icon-options__chat"></i>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <i class="icon-options icon-options__information"></i>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <i class="icon-options icon-options__notification"></i>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <i class="icon-options icon-options__user-config"></i>
+                Rafael Sandim
+              </a>
+            </li>
+          </ul>
+        </nav>
       </div>
-      <!-- ./header-opts  !-->
     </header>
-    <!-- ./header-mobile-opts  !-->
 
     <div class="header-mobile-opts">
       <a id="bt-mobile-menu" class="opt-mobile-menu">
-				<i class="fa fa fa-bars"></i>
-			</a>
+        <i class="fa fa fa-bars"></i>
+      </a>
       <a id="bt-mobile-search" class="opt-search">
-				<i class="fa fa-search"></i>
-			</a>
-      <h2 class="page-title">Home</h2>
+        <i class="fa fa-search"></i>
+      </a>
+      <h2 class="page-title">Vendas</h2>
     </div>
-    <!-- ./header-mobile-opts  !-->
+    <!-- End Main Header  !-->
 
-    <nav id="main-menu">
+    <!-- Main Menu !-->
+    <nav id="main-menu" class="main-menu--alter">
       <ul class="menu-list">
         <li class="menu-list__item submenu">
           <a class="menu-list__link">
@@ -162,8 +188,8 @@
         </li>
       </ul>
     </nav>
+    <!-- End Main Menu  !-->
   </div>
-  <!-- ./main-menu  !-->
 
   <section class="main-content">
     <div class="container">

@@ -229,6 +229,46 @@
     overflow: hidden;
   }
 
+  &.main-menu--alter {
+    // height: 60px;
+    background: $color-base-darken;
+    border: 0;
+
+    .menu-list {
+      &__item {
+        &:hover {
+          background: $color-base-darken;
+        }
+      }
+
+      &__link {
+        color: $color-grey-0;
+
+        &:hover {
+          color: $color-grey-0;
+          background: shade($color-base-darken, 5%);
+        }
+      }
+    }
+
+    .submenu-list {
+      background: $color-base-darken;
+
+      li {
+        border-top: 1px solid rgba(255,255,255,0.2);
+        border-bottom: 1px solid shade($color-base-darken, 15%);
+      }
+
+      a {
+        color: $color-grey-0;
+
+        &:hover {
+          background: shade($color-base-darken, 5%);
+        }
+      }
+    }
+  }
+
   @include susy-breakpoint($screen-big, 16) {
     transform: translateX(0);
     position: relative;

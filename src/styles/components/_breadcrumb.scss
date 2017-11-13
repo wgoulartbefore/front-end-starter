@@ -2,13 +2,12 @@
   display: block;
   @extend %clearlist;
   @extend %clearfix;
-  // margin-bottom: $size-components-padding;
   text-align: center;
 
   &__item {
     display: block;
     position: relative;
-    padding-right: $size-components-padding;
+    padding-right: ($size-components-padding * 2);
     color: $color-grey-600;
 
     &:hover {
@@ -16,12 +15,14 @@
     }
 
     &::before {
-      content: "/";
+      font: normal normal normal 14px/1 FontAwesome;
+      content: "\f054";
       position: absolute;
       top: 0;
-      right: $size-components-padding / 3;
-      font-size: 16px;
-      color: $color-grey-700;
+      right: $size-std-padding;
+      font-size: 12px;
+      line-height: 22px;
+      color: $color-grey-800;
     }
 
     &:last-child {
@@ -29,13 +30,13 @@
 
       &:hover {
         text-decoration: none;
-
       }
 
       &::before {
         display: none;
       }
     }
+
   }
 
   &__link {
@@ -43,7 +44,6 @@
   }
 
   @include susy-breakpoint($screen-big, 16) {
-    // margin-bottom: $size-components-padding;
     text-align: left;
   }
 }

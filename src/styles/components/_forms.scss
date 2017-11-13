@@ -102,7 +102,7 @@
 
   &.input--search {
     float: left;
-    width: 79%;
+    width: 78%;
 
     & + [class^="bt-"] {
       margin: 0;
@@ -304,4 +304,31 @@ input[type="radio"]:checked + span::before {
   border-radius: 50%;
   left: 19px;
   top: 19px;
+}
+
+
+/* Search bar */
+.search-bar {
+  display: flex;
+  flex-wrap: wrap;
+  background: $color-grey-0;
+  margin-bottom: $size-components-padding;
+  padding: $size-components-padding;
+
+  &__item {
+    flex: 1 0 auto;
+    padding-bottom:  $size-components-padding;
+
+    &--medium {
+      flex: 1 0 50%;
+
+      &:first-child {
+        flex-basis: calc(50% - 15px);
+        margin-right: $size-components-padding;
+      }
+    }
+  }
+
+  @include susy-breakpoint($screen-big, 16) {
+  }
 }

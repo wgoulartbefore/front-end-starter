@@ -16,8 +16,15 @@ gulp.task('browsersync-run', () => {
   gulp.watch(`${config.html.src}`, ['html']);
 });
 
+gulp.task('server', () => {
+  browsersync.init(config.browsersync.options);
+
+  gulp.watch(`${config.sass.src}`, ['sass']);
+  gulp.watch(`${config.html.src}`, ['html']);
+  gulp.watch(`${config.js.src}`, ['js']);
+});
+
 gulp.task('js', () => {
-  del(config.js.del);
   return gulp.src(config.js.src)
     .pipe(sourcemaps.init())
     .pipe(babel())
@@ -36,7 +43,6 @@ gulp.task('js-watch', ['js'], () => {
 });
 
 gulp.task('html', () => {
-  // del(config.html.del);
   return gulp.src(config.html.src)
     .pipe(gulp.dest(config.html.dist))
     .pipe(browsersync.stream());
@@ -49,7 +55,6 @@ gulp.task('html-watch', ['html'], () => {
 });
 
 gulp.task('sass', () => {
-  del(config.sass.del);
   return gulp.src(config.sass.src)
     .pipe(sourcemaps.init())
     .pipe(sass({
@@ -77,6 +82,10 @@ gulp.task('vendors', () => {
     .pipe(gulp.dest(config.vendors.dist))
 });
 
+gulp.task('clean', () => {
+  return del('./dist');
+});
+
 gulp.task('development', [
   'html-watch',
   'js-watch',
@@ -84,14 +93,14 @@ gulp.task('development', [
   'browsersync-run',
 ]);
 
-gulp.task('dev', [
+gulp.task('browser', [
+  'server',
   'html',
   'js',
   'sass',
   'vendors',
   'images',
-  'browsersync-run',
 ]);
 
-gulp.task('dev', ['browsersync-run']);
+gulp.task('dev'), ['browser'];
 gulp.task('default', ['development']);

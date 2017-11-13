@@ -25,22 +25,47 @@
   <div id="top-section">
 
     <!-- Main Header !-->
-    <header id="main-header">
+    <header id="main-header" class="main-header main-header--white">
       <h1 id="main-logo">
 				<span>Mercurio</span>
 				<a><img src="/images/main-logo.svg" alt="Logo Marca"/></a>
 			</h1>
 
       <div class="main-header-opts">
-        <div class="main-header-second-line">
-          <form class="main-header-search" role="search">
-            <div class="input-container">
-              <input type="text" class="input-search" placeholder="O que você procura?">
-            </div>
-            <button class="search-submit" type="submit"><i class="fa fa-search"></i><span>Buscar</span></button>
-            <a id="bt-mobile-search-back" class="search-back"><i class="fa fa-arrow-left"></i></a>
-          </form>
-        </div>
+        <form class="main-header-search main-header-search--grey" role="search">
+          <div class="input-container">
+            <input type="text" class="input-search" placeholder="O que você procura?">
+          </div>
+          <button class="search-submit" type="submit"><i class="fa fa-search"></i><span>Buscar</span></button>
+          <a id="bt-mobile-search-back" class="search-back"><i class="fa fa-arrow-left"></i></a>
+        </form>
+
+        <nav class="main-header-user-options">
+          <ul class="list-user-options">
+            <li>
+              <a href="">
+                Atendimento Online
+                <i class="icon-options icon-options__chat"></i>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <i class="icon-options icon-options__information"></i>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <i class="icon-options icon-options__notification"></i>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <i class="icon-options icon-options__user-config"></i>
+                Rafael Sandim
+              </a>
+            </li>
+          </ul>
+        </nav>
       </div>
     </header>
 
@@ -56,7 +81,7 @@
     <!-- End Main Header  !-->
 
     <!-- Main Menu !-->
-    <nav id="main-menu">
+    <nav id="main-menu" class="main-menu--alter">
       <ul class="menu-list">
         <li class="menu-list__item submenu">
           <a class="menu-list__link">
@@ -170,7 +195,6 @@
   <div id="global-holder">
     <section id="main-content" class="main-content">
       <div class="container">
-
         <nav class="breadcrumb">
           <ul class="breadcrumb__list">
             <li class="breadcrumb__item"><a href="" class="breadcrumb__link">Início</a></li>
@@ -180,46 +204,8 @@
         <h1 class="title-medium">Vendas</h1>
 
         <div class="gen-box">
-          <div class="wizard">
-            <ul class="wizard-steps  step-1">
-              <li class="first">
-                <span class="icon">1</span>
-                <span class="label">Cliente</span>
-              </li>
-              <li class="second">
-                <span class="icon">2</span>
-                <span class="label">Produtos</span>
-              </li>
-              <li class="third">
-                <span class="icon">3</span>
-                <span class="label">Pagamento</span>
-              </li>
-            </ul>
-          </div>
-          <!-- ./wizard-steps -->
-
-          <div class="std-form">
-            <div class="form-line">
-
-              <div class="form-line">
-                <div class="half-input">
-                  <label for="">Pesquise pelo CPF ou CNPJ do Cliente:</label>
-                  <input type="text" class="input-singleline" placeholder="Informe o CPF ou CNPJ">
-                </div>
-              </div>
-
-              <div class="form-line">
-                <div class="half-input">
-                  <label for="">ou cadastre o cliente agora:</label>
-                  <a href="" class="bt-alter"><i class="fa fa-plus"></i> Cadastrar Cliente</a>
-                </div>
-              </div>
-
-            </div>
-          </div>
-          <!-- ./form -->
+          <h2 class="title-medium"></h2>
         </div>
-        <!-- ./gen-box -->
 
         <div class="area-button">
           <a href="" class="bt-alter-2">Voltar</a>
@@ -227,6 +213,7 @@
         <!-- ./gen-box -->
 
       </div>
+      <!-- ./container -->
     </section>
   </div>
   <!-- End Global Content Holder!-->

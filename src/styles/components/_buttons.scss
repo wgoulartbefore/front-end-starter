@@ -62,7 +62,7 @@
 
 .bt-alter-2 {
   @extend %std-button;
-  @include createButtonAlter($color-base-main);
+  @include createButtonAlterBorder($color-grey-0, $color-base-main);
 }
 
 .bt-alter-3 {

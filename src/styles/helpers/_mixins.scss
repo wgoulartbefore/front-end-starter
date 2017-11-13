@@ -36,6 +36,16 @@
   }
 }
 
+@mixin createButtonAlterBorder($bg-color, $border-color) {
+  background: rgba($bg-color, 0.08);
+  border: 1px solid $border-color;
+  color: $border-color;
+
+  &:hover {
+    background: tint(rgba($bg-color, 0.1), 10%);
+  }
+}
+
 @mixin placeholderColor($color, $percentage) {
   &::placeholder {
     color: shade($color, $percentage);

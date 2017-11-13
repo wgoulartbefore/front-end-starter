@@ -220,7 +220,6 @@
 
 
 /** Header Nova **/
-
 #main-logo,
 .main-header-contact,
 .main-header-opts {
@@ -228,9 +227,6 @@
 }
 
 #main-header {
-  background: tint($color-base-darken, 5%);
-  padding-top: $size-components-height + $size-components-padding;
-  padding-bottom: $size-components-padding;
   transition: transform $time-std-transition;
   @extend %clearfix;
 
@@ -243,10 +239,30 @@
   @include susy-breakpoint($screen-big, 16) {
     display: flex;
     width: 100%;
-    padding: $size-components-padding (2 * $size-components-padding);
+
   }
 }
 
+.main-header {
+  background: tint($color-base-darken, 5%);
+  padding-top: $size-components-height + $size-components-padding;
+  padding-bottom: $size-components-padding;
+
+  &--white {
+    background: $color-grey-0;
+      @include susy-breakpoint($screen-big, 16) {
+      height: 60px;
+      // padding: $size-components-padding (2 * $size-components-padding);
+      padding: 0 (2 * $size-components-padding);
+    }
+  }
+
+  &-user-options {
+    display: flex;
+    padding: 0;
+    margin-left: auto;
+  }
+}
 
 #main-logo {
   display: block;
@@ -287,7 +303,6 @@
 
   }
 }
-
 .header-mobile-opts {
   display: block;
   position: fixed;
@@ -340,16 +355,20 @@
     color: $color-header-mobile-opts-text;
     @extend %ellipsis;
   }
+
   @include susy-breakpoint($screen-big, 16) {
     display: none;
   }
+
 }
 
 .main-header-opts {
   @include susy-breakpoint($screen-big, 16) {
+    display: flex;
     position: relative;
-     @include span(10 last);
-    padding-right: 80px;
+    @include span(11 last);
+    // padding-right: 80px;
+
   }
 }
 
@@ -419,8 +438,8 @@
   }
 
   @include susy-breakpoint($screen-big, 16) {
-    display: block;
-    float: left;
+    display: flex;
+    align-self:  center;
     transform: translateY(0);
     position: relative;
     top: auto;
@@ -440,6 +459,18 @@
 
     .search-back {
       display: none;
+    }
+
+
+    &--grey {
+      background: $color-grey-100;
+      border-radius: 5px;
+
+      .search-submit {
+        background: $color-grey-200;
+        border-radius: 0 5px 5px 0;
+      }
+
     }
   }
 }
@@ -487,7 +518,6 @@
     }
   }
 }
-
 .header-ded {
   display: none;
   position: fixed;
@@ -510,7 +540,6 @@
     border-width: 10px;
   }
 }
-
 .header-ded-close {
   display: block;
   position: absolute;
@@ -523,12 +552,10 @@
   text-align: center;
   color: $color-grey-0;
 }
-
 .header-ded-body,
 .header-ded-title {
   padding: $size-components-padding;
 }
-
 .header-ded-title {
   @extend %ellipsis;
   color: $color-grey-0;
@@ -539,7 +566,6 @@
   padding-right: $size-components-height;
   background: $color-base-main;
 }
-
 .header-ded-body {
   background: $color-grey-0;
   max-height: 280px;
@@ -549,7 +575,6 @@
     max-height: 400px;
   }
 }
-
 .header-ded-footer {
   background: $color-base-main;
 
@@ -564,7 +589,6 @@
     text-transform: uppercase;
   }
 }
-
 .main-header-sneak-checkout {
   &:after {
     right: ((1.5 * $size-components-height) - $size-components-margin - 10px);
@@ -592,7 +616,6 @@
     }
   }
 }
-
 .main-header-sneak-checkout-list {
   li {
     @extend %clearfix;
@@ -639,5 +662,66 @@
   .quantity {
     font-size: (($size-components-height / 2) - 8);
     color: $color-text-gen;
+  }
+}
+
+/* List-user-opts */
+.list-user-options {
+
+  li {
+    display: flex;
+    padding: $size-components-padding 5px;
+    position: relative;
+  }
+
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .icon-options {
+    width: 28px;
+    height: 30px;
+    margin: 0 5px;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    &__chat {
+      background-image: url(/images/icon-chat.svg);
+    }
+    &__information {
+      background-image: url(/images/icon-information.svg);
+    }
+    &__notification {
+      background-image: url(/images/icon-notification.svg);
+    }
+    &__user-config {
+      background-image: url(/images/icon-user-config.svg);
+    }
+  }
+
+  @include susy-breakpoint($screen-big, 16) {
+    display: flex;
+
+    li {
+      &::before {
+        content:"";
+        position: absolute;
+        width: 1px;
+        height: 100%;
+        background: $color-grey-100;
+        top: 0;
+        bottom: 0;
+        left: 0;
+      }
+
+      &:first-child {
+        &::before {
+          display: none;
+        }
+      }
+
+    }
   }
 }
