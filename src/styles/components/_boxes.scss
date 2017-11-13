@@ -54,10 +54,10 @@
   @include span(3);
   background: $color-grey-0;
   padding: $size-components-padding;
-  border: 1px solid $color-grey-300;
-  border-radius: 2px;
   box-shadow: 0 1px 4px rgba($color-grey-500, 0.2);
   margin-bottom: $size-components-padding;
+  border: 1px solid $color-grey-300;
+  border-radius: 2px;
 
   span {
     display: block;
@@ -93,5 +93,81 @@
     &.card-medium {
       @include span(6 of 16);
     }
+  }
+}
+
+
+/* gen-card */
+.gen-card {
+  display: block;
+  width: 100%;
+  background: $color-grey-0;
+  border-radius: 2px;
+
+  &__header {
+    display: flex;
+    width: 100%;
+    border-bottom: 1px solid $color-grey-400;
+    padding: $size-std-padding;
+  }
+
+  &__title {
+    display: flex;
+    @include adjust-font-size-to(18px);
+    color: $color-base-darken;
+    font-weight: 700;
+  }
+
+  &__content {
+    display: flex;
+    padding: $size-std-padding;
+  }
+
+  &__footer {}
+}
+
+.card-option {
+  display: flex;
+  width: 25%;
+  background: $color-grey-0;
+  padding: $size-components-padding;
+  border: 1px solid $color-base-darken;
+  justify-content: space-between;
+
+  &__image {
+    display: flex;
+    width: 73px;
+    height: 73px;
+    border-radius: 50%;
+    background: rgba($color-base-main, 0.2);
+    border: 1px solid $color-base-darken;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 40px;
+    color: $color-base-darken;
+  }
+
+  @include susy-breakpoint($screen-big, 16) {
+    &__description {
+      align-self: center;
+    }
+
+    &__title {
+      display: block;
+      font-size: 18px;
+      color: $color-grey-900;
+      font-weight: 700;
+    }
+
+    &__text {
+      display: block;
+      font-size: 14px;
+      color: $color-grey-900;
+    }
+
+    &__text {
+    }
+
   }
 }
