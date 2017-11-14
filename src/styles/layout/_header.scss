@@ -258,9 +258,15 @@
   }
 
   &-user-options {
-    display: flex;
+    display: none;
     padding: 0;
     margin-left: auto;
+  }
+
+  @include susy-breakpoint($screen-big, 16) {
+    &-user-options {
+      display: flex;
+    }
   }
 }
 
@@ -683,7 +689,7 @@
   .icon-options {
     width: 28px;
     height: 30px;
-    margin: 0 5px;
+    margin: 0 7px;
     background-position: center center;
     background-repeat: no-repeat;
 

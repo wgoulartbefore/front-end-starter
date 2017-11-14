@@ -103,3 +103,22 @@ ul.gen-text {
     list-style: disc inside;
   }
 }
+
+.title-page {
+  display: block;
+  margin: $size-components-padding 0;
+
+  &__title {
+    display: block;
+    font-size: 28px;
+    line-height: 24px;
+    color: $color-grey-1000;
+    font-weight: 700;
+  }
+
+  &__subtitle {
+    font-family: $font-stack;
+    font-size: 18px;
+    color: #6A707E;
+  }
+}

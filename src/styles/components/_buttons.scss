@@ -32,7 +32,7 @@
 .area-buttons {
   display: block;
   width: 100%;
-  padding: $size-components-padding 0;
+  // padding: $size-components-padding 0;
   @extend %clearfix;
   clear: both;
 }
@@ -62,7 +62,13 @@
 
 .bt-alter-2 {
   @extend %std-button;
-  @include createButtonAlterBorder($color-grey-0, $color-base-main);
+  background: transparent;
+  border: 1px solid $color-base-darken;
+  color: $color-base-darken;
+
+  &:hover {
+    background: rgba($color-base-main, 0.1);
+  }
 }
 
 .bt-alter-3 {

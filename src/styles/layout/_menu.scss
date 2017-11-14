@@ -303,8 +303,12 @@
   &__item {
     display: block;
     position: relative;
-    border-top: 1px solid tint($color-main-menu-bg, 10%);
-    border-bottom: 1px solid shade($color-main-menu-bg, 10%);
+    border-top: 1px solid tint($color-base-darken, 10%);
+    border-bottom: 1px solid shade($color-base-darken, 10%);
+
+    &:last-child {
+      border-bottom: 0;
+    }
   }
 
   .bt-submenu-back {
@@ -374,6 +378,10 @@
 
     &:first-child {
       border-top: none;
+    }
+
+    &:last-child {
+      border-bottom: none;
     }
   }
 

@@ -103,71 +103,109 @@
   width: 100%;
   background: $color-grey-0;
   border-radius: 2px;
+  margin-bottom: $size-components-margin;
 
   &__header {
-    display: flex;
+    // display: flex;
     width: 100%;
-    border-bottom: 1px solid $color-grey-400;
+    border-bottom: 1px solid $color-grey-300;
     padding: $size-std-padding;
   }
 
   &__title {
-    display: flex;
+    // display: flex;
     @include adjust-font-size-to(18px);
     color: $color-base-darken;
     font-weight: 700;
   }
 
   &__content {
+    width: 100%;
     display: flex;
+    flex-wrap: wrap;
     padding: $size-std-padding;
+    justify-content: space-between;
   }
 
-  &__footer {}
+  &__footer {
+  }
+
+  @include susy-breakpoint($screen-medium, 12) {
+    justify-content: space-between;
+  }
+
+  @include susy-breakpoint($screen-big, 16) {
+    &__header {}
+    &__title {}
+    &__content {}
+    &__footer {}
+  }
 }
 
 .card-option {
   display: flex;
-  width: 25%;
+  flex-basis: 100%;
   background: $color-grey-0;
   padding: $size-components-padding;
-  border: 1px solid $color-base-darken;
-  justify-content: space-between;
+  border: 1px solid $color-grey-300;
+  align-items: center;
+  margin-top: $size-std-padding;
 
   &__image {
     display: flex;
     width: 73px;
     height: 73px;
     border-radius: 50%;
+    font-size: 32px;
+    color: $color-base-darken;
     background: rgba($color-base-main, 0.2);
     border: 1px solid $color-base-darken;
-    justify-content: center;
-    align-items: center;
     text-align: center;
-    font-size: 40px;
-    color: $color-base-darken;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 73px;
+    margin-right: $size-std-padding;
   }
 
-  @include susy-breakpoint($screen-big, 16) {
+  &__description {
+    align-self: center;
+  }
+
+  &__title {
+    display: block;
+    font-size: 18px;
+    color: $color-grey-900;
+    font-weight: 700;
+  }
+
+  &__text {
+    display: block;
+    font-size: 14px;
+    color: $color-grey-900;
+  }
+
+  &:hover {
+    transition: all .5s cubic-bezier(0, 0, 0.41, 1.03);
+    box-shadow: 0 0 8px -2px $color-base-darken;
+    border-color: $color-base-darken;
+  }
+
+  @include susy-breakpoint($screen-medium, 12) {
+    display: flex;
+    flex-basis: calc(50% - 5px);
+
     &__description {
       align-self: center;
     }
+  }
 
-    &__title {
-      display: block;
-      font-size: 18px;
-      color: $color-grey-900;
-      font-weight: 700;
+  @include susy-breakpoint($screen-big, 16) {
+    display: flex;
+    flex-basis: calc(25% - 10px);
+    margin-top: 0;
+
+    &:first-child {
+      margin-left: 0;
     }
-
-    &__text {
-      display: block;
-      font-size: 14px;
-      color: $color-grey-900;
-    }
-
-    &__text {
-    }
-
   }
 }

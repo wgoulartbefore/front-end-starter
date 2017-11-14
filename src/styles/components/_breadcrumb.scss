@@ -2,7 +2,7 @@
   display: block;
   @extend %clearlist;
   @extend %clearfix;
-  text-align: center;
+  // text-align: center;
 
   &__item {
     display: block;
