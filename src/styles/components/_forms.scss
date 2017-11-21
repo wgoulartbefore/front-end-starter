@@ -52,8 +52,8 @@
     }
 
     @include susy-breakpoint($screen-big, 16) {
-
     }
+
   }
 
   fieldset {
@@ -306,7 +306,6 @@ input[type="radio"]:checked + span::before {
   top: 19px;
 }
 
-
 /* Search bar */
 .search-bar {
   display: flex;
@@ -326,9 +325,49 @@ input[type="radio"]:checked + span::before {
         flex-basis: calc(50% - 15px);
         margin-right: $size-components-padding;
       }
+
     }
   }
 
   @include susy-breakpoint($screen-big, 16) {
   }
+}
+
+.search-user {
+  display: flex;
+  flex: 1 0 100%;
+
+  @include susy-breakpoint($screen-medium, 12) {
+    & &__half-itens {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+
+      .form-line {
+        display: inline-flex;
+        flex-direction: column;
+        margin-left: 10px;
+        width: calc(40% - 15px);
+
+        &:first-child {
+          margin-left: 0;
+        }
+
+        &:last-child {
+          width: auto;
+          justify-content: flex-end;
+          margin-bottom: $size-std-padding;
+        }
+
+      }
+    }
+  }
+
+  @include susy-breakpoint($screen-big, 16) {
+    // &__half-itens {
+    //   flex-wrap: wrap;
+    //   flex-direction: column;
+    // }
+  }
+
 }
