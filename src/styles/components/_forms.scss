@@ -333,6 +333,51 @@ input[type="radio"]:checked + span::before {
   }
 }
 
+.basic-search {
+  @include susy-breakpoint($screen-big, 16) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 15px;
+
+    label {
+      text-transform: none;
+      color: $color-grey-1000;
+    }
+
+    .input-multiline {
+      height: 32px;
+      line-height: 32px;
+      border-radius: 2px;
+      border-color: #C4C4C4;
+
+      &::placeholder {
+        color: #C4C4C4;
+      }
+    }
+
+    .form-line {
+      flex: 1 0 calc(28% - 30px);
+      flex-wrap: wrap;
+      margin: $size-components-padding;
+      margin-left: 0;
+
+      &:last-child {
+        width: auto;
+        flex-basis: 10%;
+        margin-right: 0;
+        align-self: flex-end;
+
+        .bt-confirm {
+          width: 100%;
+          font-weight: 700;
+        }
+
+      }
+    }
+  }
+}
+
 .search-user {
   display: flex;
   flex: 1 0 100%;

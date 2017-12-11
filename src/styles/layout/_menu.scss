@@ -230,37 +230,42 @@
   }
 
   &.main-menu--alter {
-    // height: 60px;
+    height: 60px;
     background: $color-base-darken;
     border: 0;
 
     .menu-list {
       &__item {
         &:hover {
-          background: $color-base-darken;
+          background: $color-main-menu-bg;
         }
       }
 
       &__link {
-        color: $color-grey-0;
+        font-weight: 700;
+        color: $color-grey-1000;
 
         &:hover {
-          color: $color-grey-0;
-          background: shade($color-base-darken, 5%);
+          color: $color-grey-1000;
+          background: shade($color-main-menu-bg, 5%);
+        }
+
+        .fa {
+          display: none;
         }
       }
     }
 
     .submenu-list {
-      background: $color-base-darken;
+      background: $color-main-menu-bg;
 
       li {
         border-top: 1px solid rgba(255,255,255,0.2);
-        border-bottom: 1px solid shade($color-base-darken, 15%);
+        border-bottom: 1px solid shade($color-main-menu-bg, 15%);
       }
 
       a {
-        color: $color-grey-0;
+        color: $color-grey-1000;
 
         &:hover {
           background: shade($color-base-darken, 5%);
@@ -275,9 +280,9 @@
     top: inherit;
     left: inherit;
     width: auto;
-    height: $size-components-height + 12px;
+    height: $size-components-height + 2px;
     overflow: visible;
-    border-top: 1px solid $color-grey-0;
+    border-top: 1px solid $color-grey-1000;
     border-bottom: 1px solid $color-grey-200;
   }
 }
@@ -314,7 +319,7 @@
   .bt-submenu-back {
     > a {
       background: $color-base-main;
-      color: $color-grey-0;
+      color: $color-grey-1000;
       padding-left: ($size-components-height * 0.75);
 
       &:after {

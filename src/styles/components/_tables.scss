@@ -81,3 +81,25 @@ table {
     text-align: center;
   }
 }
+
+
+.table--cliente {
+  td:last-child {
+    .fa {
+      margin-right: 5px;
+    }
+
+    .fa-user {
+      color: rgb(32, 32, 32);
+    }
+
+    .fa-pencil-square-o {
+      color: #136FE0;
+    }
+
+    .fa-trash {
+      color: $color-base-main;
+    }
+
+  }
+}

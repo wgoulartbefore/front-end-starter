@@ -8,7 +8,9 @@
     display: block;
     position: relative;
     padding-right: ($size-components-padding * 2);
-    color: $color-grey-600;
+    color: #6A707E;
+    font-size: 12px;
+    font-weight: 300;
 
     &:hover {
       text-decoration: underline;
@@ -20,13 +22,17 @@
       position: absolute;
       top: 0;
       right: $size-std-padding;
-      font-size: 12px;
+      font-size: 10px;
       line-height: 22px;
-      color: $color-grey-800;
+      color: $color-base-main;
     }
 
     &:last-child {
-      color: $color-base-main;
+      color: $color-text-gen;
+
+      &__link {
+        color: #4F4F4F;
+      }
 
       &:hover {
         text-decoration: none;

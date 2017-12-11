@@ -87,9 +87,9 @@ gulp.task('clean', () => {
 });
 
 gulp.task('development', [
-  'html-watch',
-  'js-watch',
-  'sass-watch',
+  'html',
+  'js',
+  'sass',
   'browsersync-run',
 ]);
 
@@ -102,5 +102,5 @@ gulp.task('browser', [
   'images',
 ]);
 
-gulp.task('dev'), ['browser'];
+gulp.task('dev', ['browser']);
 gulp.task('default', ['development']);
