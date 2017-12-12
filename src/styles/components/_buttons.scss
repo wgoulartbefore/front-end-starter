@@ -30,8 +30,12 @@
 }
 
 .area-buttons {
-  display: block;
+  display: flex;
   width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+
   // padding: $size-components-padding 0;
   @extend %clearfix;
   clear: both;
@@ -108,3 +112,60 @@
   line-height: 32px;
   height: 30px;
 }
+
+.pagination {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+
+  &__label {
+    padding: $size-std-padding;
+    width: 200px;
+    font-size: 14px;
+    text-align: right;
+  }
+
+  &__list {
+    display: inline-flex;
+  }
+
+  &__item {
+    background: $color-pl-2;
+    border-top: 1px solid $color-grey-400;
+    border-bottom: 1px solid $color-grey-400;
+    border-left: 1px solid $color-grey-400;
+    color: $color-pl-3;
+
+    &--active {
+      background: $color-base-main;
+      color: $color-grey-0;
+
+      &:hover {
+        background: tint($color-base-main, 5%);
+        color: $color-grey-0;
+      }
+    }
+
+    &:hover {
+      background: $color-grey-200;
+      color: $color-grey-1000;
+    }
+
+    &:first-child,
+    &:last-child {
+      color: $color-base-main;
+    }
+
+    &:last-child {
+      border-right: 1px solid $color-grey-400;
+    }
+
+  }
+
+  &__link {
+    display: block;
+    color: inherit;
+    padding: 10px $size-components-padding;
+  }
+}
+
