@@ -253,9 +253,11 @@
   height: $size-components-height;
   padding: (($size-components-height - 24px) / 2) $size-components-padding;
   vertical-align: text-bottom;
+
 }
 
 input[type="checkbox"] {
+  position: relative;
   width: 20px;
   height: 20px;
   background: $color-grey-0;
@@ -270,6 +272,18 @@ input[type="checkbox"] {
   &:checked {
     border-color: $color-base-main;
     box-shadow: 0 0 2px rgba($color-base-main, 0.2);
+
+    &::before {
+      font-family: normal normal normal 14px/1 FontAwesome;
+      content: "\f00c";
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      left: 50%;
+      top: 50%; /* 2px border */
+      transform: translateY(-50%) translateX(-50%);
+    }
+
   }
 }
 
@@ -291,21 +305,22 @@ input[type="radio"] {
     border: 1px solid $color-base-darken;
     box-shadow: 0 0 2px rgba($color-base-darken, 0.2);
     transition: background 0.3s ease-in-out;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 11px;
+      height: 11px;
+      background: $color-grey-0;
+      border-radius: 50%;
+      left: 50%;
+      top: 50%; /* 2px border */
+      transform: translateY(-50%) translateX(-50%);
+    }
   }
 }
 
-input[type="radio"]:checked + span::before {
-  content: "";
-  position: absolute;
-  width: 12px;
-  height: 12px;
-  background: $color-grey-0;
-  box-shadow: 0 0 3px $color-base-darken;
-  border-radius: 50%;
-  left: 19px;
-  top: 48%; /* 2px border */
-  transform: translateY(-50%);
-}
+// input[type="radio"]:checked + span
 
 /* Search bar */
 .search-bar {
@@ -423,7 +438,6 @@ input[type="radio"]:checked + span::before {
 
 .form-register {
 
-
   label {
     flex: 1 0 100%;
     flex-wrap: wrap;
@@ -442,5 +456,13 @@ input[type="radio"]:checked + span::before {
     width: 100%;
     justify-content: space-between;
     margin-top: $size-components-padding;
+
+    .form-radio {
+      display: flex;
+      width: auto;
+      flex: 1 0 auto;
+      align-items: center;
+    }
   }
+
 }
