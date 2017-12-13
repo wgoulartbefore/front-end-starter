@@ -273,343 +273,393 @@
   <section id="main-content" class="main-content">
     <div class="container">
 
-      <div class="">
-        <form action="" class="form-std form-register">
 
+      <form action="" class="form-std form-register">
 
-          <div class="form-line full-line">
-            <label>Tipo:</label>
-            <div class="holder-line">
-              <label class="form-radio tipoForm">
-                <input type="radio" name="cli_tipo" value="0">
-                <span class="text-gen">Pessoa Física</span>
+        <div class="form-line full-line">
+          <label>Tipo:</label>
+          <div class="holder-line bm-top-small">
+            <label class="form-radio">
+              <input type="radio" name="cli_tipo" value="0" class="tipoPessoa tipoPessoaFisica">
+              <span class="text-gen">Pessoa Física</span>
+            </label>
+            <label class="form-radio">
+              <input type="radio" name="cli_tipo" value="1" class="tipoPessoa tipoPessoaJuridica">
+              <span class="text-gen">Pessoa Jurídica</span>
+            </label>
+            <label class="form-radio">
+              <input type="radio" name="cli_tipo" value="2" class="tipoPessoa tipoPessoaEstrangeira">
+              <span class="text-gen">Estrangeiro</span>
+            </label>
+          </div>
+        </div>
+
+        <fieldset class="pessoaFisica">
+          <legend>Pessoa Fisica</legend>
+          <div class="holder-line">
+            <div class="form-line">
+              <label> CPF:
+                <a href="" class="text-link-small to-right underline-hover">Consultar na receita</a>
               </label>
-              <label class="form-radio tipoForm">
-                <input type="radio" name="cli_tipo" value="1">
-                <span class="text-gen">Pessoa Jurídica</span>
-              </label>
-              <label class="form-radio tipoForm">
-                <input type="radio" name="cli_tipo" value="2">
-                <span class="text-gen">Estrangeiro</span>
-              </label>
+              <input type="text" class="input-singleline" placeholder="Informe o CPF do cliente">
+            </div>
+
+            <div class="form-line">
+              <label> RG: </label>
+              <input type="text" class="input-singleline" placeholder="Informe o RG do cliente">
+            </div>
+
+            <div class="form-line">
+              <label> Órgão Emissor: </label>
+              <input type="text" class="input-singleline" placeholder="Informe o Nome do cliente">
+            </div>
+
+            <div class="form-line">
+              <label> Data de Nascimento: </label>
+              <input type="date" class="input-singleline" placeholder="Informe o Nome do cliente">
             </div>
           </div>
 
+          <div class="holder-line input-big">
+            <div class="form-line ">
+              <label> Nome: </label>
+              <input type="text" class="input-singleline" placeholder="Informe o Nome do cliente">
+            </div>
 
-          <fieldset class="pessoaFisica">
-            <legend>Pessoa Fisica</legend>
-            <div class="holder-line">
-              <div class="form-line">
-                <label> CPF:
-                  <a href="" class="text-link-small to-right underline-hover">Consultar na receita</a>
+            <div class="form-line">
+              <label>Filiação:</label>
+              <input type="text" class="input-singleline" placeholder="Informe a Filiação do cliente">
+            </div>
+
+          </div>
+
+          <div class="holder-line">
+            <div class="form-line input-medium">
+              <label> Profissão: </label>
+              <input type="text" class="input-singleline" placeholder="Informe a profissão do cliente">
+            </div>
+
+            <div class="form-line">
+              <label> Escolaridade: </label>
+              <div class="fancy-select">
+                <select>
+                  <option value="">Selecione uma opção</option>
+                  <option value="1" title="">Doutorado</option>
+                  <option value="2" title="">Mestrado</option>
+                  <option value="3" title="">Nível Superior</option>
+                  <option value="4" title="">Nível Fundamental (1º Grau) Incompleto</option>
+                  <option value="5" title="">Nível Médio (2º Grau)</option>
+                  <option value="6" title="">Nível Fundamental (1º Grau) Completo</option>
+                  <option value="7" title="">Alfabetizado</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-line">
+              <label> Estado Civil: </label>
+              <div class="fancy-select">
+                <select>
+                  <option value="">Selecione uma opção</option>
+                  <option value="1" title="">Solteiro(a)</option>
+                  <option value="2" title="">Casado(a)</option>
+                  <option value="3" title="">Divorciado(a)</option>
+                  <option value="4" title="">Separado Judicialmente</option>
+                  <option value="5" title="">União Estável</option>
+                  <option value="6" title="">Viúvo(a)</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="holder-line input-big">
+            <div class="form-line">
+              <label>Sexo:</label>
+              <div class="bm-top-small">
+                <label class="form-radio">
+                  <input type="radio" name="sexo" value="0">
+                  <span class="text-gen">Masculino</span>
                 </label>
-                <input type="text" class="input-singleline" placeholder="Informe o CPF do cliente">
-              </div>
-
-              <div class="form-line">
-                <label> RG: </label>
-                <input type="text" class="input-singleline" placeholder="Informe o RG do cliente">
-              </div>
-
-              <div class="form-line input-medium">
-                <label> Nome: </label>
-                <input type="text" class="input-singleline" placeholder="Informe o Nome do cliente">
-              </div>
-            </div>
-          </fieldset>
-
-          <fieldset class="pessoaJuridica">
-            <legend>Pessoa Juridica</legend>
-            <div class="holder-line">
-              <div class="form-line">
-                <label> CNPJ:
-                  <a href="" class="text-link-small to-right underline-hover">Consultar na receita</a>
+                <label class="form-radio">
+                  <input type="radio" name="sexo" value="1">
+                  <span class="text-gen">Feminino</span>
                 </label>
-                <input type="text" class="input-singleline" placeholder="Informe o CNPJ">
-              </div>
-
-              <div class="form-line">
-                <label> Razão Social: </label>
-                <input type="text" class="input-singleline" placeholder="Informe a Razão Social">
-              </div>
-
-              <div class="form-line">
-                <label> Nome Fantasia: </label>
-                <input type="text" class="input-singleline" placeholder="Informe o Nome Fantasia">
-              </div>
-
-              <div class="form-line">
-                <label> CNAE: </label>
-                <input type="text" class="input-singleline" placeholder="Informe o CNAE">
-              </div>
-            </div>
-          </fieldset>
-
-          <!-- <div class="form-line">
-            <label> Órgão Emissor: </label>
-            <input type="text" class="input-singleline">
-          </div> -->
-
-          <fieldset>
-            <legend>Informações basicas</legend>
-
-            <div class="holder-line input-medium">
-              <div class="form-line">
-                <label>Sexo:</label>
-                <div class="bm-top-small">
-                  <label class="form-radio">
-                    <input type="radio" name="sexo" value="0">
-                    <span class="text-gen">Masculino</span>
-                  </label>
-                  <label class="form-radio">
-                    <input type="radio" name="sexo" value="1">
-                    <span class="text-gen">Feminino</span>
-                  </label>
-                  <label class="form-radio">
-                    <input type="radio" name="sexo" value="2">
-                    <span class="text-gen">Não Informar</span>
-                  </label>
-                </div>
-              </div>
-
-
-
-              <div class="form-line">
-                <label> Profissão: </label>
-                <input type="text" class="input-singleline" placeholder="Informe a profissão do cliente">
-              </div>
-
-              <div class="form-line">
-                <label> Escolaridade: </label>
-                <div class="fancy-select">
-                  <select>
-                    <option value="">Selecione uma opção</option>
-                    <option value="1" title="">Doutorado</option>
-                    <option value="2" title="">Mestrado</option>
-                    <option value="3" title="">Nível Superior</option>
-                    <option value="4" title="">Nível Fundamental (1º Grau) Incompleto</option>
-                    <option value="5" title="">Nível Médio (2º Grau)</option>
-                    <option value="6" title="">Nível Fundamental (1º Grau) Completo</option>
-                    <option value="7" title="">Alfabetizado</option>
-                  </select>
-                </div>
-              </div>
-
-            </div>
-
-            <div class="holder-line input-big">
-              <div class="form-line">
-                <label> Estado Civil: </label>
-                <div class="fancy-select">
-                  <select>
-                    <option value="">Selecione uma opção</option>
-                    <option value="1" title="">Solteiro(a)</option>
-                    <option value="2" title="">Casado(a)</option>
-                    <option value="3" title="">Divorciado(a)</option>
-                    <option value="4" title="">Separado Judicialmente</option>
-                    <option value="5" title="">União Estável</option>
-                    <option value="6" title="">Viúvo(a)</option>
-                  </select>
-                </div>
-              </div>
-
-              <div class="form-line ">
-                <label> Nacionalidade: </label>
-                <div class="fancy-select">
-                  <select>
-                    <option value="">Selecione uma opção</option>
-                    <option value="18" title="">Afegão</option>
-                    <option value="19" title="">Africano</option>
-                    <option value="20" title="">Albanês</option>
-                    <option value="6" title="">Alemão</option>
-                    <option value="21" title="">Americano</option>
-                    <option value="22" title="">Angolano</option>
-                    <option value="23" title="">Árabe</option>
-                    <option value="24" title="">Argelino</option>
-                    <option value="3" title="">Argentino</option>
-                    <option value="25" title="">Asiático</option>
-                    <option value="26" title="">Australiano</option>
-                    <option value="27" title="">Austríaco</option>
-                    <option value="28" title="">Belga</option>
-                    <option value="29" title="">Boliviano</option>
-                    <option selected="" value="1" title="">Brasileiro</option>
-                    <option value="30" title="">Britânico</option>
-                    <option value="31" title="">Búlgaro</option>
-                    <option value="32" title="">Cabo-Verdiano</option>
-                    <option value="33" title="">Canadense</option>
-                    <option value="7" title="">Chileno</option>
-                    <option value="11" title="">Chinês</option>
-                    <option value="34" title="">Cipritoa</option>
-                    <option value="5" title="">Colombiano</option>
-                    <option value="93" title="">Costa Rica</option>
-                    <option value="14" title="">Croata</option>
-                    <option value="35" title="">Cubano</option>
-                    <option value="36" title="">Dinamarquês</option>
-                    <option value="37" title="">Egípcio</option>
-                    <option value="38" title="">Equatoriano</option>
-                    <option value="39" title="">Escocês</option>
-                    <option value="40" title="">Eslovaco</option>
-                    <option value="41" title="">Esloveno</option>
-                    <option value="42" title="">Espanhol</option>
-                    <option value="43" title="">Europeu</option>
-                    <option value="44" title="">Filipino</option>
-                    <option value="45" title="">Finlandês</option>
-                    <option value="46" title="">Francês</option>
-                    <option value="47" title="">Grego</option>
-                    <option value="48" title="">Guineense</option>
-                    <option value="17" title="">Haitiano</option>
-                    <option value="12" title="">Holandês</option>
-                    <option value="49" title="">Húngaro</option>
-                    <option value="50" title="">Indiano</option>
-                    <option value="51" title="">Indoneso</option>
-                    <option value="52" title="">Inglês</option>
-                    <option value="53" title="">Iraniano</option>
-                    <option value="54" title="">Iraquiano</option>
-                    <option value="55" title="">Irlandês</option>
-                    <option value="56" title="">Islandês</option>
-                    <option value="57" title="">Israelita</option>
-                    <option value="8" title="">Italiano</option>
-                    <option value="58" title="">Jamaicano</option>
-                    <option value="10" title="">Japonês</option>
-                    <option value="59" title="">Jordano</option>
-                    <option value="60" title="">Kosovar</option>
-                    <option value="61" title="">Libanês</option>
-                    <option value="62" title="">Líbio</option>
-                    <option value="63" title="">Lituano</option>
-                    <option value="64" title="">Luxemburguês</option>
-                    <option value="65" title="">Marroquino</option>
-                    <option value="66" title="">Mexicano</option>
-                    <option value="67" title="">Moçambicano</option>
-                    <option value="68" title="">Montenegrino</option>
-                    <option value="69" title="">Neozelandês</option>
-                    <option value="70" title="">Nigeriano</option>
-                    <option value="71" title="">Norte-Coreano</option>
-                    <option value="72" title="">Norueguês</option>
-                    <option value="73" title="">Paquistanês</option>
-                    <option value="2" title="">Paraguaio</option>
-                    <option value="4" title="">Peruano</option>
-                    <option value="74" title="">Polaco</option>
-                    <option value="13" title="">Português</option>
-                    <option value="75" title="">Queniano</option>
-                    <option value="76" title="">Romeno</option>
-                    <option value="77" title="">Ruandês</option>
-                    <option value="78" title="">Russo</option>
-                    <option value="79" title="">Santomense</option>
-                    <option value="80" title="">Senegalês</option>
-                    <option value="81" title="">Sírio</option>
-                    <option value="82" title="">Somalí</option>
-                    <option value="83" title="">Sudanês</option>
-                    <option value="84" title="">Sueco</option>
-                    <option value="85" title="">Suíço</option>
-                    <option value="16" title="">Sul-Africano</option>
-                    <option value="86" title="">Sul-Coreano</option>
-                    <option value="87" title="">Tailandês</option>
-                    <option value="88" title="">Timorense</option>
-                    <option value="89" title="">Tunisino</option>
-                    <option value="90" title="">Turco</option>
-                    <option value="91" title="">Ucraniano</option>
-                    <option value="15" title="">Uruguaio</option>
-                    <option value="9" title="">Venezuelano</option>
-                    <option value="92" title="">Vietnamita</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-
-            <div class="holder-line input-big">
-              <div class="form-line">
-                <label> Responsável Legal: </label>
-                <input type="text" class="input-singleline" placeholder="Informe o nome do responsável legal">
-              </div>
-
-              <div class="form-line">
-                <label> Procurador: </label>
-                <input type="text" class="input-singleline" placeholder="Informe o nome do Procurador">
-              </div>
-            </div>
-
-            <div class="holder-line align-bottom">
-              <div class="form-line">
-                <label> Inscrição Estadual:</label>
-                <input type="text" class="input-singleline" placeholder="Informe a Inscrição Estadual">
-              </div>
-              <div class="form-line ">
-                <div class="fancy-select">
-                  <select>
-                    <option value="1">Contribuinte ICMS</option>
-                    <option value="2">Contribuinte Isento</option>
-                    <option selected="" value="9">Não Contribuinte</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-          </fieldset>
-
-          <fieldset class="infoAdicionais">
-            <legend>Endereço</legend>
-
-            <div class="holder-line">
-              <div class="form-line input-medium">
-                <label>CEP:
-                  <a href="" class="text-link-small to-right underline-hover">Procurar CEP</a>
+                <label class="form-radio">
+                  <input type="radio" name="sexo" value="2">
+                  <span class="text-gen">Prefiro não Informar</span>
                 </label>
-                <input type="text" class="input-singleline" placeholder="Informe o CEP do cliente">
-              </div>
-              <div class="form-line">
-                <label> Estado (UF): </label>
-                <div class="fancy-select">
-                  <select>
-                    <option value="">Escolha uma opção</option>
-                    <option value="1">AC</option>
-                    <option value="2">AL</option>
-                    <option value="3">AM</option>
-                    <option value="4">AP</option>
-                    <option value="5">BA</option>
-                    <option value="6">CE</option>
-                    <option value="7">DF</option>
-                    <option value="8">ES</option>
-                    <option value="9">GO</option>
-                    <option value="10">MA</option>
-                    <option value="11">MG</option>
-                    <option value="12">MS</option>
-                    <option value="13">MT</option>
-                    <option value="14">PA</option>
-                    <option value="15">PB</option>
-                    <option value="16">PE</option>
-                    <option value="17">PI</option>
-                    <option value="18">PR</option>
-                    <option value="19">RJ</option>
-                    <option value="20">RN</option>
-                    <option value="21">RO</option>
-                    <option value="22">RR</option>
-                    <option value="23">RS</option>
-                    <option value="24">SC</option>
-                    <option value="25">SE</option>
-                    <option value="26">SP</option>
-                    <option value="27">TO</option>
-                  </select>
-                </div>
-              </div>
-              <div class="form-line">
-                <label> Cidade: </label>
-                <div class="fancy-select">
-                  <select>
-                    <option value="">Escolha uma opção</option>
-                  </select>
-                </div>
               </div>
             </div>
 
-            <div class="holder-line">
-              <div class="form-line input-medium">
-                <label>Rua:</label>
-                <input type="text" class="input-singleline" placeholder="Informe a Rua da residência">
+          </div>
+        </fieldset>
+
+        <fieldset class="pessoaJuridica">
+          <legend>Pessoa Juridica</legend>
+          <div class="holder-line">
+            <div class="form-line">
+              <label> CNPJ:
+                <a href="" class="text-link-small to-right underline-hover">Consultar na receita</a>
+              </label>
+              <input type="text" class="input-singleline" placeholder="Informe o CNPJ">
+            </div>
+
+            <div class="form-line">
+              <label> Razão Social: </label>
+              <input type="text" class="input-singleline" placeholder="Informe a Razão Social">
+            </div>
+
+            <div class="form-line">
+              <label> Nome Fantasia: </label>
+              <input type="text" class="input-singleline" placeholder="Informe o Nome Fantasia">
+            </div>
+
+            <div class="form-line">
+              <label> CNAE: </label>
+              <input type="text" class="input-singleline" placeholder="Informe o CNAE">
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset class="pessoaEstrangeira">
+          <legend>Estrangeiro</legend>
+          <div class="holder-line">
+            <div class="form-line input-medium">
+              <label> Nome: </label>
+              <input type="text" class="input-singleline" placeholder="Informe o Nome do cliente">
+            </div>
+
+            <div class="form-line">
+              <label> Data de Nascimento: </label>
+              <input type="date" class="input-singleline" placeholder="Informe a Razão Social">
+            </div>
+
+            <div class="form-line ">
+              <label>Sexo:</label>
+              <div class="bm-top-small">
+                <label class="form-radio">
+                  <input type="radio" name="sexo" value="0">
+                  <span class="text-gen">Masculino</span>
+                </label>
+                <label class="form-radio">
+                  <input type="radio" name="sexo" value="1">
+                  <span class="text-gen">Feminino</span>
+                </label>
               </div>
-              <div class="form-line">
-                <label>Bairro:</label>
-                <input type="text" class="input-singleline" placeholder="Informe o Bairro da residência">
+            </div>
+          </div>
+
+          <div class="holder-line">
+            <div class="form-line">
+              <label> Nacionalidade: </label>
+              <div class="fancy-select">
+                <select>
+                  <option value="">Selecione uma opção</option>
+                </select>
               </div>
-              <div class="form-line">
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset class="dadosBasicos">
+          <legend>Informações basicas</legend>
+
+          <div class="holder-line">
+            <div class="form-line input-medium">
+              <label> Nacionalidade: </label>
+              <div class="fancy-select">
+                <select>
+                  <option value="">Selecione uma opção</option>
+                  <option value="18" title="">Afegão</option>
+                  <option value="19" title="">Africano</option>
+                  <option value="20" title="">Albanês</option>
+                  <option value="6" title="">Alemão</option>
+                  <option value="21" title="">Americano</option>
+                  <option value="22" title="">Angolano</option>
+                  <option value="23" title="">Árabe</option>
+                  <option value="24" title="">Argelino</option>
+                  <option value="3" title="">Argentino</option>
+                  <option value="25" title="">Asiático</option>
+                  <option value="26" title="">Australiano</option>
+                  <option value="27" title="">Austríaco</option>
+                  <option value="28" title="">Belga</option>
+                  <option value="29" title="">Boliviano</option>
+                  <option selected="" value="1" title="">Brasileiro</option>
+                  <option value="30" title="">Britânico</option>
+                  <option value="31" title="">Búlgaro</option>
+                  <option value="32" title="">Cabo-Verdiano</option>
+                  <option value="33" title="">Canadense</option>
+                  <option value="7" title="">Chileno</option>
+                  <option value="11" title="">Chinês</option>
+                  <option value="34" title="">Cipritoa</option>
+                  <option value="5" title="">Colombiano</option>
+                  <option value="93" title="">Costa Rica</option>
+                  <option value="14" title="">Croata</option>
+                  <option value="35" title="">Cubano</option>
+                  <option value="36" title="">Dinamarquês</option>
+                  <option value="37" title="">Egípcio</option>
+                  <option value="38" title="">Equatoriano</option>
+                  <option value="39" title="">Escocês</option>
+                  <option value="40" title="">Eslovaco</option>
+                  <option value="41" title="">Esloveno</option>
+                  <option value="42" title="">Espanhol</option>
+                  <option value="43" title="">Europeu</option>
+                  <option value="44" title="">Filipino</option>
+                  <option value="45" title="">Finlandês</option>
+                  <option value="46" title="">Francês</option>
+                  <option value="47" title="">Grego</option>
+                  <option value="48" title="">Guineense</option>
+                  <option value="17" title="">Haitiano</option>
+                  <option value="12" title="">Holandês</option>
+                  <option value="49" title="">Húngaro</option>
+                  <option value="50" title="">Indiano</option>
+                  <option value="51" title="">Indoneso</option>
+                  <option value="52" title="">Inglês</option>
+                  <option value="53" title="">Iraniano</option>
+                  <option value="54" title="">Iraquiano</option>
+                  <option value="55" title="">Irlandês</option>
+                  <option value="56" title="">Islandês</option>
+                  <option value="57" title="">Israelita</option>
+                  <option value="8" title="">Italiano</option>
+                  <option value="58" title="">Jamaicano</option>
+                  <option value="10" title="">Japonês</option>
+                  <option value="59" title="">Jordano</option>
+                  <option value="60" title="">Kosovar</option>
+                  <option value="61" title="">Libanês</option>
+                  <option value="62" title="">Líbio</option>
+                  <option value="63" title="">Lituano</option>
+                  <option value="64" title="">Luxemburguês</option>
+                  <option value="65" title="">Marroquino</option>
+                  <option value="66" title="">Mexicano</option>
+                  <option value="67" title="">Moçambicano</option>
+                  <option value="68" title="">Montenegrino</option>
+                  <option value="69" title="">Neozelandês</option>
+                  <option value="70" title="">Nigeriano</option>
+                  <option value="71" title="">Norte-Coreano</option>
+                  <option value="72" title="">Norueguês</option>
+                  <option value="73" title="">Paquistanês</option>
+                  <option value="2" title="">Paraguaio</option>
+                  <option value="4" title="">Peruano</option>
+                  <option value="74" title="">Polaco</option>
+                  <option value="13" title="">Português</option>
+                  <option value="75" title="">Queniano</option>
+                  <option value="76" title="">Romeno</option>
+                  <option value="77" title="">Ruandês</option>
+                  <option value="78" title="">Russo</option>
+                  <option value="79" title="">Santomense</option>
+                  <option value="80" title="">Senegalês</option>
+                  <option value="81" title="">Sírio</option>
+                  <option value="82" title="">Somalí</option>
+                  <option value="83" title="">Sudanês</option>
+                  <option value="84" title="">Sueco</option>
+                  <option value="85" title="">Suíço</option>
+                  <option value="16" title="">Sul-Africano</option>
+                  <option value="86" title="">Sul-Coreano</option>
+                  <option value="87" title="">Tailandês</option>
+                  <option value="88" title="">Timorense</option>
+                  <option value="89" title="">Tunisino</option>
+                  <option value="90" title="">Turco</option>
+                  <option value="91" title="">Ucraniano</option>
+                  <option value="15" title="">Uruguaio</option>
+                  <option value="9" title="">Venezuelano</option>
+                  <option value="92" title="">Vietnamita</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-line input-medium">
+              <label> Responsável Legal: </label>
+              <input type="text" class="input-singleline" placeholder="Informe o nome do responsável legal">
+            </div>
+          </div>
+
+          <div class="holder-line align-bottom">
+            <div class="form-line input-medium">
+              <label> Procurador:</label>
+              <input type="text" class="input-singleline" placeholder="Informe o nome do Procurador">
+            </div>
+            <div class="form-line">
+              <label> Inscrição Estadual:</label>
+              <input type="text" class="input-singleline" placeholder="Informe a Inscrição Estadual">
+            </div>
+
+            <div class="form-line">
+              <div class="fancy-select">
+                <select>
+                  <option value="1">Contribuinte ICMS</option>
+                  <option value="2">Contribuinte Isento</option>
+                  <option selected="" value="9">Não Contribuinte</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset class="dadosEndereco">
+          <legend>Endereço</legend>
+          <div class="holder-line">
+            <div class="form-line input-medium">
+              <label>CEP:
+                <a href="" class="text-link-small to-right underline-hover">Procurar CEP</a>
+              </label>
+              <input type="text" class="input-singleline" placeholder="Informe o CEP do cliente">
+            </div>
+            <div class="form-line">
+              <label> Estado (UF): </label>
+              <div class="fancy-select">
+                <select>
+                  <option value="">Escolha uma opção</option>
+                  <option value="1">AC</option>
+                  <option value="2">AL</option>
+                  <option value="3">AM</option>
+                  <option value="4">AP</option>
+                  <option value="5">BA</option>
+                  <option value="6">CE</option>
+                  <option value="7">DF</option>
+                  <option value="8">ES</option>
+                  <option value="9">GO</option>
+                  <option value="10">MA</option>
+                  <option value="11">MG</option>
+                  <option value="12">MS</option>
+                  <option value="13">MT</option>
+                  <option value="14">PA</option>
+                  <option value="15">PB</option>
+                  <option value="16">PE</option>
+                  <option value="17">PI</option>
+                  <option value="18">PR</option>
+                  <option value="19">RJ</option>
+                  <option value="20">RN</option>
+                  <option value="21">RO</option>
+                  <option value="22">RR</option>
+                  <option value="23">RS</option>
+                  <option value="24">SC</option>
+                  <option value="25">SE</option>
+                  <option value="26">SP</option>
+                  <option value="27">TO</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-line">
+              <label> Cidade: </label>
+              <div class="fancy-select">
+                <select>
+                  <option value="">Escolha uma opção</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="holder-line input-big">
+            <div class="form-line">
+              <label>Rua:</label>
+              <input type="text" class="input-singleline" placeholder="Informe a Rua da residência">
+            </div>
+            <div class="form-line">
+              <label>Bairro:</label>
+              <input type="text" class="input-singleline" placeholder="Informe o Bairro da residência">
+            </div>
+
+          </div>
+          <div class="holder-line">
+            <div class="form-line">
                 <label>Nº:</label>
                 <input type="text" class="input-singleline" placeholder="Informe o Nº da residência">
               </div>
@@ -617,137 +667,125 @@
                 <label>Complemento:</label>
                 <input type="text" class="input-singleline" placeholder="Informe o Complemento">
               </div>
+          </div>
+        </fieldset>
+
+        <fieldset class="dadosComplementares">
+          <legend>Dados Complementares</legend>
+
+          <div class="holder-line">
+            <div class="form-line input-medium">
+              <label>E-mail:</label>
+              <input type="text" class="input-singleline" placeholder="Informe o E-mail do cliente">
             </div>
-          </fieldset>
-
-          <fieldset class="infoAdicionais">
-            <legend>Dados Complementares</legend>
-
-            <div class="holder-line">
-              <div class="form-line">
-                <label> Filiação: </label>
-                <input type="text" class="input-singleline" placeholder="Informe o nome da mãe do cliente">
-              </div>
-
-              <div class="form-line input-medium">
-                <label>E-mail:</label>
-                <input type="text" class="input-singleline" placeholder="Informe o E-mail do cliente">
-              </div>
-              <div class="form-line">
-                <label>Celular:</label>
-                <input type="text" class="input-singleline" placeholder="Informe o Nº celular do cliente">
-              </div>
-              <div class="form-line">
-                <label>Telefone:</label>
-                <input type="text" class="input-singleline" placeholder="Informe o Telefone Fixo do cliente">
-              </div>
-              <!-- <div class="form-line">
-                <label>Fax:</label>
-                <input type="text" class="input-singleline" placeholder="Informe o Fax do cliente">
-              </div> -->
+            <div class="form-line">
+              <label>Celular:</label>
+              <input type="text" class="input-singleline" placeholder="Informe o Nº celular do cliente">
             </div>
-
-            <div class="holder-line">
-              <div class="form-line">
-                <label>Contato:</label>
-                <input type="text" class="input-singleline" placeholder="Informe o telefone de Contato do cliente">
-              </div>
-
-              <div class="form-line">
-                <label>Telefone:</label>
-                <input type="text" class="input-singleline" placeholder="Informe o Telefone Fixo do cliente">
-              </div>
-              <div class="form-line">
-                <label>Fax:</label>
-                <input type="text" class="input-singleline" placeholder="Informe o Fax do cliente">
-              </div>
-              <div class="form-line">
-                <label>Complemento:</label>
-                <input type="text" class="input-singleline" placeholder="Informe o Complemento">
-              </div>
+            <div class="form-line">
+              <label>Telefone Fixo:</label>
+              <input type="text" class="input-singleline" placeholder="Informe o Telefone Fixo do cliente">
             </div>
+          </div>
 
-            <div class="holder-line">
-              <div class="form-line">
-                <label>Restrição:</label>
-                <div class="fancy-select">
-                  <select>
-                    <option value="">Escolha uma opção</option>
-                    <option value="">Sim</option>
-                    <option value="">Não</option>
-                  </select>
-                </div>
-              </div>
-
-              <div class="form-line">
-                <label> Origem do cadastro: </label>
-                <div class="fancy-select">
-                  <select>
-                    <option value="">Escolha uma opção</option>
-                    <option value="4" title="">Indicação</option>
-                    <option selected="" value="1" title="">Loja Física</option>
-                    <option value="7" title="">Loja Móvel</option>
-                    <option value="2" title="">Loja Virtual</option>
-                    <option value="5" title="">Mailing</option>
-                    <option value="6" title="">Outro</option>
-                    <option value="9" title="">Panfleto</option>
-                    <option value="8" title="">Rádio</option>
-                    <option value="3" title="">Site</option>
-                  </select>
-                </div>
-              </div>
-
-              <div class="form-line">
-                <label> Vencimento da fatura: </label>
-                <div class="fancy-select">
-                  <select>
-                    <option value="">Escolha uma opção</option>
-                  </select>
-                </div>
-              </div>
-
+          <div class="holder-line">
+            <div class="form-line">
+              <label>Falar com (Contato):</label>
+              <input type="text" class="input-singleline" placeholder="Informe Contato do cliente">
             </div>
+            <div class="form-line">
+              <label>Celular:</label>
+              <input type="text" class="input-singleline" placeholder="Informe o celular para contato">
+            </div>
+            <div class="form-line">
+              <label>Telefone Fixo:</label>
+              <input type="text" class="input-singleline" placeholder="Informe o Telefone Fixo para contato">
+            </div>
+            <div class="form-line">
+              <label>Fax:</label>
+              <input type="text" class="input-singleline" placeholder="Informe o Fax para contato">
+            </div>
+          </div>
 
-            <div class="holder-line">
-              <div class="form-line input-medium">
-                <label>Observação:</label>
-                <textarea type="text" class="input-multiline" placeholder="Informe o CEP da residência do cliente"></textarea>
-              </div>
-
-              <div class="form-line input-medium">
-                <div class="">
-                  <label>Esta pessoa faz parte da carteira de clientes da CELULARES S/A ?: </label>
-                  <div class="fancy-select">
-                    <select>
-                      <option value="">Escolha uma opção</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div class="">
-                  <label> Deseja receber mensagens promocionais da loja (E-mail, SMS ...) ? </label>
-                  <div class="fancy-select">
-                    <select>
-                      <option value="">Escolha uma opção</option>
-                    </select>
-                  </div>
-                </div>
+          <div class="holder-line">
+            <div class="form-line">
+              <label>Restrição:</label>
+              <div class="fancy-select">
+                <select>
+                  <option value="">Escolha uma opção</option>
+                  <option value="">Sim</option>
+                  <option value="">Não</option>
+                </select>
               </div>
             </div>
 
-            <div class="holder-line input-big">
-
+            <div class="form-line">
+              <label> Origem do cadastro: </label>
+              <div class="fancy-select">
+                <select>
+                  <option value="">Escolha uma opção</option>
+                  <option value="4" title="">Indicação</option>
+                  <option selected="" value="1" title="">Loja Física</option>
+                  <option value="7" title="">Loja Móvel</option>
+                  <option value="2" title="">Loja Virtual</option>
+                  <option value="5" title="">Mailing</option>
+                  <option value="6" title="">Outro</option>
+                  <option value="9" title="">Panfleto</option>
+                  <option value="8" title="">Rádio</option>
+                  <option value="3" title="">Site</option>
+                </select>
+              </div>
             </div>
 
-          </fieldset>
+            <div class="form-line">
+              <label> Vencimento da fatura: </label>
+              <div class="fancy-select">
+                <select>
+                  <option value="">Escolha uma opção</option>
+                </select>
+              </div>
+            </div>
+          </div>
 
-        </form>
-      </div>
+          <div class="holder-line input-full">
+            <div class="form-line">
+              <label>Observação:</label>
+              <textarea type="text" class="input-multiline" placeholder="Possui observações?"></textarea>
+            </div>
+          </div>
+
+          <div class="holder-line input-big">
+            <div class="form-line">
+              <label>Esta pessoa faz parte da carteira de clientes da CELULARES S/A ?: </label>
+              <div class="fancy-select">
+                <select>
+                  <option value="">Escolha uma opção</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-line">
+              <label> Deseja receber mensagens promocionais da loja (E-mail, SMS ...) ? </label>
+              <div class="fancy-select">
+                <select>
+                  <option value="">Escolha uma opção</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+
+        <button class="bt-main to-right">Cadastrar Cliente</button>
+
+      </form>
+
+
 
       <div class="area-buttons">
         <a href="" class="bt-back">Voltar</a>
         <!-- <a href="" class="bt-confirm">Cadastrar</a> -->
       </div>
+
 
     </div>
     <!-- ./container -->
@@ -758,7 +796,29 @@
   <!-- End global-barrier!-->
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="/scripts/app.js"></script>
+  <!-- <script src="/scripts/app.js"></script> -->
+
+  <script>
+    let tipoPessoaFisica = document.querySelector('.tipoPessoaFisica');
+    let tipoPessoaJuridica = document.querySelector('.tipoPessoaJuridica');
+    let tipoPessoaEstrangeira = document.querySelector('.tipoPessoaEstrangeira');
+    let pessoaFisica = document.querySelector('.pessoaFisica');
+    let pessoaJuridica = document.querySelector('.pessoaJuridica');
+    let pessoaEstrangeira = document.querySelector('.pessoaEstrangeira');
+
+    tipoPessoaFisica.addEventListener('click', function() {
+      pessoaFisica.classList.toggle('is-visible')
+    })
+
+    tipoPessoaJuridica.addEventListener('click', function() {
+      pessoaJuridica.classList.toggle('is-visible')
+    })
+
+    tipoPessoaEstrangeira.addEventListener('click', function() {
+      pessoaEstrangeira.classList.toggle('is-visible')
+    })
+
+  </script>
 
 </body>
 

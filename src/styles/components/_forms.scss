@@ -471,6 +471,7 @@ input[type="radio"] {
   background: $color-grey-0;
   margin-bottom: $size-components-padding;
   border: 1px solid $color-pl-4;
+  @extend %clearfix;
 
   .form-line {
     display: block;
@@ -495,6 +496,10 @@ input[type="radio"] {
       &.input-big {
         width: 75%;
       }
+
+      &.input-full {
+        width: 100%;
+      }
     }
 
     &.input-medium {
@@ -506,6 +511,12 @@ input[type="radio"] {
     &.input-big {
       .form-line {
         @include span(8 of 16);
+      }
+    }
+
+    &.input-full {
+      .form-line {
+        @include span(16 of 16);
       }
     }
 
@@ -523,21 +534,24 @@ input[type="radio"] {
     padding-right: $size-components-padding;
   }
 
-  // .pessoaFisica,
-  // .pessoaJuridica {
-  //   transition: all 0.3s ease-in-out;
-  //   opacity: 0;
-  //   height: 0;
-  //   visibility: hidden;
-  //   transform: translateY(-100%);
+  .pessoaFisica,
+  .pessoaJuridica,
+  .pessoaEstrangeira {
+    display: none;
+    opacity: 0;
+    height: 0;
+    visibility: hidden;
+    transform: translateY(-100%);
+    transition: all 0.3s ease-in-out;
 
-  //   &.is-visible {
-  //     opacity: 1;
-  //     visibility: visible;
-  //     transform: translateY(0);
-  //     height: auto;
-  //   }
-  // }
+    &.is-visible {
+      display: block;
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+      height: auto;
+    }
+  }
 }
 
 fieldset {
@@ -552,5 +566,4 @@ fieldset {
     margin: 0 $size-components-padding;
     padding: 0 $size-components-padding - 10;
   }
-
 }
