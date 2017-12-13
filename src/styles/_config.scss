@@ -28,7 +28,7 @@ $time-std-transition: 0.5s;
 
 //  Greyscale
 $color-grey-0: #ffffff;
-$color-grey-50: #fafafa;
+$color-grey-50: #fdfdfd;
 $color-grey-100: #F6F7FA;
 $color-grey-200: #eeeeee;
 $color-grey-300: #DFE6EE;
@@ -41,11 +41,13 @@ $color-grey-900: #333333;
 $color-grey-1000: #000000;
 
 // Paleta de Cores
-// $color-pl-1: #136FE0;
+
 $color-pl-1: #D52B1E;
 $color-pl-2: #F2F2F2;
 $color-pl-3: #828282;
 $color-pl-4: #BDBDBD;
+$color-pl-5: #136FE0;
+$color-base-focus: #61B0FF;
 
 // Base Colors
 $color-base-main: #D52B1E;
@@ -53,7 +55,7 @@ $color-base-darken: $color-pl-2;
 $color-base-background: #E5E5E5;
 // $color-base-background: $color-grey-100;
 $color-base-border: $color-grey-300;
-$color-base-focus: $color-pl-3;
+// $color-base-focus: $color-pl-3;
 $color-base-error: #E55D64;
 $color-base-warning: #F7B422;
 $color-base-success: #56BD5B;

@@ -13,8 +13,10 @@
 }
 
 .bm-top-small {
-  @extend %bm-top-small;
+  // @extend %bm-top-small;
+  margin-top: 15px;
 }
+
 
 .bm-bottom-tiny {
   @extend %bm-bottom-tiny;
