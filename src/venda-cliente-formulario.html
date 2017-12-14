@@ -273,9 +273,7 @@
   <section id="main-content" class="main-content">
     <div class="container">
 
-
       <form action="" class="form-std form-register">
-
         <div class="form-line full-line">
           <label>Tipo:</label>
           <div class="holder-line bm-top-small">
@@ -301,26 +299,26 @@
               <label> CPF:
                 <a href="" class="text-link-small to-right underline-hover">Consultar na receita</a>
               </label>
-              <input type="text" class="input-singleline" placeholder="Informe o CPF do cliente">
+              <input type="text" class="input-singleline" placeholder="Informe o CPF do cliente" required required>
             </div>
 
             <div class="form-line">
               <label> RG: </label>
-              <input type="text" class="input-singleline" placeholder="Informe o RG do cliente">
+              <input type="text" class="input-singleline" placeholder="Informe o RG do cliente" required>
             </div>
 
             <div class="form-line">
               <label> Órgão Emissor: </label>
-              <input type="text" class="input-singleline" placeholder="Informe o Nome do cliente">
+              <input type="text" class="input-singleline" placeholder="Informe o Nome do cliente" required>
             </div>
 
             <div class="form-line">
               <label> Data de Nascimento: </label>
-              <input type="date" class="input-singleline" placeholder="Informe o Nome do cliente">
+              <input type="date" class="input-singleline" placeholder="Informe o Nome do cliente" required>
             </div>
           </div>
 
-          <div class="holder-line input-big">
+          <div class="holder-line input-big" required>
             <div class="form-line ">
               <label> Nome: </label>
               <input type="text" class="input-singleline" placeholder="Informe o Nome do cliente">
@@ -333,7 +331,7 @@
 
           </div>
 
-          <div class="holder-line">
+          <div class="holder-line" required>
             <div class="form-line input-medium">
               <label> Profissão: </label>
               <input type="text" class="input-singleline" placeholder="Informe a profissão do cliente">
@@ -393,7 +391,7 @@
           </div>
         </fieldset>
 
-        <fieldset class="pessoaJuridica">
+        <fieldset class="pessoaJuridica" required>
           <legend>Pessoa Juridica</legend>
           <div class="holder-line">
             <div class="form-line">
@@ -420,7 +418,7 @@
           </div>
         </fieldset>
 
-        <fieldset class="pessoaEstrangeira">
+        <fieldset class="pessoaEstrangeira" required>
           <legend>Estrangeiro</legend>
           <div class="holder-line">
             <div class="form-line input-medium">
@@ -463,7 +461,7 @@
         <fieldset class="dadosBasicos">
           <legend>Informações basicas</legend>
 
-          <div class="holder-line">
+          <div class="holder-line" required>
             <div class="form-line input-medium">
               <label> Nacionalidade: </label>
               <div class="fancy-select">
@@ -571,7 +569,7 @@
             </div>
           </div>
 
-          <div class="holder-line align-bottom">
+          <div class="holder-line align-bottom" required>
             <div class="form-line input-medium">
               <label> Procurador:</label>
               <input type="text" class="input-singleline" placeholder="Informe o nome do Procurador">
@@ -595,7 +593,7 @@
 
         <fieldset class="dadosEndereco">
           <legend>Endereço</legend>
-          <div class="holder-line">
+          <div class="holder-line" required>
             <div class="form-line input-medium">
               <label>CEP:
                 <a href="" class="text-link-small to-right underline-hover">Procurar CEP</a>
@@ -647,7 +645,7 @@
             </div>
           </div>
 
-          <div class="holder-line input-big">
+          <div class="holder-line input-big" required>
             <div class="form-line">
               <label>Rua:</label>
               <input type="text" class="input-singleline" placeholder="Informe a Rua da residência">
@@ -658,7 +656,7 @@
             </div>
 
           </div>
-          <div class="holder-line">
+          <div class="holder-line" required>
             <div class="form-line">
                 <label>Nº:</label>
                 <input type="text" class="input-singleline" placeholder="Informe o Nº da residência">
@@ -673,7 +671,7 @@
         <fieldset class="dadosComplementares">
           <legend>Dados Complementares</legend>
 
-          <div class="holder-line">
+          <div class="holder-line" required>
             <div class="form-line input-medium">
               <label>E-mail:</label>
               <input type="text" class="input-singleline" placeholder="Informe o E-mail do cliente">
@@ -688,7 +686,7 @@
             </div>
           </div>
 
-          <div class="holder-line">
+          <div class="holder-line" required>
             <div class="form-line">
               <label>Falar com (Contato):</label>
               <input type="text" class="input-singleline" placeholder="Informe Contato do cliente">
@@ -779,13 +777,10 @@
 
       </form>
 
-
-
       <div class="area-buttons">
         <a href="" class="bt-back">Voltar</a>
         <!-- <a href="" class="bt-confirm">Cadastrar</a> -->
       </div>
-
 
     </div>
     <!-- ./container -->
@@ -796,6 +791,6 @@
   <!-- End global-barrier!-->
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <!-- <script src="/scripts/app.js"></script> -->
+  <script src="/scripts/app.js"></script>
 </body>
 </html>

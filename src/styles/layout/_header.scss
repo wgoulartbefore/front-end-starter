@@ -816,3 +816,17 @@
     }
   }
 }
+
+
+.master-header {
+  display: block;
+  background: $color-grey-1000;
+}
+.header-opts {
+  &-bar {}
+  &-list {}
+  &-item {
+    color: $color-grey-0;
+  }
+  &-link {}
+}

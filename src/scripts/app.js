@@ -239,18 +239,35 @@ function switchTypeClientRegisterSell() {
   const pessoaFisica = document.querySelector('.pessoaFisica');
   const pessoaJuridica = document.querySelector('.pessoaJuridica');
   const pessoaEstrangeira = document.querySelector('.pessoaEstrangeira');
+  const fieldsetsItems = document.querySelectorAll('.form-register > fieldset');
+
+  function isVisible(element) {
+    element.classList.add('is-visible');
+  }
+
+  function hiddenElements() {
+    $('.form-register > fieldset').each( function() {
+      this.classList.remove("is-visible");
+    });
+  }
 
   tipoPessoaFisica.addEventListener('click', function() {
-    pessoaFisica.classList.toggle('is-visible');
+    hiddenElements();
+    isVisible(pessoaFisica);
   });
 
   tipoPessoaJuridica.addEventListener('click', function() {
-    pessoaJuridica.classList.toggle('is-visible');
+    hiddenElements();
+    isVisible(pessoaJuridica);
+    // pessoaJuridica.classList.add('is-visible');
   });
 
   tipoPessoaEstrangeira.addEventListener('click', function() {
-    pessoaEstrangeira.classList.toggle('is-visible');
+    hiddenElements();
+    isVisible(pessoaEstrangeira);
+    // pessoaEstrangeira.classList.add('is-visible');
   });
+
 }
 
 switchTypeClientRegisterSell();

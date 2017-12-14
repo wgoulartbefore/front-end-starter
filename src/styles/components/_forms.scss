@@ -539,17 +539,19 @@ input[type="radio"] {
   .pessoaEstrangeira {
     display: none;
     opacity: 0;
+    padding: 0;
+    margin: 0;
     height: 0;
     visibility: hidden;
-    transform: translateY(-100%);
-    transition: all 0.3s ease-in-out;
+    transition: all 120ms ease-out;
 
     &.is-visible {
       display: block;
       opacity: 1;
       visibility: visible;
-      transform: translateY(0);
-      height: auto;
+      padding: 10px;
+      height: 100%;
+      margin-bottom: $size-components-padding;
     }
   }
 }
