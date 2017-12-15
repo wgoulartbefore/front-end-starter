@@ -251,6 +251,7 @@ function switchTypeClientRegisterSell() {
     });
   }
 
+
   tipoPessoaFisica.addEventListener('click', function() {
     hiddenElements();
     isVisible(pessoaFisica);
@@ -267,7 +268,41 @@ function switchTypeClientRegisterSell() {
     isVisible(pessoaEstrangeira);
     // pessoaEstrangeira.classList.add('is-visible');
   });
+}
+
+function headerOptsController() {
+  const container = document.querySelector('.header-opts-list');
+  const menuItens = document.querySelectorAll('.header-opts-item');
+  const menuInformation = document.querySelector('.header-opts-item--info');
+  const menuNotification = document.querySelector('.header-opts-item--notifications');
+
+  let openSubMenuHeaderOpts = (item) => {
+    item.addEventListener('click', function() {
+      closeSubMenuHeaderOpts();
+      addClassSubmenu(item);
+    });
+  }
+
+  let removeClassSubmenu = (item) => {
+    item.classList.remove('open-submenu');
+  }
+
+  let addClassSubmenu = (item) => {
+    item.classList.add('open-submenu');
+  }
+
+  let closeSubMenuHeaderOpts = () => {
+    $(menuItens).each(function(i) {
+      console.log(i, this);
+      removeClassSubmenu(this);
+    });
+  }
+
+  openSubMenuHeaderOpts(menuInformation);
+  openSubMenuHeaderOpts(menuNotification);
 
 }
 
-switchTypeClientRegisterSell();
+headerOptsController();
+
+// switchTypeClientRegisterSell();
