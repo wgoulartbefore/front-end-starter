@@ -187,12 +187,22 @@
 // }
 
 
+#main-header {
+  @at-root {
+    .mobile-menu-active #{&} {
+     transform: translateX($size-main-menu-width);
+    }
+  }
+}
+
 /* main header */
 .main-header {
+  position: relative;
   background: $color-base-main;
   padding-top: ($size-components-padding + $size-components-height);
   padding-bottom: $size-components-padding;
-  transition: transform .5s;
+  transition: transform $time-std-transition;
+  z-index: 11;
 
   @include susy-breakpoint($screen-big, 16) {
     padding: $size-components-padding 0;
@@ -209,7 +219,7 @@
 
   a {
     display: block;
-    max-width: 80%;
+    max-width: 70%;
     margin: auto;
   }
 
@@ -225,7 +235,7 @@
 
   @include susy-breakpoint($screen-small, 8){
     a {
-      max-width: 50%;
+      max-width: 200px;
     }
   }
 
@@ -328,7 +338,7 @@
     position: relative;
     height: 30px;
     padding: 5px 0;
-    z-index: 2;
+    z-index: 11;
     background: $color-grey-900;
   }
 
@@ -389,7 +399,7 @@
     }
   }
 
-  @include susy-breakpoint($screen-medium, 12) {
+  @include susy-breakpoint($screen-big, 16) {
     &-bar {
       display: block;
     }
