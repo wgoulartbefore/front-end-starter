@@ -221,6 +221,7 @@ function headerOptsController() {
 }
 
 function openUserOptions() {
+
   const container = document.querySelector('.header-user-options');
   const global = document.querySelector(':not(.header-user-options)');
 
@@ -242,6 +243,8 @@ function openUserOptions() {
     container.classList.remove('options-open');
   }
 }
+
+
 
 function headerSearchController() {
   const pageBody = $('body');

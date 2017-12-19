@@ -41,10 +41,10 @@
   padding: 0 $size-components-height;
   background: rgba($color-grey-1000, 0.1);
   transition: left $time-std-transition;
-  z-index: 9;
+  z-index: 12;
 
   @at-root {
-    .mobile-menu-active #{ &} {
+    .mobile-menu-active #{&} {
       left: $size-main-menu-width;
     }
   }
