@@ -1,4 +1,4 @@
-let isMobile = {
+const isMobile = {
   Android: function () {
     return navigator.userAgent.match(/Android/i);
   },
@@ -175,53 +175,52 @@ function switchTypeClientRegisterSell() {
   });
 }
 
-function headerOptsController() {
-  const container = document.querySelector('.header-opts-list');
-  const menuItens = document.querySelectorAll('.header-opts-item');
-  const menuInformation = document.querySelector('.header-opts-item--info');
-  const menuNotification = document.querySelector('.header-opts-item--notifications');
-  const globalBarrier = document.querySelector(':not(.header-opts-list)');
+// function headerOptsController() {
+//   const container = document.querySelector('.header-opts-list');
+//   const menuItens = document.querySelectorAll('.header-opts-item');
+//   const menuInformation = document.querySelector('.header-opts-item--info');
+//   const menuNotification = document.querySelector('.header-opts-item--notifications');
+//   const globalBarrier = document.querySelector(':not(.header-opts-list)');
 
-  let openSubMenuHeaderOpts = (item) => {
-    item.addEventListener('click', function () {
-      closeSubMenuHeaderOpts();
-      addClassSubmenu(item);
-    });
-  }
+//   let openSubMenuHeaderOpts = (item) => {
+//     item.addEventListener('click', function () {
+//       closeSubMenuHeaderOpts();
+//       addClassSubmenu(item);
+//     });
+//   }
 
-  let removeClassSubmenu = (item) => {
-    $(item).removeClass('open-submenu');
-  }
+//   let removeClassSubmenu = (item) => {
+//     $(item).removeClass('open-submenu');
+//   }
 
-  let addClassSubmenu = (item) => {
-    item.classList.add('open-submenu');
-  }
+//   let addClassSubmenu = (item) => {
+//     item.classList.add('open-submenu');
+//   }
 
-  let closeSubMenuHeaderOpts = () => {
-    $(menuItens).each(function () {
-      removeClassSubmenu(this);
-    });
-  }
+//   let closeSubMenuHeaderOpts = () => {
+//     $(menuItens).each(function () {
+//       removeClassSubmenu(this);
+//     });
+//   }
 
-  function closeSubmenuOpts() {
-    if ($('.header-opts-item').hasClass('open-submenu')) {
-      $(this).removeClass('open-submenu');
-    } else {
-      closeSubMenuHeaderOpts();
-      $(this).addClass('open-submenu');
-    }
-  }
+//   function closeSubmenuOpts() {
+//     if ($('.header-opts-item').hasClass('open-submenu')) {
+//       $(this).removeClass('open-submenu');
+//     } else {
+//       closeSubMenuHeaderOpts();
+//       $(this).addClass('open-submenu');
+//     }
+//   }
 
-  globalBarrier.addEventListener('click', function (e) {
-    closeSubmenuOpts();
-  });
+//   globalBarrier.addEventListener('click', function (e) {
+//     closeSubmenuOpts();
+//   });
 
-  openSubMenuHeaderOpts(menuInformation);
-  openSubMenuHeaderOpts(menuNotification);
-}
+//   openSubMenuHeaderOpts(menuInformation);
+//   openSubMenuHeaderOpts(menuNotification);
+// }
 
 function openUserOptions() {
-
   const container = document.querySelector('.header-user-options');
   const global = document.querySelector(':not(.header-user-options)');
 
@@ -243,8 +242,6 @@ function openUserOptions() {
     container.classList.remove('options-open');
   }
 }
-
-
 
 function headerSearchController() {
   const pageBody = $('body');
@@ -292,6 +289,49 @@ function headerSearchController() {
   btMobileSearchBack.on('click.mainmenu', function (e) {
     closeSearch();
   });
+}
+
+function headerOptsController() {
+  const container = $('.header-opts-bar');
+  const headerOptsList = container.find('.header-opts-list');
+  const headerOptsItem = headerOptsList.find('.header-opts-item');
+  const optsOpenClass = 'open-submenu';
+
+  // headerOptsItem.each(function() {
+  //   console.log(this);
+  // })
+
+  headerOptsItem.on('click', function(event) {
+    event.preventDefault();
+    isOpen(this);
+    console.log(this);
+  });
+
+  function isOpen(obj) {
+    let element = $(obj);
+
+    if(!element.hasClass(optsOpenClass)) {
+      element.addClass(optsOpenClass);
+      console.log('add class');
+    } else {
+      element.removeClass(optsOpenClass);
+      console.log('remove class');
+    }
+    // element.hasClass(optsOpenClass) ? element.addClass(optsOpenClass) : element.removeClass(optsOpenClass)
+  }
+
+  // headerOptsItem.on('click', function(e){
+  //   e.preventDefault();
+  //   console.log(this);
+  // });
+
+  // let removeClassSubmenu = (item) => {
+  //   $(item).removeClass('open-submenu');
+  // }
+
+  // let addClassSubmenu = (item) => {
+  //   item.classList.add('open-submenu');
+  // }
 }
 
 headerOptsController();

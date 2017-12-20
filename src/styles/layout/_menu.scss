@@ -1,7 +1,6 @@
 #main-menu {
   display: block;
   position: fixed;
-  z-index: 10;
   width: $size-main-menu-width;
   height: 100%;
   top: 0;
@@ -10,6 +9,7 @@
   overflow-y: auto;
   transform: translateX(-100%);
   transition: transform $time-std-transition;
+  z-index: 2;
   // border-top: 1px solid $color-grey-1000;
 
   @at-root {
@@ -70,6 +70,7 @@
   @include susy-breakpoint($screen-big, 16){
     display: none;
   }
+
 }
 
 /* menu-list */
@@ -103,9 +104,10 @@
   }
 
   .bt-submenu-back {
+
     > a {
-      background: $color-base-main;
-      color: $color-grey-1000;
+      background: $color-grey-800;
+      color: $color-grey-0;
       padding-left: ($size-components-height * 0.75);
 
       &:after {
@@ -122,6 +124,7 @@
         line-height: $size-components-height;
         text-align: center;
       }
+
     }
   }
 
@@ -151,13 +154,10 @@
         background: shade($color-main-menu-bg, 5%);
       }
 
-      .fa {
-        display: none;
-      }
-
     }
 
   }
+
 }
 
 .submenu-list {
@@ -185,7 +185,6 @@
     &:last-child {
       border-bottom: none;
     }
-
   }
 
   a {
@@ -196,14 +195,12 @@
     height: 50px;
     min-height: $size-components-height;
     padding: $size-components-padding (($size-components-height - 22px) / 2);
-    // color: $color-base-main;
 
     color: $color-grey-900;
-    font-weight: 700;
-    background: tint($color-main-menu-bg, 5%);
+    background: shade($color-main-menu-bg, 5%);
 
     &:hover {
-      background: tint($color-main-menu-bg, 10%);
+      background: shade($color-main-menu-bg, 5%);
     }
   }
 
@@ -222,6 +219,7 @@
     min-width: $size-main-menu-width;
     box-shadow: none;
     overflow: visible;
+
     background: shade($color-main-menu-bg, 5%);
     border-bottom: 1px solid $color-main-menu-border;
 
@@ -267,6 +265,12 @@
     }
   }
 
+  &:hover {
+    .submenu-list {
+      display: block;
+    }
+  }
+
   @include susy-breakpoint($screen-big, 16) {
     > a {
       &:after {
@@ -274,20 +278,20 @@
       }
     }
 
+    &:hover {
+      .submenu-list {
+        display: block;
+      }
+
+      .bt-submenu-back {
+        display: none;
+      }
+    }
+
     .submenu {
       > a {
         &:after {
           content: "\f054";
-        }
-      }
-
-      &:hover {
-        .submenu-list {
-          display: block;
-        }
-
-        .bt-submenu-back {
-          display: none;
         }
       }
     }

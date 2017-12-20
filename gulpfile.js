@@ -66,12 +66,6 @@ gulp.task('sass', () => {
     .pipe(browsersync.stream());
 });
 
-gulp.task('sass-watch', ['sass'], () => {
-  return watch([config.sass.src], () => {
-    gulp.start('sass');
-  });
-});
-
 gulp.task('images', () => {
   return gulp.src(config.images.src)
     .pipe(gulp.dest(config.images.dist))

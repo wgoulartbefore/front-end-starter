@@ -202,7 +202,7 @@
   padding-top: ($size-components-padding + $size-components-height);
   padding-bottom: $size-components-padding;
   transition: transform $time-std-transition;
-  z-index: 11;
+  z-index: 3;
 
   @include susy-breakpoint($screen-big, 16) {
     padding: $size-components-padding 0;
@@ -333,12 +333,12 @@
 
 /* header search */
 .header-opts {
-   &-bar {
+  &-bar {
     display: none;
     position: relative;
     height: 30px;
     padding: 5px 0;
-    z-index: 11;
+    z-index: 4;
     background: $color-grey-900;
   }
 
@@ -404,6 +404,7 @@
       display: block;
     }
   }
+
 }
 
 /* header search */
@@ -521,15 +522,17 @@
 }
 
 .list-notifications {
+
   li {
-    background: $color-pl-2;
+    background: $color-grey-0;
     padding: ($size-components-padding + 10) $size-components-padding;
     margin: -15px;
     border-bottom: 1px solid $color-grey-100;
 
     &:hover {
-      background: $color-grey-200;
+      background: $color-grey-100;
     }
+
   }
 
   a {
