@@ -157,21 +157,36 @@ function switchTypeClientRegisterSell() {
     });
   }
 
-  tipoPessoaFisica.addEventListener('click', function () {
+  // tipoPessoaFisica.addEventListener('click', function () {
+  //   hiddenElements();
+  //   isVisible(pessoaFisica);
+  // });
+
+  // tipoPessoaJuridica.addEventListener('click', function () {
+  //   hiddenElements();
+  //   isVisible(pessoaJuridica);
+  //   // pessoaJuridica.classList.add('is-visible');
+  // });
+
+  // tipoPessoaEstrangeira.addEventListener('click', function () {
+  //   hiddenElements();
+  //   isVisible(pessoaEstrangeira);
+  //   // pessoaEstrangeira.classList.add('is-visible');
+  // });
+
+  $(document).on('click', '.tipoPessoaFisica', function () {
     hiddenElements();
-    isVisible(pessoaFisica);
+    isVisible(document.querySelector('.pessoaFisica'));
   });
 
-  tipoPessoaJuridica.addEventListener('click', function () {
+  $(document).on('click', '.tipoPessoaJuridica', function () {
     hiddenElements();
-    isVisible(pessoaJuridica);
-    // pessoaJuridica.classList.add('is-visible');
+    isVisible(document.querySelector('.pessoaJuridica'));
   });
 
-  tipoPessoaEstrangeira.addEventListener('click', function () {
+  $(document).on('click', '.tipoPessoaEstrangeira', function () {
     hiddenElements();
-    isVisible(pessoaEstrangeira);
-    // pessoaEstrangeira.classList.add('is-visible');
+    isVisible(document.querySelector('.pessoaEstrangeira'));
   });
 }
 
@@ -220,28 +235,28 @@ function switchTypeClientRegisterSell() {
 //   openSubMenuHeaderOpts(menuNotification);
 // }
 
-function openUserOptions() {
-  const container = document.querySelector('.header-user-options');
-  const global = document.querySelector(':not(.header-user-options)');
+// function openUserOptions() {
+//   const container = document.querySelector('.header-user-options');
+//   const global = document.querySelector(':not(.header-user-options)');
 
-  container.addEventListener('click', function (e) {
-    e.preventDefault();
+//   container.addEventListener('click', function (e) {
+//     e.preventDefault();
 
-    if ($(this).hasClass('options-open')) {
-      closeOptions();
-    } else {
-      openOptions();
-    }
-  });
+//     if ($(this).hasClass('options-open')) {
+//       closeOptions();
+//     } else {
+//       openOptions();
+//     }
+//   });
 
-  function openOptions() {
-    container.classList.add('options-open');
-  }
+//   function openOptions() {
+//     container.classList.add('options-open');
+//   }
 
-  function closeOptions() {
-    container.classList.remove('options-open');
-  }
-}
+//   function closeOptions() {
+//     container.classList.remove('options-open');
+//   }
+// }
 
 function headerSearchController() {
   const pageBody = $('body');
@@ -292,33 +307,61 @@ function headerSearchController() {
 }
 
 function headerOptsController() {
-  const container = $('.header-opts-bar');
-  const headerOptsList = container.find('.header-opts-list');
-  const headerOptsItem = headerOptsList.find('.header-opts-item');
+  /*
+    Quando clicar no elemento `header-opts-item`
+    Adicionar classe "open-submenu"
+    Se clicar novamente remover a classe "open-submenu"
+
+    Cases:
+    1- clicar no elemento ao lado, remover a classe do anterior e adicionar no
+    elemento clicado.
+    2- clicar no elemento com submenu aberto, remover a classe "open-submenu"
+    3- ao clicar fora do elemento, remover a classe "open-submenu"
+  */
+
+  const headerOptsContainer = $('.header-opts-bar');
+  const headerOptsItem = $('.header-opts-item');
   const optsOpenClass = 'open-submenu';
 
-  // headerOptsItem.each(function() {
-  //   console.log(this);
-  // })
-
-  headerOptsItem.on('click', function(event) {
+  $(document).on('click', '.header-opts-item', function(event) {
+    const element = $(this);
+    $('.header-opts-item').removeClass(optsOpenClass);
+    element.toggleClass(optsOpenClass);
     event.preventDefault();
-    isOpen(this);
-    console.log(this);
   });
 
-  function isOpen(obj) {
-    let element = $(obj);
+  $(document).on('mouseover', '.header-opts-item', function() {
+    setTimeout(() => {
+      $(this).removeClass(optsOpenClass);
+    }, 300);
+  });
 
-    if(!element.hasClass(optsOpenClass)) {
-      element.addClass(optsOpenClass);
-      console.log('add class');
-    } else {
-      element.removeClass(optsOpenClass);
-      console.log('remove class');
-    }
-    // element.hasClass(optsOpenClass) ? element.addClass(optsOpenClass) : element.removeClass(optsOpenClass)
-  }
+  // $(document).on('click.headerOpts', function(e) {
+  //   console.log(e.target);
+
+  //   if (e.target !== this) {
+  //     return;
+  //   }
+  // });
+
+  // $('.header-opts-item').removeClass(optsOpenClass);
+  // $(document).on('click', '.header-opts-item', function(event) {
+  //   const element = $(this);
+  //   console.log(this);
+  //   event.preventDefault();
+  //   element.toggleClass(optsOpenClass);
+  // });
+  // $('body').on('click.headerOpts', function(e) {
+  //   console.log(e.target);
+  //   if (e.target !== this) {
+  //     return;
+  //   }
+  //   $('.header-opts-item').removeClass(optsOpenClass);
+  //   // $('.header-opts-list').each(function() {
+  //   //   console.log(this);
+  //   //   $(this).hasClass(optsOpenClass) ? $(this).removeClass(optsOpenClass) : $(this).addClass(optsOpenClass);
+  //   // });
+  // })
 
   // headerOptsItem.on('click', function(e){
   //   e.preventDefault();
@@ -335,7 +378,7 @@ function headerOptsController() {
 }
 
 headerOptsController();
-openUserOptions();
+// openUserOptions();
 headerSearchController();
 mainMenuController();
-// switchTypeClientRegisterSell();
+switchTypeClientRegisterSell();

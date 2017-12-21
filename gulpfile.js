@@ -66,6 +66,17 @@ gulp.task('sass', () => {
     .pipe(browsersync.stream());
 });
 
+
+
+gulp.task('sass-build', () => {
+  return gulp.src(config.sass.src)
+    .pipe(sass({
+      outputStyle: 'compressed',
+      includePaths: ['node_modules/susy/sass']
+    }).on('error', sass.logError))
+    .pipe(gulp.dest(config.sass.dist))
+});
+
 gulp.task('images', () => {
   return gulp.src(config.images.src)
     .pipe(gulp.dest(config.images.dist))

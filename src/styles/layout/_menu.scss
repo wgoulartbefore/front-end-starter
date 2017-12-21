@@ -246,7 +246,7 @@
   }
 }
 
-.submenu {
+.menu-list--submenu {
   > a {
     padding-right: ($size-components-height * 0.75);
 
@@ -288,7 +288,7 @@
       }
     }
 
-    .submenu {
+    .menu-list--submenu {
       > a {
         &:after {
           content: "\f054";
