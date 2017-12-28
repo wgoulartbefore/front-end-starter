@@ -209,3 +209,13 @@
     }
   }
 }
+
+#subCapa {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .grupo {
+        margin-bottom: $size-components-padding;
+    }
+}
