@@ -352,20 +352,21 @@
         padding: $size-components-padding;
         margin: -15px;
         border-bottom: 1px solid $color-grey-100;
-        top: 60px;
+        top: 55px;
         right: 0;
         border-radius: 2px;
+        box-shadow: 1px 1px 2px rgba($color-grey-1000, 0.1);
 
         &::before {
-            content: "";
-            width: 0;
-            height: 0;
-            position: absolute;
-            top: -20px;
-            right: 60px;
-            border: solid;
-            border-width: 10px 10px 10px 10px;
-            border-color: transparent transparent $color-grey-0 transparent;
+          content: "";
+          width: 0;
+          height: 0;
+          position: absolute;
+          top: -20px;
+          right: 13px;
+          border: solid;
+          border-width: 10px 10px 10px 10px;
+          border-color: transparent transparent $color-grey-0 transparent;
         }
 
         &-item {

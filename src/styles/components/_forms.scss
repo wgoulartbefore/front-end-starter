@@ -64,6 +64,54 @@
   }
 }
 
+.form-std {
+  @extend %clearfix;
+
+  label {
+    display: block;
+    @include adjust-font-size-to(14px);
+    line-height: 1.5;
+    color: $color-grey-900;
+    margin-bottom: $size-components-padding / 2;
+  }
+
+  .half-input {
+    display: block;
+    margin-top: $size-components-padding;
+    @extend %clearfix;
+
+    & > .half-input {
+      float: left;
+      width: 48%;
+      margin-right: 2%;
+      margin-top: 0;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  @include susy-breakpoint($screen-big, 16) {
+    .half-input {
+      @include span(8 of 16);
+      margin-top: 0;
+    }
+
+    .without-label {
+      display: flex;
+      align-items: flex-end;
+      flex-wrap: wrap;
+    }
+
+  }
+
+}
+
 .form-line {
   display: block;
   margin-bottom: $size-components-padding;
@@ -89,7 +137,6 @@
 }
 
 .input-multiline,
-
 .input-singleline {
   display: block;
   width: 100%;

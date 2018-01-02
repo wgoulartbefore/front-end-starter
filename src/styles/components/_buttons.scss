@@ -5,8 +5,8 @@
   font-family: $font-stack;
   @include adjust-font-size-to(16px);
   font-weight: 500;
-  line-height: $size-components-height;
-  height: $size-components-height;
+  line-height: $size-components-height - 8px;
+  height: $size-components-height - 8px;
   padding: 0 $size-components-padding;
   text-align: center;
   text-transform: uppercase;

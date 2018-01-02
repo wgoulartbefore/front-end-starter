@@ -65,6 +65,45 @@ table {
   }
 }
 
+/* fallback */
+table.lista,
+table.form {
+  @extend .std-table;
+
+  tr:nth-child(even) {
+    background: $color-grey-100;
+  }
+
+  th,
+  td {
+    border-bottom: 1px solid $color-grey-300;
+    border-right: 1px solid $color-grey-300;
+    text-align: center;
+    vertical-align: middle;
+
+    &:last-child {
+      border-right: 0;
+    }
+  }
+
+  th {
+    font-weight: 700;
+    background: $color-grey-200;
+
+    &:last-child {
+      border-right: 0;
+    }
+  }
+
+  @include susy-breakpoint($screen-big, 16) {
+    td,
+    th {
+      @include adjust-font-size-to(16px);
+      padding: $size-std-padding / 2;
+    }
+  }
+}
+
 .table-wrapper {
   display: block;
   overflow: hidden;

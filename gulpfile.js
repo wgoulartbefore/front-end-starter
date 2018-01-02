@@ -10,7 +10,6 @@ const notify = require('gulp-notify');
 
 gulp.task('browsersync-run', () => {
   browsersync.init(config.browsersync.options);
-
   gulp.watch(`${config.js.src}`, ['js']);
   gulp.watch(`${config.sass.src}`, ['sass']);
   gulp.watch(`${config.html.src}`, ['html']);
@@ -65,8 +64,6 @@ gulp.task('sass', () => {
     .pipe(gulp.dest(config.sass.dist))
     .pipe(browsersync.stream());
 });
-
-
 
 gulp.task('sass-build', () => {
   return gulp.src(config.sass.src)

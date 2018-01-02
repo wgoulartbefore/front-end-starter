@@ -48,7 +48,6 @@
   }
 }
 
-
 /* card style color */
 .card {
   @include span(3);
@@ -95,7 +94,6 @@
     }
   }
 }
-
 
 /* gen-card */
 .gen-card {
@@ -211,11 +209,53 @@
 }
 
 #subCapa {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+  .grupo {
+    background: $color-grey-0;
+    border: 1px solid #d2d2d2;
+    margin-bottom: $size-components-padding;
+  }
+}
 
-    .grupo {
-        margin-bottom: $size-components-padding;
+/* box-card */
+.box-card {
+  display: block;
+  background: $color-grey-0;
+  border-radius: 2px;
+  margin-bottom: $size-components-padding;
+
+  &__title {
+    display: flex;
+    background: $color-grey-100;
+    font-size: 1rem;
+    font-weight: 700;
+    padding: $size-components-padding;
+    border-bottom: 1px solid $color-pl-2;
+
+    &-close {
+      font-size: 20px;
+      margin-left: auto;
     }
+  }
+
+  &__content {
+    display: block;
+    padding: $size-components-padding;
+
+    // opacity: 0;
+    // height: 0;
+    // visibility: hidden;
+    // transform: translateY(-100%);
+    // transition: height 0.1s , visibility 0.3s, opacity 0.3s, transform 0.5s linear;
+    @extend %clearfix;
+  }
+
+  &--open {
+    // .box-card__content {
+    //   padding: $size-components-padding;
+    //   opacity: 1;
+    //   height: 100%;
+    //   visibility: visible;
+    //   transform: translateY(0);
+    // }
+  }
 }

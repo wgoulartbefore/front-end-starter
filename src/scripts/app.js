@@ -323,8 +323,50 @@ function headerOptsController() {
   });
 }
 
+// Função auxiliar de Logging
+function printc(msg){
+	try{
+		console.log(msg);
+	}
+	catch(err){
+	}
+}
+
+
+function boxCardController() {
+	const activeClass = 'box-card--open';
+
+  function toggleIcon(element) {
+  }
+
+	function showContent(element){
+    element.removeClass(activeClass);
+    element.find('.box-card__content').slideDown();
+    element.addClass(activeClass);
+    toggleIcon(element);
+	}
+
+	function hideContent(element){
+    element.removeClass(activeClass);
+    element.find('.box-card__content').slideUp();
+    toggleIcon(element);
+	}
+
+  $(document).on('click', '.box-card', function(e) {
+    e.preventDefault();
+    let element = $(this);
+
+    if(element.hasClass(activeClass)){
+			hideContent(element);
+		}else{
+			showContent(element);
+    }
+  });
+}
+
 headerOptsController();
 openUserOptions();
 headerSearchController();
 mainMenuController();
 switchTypeClientRegisterSell();
+boxCardController()
