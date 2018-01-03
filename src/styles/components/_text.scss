@@ -85,6 +85,19 @@
   }
 }
 
+.gen-text-small {
+  display: block;
+  @include adjust-font-size-to(14px);
+  color: $color-text-gen;
+  margin-top: $size-std-padding / 2;
+  margin-bottom: $size-std-padding / 2;
+
+  a {
+    color: $color-pl-4;
+    text-decoration: underline;
+  }
+}
+
 .small-text {
   display: block;
   @include adjust-font-size-to(14px);

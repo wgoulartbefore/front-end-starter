@@ -62,71 +62,23 @@
     padding: $size-components-padding $size-components-padding 0 $size-components-padding;
     margin-bottom: $size-components-padding;
   }
-}
 
-.form-std {
-  @extend %clearfix;
-
-  label {
+  .form-line {
     display: block;
-    @include adjust-font-size-to(14px);
-    line-height: 1.5;
-    color: $color-grey-900;
-    margin-bottom: $size-components-padding / 2;
-  }
-
-  .half-input {
-    display: block;
-    margin-top: $size-components-padding;
+    margin-bottom: $size-components-padding;
     @extend %clearfix;
 
-    & > .half-input {
-      float: left;
-      width: 48%;
-      margin-right: 2%;
-      margin-top: 0;
-
-      &:last-child {
-        margin-right: 0;
-      }
-    }
-
-    &:first-child {
-      margin-top: 0;
-    }
-  }
-
-  @include susy-breakpoint($screen-big, 16) {
-    .half-input {
-      @include span(8 of 16);
+    &:first-last {
       margin-top: 0;
     }
 
-    .without-label {
+    @include susy-breakpoint($screen-small, 8) {
       display: flex;
-      align-items: flex-end;
-      flex-wrap: wrap;
     }
 
-  }
-
-}
-
-.form-line {
-  display: block;
-  margin-bottom: $size-components-padding;
-  @extend %clearfix;
-
-  &:first-last {
-    margin-top: 0;
-  }
-
-  @include susy-breakpoint($screen-small, 8) {
-    display: flex;
-  }
-
-  @include susy-breakpoint($screen-big, 16) {
-    margin-bottom: $size-components-padding;
+    @include susy-breakpoint($screen-big, 16) {
+      margin-bottom: $size-components-padding;
+    }
   }
 }
 
@@ -217,22 +169,8 @@
   width: 100%;
   @include adjust-font-size-to(16px);
   height: $size-components-height - 8;
-  // // background: $color-grey-0;
-  // // border: 1px solid $color-grey-400;
-  // background: $color-grey-50;
-  // border: 1px solid $color-grey-400;
   border-radius: 2px;
   cursor: pointer;
-
-  // .label {
-  //   display: block;
-  //   @include adjust-font-size-to(16px);
-  //   // height: $size-components-height;
-  //   // line-height: $size-components-height - 24px;
-  //   padding: (($size-components-height - 24px) / 2) $size-components-padding;
-  //   color: $color-grey-600;
-  //   // font-weight: bold;
-  // }
 
   &:after {
     display: block;
@@ -319,7 +257,6 @@
   @include adjust-font-size-to(16px);
   line-height: 22px;
   height: $size-components-height;
-  // padding: (($size-components-height - 24px) / 2) $size-components-padding;
   vertical-align: text-bottom;
 }
 
@@ -396,8 +333,6 @@ input[type="radio"] {
     }
   }
 }
-
-// input[type="radio"]:checked + span
 
 /* Search bar */
 .search-bar {
@@ -615,4 +550,74 @@ fieldset {
     margin: 0 $size-components-padding;
     padding: 0 $size-components-padding - 10;
   }
+}
+
+/* form-std */
+.form-std {
+    @extend %clearfix;
+
+    label {
+        display: block;
+        @include adjust-font-size-to(14px);
+        line-height: 1.5;
+        color: $color-grey-900;
+        margin-bottom: $size-components-padding / 2;
+    }
+
+    .form-line {
+        @extend %clearfix;
+        margin-top: $size-components-padding / 2;
+
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+
+    .half-input {
+        display: block;
+        margin: 0;
+        width: 100%;
+        margin-bottom: $size-components-padding;
+
+        [class^="bt-"] {
+            width: 100%;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &.without-label {
+            vertical-align: bottom;
+        }
+
+        @include susy-breakpoint($screen-medium, 12) {
+            display: block;
+            float: left;
+            width: 49%;
+            margin-right: 2%;
+            margin-bottom: 0;
+
+            [class^="bt-"] {
+                width: auto;
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+        }
+    }
+
+    .input-holder {
+        // @include span(6);
+        @extend %clearfix;
+        border: none;
+        height: auto;
+        padding: 0;
+
+        // @include susy-breakpoint($screen-medium, 16){
+        //     @include span(16);
+        // }
+    }
 }
