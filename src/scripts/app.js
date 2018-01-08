@@ -332,35 +332,29 @@ function printc(msg){
 	}
 }
 
-
 function boxCardController() {
-	const activeClass = 'box-card--open';
+  const activeClass = 'box-card--open';
 
-  function toggleIcon(element) {
+  function showContent(element) {
+      element.closest('.box-card').find('.box-card__content').slideDown();
+      element.closest('.box-card').addClass(activeClass);
   }
 
-	function showContent(element){
-    element.removeClass(activeClass);
-    element.find('.box-card__content').slideDown();
-    element.addClass(activeClass);
-    toggleIcon(element);
-	}
+  function hideContent(element) {
+      element.closest('.box-card').removeClass(activeClass);
+      element.closest('.box-card').find('.box-card__content').slideUp();
+  }
 
-	function hideContent(element){
-    element.removeClass(activeClass);
-    element.find('.box-card__content').slideUp();
-    toggleIcon(element);
-	}
+  $(document).on('click', '.box-card__title', function (e) {
+      e.preventDefault();
+      let element = $(this);
+      element.closest('.box-card').toggleClass
 
-  $(document).on('click', '.box-card', function(e) {
-    e.preventDefault();
-    let element = $(this);
-
-    if(element.hasClass(activeClass)){
-			hideContent(element);
-		}else{
-			showContent(element);
-    }
+      if (element.closest('.box-card').hasClass(activeClass)) {
+          hideContent(element);
+      } else {
+          showContent(element);
+      }
   });
 }
 

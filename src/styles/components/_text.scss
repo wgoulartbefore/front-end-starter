@@ -117,14 +117,20 @@ ul.gen-text {
   }
 }
 
+.header-heading {
+ @include susy-breakpoint($screen-big, 16){
+   margin-top: $size-components-padding;
+ }
+}
+
 .title-page {
   display: block;
-  margin: $size-components-padding 0;
+  margin-bottom: $size-components-padding;
 
   &__title {
     display: block;
     font-size: 28px;
-    line-height: 24px;
+    line-height: 1.5;
     color: $color-grey-1000;
     font-weight: 700;
   }

@@ -33,11 +33,11 @@ table {
       padding: $size-components-padding;
     }
   }
-
 }
 
 .table-striped {
   @extend .std-table;
+  border-color: #cecece;
 
   tr:nth-child(even) {
     background: $color-grey-100;
@@ -45,8 +45,10 @@ table {
 
   th,
   td {
-    border-bottom: 1px solid $color-grey-300;
-    border-right: 1px solid $color-grey-300;
+    // border-bottom: 1px solid $color-grey-300;
+    // border-right: 1px solid $color-grey-300;
+    border-bottom: 1px solid #cecece;
+    border-right: 1px solid #cecece;
     text-align: center;
     vertical-align: middle;
 

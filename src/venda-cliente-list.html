@@ -15,157 +15,393 @@
   <meta name="theme-color" content="#4a245d">
 
   <!-- Google Fonts !-->
-  <link href="https://fonts.googleapis.com/css?family=Bitter:400,700|PT+Sans:400,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet">
   <!-- Estilos Padrão !-->
   <link rel="stylesheet" href="/styles/main.css" type="text/css" media="screen, projection">
 </head>
 
 <body>
-  <div id="top-section">
 
-    <section class="top-header">
-      <div class="container">
-        <ul class="list-opts">
-          <li><a href=""> </a></li>
+  <div id="master-header" class="master-header">
+    <nav class="header-opts-bar">
+      <div class="holder">
+        <ul class="header-opts-list">
+            <li class="header-opts-item">
+              <span id="relogioExpiraSessao" class="hasCountdown">
+                <span class="countdown_row countdown_amount">19:52</span>
+                <span class="countdown_row countdown_descr">A sessão expira em: </span>
+              </span>
+            </li>
+
+          <li class="header-opts-item">
+            <a class="header-opts-link">
+              <i class="fa fa-phone"></i>
+              Atendimento Online
+            </a>
+          </li>
+
+          <li class="header-opts-item">
+            <a class="header-opts-link">
+              <i class="fa fa-question-circle"></i>
+              Ajuda
+            </a>
+
+            <div class="header-opts-submenu">
+              <a href="https://before.atlassian.net/servicedesk/customer/portal/2 " class="header-opts-text ">
+                Central do Cliente
+              </a>" class="header-opts-text"> Central do Cliente
+              </a>
+              <a href="" class="header-opts-text">
+                Manual
+              </a>
+            </div>
+          </li>
+
+          <li class="header-opts-item">
+            <a class="header-opts-link">
+              <i class="fa fa-info-circle"></i>
+              Informações
+            </a>
+            <div class="header-opts-submenu">
+              <h4 class="header-opts-title"> Tabela de preço: </h4>
+              <p class="header-opts-text">
+                Última atualização: 14/11/2017 08:17:33
+              </p>
+              <p class="header-opts-text">
+                Início da vigência: 14/11/2017
+              </p>
+
+              <h4 class="header-opts-title"> Telefones para suporte: </h4>
+              <a href="tel:0673352-3456" class="header-opts-text">
+                (067) 3352-3456
+              </a>
+              <a href="tel:0673230-0099" class="header-opts-text">
+                (067) 3230-0099
+              </a>
+
+              <h4 class="header-opts-title">Celulares para suporte:</h4>
+              <a href="tel:06799614-1046" class="header-opts-text">
+                (067) 99614-1046
+              </a>
+              <a href="tel:06799972-3456" class="header-opts-text">
+                (067) 99972-3456
+              </a>
+              <a href="tel:06798109-8602" class="header-opts-text">
+                (067) 98109-8602
+              </a>
+              <a href="tel:01196866-0077" class="header-opts-text">
+                (011) 96866-0077
+              </a>
+              <a href="tel:01199558-1504" class="header-opts-text">
+                (011) 99558-1504
+              </a>
+
+              <h4 class="header-opts-title">Celulares para comercial:</h4>
+              <a href="tel:06799904-8880" class="header-opts-text">
+                (067) 99904-8880
+              </a>
+              <a href="tel:06799958-8880" class="header-opts-text">
+                (067) 99958-8880
+              </a>
+
+              <a href="tel:01196390-9900" class="header-opts-text">
+                (011) 96390-9900
+              </a>
+
+              <p class="header-opts-title">Vivo GO</p>
+              <p class="header-opts-title">Versão 2.2.181</p>
+            </div>
+
+          </li>
+
+          <li class="header-opts-item">
+            <a class="header-opts-link">
+              <i class="fa fa-bell"></i>
+              Notificações
+            </a>
+
+            <div class="header-opts-submenu">
+              <ul class="header-notification-list">
+                <li class="header-notification-item">
+                  <a href="" class="header-notification-link">
+                    <i class="header-notification-icon fa fa-bell"></i>
+                    <div class="header-notification-text">
+                      <p class="">Revista Vivo Ligado - 219ª Edição - Diretoria de Lojas - Nacional</p>
+                      <date class="header-notification-date">12/12/2017 - 10:35</date>
+                    </div>
+                  </a>
+                </li>
+
+                <li class="header-notification-item">
+                  <a href="" class="header-notification-link">
+                    <i class="header-notification-icon fa fa-bell"></i>
+                    <div class="header-notification-text">
+                      <p class="">Revista Vivo Ligado - 219ª Edição - Diretoria de Lojas - Nacional</p>
+                      <date class="header-notification-date">12/12/2017 - 10:35</date>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+
         </ul>
       </div>
-    </section>
+    </nav>
+    <!-- ./header-opts-bar -->
 
     <!-- Main Header !-->
     <header id="main-header" class="main-header">
-     <div class="container">
+      <div class="container">
         <h1 id="main-logo">
-          <span>Mercurio</span>
-          <a><img src="/images/main-logo.svg" alt="Logo Marca"/></a>
+          <a href="#">
+            <img src="/images/main-logo.svg" width="200" height="34" class="" alt="Logo da marca Mercurio" />
+            <span>Mercurio - Software de Gestão de Revendas Claro</span>
+          </a>
         </h1>
 
-        <div class="main-header-opts">
-          <form class="main-header-search" role="search">
-            <div class="input-container">
-              <input type="text" class="input-search" placeholder="O que você procura?">
-            </div>
-            <button class="search-submit" type="submit"><i class="fa fa-search"></i><span>Buscar</span></button>
-            <a id="bt-mobile-search-back" class="search-back"><i class="fa fa-arrow-left"></i></a>
-          </form>
-        </div>
+        <form class="main-header-search" role="search">
+          <div class="input-container">
+            <input type="text" class="input-search" placeholder="O que você procura?">
+          </div>
+          <button class="search-submit" type="submit">
+            <i class="fa fa-search"></i>
+            <span>Buscar</span>
+          </button>
+          <a id="bt-mobile-search-back" class="search-back">
+            <i class="fa fa-arrow-left"></i>
+          </a>
+        </form>
 
-        <a href="" class="user-login">
-          Olá, Marcelo Zucareli
-          <i class="fa fa-chevron-down"></i>
-        </a>
-     </div>
+        <nav class="main-header-user">
+          <a href="" class="header-user-options">Olá, Rafael Sandim</a>
+          <div class="header-user-submenu">
+            <p class="header-user-submenu-item">
+              <strong>Rafael Sandim | CELULARES S/A</strong>
+              <a class="fa fa-pencil-square-o"></a>
+            </p>
+            <p class="header-user-submenu-item">
+              <strong>E-mail:</strong> revenda@rafael.bom.br </p>
+            <p class="header-user-submenu-item">
+              <a href="">Deslogar</a>
+            </p>
+          </div>
+        </nav>
+      </div>
     </header>
+
+    <div class="header-mobile-opts">
+      <a id="bt-mobile-menu" class="opt-mobile-menu">
+        <i class="fa fa fa-bars"></i>
+      </a>
+      <a id="bt-mobile-search" class="opt-search">
+        <i class="fa fa-search"></i>
+      </a>
+      <h2 class="page-title"></h2>
+    </div>
     <!-- End Main Header  !-->
 
     <!-- Main Menu !-->
-    <nav id="main-menu" class="main-menu--alter">
+    <nav id="main-menu">
+      <ul class="main-menu-mobile">
+        <li>
+          <a>
+            <i class="fa fa-user"></i>Notificações</a>
+        </li>
+        <li>
+          <a>
+            <i class="fa fa-list"></i> Meus Pedidos</a>
+        </li>
+        <li>
+          <a>
+            <i class="fa fa-phone"></i> Atendimento Online</a>
+        </li>
+      </ul>
+
       <ul class="menu-list">
-        <li class="menu-list__item submenu">
+        <li class="menu-list__item menu-list--submenu">
           <a class="menu-list__link">
             <i class="fa fa-tag"></i>
             Acesso rápido
           </a>
 
           <ul class="submenu-list">
-            <li><a>Cliente</a></li>
-            <li><a>Compras</a></li>
-            <li><a>Fornecedor</a></li>
-            <li><a>Usuários</a></li>
-            <li><a>Valor Aparelho Vivo</a></li>
-            <li><a>Venda</a></li>
+            <li>
+              <a>Cliente</a>
+            </li>
+            <li>
+              <a>Compras</a>
+            </li>
+            <li>
+              <a>Fornecedor</a>
+            </li>
+            <li>
+              <a>Usuários</a>
+            </li>
+            <li>
+              <a>Valor Aparelho Vivo</a>
+            </li>
+            <li>
+              <a>Venda</a>
+            </li>
           </ul>
 
         </li>
-        <li class="menu-list__item">
+
+        <!-- <li class="menu-list__item">
           <a class="menu-list__link">
             <i class="fa fa-home"></i>
             Início
           </a>
-        </li>
-        <li class="menu-list__item submenu ">
+        </li> -->
+
+        <!-- <li class="menu-list__item menu-list--submenu ">
           <a class="menu-list__link">
             <i class="fa fa-question-circle"></i>
             Ajuda
           </a>
           <ul class="submenu-list">
-            <li><a>Atendimento</a></li>
-            <li><a>Manual</a></li>
+            <li>
+              <a>Atendimento</a>
+            </li>
+            <li>
+              <a>Manual</a>
+            </li>
           </ul>
-        </li>
-        <li class="menu-list__item submenu ">
+        </li> -->
+
+        <li class="menu-list__item menu-list--submenu ">
           <a class="menu-list__link">
             <i class="fa fa-shopping-cart"></i>
             Venda
           </a>
-
           <ul class="submenu-list">
-            <li><a>Venda</a></li>
-            <li><a>Gestão documental</a></li>
-            <li><a>Campanhas</a></li>
+            <li>
+              <a>Venda</a>
+            </li>
+            <li>
+              <a>Gestão documental</a>
+            </li>
+            <li>
+              <a>Campanhas</a>
+            </li>
           </ul>
         </li>
-        <li class="menu-list__item submenu ">
+
+        <li class="menu-list__item menu-list--submenu ">
           <a class="menu-list__link">
             <i class="fa fa-archive"></i>
             Gestão de Estoque
           </a>
 
           <ul class="submenu-list">
-            <li><a>Acessório</a></li>
-            <li><a>Estoque</a></li>
-            <li><a>Produtos Open</a></li>
-            <li><a>Uso e Consumo</a></li>
-            <li><a>Valores</a></li>
+            <li>
+              <a>Acessório</a>
+            </li>
+            <li>
+              <a>Estoque</a>
+            </li>
+            <li>
+              <a>Produtos Open</a>
+            </li>
+            <li>
+              <a>Uso e Consumo</a>
+            </li>
+            <li>
+              <a>Valores</a>
+            </li>
           </ul>
         </li>
-        <li class="menu-list__item submenu ">
+
+        <li class="menu-list__item menu-list--submenu ">
           <a class="menu-list__link">
             <i class="fa fa-usd"></i>
             Financeiro
           </a>
 
           <ul class="submenu-list">
-            <li><a>Baixa de títulos</a></li>
-            <li><a>Caixa</a></li>
-            <li><a>Contas a Pagar</a></li>
-            <li><a>Contas a Receber</a></li>
-            <li><a>Contas Bancárias</a></li>
+            <li>
+              <a>Baixa de títulos</a>
+            </li>
+            <li>
+              <a>Caixa</a>
+            </li>
+            <li>
+              <a>Contas a Pagar</a>
+            </li>
+            <li>
+              <a>Contas a Receber</a>
+            </li>
+            <li>
+              <a>Contas Bancárias</a>
+            </li>
           </ul>
         </li>
-        <li class="menu-list__item submenu ">
+
+        <li class="menu-list__item menu-list--submenu ">
           <a class="menu-list__link">
             <i class="fa fa-bar-chart"></i>
             Relatórios
           </a>
 
           <ul class="submenu-list">
-            <li><a>Comissões</a></li>
-            <li><a>Estoque</a></li>
-            <li><a>Financeiro</a></li>
-            <li><a>Gerencial</a></li>
-            <li><a>Movimento</a></li>
-            <li><a>Pessoas</a></li>
-            <li><a>Remuneração</a></li>
-            <li><a>Vendas</a></li>
-            <li><a>Vivo GO</a></li>
+            <li>
+              <a>Comissões</a>
+            </li>
+            <li>
+              <a>Estoque</a>
+            </li>
+            <li>
+              <a>Financeiro</a>
+            </li>
+            <li>
+              <a>Gerencial</a>
+            </li>
+            <li>
+              <a>Movimento</a>
+            </li>
+            <li>
+              <a>Pessoas</a>
+            </li>
+            <li>
+              <a>Remuneração</a>
+            </li>
+            <li>
+              <a>Vendas</a>
+            </li>
+            <li>
+              <a>Vivo GO</a>
+            </li>
           </ul>
         </li>
-        <li class="menu-list__item submenu ">
+
+        <li class="menu-list__item menu-list--submenu ">
           <a class="menu-list__link">
             <i class="fa fa-cog"></i>
             Configurações
           </a>
           <ul class="submenu-list">
-            <li><a>Alíquotas</a></li>
-            <li><a>Comunicação</a></li>
-            <li><a>Metas e Comissões</a></li>
-            <li><a>Rede</a></li>
-            <li><a>Usuários</a></li>
+            <li>
+              <a>Alíquotas</a>
+            </li>
+            <li>
+              <a>Comunicação</a>
+            </li>
+            <li>
+              <a>Metas e Comissões</a>
+            </li>
+            <li>
+              <a>Rede</a>
+            </li>
+            <li>
+              <a>Usuários</a>
+            </li>
           </ul>
         </li>
+
       </ul>
     </nav>
-    <!-- End Main Menu  !-->
+    <!-- End Main Menu  ! -->
   </div>
 
   <section class="header-heading">
@@ -192,9 +428,21 @@
   </section>
 
   <!-- Global Holder!-->
-  <section id="main-content" class="main-content">
+  <section id="main-content" class="">
     <div class="container">
       <form action="" class="std-form basic-search">
+        <div class="form-line">
+          <label for="">Nº de registro:</label>
+          <input type="text" class="input-singleline" placeholder="Informe o Nº de protocolo...">
+        </div>
+        <div class="form-line">
+          <label for="">Nome:</label>
+          <input type="text" class="input-singleline" placeholder="Informe Nome do cliente...">
+        </div>
+        <div class="form-line">
+          <label for="">CPF/CNPJ:</label>
+          <input type="text" class="input-singleline" placeholder="Informe o CPF ou CNPJ do cliente...">
+        </div>
         <div class="form-line">
           <label for="">Nº de registro:</label>
           <input type="text" class="input-singleline" placeholder="Informe o Nº de protocolo...">

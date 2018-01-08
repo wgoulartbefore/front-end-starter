@@ -120,17 +120,18 @@
     height: 30px;
     z-index: 4;
     background: $color-grey-900;
+
     @include susy-breakpoint($screen-big, 16) {
-        display: block;
+      display: block;
     }
 }
 
 .header-opts {
     &-list {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: flex-end;
-        margin-left: auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      margin-left: auto;
     }
 
     &-item {
@@ -138,10 +139,16 @@
         padding: 5px $size-components-padding;
 
         .hasCountdown {
-            display: block;
-            font-size: 12px;
-            justify-content: flex-start;
-            align-content: center;
+          display: block;
+          font-size: 12px;
+          justify-content: flex-start;
+          align-content: center;
+          color: $color-grey-0;
+
+          .countdown_amount {
+            float: right;
+            margin-left: 5px;
+          }
         }
 
         &:first-child {
@@ -151,23 +158,22 @@
         }
 
         &.open-submenu {
-            .header-opts-submenu {
-                opacity: 1;
-                transform: translateY(0);
-                visibility: visible;
-            }
+          .header-opts-submenu {
+              opacity: 1;
+              transform: translateY(0);
+              visibility: visible;
+          }
         }
     }
 
-
     &-link {
-        font-size: 14px;
-        color: $color-grey-0;
-        padding-bottom: $size-components-padding + 5;
+      font-size: 14px;
+      color: $color-grey-0;
+      padding-bottom: $size-components-padding + 5;
 
-        i {
-            margin-right: 5px;
-        }
+      i {
+          margin-right: 5px;
+      }
     }
 
     &-submenu {

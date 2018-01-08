@@ -166,15 +166,18 @@
   height: 100%;
   top: 0;
   left: 0;
-  background: shade($color-main-menu-bg, 5%);
+  // background: shade($color-main-menu-bg, 5%);
+  background: $color-grey-150;
   overflow-y: auto;
   transform: translateX(-100%);
   transition: transform $time-std-transition;
 
   li {
     display: block;
-    border-top: 1px solid tint($color-main-menu-bg, 5%);
-    border-bottom: 1px solid shade($color-main-menu-bg, 15%);
+    // border-top: 1px solid tint($color-main-menu-bg, 5%);
+    // border-bottom: 1px solid shade($color-main-menu-bg, 15%);
+    border-top: 1px solid #f2f2f2;
+    border-bottom: 1px solid #dadada;
 
     &:first-child {
       border-top: none;
@@ -195,10 +198,12 @@
     padding: $size-components-padding (($size-components-height - 22px) / 2);
 
     color: $color-grey-900;
-    background: shade($color-main-menu-bg, 5%);
+    // background: shade($color-main-menu-bg, 5%);
+    background: $color-grey-150;
 
     &:hover {
-      background: shade($color-main-menu-bg, 5%);
+      // background: shade($color-main-menu-bg, 5%);
+      background:  shade($color-grey-150, 5%);
     }
   }
 
@@ -218,8 +223,12 @@
     box-shadow: none;
     overflow: visible;
 
-    background: shade($color-main-menu-bg, 5%);
-    border-bottom: 1px solid $color-main-menu-border;
+    // background: shade($color-main-menu-bg, 5%);
+    background: $color-grey-150;
+
+    // border-bottom: 1px solid $color-main-menu-border;
+    border-top: 1px solid #f2f2f2;
+    border-bottom: 1px solid #dadada;
 
     li {
       text-align: left;
@@ -261,9 +270,15 @@
       font-size: 14px;
       line-height: $size-components-height;
     }
+
+    &:hover {
+      background: $color-grey-150;
+    }
   }
 
   &:hover {
+    background: $color-grey-150;
+
     .submenu-list {
       display: block;
     }

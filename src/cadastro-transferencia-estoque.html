@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Mercurio - Software de Gestão de Revendas</title>
+  <title>Mercurio</title>
 
   <!-- IE Edge !-->
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -16,9 +16,8 @@
 
   <!-- Google Fonts !-->
   <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet">
-
   <!-- Estilos Padrão !-->
-  <link rel="stylesheet" href="styles/main.css" type="text/css" media="screen, projection">
+  <link rel="stylesheet" href="/styles/main.css" type="text/css" media="screen, projection">
 </head>
 
 <body>
@@ -27,6 +26,13 @@
     <nav class="header-opts-bar">
       <div class="holder">
         <ul class="header-opts-list">
+            <li class="header-opts-item">
+              <span id="relogioExpiraSessao" class="hasCountdown">
+                <span class="countdown_row countdown_amount">19:52</span>
+                <span class="countdown_row countdown_descr">A sessão expira em: </span>
+              </span>
+            </li>
+
           <li class="header-opts-item">
             <a class="header-opts-link">
               <i class="fa fa-phone"></i>
@@ -168,14 +174,14 @@
         </form>
 
         <nav class="main-header-user">
-          <a href="" class="header-user-options">Olá, Marcelo Zucareli</a>
+          <a href="" class="header-user-options">Olá, Rafael Sandim</a>
           <div class="header-user-submenu">
             <p class="header-user-submenu-item">
-              <strong>Marcelo Zucareli | CELULARES S/A</strong>
+              <strong>Rafael Sandim | CELULARES S/A</strong>
               <a class="fa fa-pencil-square-o"></a>
             </p>
             <p class="header-user-submenu-item">
-              <strong>E-mail:</strong> marcelo@before.bom.br </p>
+              <strong>E-mail:</strong> revenda@rafael.bom.br </p>
             <p class="header-user-submenu-item">
               <a href="">Deslogar</a>
             </p>
@@ -211,6 +217,7 @@
             <i class="fa fa-phone"></i> Atendimento Online</a>
         </li>
       </ul>
+
       <ul class="menu-list">
         <li class="menu-list__item menu-list--submenu">
           <a class="menu-list__link">
@@ -240,13 +247,15 @@
           </ul>
 
         </li>
-        <li class="menu-list__item">
+
+        <!-- <li class="menu-list__item">
           <a class="menu-list__link">
             <i class="fa fa-home"></i>
             Início
           </a>
-        </li>
-        <li class="menu-list__item menu-list--submenu ">
+        </li> -->
+
+        <!-- <li class="menu-list__item menu-list--submenu ">
           <a class="menu-list__link">
             <i class="fa fa-question-circle"></i>
             Ajuda
@@ -259,7 +268,8 @@
               <a>Manual</a>
             </li>
           </ul>
-        </li>
+        </li> -->
+
         <li class="menu-list__item menu-list--submenu ">
           <a class="menu-list__link">
             <i class="fa fa-shopping-cart"></i>
@@ -277,6 +287,7 @@
             </li>
           </ul>
         </li>
+
         <li class="menu-list__item menu-list--submenu ">
           <a class="menu-list__link">
             <i class="fa fa-archive"></i>
@@ -301,6 +312,7 @@
             </li>
           </ul>
         </li>
+
         <li class="menu-list__item menu-list--submenu ">
           <a class="menu-list__link">
             <i class="fa fa-usd"></i>
@@ -325,6 +337,7 @@
             </li>
           </ul>
         </li>
+
         <li class="menu-list__item menu-list--submenu ">
           <a class="menu-list__link">
             <i class="fa fa-bar-chart"></i>
@@ -361,6 +374,7 @@
             </li>
           </ul>
         </li>
+
         <li class="menu-list__item menu-list--submenu ">
           <a class="menu-list__link">
             <i class="fa fa-cog"></i>
@@ -384,26 +398,39 @@
             </li>
           </ul>
         </li>
+
       </ul>
     </nav>
     <!-- End Main Menu  ! -->
   </div>
 
+  <section class="header-heading">
+    <div class="container">
+      <nav class="breadcrumb">
+        <ul class="breadcrumb__list">
+          <li class="breadcrumb__item">
+            <a href="" class="breadcrumb__link">Início</a>
+          </li>
+          <li class="breadcrumb__item">
+            <a href="" class="breadcrumb__link">Transferir estoque</a>
+          </li>
+          <li class="breadcrumb__item">
+            <a href="" class="breadcrumb__link">Cadastro de transferencia de estoque</a>
+          </li>
+        </ul>
+      </nav>
+
+      <header class="title-page">
+        <h2 class="title-page__title">Cadastro de transferencia de estoque</h2>
+        <p class="title-page__subtitle">Cadastro de transferência de produtos entre filiais.</p>
+      </header>
+    </div>
+  </section>
   <!-- Global Holder!-->
   <div id="global-holder">
-    <section id="main-content" class="main-content">
+    <section id="main-content" class="">
       <div class="container">
-        <nav class="breadcrumb">
-          <ul class="breadcrumb__list">
-            <li class="breadcrumb__item">
-              <a href="" class="breadcrumb__link">Início</a>
-            </li>
-            <li class="breadcrumb__item">
-              <a href="" class="breadcrumb__link">Cadastro de transferencia de estoque</a>
-            </li>
-          </ul>
-        </nav>
-        <h1 class="title-medium">Cadastro de transferencia de estoque</h1>
+
 
         <div class="box-card">
           <div class="box-card__title">
@@ -535,7 +562,7 @@
 
         <div class="box-card">
           <div class="box-card__title">
-            Produto Claro
+            Produtos Claro
             <span class="box-card__title-count">(0)</span>
             <a class="box-card__title-close">
               <i class="fa fa-angle-down"></i>
@@ -624,7 +651,7 @@
             <form action="" class="form-std">
               <div class="form-line">
                 <div class="half-input">
-                  <label for="">Serial do produto:</label>
+                  <label for="">Produto:</label>
                   <input type="text" class="input-singleline" placeholder="Informe o serial do produto">
                   <p class="gen-text-small">Digite as quatro primeiras letras para iniciar a busca.</p>
                 </div>
@@ -680,6 +707,12 @@
                 </form>
             </div>
         </div>
+
+        <div class="area-buttons">
+            <a href="" class="bt-back">Voltar</a>
+            <a href="" class="bt-confirm">Salvar</a>
+          </div>
+        <!-- ./gen-box -->
 
       </div>
       <!-- ./container -->
