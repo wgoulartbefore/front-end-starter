@@ -53,7 +53,6 @@
 
     @include susy-breakpoint($screen-big, 16) {
     }
-
   }
 
   fieldset {
@@ -99,6 +98,10 @@
   border: 1px solid $color-grey-400;
   padding: (($size-components-height - 24px) / 2) $size-components-padding;
   border-radius: 2px;
+
+  &--small {
+    width: 25%;
+  }
 
   &.input--search {
     float: left;
@@ -564,70 +567,148 @@ fieldset {
 
 /* form-std */
 .form-std {
-    @extend %clearfix;
+  @extend %clearfix;
 
-    label {
-        display: block;
-        @include adjust-font-size-to(14px);
-        line-height: 1.5;
-        color: $color-grey-900;
-        margin-bottom: $size-components-padding / 2;
+  label {
+      display: block;
+      @include adjust-font-size-to(14px);
+      line-height: 1.5;
+      color: $color-grey-900;
+      margin-bottom: $size-components-padding / 2;
+  }
+
+  .form-line {
+      @extend %clearfix;
+      margin-top: $size-components-padding / 2;
+
+      &:first-child {
+          // margin-top: 0;
+      }
+  }
+
+  .half-input {
+      display: block;
+      margin: 0;
+      width: 100%;
+      margin-bottom: $size-components-padding;
+
+      [class^="bt-"] {
+          width: 100%;
+      }
+
+      &:last-child {
+          margin-bottom: 0;
+      }
+
+      &.without-label {
+          vertical-align: bottom;
+      }
+
+      @include susy-breakpoint($screen-medium, 12) {
+          display: block;
+          float: left;
+          width: 49%;
+          margin-right: 2%;
+          margin-bottom: 0;
+
+          [class^="bt-"] {
+              width: auto;
+          }
+
+          &:last-child {
+              margin-right: 0;
+          }
+
+      }
+  }
+
+  .input-holder {
+      // @include span(6);
+      @extend %clearfix;
+      border: none;
+      height: auto;
+      padding: 0;
+
+      // @include susy-breakpoint($screen-medium, 16){
+      //     @include span(16);
+      // }
+  }
+
+  &.form-small {
+    .form-line {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  &.form-std--goals {
+
+    fieldset {
+      padding: $size-std-padding;
+    }
+
+    .holder-input {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
     }
 
     .form-line {
-        @extend %clearfix;
-        margin-top: $size-components-padding / 2;
+      width: 24%;
+      margin-right: 1%;
+      align-items: flex-end;
 
-        &:first-child {
-            // margin-top: 0;
-        }
+      &:last-child {
+        margin-right: 0;
+        display: flex;
+        flex-wrap: wrap;
+      }
     }
 
-    .half-input {
-        display: block;
+    [class^="bt-"] {
+      padding: 0 $size-std-padding;
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: none;
+
+      .fa {
+        margin-right: 5px;
+      }
+
+      &:first-child {
+        margin-right: auto;
+      }
+
+      &:last-child {
+        float: right;
+      }
+    }
+
+    .header-goals-form {
+      label {
+        font-size: 16px;
+        font-weight: 700;
+        min-width: 200px;
+
         margin: 0;
-        width: 100%;
-        margin-bottom: $size-components-padding;
+        margin-right: $size-components-margin;
+      }
 
-        [class^="bt-"] {
-            width: 100%;
-        }
-
-        &:last-child {
-            margin-bottom: 0;
-        }
-
-        &.without-label {
-            vertical-align: bottom;
-        }
-
-        @include susy-breakpoint($screen-medium, 12) {
-            display: block;
-            float: left;
-            width: 49%;
-            margin-right: 2%;
-            margin-bottom: 0;
-
-            [class^="bt-"] {
-                width: auto;
-            }
-
-            &:last-child {
-                margin-right: 0;
-            }
-
-        }
+      .form-line {
+        display: flex;
+        width: auto;
+        align-items: center;
+        margin: 0 0 $size-components-padding 0;
+      }
     }
 
-    .input-holder {
-        // @include span(6);
-        @extend %clearfix;
-        border: none;
-        height: auto;
-        padding: 0;
+    .goals-form-bonus {
+      border-bottom:  1px solid $color-base-main;
 
-        // @include susy-breakpoint($screen-medium, 16){
-        //     @include span(16);
-        // }
+      &__currency {}
+      &__value {
+      }
     }
+
+  }
 }

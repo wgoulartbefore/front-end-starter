@@ -57,6 +57,8 @@
   }
 }
 
+
+
 .title-medium--underline {
   display: block;
   @include adjust-font-size-to(18px);
@@ -118,9 +120,9 @@ ul.gen-text {
 }
 
 .header-heading {
- @include susy-breakpoint($screen-big, 16){
-   margin-top: $size-components-padding;
- }
+  @include susy-breakpoint($screen-big, 16){
+    margin-top: $size-components-padding;
+  }
 }
 
 .title-page {
@@ -140,4 +142,41 @@ ul.gen-text {
     font-size: 18px;
     color: #6A707E;
   }
+}
+
+.text-main-std {
+  @include adjust-font-size-to(16px);
+  color: $color-grey-1000;
+  text-transform: none;
+  margin-bottom: 5px;
+}
+
+.text-gen-label {
+  display: inline-block;
+  @include adjust-font-size-to(16px);
+  color: $color-grey-1000;
+  text-transform: none;
+  margin-right: 10px;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  .fa {
+    color: $color-base-main;
+  }
+}
+
+.text-main-std {
+  @include adjust-font-size-to(16px);
+  color: $color-grey-1000;
+  text-transform: none;
+  margin-bottom: 5px;
+}
+
+.text-main-spacing {
+  @include adjust-font-size-to(16px);
+  color: $color-grey-1000;
+  text-transform: none;
+  margin-bottom: $size-components-padding;
 }

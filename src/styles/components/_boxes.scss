@@ -48,6 +48,7 @@
   }
 }
 
+
 /* card style color */
 .card {
   @include span(3);
@@ -250,23 +251,10 @@
   &__content {
     display: none;
     padding: $size-components-padding;
-
-    // opacity: 0;
-    // height: 0;
-    // visibility: hidden;
-    // transform: translateY(-100%);
-    // transition: height 0.1s , visibility 0.3s, opacity 0.3s, transform 0.5s linear;
     @extend %clearfix;
   }
 
   &--open {
-    // .box-card__content {
-    //   padding: $size-components-padding;
-    //   opacity: 1;
-    //   height: 100%;
-    //   visibility: visible;
-    //   transform: translateY(0);
-    // }
   }
 
   &--std {
@@ -278,5 +266,40 @@
       display: block;
     }
   }
+}
 
+.card-container {
+  display: block;
+  background: $color-grey-0;
+  border-radius: 2px;
+  margin-bottom: $size-components-padding;
+
+  &__title {
+    display: flex;
+    position: relative;
+    background: $color-grey-100;
+    font-size: 18px;
+    font-weight: 700;
+    padding: $size-components-padding;
+    border-bottom: 1px solid $color-pl-2;
+
+    &-close {
+      position: absolute;
+      font-size: 24px;
+      font-weight: 700;
+      top: 50%;
+      right: $size-components-padding;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__content {
+    display: block;
+    padding: $size-components-padding;
+    @extend %clearfix;
+  }
+
+  &--striped {
+    border: 1px solid $color-base-background;
+  }
 }
