@@ -153,7 +153,12 @@
     box-shadow: 0 0 2px rgba($color-grey-400, 0.5);
     color: shade($color-grey-400, 10%);
     @include placeholderColor($color-grey-200, 40%);
-    cursor: not-allowed;
+
+    &:focus {
+      border-color: $color-grey-400;
+      box-shadow: 0 0 2px -1px $color-grey-400;
+      -webkit-tap-highlight-color: $color-grey-400;
+    }
   }
 
   &::placeholder {

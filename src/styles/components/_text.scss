@@ -57,7 +57,11 @@
   }
 }
 
-
+.title-gen-small {
+  @include adjust-font-size-to(16px);
+  color: $color-grey-1000;
+  font-weight: 700;
+}
 
 .title-medium--underline {
   display: block;
