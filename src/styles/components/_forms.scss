@@ -647,7 +647,6 @@ fieldset {
   }
 
   &.form-std--goals {
-
     fieldset {
       padding: $size-std-padding;
     }
@@ -667,6 +666,11 @@ fieldset {
         margin-right: 0;
         display: flex;
         flex-wrap: wrap;
+      }
+
+      .form-radio {
+        min-width: auto;
+        height: auto;
       }
     }
 

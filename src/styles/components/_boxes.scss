@@ -294,12 +294,33 @@
   }
 
   &__content {
-    display: block;
+    display: none;
     padding: $size-components-padding;
     @extend %clearfix;
+  }
+
+  &__sub-container {
+    margin-bottom: $size-components-margin;
+
+    .card-container__title {
+      padding-top: $size-components-padding / 2;
+      padding-bottom: $size-components-padding / 2;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &--open {
+    > .card-container__content {
+      display: block;
+    }
   }
 
   &--striped {
     border: 1px solid $color-base-background;
   }
+
+  
 }

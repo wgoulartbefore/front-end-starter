@@ -46,6 +46,19 @@
   }
 }
 
+.title-section {
+  @include adjust-font-size-to(22px);
+  color: $color-base-main;
+  font-weight: 700;
+  border-bottom: 2px solid $color-grey-800;
+  margin-bottom: $size-components-padding;
+  padding-bottom: $size-std-padding / 2;
+
+  @include susy-breakpoint($screen-big, 16) {
+    @include adjust-font-size-to(22px);
+  }
+}
+
 .title-gen {
   @include adjust-font-size-to(18px);
   color: $color-base-darken;
