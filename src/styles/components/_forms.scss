@@ -745,4 +745,22 @@ fieldset {
     }
 
   }
+
+  &--flexitems {
+    @include susy-breakpoint($screen-big, 16) {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      align-items: flex-end;
+
+      .form-line {
+        flex: 1 0 20%;
+        margin-left: $size-components-padding;
+
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+    }
+  }
 }
