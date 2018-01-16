@@ -575,56 +575,51 @@ fieldset {
   @extend %clearfix;
 
   label {
-      display: block;
-      @include adjust-font-size-to(14px);
-      line-height: 1.5;
-      color: $color-grey-900;
-      margin-bottom: $size-components-padding / 2;
+    display: block;
+    @include adjust-font-size-to(14px);
+    line-height: 1.5;
+    color: $color-grey-900;
+    margin-bottom: $size-components-padding / 2;
   }
 
   .form-line {
-      @extend %clearfix;
-      margin-top: $size-components-padding / 2;
-
-      &:first-child {
-          // margin-top: 0;
-      }
+    @extend %clearfix;
+    margin-top: $size-components-padding / 2;
   }
 
   .half-input {
-      display: block;
-      margin: 0;
+    display: block;
+    margin: 0;
+    width: 100%;
+    margin-bottom: $size-components-padding;
+
+    [class^="bt-"] {
       width: 100%;
-      margin-bottom: $size-components-padding;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &.without-label {
+      vertical-align: bottom;
+    }
+
+    @include susy-breakpoint($screen-medium, 12) {
+      display: block;
+      float: left;
+      width: 49%;
+      margin-right: 2%;
+      margin-bottom: 0;
 
       [class^="bt-"] {
-          width: 100%;
+          width: auto;
       }
 
       &:last-child {
-          margin-bottom: 0;
+          margin-right: 0;
       }
-
-      &.without-label {
-          vertical-align: bottom;
-      }
-
-      @include susy-breakpoint($screen-medium, 12) {
-          display: block;
-          float: left;
-          width: 49%;
-          margin-right: 2%;
-          margin-bottom: 0;
-
-          [class^="bt-"] {
-              width: auto;
-          }
-
-          &:last-child {
-              margin-right: 0;
-          }
-
-      }
+    }
   }
 
   .input-holder {
@@ -716,6 +711,36 @@ fieldset {
 
       &__currency {}
       &__value {
+      }
+    }
+
+  }
+
+  &.stock-transfer {
+    fieldset {
+      padding: $size-components-padding;
+      margin: 0;
+    }
+
+    label {
+      font-size: 1rem;
+      font-weight: 700;
+    }
+
+    .form-line {
+      display: inline-flex;
+      justify-content: space-between;
+      width: calc((100% / 3) - 13px);
+      flex-wrap: wrap;
+      flex-direction: column;
+      margin-left: 15px;
+
+      &:nth-child(3n + 1) {
+        margin-left: 0;
+      }
+
+      label {
+        flex-wrap: wrap;
       }
     }
 

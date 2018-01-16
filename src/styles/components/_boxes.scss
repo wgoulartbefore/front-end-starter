@@ -255,6 +255,9 @@
   }
 
   &--open {
+    > .box-card__content {
+      display: block;
+    }
   }
 
   &--std {
@@ -265,6 +268,11 @@
     .box-card__content {
       display: block;
     }
+  }
+
+  .card-container {
+    margin-top: 15px;
+    margin-bottom: 0;
   }
 }
 
@@ -312,6 +320,20 @@
     }
   }
 
+  &--small {
+    border: 1px solid $color-base-background;
+    margin-top: 15px;
+    margin-bottom: 0;
+
+    .card-container__title {
+      padding-top: $size-components-padding / 2;
+      padding-bottom: $size-components-padding / 2;
+    }
+    .card-container__content {
+      display: block;
+    }
+  }
+
   &--open {
     > .card-container__content {
       display: block;
@@ -321,6 +343,4 @@
   &--striped {
     border: 1px solid $color-base-background;
   }
-
-  
 }
