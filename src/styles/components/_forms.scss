@@ -58,9 +58,12 @@
   fieldset {
     display: block;
     border: 1px solid $color-grey-200;
-    // padding: $size-components-padding $size-components-padding 0 $size-components-padding;
     padding: 0 5px 15px 5px;
     margin-bottom: $size-components-padding;
+
+    &.spacing-medium {
+      padding: $size-components-padding;
+    }
   }
 
   .form-line {
@@ -78,6 +81,21 @@
 
     @include susy-breakpoint($screen-big, 16) {
       margin-bottom: $size-components-padding;
+    }
+  }
+
+  &--sales-page {
+    @include susy-breakpoint($screen-big, 16) {
+      display: block;
+
+      .form-line {
+        display: block;
+      }
+
+      label {
+        text-transform: none;
+      }
+
     }
   }
 }
@@ -196,12 +214,6 @@
     height: 0;
     color: $color-grey-800;
     content: "";
-    // text-align: center;
-    // line-height: 20px;
-    // font-size: 16px;
-    // font-family: 'FontAwesome';
-    // content: "\f078";
-    // z-index: 2;
   }
 
   select {
@@ -219,18 +231,6 @@
     appearance: none;
     -moz-appearance: none;
     -webkit-appearance: none;
-    // opacity: 0;
-    // display: block;
-    // position: absolute;
-    // top: -1px;
-    // right: 0;
-    // bottom: 0;
-    // left: 0;
-    // width: 100%;
-    // min-height: 100%;
-    // border: 0;
-    // cursor: pointer;
-    // z-index: 3;
   }
 
   option {
@@ -584,7 +584,11 @@ fieldset {
 
   .form-line {
     @extend %clearfix;
-    margin-top: $size-components-padding / 2;
+    margin-bottom: $size-components-padding / 2;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
   .half-input {

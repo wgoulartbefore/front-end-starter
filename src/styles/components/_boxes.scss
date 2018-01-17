@@ -274,7 +274,12 @@
     margin-top: 15px;
     margin-bottom: 0;
   }
+
+  @include susy-breakpoint($screen-big, 16) {
+
+  }
 }
+
 
 .card-container {
   display: block;
@@ -335,6 +340,16 @@
   }
 
   &--open {
+    > .card-container__content {
+      display: block;
+    }
+  }
+
+  &--std {
+    > .card-container__content {
+      display: none;
+    }
+
     > .card-container__content {
       display: block;
     }
