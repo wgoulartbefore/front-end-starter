@@ -743,7 +743,6 @@ fieldset {
         flex-wrap: wrap;
       }
     }
-
   }
 
   &--flexitems {
@@ -753,12 +752,26 @@ fieldset {
       flex-wrap: wrap;
       align-items: flex-end;
 
+      .form-checkbox {
+        height: auto;
+        align-self: center;
+        margin-top: 25px;
+
+        span {
+          margin-right: 15px;
+        }
+      }
+
       .form-line {
         flex: 1 0 20%;
         margin-left: $size-components-padding;
 
         &:first-child {
           margin-left: 0;
+        }
+
+        &:last-child {
+          flex: 0 1 auto;
         }
       }
     }
