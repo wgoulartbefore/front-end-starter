@@ -580,6 +580,10 @@ fieldset {
     margin: 0 $size-components-padding;
     padding: 0 $size-components-padding - 10;
   }
+
+  &.spacing-medium {
+    padding: $size-components-padding;
+  }
 }
 
 /* form-std */
@@ -619,6 +623,22 @@ fieldset {
 
     &.without-label {
       vertical-align: bottom;
+    }
+
+    &.label-inline {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      label {
+        margin-right: $size-components-padding;
+      }
+
+      .input-singleline {
+        width: 50%;
+        flex: 1 0 auto;
+      }
+
     }
 
     @include susy-breakpoint($screen-medium, 12) {
@@ -807,6 +827,16 @@ fieldset {
 
       label {
         flex-wrap: wrap;
+      }
+    }
+  }
+
+  &--sale-singup {
+    .form-line {
+      margin-top: $size-components-padding;
+
+      &:first-child {
+        margin-top: 0;
       }
     }
   }

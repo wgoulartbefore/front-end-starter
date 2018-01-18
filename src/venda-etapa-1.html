@@ -425,16 +425,22 @@
         <p class="title-page__subtitle">Venda de produtos e serviços.</p>
       </header>
 
-      <div class="sale-step-list">
-        <div class="numerical"></div>
-        <div class="title"></div>
+      <div class="sale-step">
+        <p class="sale-step__details">
+          Passo <span class="sale-step-current">1</span> de <span class="sale-step-last">5</span>
+        </p>
+
+        <div class="sale-step-progress">
+            <progress value="20%" max="100"> 70%</progress>
+        </div>
       </div>
 
     </div>
   </section>
+
   <!-- Global Holder!-->
   <div id="global-holder">
-    <section id="main-content" class="">
+    <section id="main-content">
       <div class="container">
 
         <div class="card-container card-container--std">
@@ -443,39 +449,75 @@
           </div>
 
           <div class="card-container__content">
-            <form action="" class="std-form std-form--sales-page">
+            <form class="form-std form-std--sale-singup">
               <div class="form-line">
-                <label for="">Ponto de Venda:</label>
-                <div class="fancy-select">
-                  <select>
-                    <option value="">Selecione um Ponto de Venda</option>
-                    <option value="">Filial 1</option>
-                    <option value="">Filial 2</option>
-                  </select>
+                <div class="half-input">
+                  <label for=""><strong class="gen-text">Ponto de venda:</strong></label>
+                  <div class="fancy-select">
+                    <select name="" id="">
+                      <option value="">Filial 1</option>
+                      <option value="">Filial 2</option>
+                      <option value="">Filial 3</option>
+                      <option value="">Filial 4</option>
+                      <option value="">Filial 5</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="half-input">
+                  <label for=""><strong class="gen-text">Ponto de venda:</strong></label>
+                  <input type="text" class="input-singleline" placeholder="Digite os 4 primeiros caracteres do CPF ou Nome do Vendedor">
                 </div>
               </div>
               <div class="form-line">
-                <label for="">Vendedor:</label>
-                <input type="text" class="input-singleline" placeholder="Digite os 4 primeiros caracteres do CPF ou Nome do Vendedor">
+                <div class="half-input">
+                  <div class="half-input">
+                    <label for=""><strong class="gen-text">Caixa:</strong></label>
+                    <p class="gen-text">Caixa Unico</p>
+                  </div>
+                  <div class="half-input">
+                    <label for=""><strong class="gen-text">Tipo de venda:</strong></label>
+                    <div class="fancy-select">
+                      <select name="" id="">
+                        <option value="">Filial 1</option>
+                        <option value="">Filial 2</option>
+                        <option value="">Filial 3</option>
+                        <option value="">Filial 4</option>
+                        <option value="">Filial 5</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="half-input">
+                  <label for=""><strong class="gen-text">Comprovante:</strong></label>
+                  <div class="half-input label-inline">
+                    <label for="">Nº de série nota: </label>
+                    <input type="text" class="input-singleline" placeholder="Nº de série nota">
+                  </div>
+                  <div class="half-input label-inline">
+                    <label for="">Nº da nota: </label>
+                    <input type="text" class="input-singleline" placeholder="Nº da nota">
+                  </div>
+                </div>
               </div>
+
+              <div class="form-line">
+              <fieldset class="spacing-medium">
+
+                  <div class="half-input label-inline">
+                    <label for="">E-mail: </label>
+                    <input type="email" class="input-singleline" placeholder="Nº de série nota">
+                  </div>
+                  <div class="half-input label-inline">
+                    <label for="">Senha: </label>
+                    <input type="password" class="input-singleline" placeholder="Nº da nota">
+                  </div>
+                </fieldset>
+                </div>
+
             </form>
           </div>
         </div>
 
-        <div class="card-container card-container--std">
-          <div class="card-container__content">
-            <form action="" class="std-form std-form--sales-page">
-              <div class="form-line">
-                <label for="">Ponto de Venda:</label>
-                <input type="text" class="input-singleline" placeholder="Digite seu e-mail">
-              </div>
-              <div class="form-line">
-                <label for="">Ponto de Venda:</label>
-                <input type="text" class="input-singleline" placeholder="Digite sua senha">
-              </div>
-            </form>
-          </div>
-        </div>
 
         <div class="area-buttons">
           <a href="" class="bt-confirm to-right">Avançar</a>
