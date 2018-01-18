@@ -553,6 +553,10 @@ input[type="radio"] {
       margin-bottom: $size-components-padding;
     }
   }
+
+  .spacing-medium {
+    padding: 15px;
+  }
 }
 
 fieldset {
@@ -648,6 +652,10 @@ fieldset {
   &.form-std--goals {
     fieldset {
       padding: $size-std-padding;
+
+      &.spacing-medium {
+        padding: $size-components-padding;
+      }
     }
 
     .holder-input {
@@ -660,6 +668,7 @@ fieldset {
       width: 24%;
       margin-right: 1%;
       align-items: flex-end;
+      margin-bottom: 0;
 
       &:last-child {
         margin-right: 0;
@@ -667,10 +676,34 @@ fieldset {
         flex-wrap: wrap;
       }
 
-      .form-radio {
-        min-width: auto;
-        height: auto;
+      &.m-left {
+        margin-left: auto;
       }
+      &.m-right {
+        margin-right: auto;
+      }
+
+      &.form-line-single {
+        label {
+          float: left;
+          margin-right: 15px;
+          font-weight: 700;
+        }
+      }
+    }
+
+    .form-radio {
+      min-width: auto;
+      height: auto;
+      float: left;
+      margin: 15px;
+      margin-left: 0;
+      margin-top: 10px;
+    }
+
+    + .feedback-box-warning {
+      margin-right: 0;
+      margin-left: 0;
     }
 
     [class^="bt-"] {
@@ -693,6 +726,9 @@ fieldset {
     }
 
     .header-goals-form {
+      clear: both;
+      @extend %clearfix;
+
       label {
         font-size: 16px;
         font-weight: 700;
