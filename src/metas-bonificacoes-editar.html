@@ -1549,7 +1549,7 @@
       </div>
       <!-- ./card-container -->
 
-      <div class="card-container ">
+      <div class="card-container card-container--open">
         <div class="card-container__title">
           Serviços
           <span class="card-container__title-close">
@@ -1558,7 +1558,6 @@
         </div>
 
         <div class="card-container__content">
-
           <div class="card-container__sub-container">
             <h4 class="title-section">Indicadores das Metas da Claro</h4>
             <div class="card-container card-container--striped">
@@ -1670,6 +1669,7 @@
               <!-- ./card-container__content -->
             </div>
             <!-- ./ card-container--striped -->
+
             <div class="card-container card-container--striped">
               <div class="card-container__title">
                 Migrações Controle-Puro Titular
@@ -1738,21 +1738,6 @@
               <div class="card-container__content">
                 <p class="text-main-std">Considera Altas Pós Puro Titular + Migrações Pré Puro Titular + Migrações Controle Puro Titular. Obs: "Puro"
                   são todas as altas pós exceto controle e dependente.</p>
-
-                <div class="feedback-box-warning bm-bottom">
-                  <div class="header">
-                    <h4 class="title">ATENÇÃO</h4>
-                    <i class="fa fa-times"></i>
-                    </a>
-                  </div>
-                  <div class="content">
-                    <p>As metas de Produtos Claro e Produtos Open podem também contabilizar vendas realizadas através deste
-                      indicador. Ao definir metas ou bonificações deste indicador e também de Produtos Claro ou Produtos
-                      Diversos, o produto será contabilizado nas duas metas, além da possibilidade de remunerar duas vezes
-                      o funcionário pelo mesmo produto vendido.</p>
-                  </div>
-                </div>
-
               </div>
               <!-- ./card-container__content -->
             </div>
@@ -1766,8 +1751,24 @@
                 </span>
               </div>
 
-              <div class="card-container__content ">
+              <div class="card-container__content">
                 <p class="text-main-std">Considera Altas Controle + Migrações Pré-Controle.</p>
+
+                <div class="feedback-box-warning bm-bottom">
+                    <div class="header">
+                      <h4 class="title">ATENÇÃO</h4>
+                      <a class="bt-close feedback-box-close">
+                        <i class="fa fa-times"></i>
+                      </a>
+                    </div>
+
+                    <div class="content">
+                      <p> ATENÇÃO: As metas Altas Controle e Migração Pré-Controle podem também contabilizar as altas e migrações
+                        controle. Ao definir metas ou bonificações de Grupo 02 - Altas e Migras Controle e também das metas
+                        citadas, o serviço poderá ser considerado nas duas metas, além de remunerar duas vezes o funcionário
+                        pelo mesmo serviço.</p>
+                    </div>
+                  </div>
 
                 <form class="form-std form-std--goals">
                   <p class="text-main-std bm-top">
@@ -1775,54 +1776,98 @@
                   </p>
 
                   <label class="form-radio">
-                    <input type="radio" name="pagamento" checked>
+                    <input type="radio" name="pagamento" >
                     <span>Reais (R$)</span>
                   </label>
 
                   <label class="form-radio">
-                    <input type="radio" name="pagamento">
+                    <input type="radio" name="pagamento" checked>
                     <span>Quantidade</span>
                   </label>
 
                   <fieldset class="header-goals-form">
                     <div class="form-line">
-                      <label for="">Meta da filial em (R$):</label>
-                      <input type="text" class="input-singleline input-singleline--small" placeholder="R$ 5.000,00">
+                      <label for="">Meta para cada filial em Quantidade:</label>
+                      <input type="text" class="input-singleline input-singleline--small" placeholder="163">
                     </div>
 
                     <div class="form-line">
                       <label for="">Total de vendedores:</label>
-                      <p class="title-gen-small">50</p>
+                      <p class="title-gen-small">8</p>
                     </div>
 
                     <div class="form-line">
                       <label for="">
-                        <strong>Valor por vendedor:</strong>
+                        <strong>Serviços por vendedor:</strong>
                       </label>
                       <p class="goals-form-bonus">
-                        <span class="goals-form-bonus__currency">R$</span>
-                        <span class="goals-form-bonus__value"> 100,00 </span>
+                        <!-- <span class="goals-form-bonus__currency">R$</span> -->
+                        <span class="goals-form-bonus__value"> 21 </span>
                       </p>
                     </div>
                   </fieldset>
 
+                  <fieldset>
+                      <legend>Bonificação para Vendedores:</legend>
+
+                      <div class="holder-input input-goals">
+                          <div class="form-line">
+                            <label for="">Meta:</label>
+                            <input type="text" class="input-singleline" placeholder="R$ 0,00">
+                          </div>
+                          <div class="form-line">
+                            <label for="">Bonificação a receber em (R$):</label>
+                            <input type="text" class="input-singleline" placeholder="R$ 0,00">
+                          </div>
+                          <div class="form-line">
+                            <label for="">Bonificação a receber em (%):</label>
+                            <input type="text" class="input-singleline" placeholder="0%">
+                          </div>
+                          <div class="form-line">
+                              <label for="">Bonificação a receber fixa (R$):</label>
+                              <input type="text" class="input-singleline" placeholder="R$ 0,00">
+                          </div>
+
+                          <div class="form-line w-auto">
+                              <a href="" class="bt-main">
+                                  <i class="fa fa-trash"></i> Remover Meta</a>
+                              <a href="" class="bt-confirm">
+                                  <i class="fa fa-plus"></i> Adicionar Meta</a>
+                          </div>
+                        </div>
+                      <!-- ./holder-line -->
+                  </fieldset>
+                  <fieldset>
+                      <legend>Bonificação para cada Gerente:</legend>
+                      <div class="holder-input input-goals">
+                        <div class="form-line">
+                          <label for="">Meta:</label>
+                          <input type="text" class="input-singleline" placeholder="R$ 0,00">
+                        </div>
+                        <div class="form-line">
+                          <label for="">Bonificação a receber em (R$):</label>
+                          <input type="text" class="input-singleline" placeholder="R$ 0,00">
+                        </div>
+                        <div class="form-line">
+                          <label for="">Bonificação a receber em (%):</label>
+                          <input type="text" class="input-singleline" placeholder="0%">
+                        </div>
+                        <div class="form-line">
+                            <label for="">Bonificação a receber fixa (R$):</label>
+                            <input type="text" class="input-singleline" placeholder="R$ 0,00">
+                        </div>
+
+                        <div class="form-line w-auto">
+                            <a href="" class="bt-main">
+                                <i class="fa fa-trash"></i> Remover Meta</a>
+                            <a href="" class="bt-confirm">
+                                <i class="fa fa-plus"></i> Adicionar Meta</a>
+                        </div>
+                      </div>
+                      <!-- ./holder-line -->
+                  </fieldset>
+
                 </form>
-
-                <div class="feedback-box-warning bm-bottom">
-                  <div class="header">
-                    <h4 class="title">ATENÇÃO</h4>
-                    <a class="bt-close feedback-box-close">
-                      <i class="fa fa-times"></i>
-                    </a>
-                  </div>
-
-                  <div class="content">
-                    <p> ATENÇÃO: As metas Altas Controle e Migração Pré-Controle podem também contabilizar as altas e migrações
-                      controle. Ao definir metas ou bonificações de Grupo 02 - Altas e Migras Controle e também das metas
-                      citadas, o serviço poderá ser considerado nas duas metas, além de remunerar duas vezes o funcionário
-                      pelo mesmo serviço.</p>
-                  </div>
-                </div>
 
               </div>
               <!-- ./card-container__content -->

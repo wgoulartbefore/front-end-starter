@@ -557,6 +557,14 @@ input[type="radio"] {
   .spacing-medium {
     padding: 15px;
   }
+
+  .full-line {
+    label {
+      float: left;
+      margin: 0;
+      margin-right: 15px;
+    }
+  }
 }
 
 fieldset {
@@ -662,6 +670,24 @@ fieldset {
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
+
+      &.input-goals {
+
+
+        .form-line {
+          width: 18%;
+
+          &:first-child {
+            width: 15%;
+          }
+
+
+        }
+
+        .w-auto {
+          width: 24%;
+        }
+      }
     }
 
     .form-line {
