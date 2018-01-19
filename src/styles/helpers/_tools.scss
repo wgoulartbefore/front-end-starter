@@ -17,6 +17,9 @@
   margin-top: 15px;
 }
 
+.bm-right-small {
+  margin-right: $size-components-padding;
+}
 
 .bm-bottom-tiny {
   @extend %bm-bottom-tiny;
@@ -29,8 +32,8 @@
 .bm-horizontal {
   @extend %bm-horizontal;
 }
-//Text Align
 
+//Text Align
 .text-justify {
   @extend %text-justify;
 }
@@ -46,10 +49,11 @@
 .text-left {
   @extend %text-left;
 }
+
 // Float
 .to-left {
   @extend %to-left;
-  margin-right: auto !important;
+  margin-right: auto;
 }
 
 .to-right {
@@ -61,6 +65,7 @@
 .text-underline{
   @extend %text-underline;
 }
+
 .underline-hover {
   @extend %underline-hover;
 }

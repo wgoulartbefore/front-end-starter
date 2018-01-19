@@ -363,4 +363,18 @@
     width: 100%;
     margin: 5px 0 15px 0;
   }
+
+
+  @include susy-breakpoint($screen-big, 16) {
+    &--half-card {
+      float: left;
+      width: span(8 of 16);
+      margin-right: (gutters(8) * 2);
+
+      &:nth-child(1n + 2) {
+        margin-right: 0;
+      }
+
+    }
+  }
 }

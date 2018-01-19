@@ -856,6 +856,15 @@ fieldset {
     }
   }
 
+  &--sale-clientes {
+    @include susy-breakpoint($screen-big, 16) {
+  	  .form-line--center {
+        display: flex;
+        flex: 1 0 auto;
+      }
+    }
+  }
+
   &--flexitems {
     @include susy-breakpoint($screen-big, 16) {
       display: flex;

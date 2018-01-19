@@ -15,6 +15,7 @@
   border: 0;
   margin: 0;
   border-radius: 3px;
+  font-weight: 700;
 
   &.half-bt {
     width: calc((100% / 2) - 8px);
@@ -78,7 +79,7 @@
 
 .bt-alter-3 {
   @extend %std-button;
-  @include createButtonAlter($color-base-darken);
+  @include createButtonAlter(#136fe0);
 }
 
 .bt-back {

@@ -26,12 +26,12 @@
     <nav class="header-opts-bar">
       <div class="holder">
         <ul class="header-opts-list">
-            <li class="header-opts-item">
-              <span id="relogioExpiraSessao" class="hasCountdown">
-                <span class="countdown_row countdown_amount">19:52</span>
-                <span class="countdown_row countdown_descr">A sessão expira em: </span>
-              </span>
-            </li>
+          <li class="header-opts-item">
+            <span id="relogioExpiraSessao" class="hasCountdown">
+              <span class="countdown_row countdown_amount">19:52</span>
+              <span class="countdown_row countdown_descr">A sessão expira em: </span>
+            </span>
+          </li>
 
           <li class="header-opts-item">
             <a class="header-opts-link">
@@ -427,10 +427,12 @@
 
       <div class="sale-step">
         <p class="sale-step__details">
-          Passo <span class="sale-step-current">1</span> de <span class="sale-step-last">5</span>
+          Passo
+          <span class="sale-step-current">2 </span> de
+          <span class="sale-step-last">5</span>
         </p>
         <div class="sale-step-progress">
-          <div class="progress-bar" style="width:20%"></div>
+          <div class="progress-bar" style="width:40%"></div>
         </div>
       </div>
 
@@ -442,74 +444,38 @@
     <section id="main-content">
       <div class="container">
 
-        <div class="card-container card-container--std ">
+        <div class="card-container card-container--std">
+
           <div class="card-container__title">
-            Atribua a venda a um vendedor
+            Buscar dados do Cliente
           </div>
 
           <div class="card-container__content">
-            <form class="form-std form-std--sale-singup">
-              <div class="form-line">
-                <div class="half-input">
-                  <label for=""><strong class="gen-text">Ponto de venda:</strong></label>
-                  <div class="fancy-select">
-                    <select name="" id="">
-                      <option value="">Filial 1</option>
-                      <option value="">Filial 2</option>
-                      <option value="">Filial 3</option>
-                      <option value="">Filial 4</option>
-                      <option value="">Filial 5</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="half-input">
-                  <label for=""><strong class="gen-text">Vendedor:</strong></label>
-                  <input type="text" class="input-singleline" placeholder="Digite os 4 primeiros caracteres do CPF ou Nome do Vendedor">
-                </div>
-              </div>
-              <div class="form-line">
-                <div class="half-input">
+            <form class="form-std form-std--sale-clientes">
+
+              <div class="form-line form-line--center">
+                <label for="" class="gen-text"><strong>Dados do Cliente:</strong></label>
+                <div class="form-line">
                   <div class="half-input">
-                    <label for=""><strong class="gen-text">Caixa:</strong></label>
-                    <p class="gen-text">Caixa Unico</p>
+                    <input type="text" class="input-singleline" placeholder="Pesquise pelo CPF ou CNPJ do Cliente..">
                   </div>
-                  <div class="half-input">
-                    <label for=""><strong class="gen-text">Tipo de venda:</strong></label>
-                    <div class="fancy-select">
-                      <select name="" id="">
-                        <option value="">Filial 1</option>
-                        <option value="">Filial 2</option>
-                        <option value="">Filial 3</option>
-                        <option value="">Filial 4</option>
-                        <option value="">Filial 5</option>
-                      </select>
-                    </div>
-                  </div>
-                </div>
-                <div class="half-input">
-                  <label for=""><strong class="gen-text">Comprovante:</strong></label>
-                  <div class="half-input label-inline">
-                    <label for="">Nº de série nota: </label>
-                    <input type="text" class="input-singleline" placeholder="Nº de série nota">
-                  </div>
-                  <div class="half-input label-inline">
-                    <label for="">Nº da nota: </label>
-                    <input type="text" class="input-singleline" placeholder="Nº da nota">
-                  </div>
+                  <div class="half-input bm-top">
+                  <a href="" class="bt-alter-3 bm-right-small"><i class="fa fa-edit"></i> Editar Cadastro</a>
+                  <a href="" class="bt-main"><i class="fa fa-add-plus"></i> Cadastrar Cliente</a>
                 </div>
               </div>
 
               <div class="form-line">
-                <fieldset class="spacing-medium">
-                  <div class="half-input label-inline">
-                    <label for="">E-mail: </label>
-                    <input type="email" class="input-singleline" placeholder="Digite sue e-mail">
+                <div class="half-input">
+                  <label for="" class="gen-text"><strong>Score do Cliente:</strong></label>
+                  <div class="fancy-select">
+                    <select id="score" name="score"><option value="0">Consulta não realizada</option>
+                      <option value="1">Aprovado com restrição</option>
+                      <option selected="" value="2">Aprovado</option>
+                      <option value="3">Reprovado</option>
+                    </select>
                   </div>
-                  <div class="half-input label-inline">
-                    <label for="">Senha: </label>
-                    <input type="password" class="input-singleline" placeholder="Digite a sua senha">
-                  </div>
-                </fieldset>
+                </div>
               </div>
 
             </form>

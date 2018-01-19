@@ -41,16 +41,16 @@
 // Base Margin
 
 %bm-bottom {
-  margin-bottom: $size-components-margin;
+  margin-bottom: $size-components-margin !important;
 }
 
 %bm-top {
-  margin-top: $size-components-margin;
+  margin-top: $size-components-margin !important;
 }
 
 %bm-horizontal {
-  margin-left: $size-components-margin;
-  margin-right: $size-components-margin;
+  margin-left: $size-components-margin !important;
+  margin-right: $size-components-margin !important;
 }
 
 %bm-bottom-small {
@@ -68,30 +68,32 @@
 %bm-top-tiny {
   margin-top: floor(1/3 * $size-components-margin);
 }
+
+
 // Text Align
 
 %text-justify {
-  text-align: justify;
+  text-align: justify !important;
 }
 
 %text-center {
-  text-align: center;
+  text-align: center !important;
 }
 
 %text-right {
-  text-align: right;
+  text-align: right !important;
 }
 
 %text-left {
-  text-align: left;
+  text-align: left !important;
 }
 
 %to-right {
-  float: right;
+  float: right !important;
 }
 
 %to-left {
-  float: left;
+  float: left !important;
 }
 
 %text-underline {
