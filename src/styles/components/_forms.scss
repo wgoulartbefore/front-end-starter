@@ -839,6 +839,21 @@ fieldset {
         margin-top: 0;
       }
     }
+
+    label {
+      font-size: 16px;
+    }
+
+    fieldset {
+      @include susy-breakpoint($screen-big, 16) {
+        label {
+          font-size: 16px;
+          font-weight: 700;
+          align-items: center;
+          margin-bottom: 0;
+        }
+      }
+    }
   }
 
   &--flexitems {
@@ -871,17 +886,5 @@ fieldset {
         }
       }
     }
-  }
-}
-
-.sale-singup-form {
-  display: flex;
-  margin-top: $size-components-padding * 2;
-  padding: $size-components-padding;
-  background: $color-grey-100;
-  align-items: center;
-
-  label {
-    margin-bottom: 0;
   }
 }

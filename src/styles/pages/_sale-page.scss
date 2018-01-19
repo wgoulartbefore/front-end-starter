@@ -1,34 +1,32 @@
-<div class="sale-step">
-        <p class="sale-step__details">
-          Passo <span class="sale-step-current">1</span> de <span class="sale-step-last">5</span>
-        </p>
-
-        <div class="sale-step-progress">
-            <progress value="20%" max="100"> 70%</progress>
-        </div>
-      </div>
-
-
-.sale-page-step {
-  &__details,
-  &__details-current {}
+.sale-step {
+  &__details {
+    font-size: 14px;
+    text-align: right;
+  }
 
   &-progress {
-    progress {
-      background: $color-base-main;
-      height: 5px;
-      border-radius: 5px;
-      appearance: none;
-    }
+    background: $color-grey-0;
+    border-radius: 6px;
   }
 
+  .progress-bar {
+    height: 6px;
+    border-radius: 6px;
+    margin-top: 5px;
+    background: $color-base-main;
+  }
 
-  @include susy-breakpoint($screen-big, 16) {
-
+   @include susy-breakpoint($screen-big, 16){
+    width: 200px;
+    position: absolute;
+    top: calc(50%);
+    right: 0;
+    transform:  translateY(-50%);
   }
 }
-.sale-page-step-list {
 
+
+.sale-page-step-list {
     @extend %clearlist;
     padding-top: rhythm(0.125);
 

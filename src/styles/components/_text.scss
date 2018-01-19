@@ -137,6 +137,12 @@ ul.gen-text {
 }
 
 .header-heading {
+  position: relative;
+
+  .container {
+    position: relative;
+  }
+
   @include susy-breakpoint($screen-big, 16){
     margin-top: $size-components-padding;
   }
@@ -144,6 +150,7 @@ ul.gen-text {
 
 .title-page {
   display: block;
+
   margin-bottom: $size-components-padding;
 
   &__title {

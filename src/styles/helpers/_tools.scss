@@ -49,12 +49,12 @@
 // Float
 .to-left {
   @extend %to-left;
-  margin-right: auto;
+  margin-right: auto !important;
 }
 
 .to-right {
   @extend %to-right;
-  margin-left: auto;
+  margin-left: auto !important;
 }
 /* text-hover */
 
