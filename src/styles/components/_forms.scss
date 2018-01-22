@@ -858,10 +858,56 @@ fieldset {
 
   &--sale-clientes {
     @include susy-breakpoint($screen-big, 16) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      width: 50%;
+      margin-left: auto;
+      margin-right: auto;
+
+      .form-line {
+        flex: 1 100%;
+        align-items: flex-end;
+        flex-wrap: wrap;
+        margin-top: $size-components-padding;
+
+        &:first-child {
+          margin-top: 0;
+        }
+      }
+
+      .half-input {
+        align-items: flex-end;
+      }
+
   	  .form-line--center {
+        justify-content: space-between;
+      }
+
+      .form-line--autosize {
         display: flex;
         flex: 1 0 auto;
+        justify-content: space-between;
+
+        label {
+          flex-wrap: wrap;
+          width: 100%;
+        }
+
+        .input-singleline {
+          display: inline-flex;
+          width: calc(100% - 200px);
+        }
+
+        [class^="bt"] {
+          margin-left: auto;
+        }
       }
+
+      .gen-text {
+        margin-bottom: 0;
+      }
+
     }
   }
 

@@ -453,31 +453,35 @@
           <div class="card-container__content">
             <form class="form-std form-std--sale-clientes">
 
-              <div class="form-line form-line--center">
-                <label for="" class="gen-text"><strong>Dados do Cliente:</strong></label>
-                <div class="form-line">
-                  <div class="half-input">
-                    <input type="text" class="input-singleline" placeholder="Pesquise pelo CPF ou CNPJ do Cliente..">
-                  </div>
-                  <div class="half-input bm-top">
-                  <a href="" class="bt-alter-3 bm-right-small"><i class="fa fa-edit"></i> Editar Cadastro</a>
-                  <a href="" class="bt-main"><i class="fa fa-add-plus"></i> Cadastrar Cliente</a>
-                </div>
+              <div class="form-line">
+                <label for=""><strong class="gen-text">Dados do Cliente:</strong></label>
+                <input type="text" class="input-singleline" placeholder="Pesquise pelo CPF ou CNPJ do Cliente..">
+              </div>
+
+              <div class="form-line form-line--autosize">
+                  <label for=""><strong class="gen-text">Dados do Cliente:</strong></label>
+                  <input type="text" class="input-singleline" placeholder="Pesquise pelo CPF ou CNPJ do Cliente..">
+                  <a href="" class="bt-edit"><i class="fa fa-edit"></i> Editar Cadastro</a>
               </div>
 
               <div class="form-line">
-                <div class="half-input">
-                  <label for="" class="gen-text"><strong>Score do Cliente:</strong></label>
-                  <div class="fancy-select">
-                    <select id="score" name="score"><option value="0">Consulta não realizada</option>
-                      <option value="1">Aprovado com restrição</option>
-                      <option selected="" value="2">Aprovado</option>
-                      <option value="3">Reprovado</option>
-                    </select>
-                  </div>
+                <label for=""><strong class="gen-text">Score do Cliente:</strong></label>
+                <div class="fancy-select">
+                  <select id="score" name="score"><option value="0">Consulta não realizada</option>
+                    <option value="1">Aprovado com restrição</option>
+                    <option selected="" value="2">Aprovado</option>
+                    <option value="3">Reprovado</option>
+                  </select>
                 </div>
               </div>
-
+              <div class="form-line">
+                <fieldset class="spacing-medium text-center">
+                  <p class="gen-text"><strong>Deseja Cadastrar Cliente?</strong></p>
+                    <div class="form-line form-line--center">
+                      <a href="" class="bt-main"><i class="fa fa-user-plus"></i> Cadastrar Cliente</a>
+                    </div>
+                </fieldset>
+              </div>
             </form>
           </div>
         </div>
