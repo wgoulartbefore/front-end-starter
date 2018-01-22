@@ -364,7 +364,6 @@
     margin: 5px 0 15px 0;
   }
 
-
   @include susy-breakpoint($screen-big, 16) {
     &--half-card {
       float: left;
