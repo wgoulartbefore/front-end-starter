@@ -80,7 +80,7 @@
 .bt-edit {
   @extend %std-button;
   @include createButtonAlter(#136fe0);
-  text-transform: none; 
+  text-transform: none;
 }
 
 .bt-back {

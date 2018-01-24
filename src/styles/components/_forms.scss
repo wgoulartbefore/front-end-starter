@@ -693,7 +693,6 @@ fieldset {
 
       &.input-goals {
 
-
         .form-line {
           width: 18%;
 
@@ -942,4 +941,30 @@ fieldset {
       }
     }
   }
+
+  &--sale {
+    .form-line {
+      display: flex;
+      align-items: flex-end;
+      margin-top: $size-components-padding;
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+
+    .form-radio {
+      display: inline-flex;
+      width: 48%;
+      height: 40px;
+      align-items: center;
+      margin-bottom: 0;
+    }
+  }
+
+  .small-input {
+    display: flex;
+    width: 50%;
+  }
+
 }

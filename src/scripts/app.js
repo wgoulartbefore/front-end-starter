@@ -190,50 +190,7 @@ function switchTypeClientRegisterSell() {
   });
 }
 
-// function headerOptsController() {
-//   const container = document.querySelector('.header-opts-list');
-//   const menuItens = document.querySelectorAll('.header-opts-item');
-//   const menuInformation = document.querySelector('.header-opts-item--info');
-//   const menuNotification = document.querySelector('.header-opts-item--notifications');
-//   const globalBarrier = document.querySelector(':not(.header-opts-list)');
 
-//   let openSubMenuHeaderOpts = (item) => {
-//     item.addEventListener('click', function () {
-//       closeSubMenuHeaderOpts();
-//       addClassSubmenu(item);
-//     });
-//   }
-
-//   let removeClassSubmenu = (item) => {
-//     $(item).removeClass('open-submenu');
-//   }
-
-//   let addClassSubmenu = (item) => {
-//     item.classList.add('open-submenu');
-//   }
-
-//   let closeSubMenuHeaderOpts = () => {
-//     $(menuItens).each(function () {
-//       removeClassSubmenu(this);
-//     });
-//   }
-
-//   function closeSubmenuOpts() {
-//     if ($('.header-opts-item').hasClass('open-submenu')) {
-//       $(this).removeClass('open-submenu');
-//     } else {
-//       closeSubMenuHeaderOpts();
-//       $(this).addClass('open-submenu');
-//     }
-//   }
-
-//   globalBarrier.addEventListener('click', function (e) {
-//     closeSubmenuOpts();
-//   });
-
-//   openSubMenuHeaderOpts(menuInformation);
-//   openSubMenuHeaderOpts(menuNotification);
-// }
 
 function openUserOptions() {
   const container = document.querySelector('.header-user-options');
@@ -358,9 +315,201 @@ function boxCardController() {
   });
 }
 
+
+function ModalClass(){
+
+	var stdReturn = this;
+	var domClasses = {};
+	var components = {};
+	var modal = null;
+	var pageHTML = $('html');
+	var modalTarget = $('body');
+	var modalStatus = false;
+	var closeCallback = null;
+	var barrier = null;
+
+	domClasses.modalActive = 'modal-active';
+	domClasses.container = 'modal';
+	domClasses.content = domClasses.container + '-content';
+	domClasses.header = domClasses.container + '-header';
+	domClasses.body = domClasses.container + '-body';
+	domClasses.footer = domClasses.container + '-footer';
+	domClasses.title = 'title';
+	domClasses.btclose = 'bt-close';
+	domClasses.globalBarrier = 'global-barrier';
+
+
+	modal = $('<div ></div>').addClass(domClasses.container);
+	barrier = $('.' + domClasses.globalBarrier);
+
+	components.content = $('<div></div>').addClass(domClasses.content);
+	components.header = $('<div></div>').addClass(domClasses.header);
+	components.body = $('<div></div>').addClass(domClasses.body);
+	components.footer = $('<div></div>').addClass(domClasses.footer);
+	components.title = $('<h4></h4>').addClass(domClasses.title);
+	components.btclose = $('<a><i class="fa fa-times"></i></a>').addClass(domClasses.btclose);
+
+	function constructor(){
+
+		components.globalBarrier = $('.' + domClasses.globalBarrier);
+
+		modal
+			.append(components.content
+				.append(components.header
+					.append(components.title)
+					.append(components.btclose)
+				)
+				.append(components.body)
+				.append(components.footer)
+			)
+
+		modalTarget.append(modal);
+		modal.on('click.modal', '.' + domClasses.btclose, hideModal);
+
+	}
+
+	function clearElements(){
+		components.title.html('');
+		components.body.html('');
+		components.footer.html('');
+		modalStatus = false;
+	}
+
+	function solveCallback(){
+		if(closeCallback != null){
+			closeCallback();
+			closeCallback = null;
+		}
+	}
+
+	function setLabel(title){
+		components.title.html(title);
+		return stdReturn;
+	}
+
+	function bindClose(){
+		$(document).on('keydown.mainmenu', function(e){
+			if(e.which == 27){
+				hideModal();
+				e.preventDefault();
+			}
+		});
+	}
+
+	function unbindClose(){
+		$(document).off('keydown.modal');
+	}
+
+
+	function showModal(){
+		if(modalStatus){
+			printc('yzModal:: Modal alredy visible. Please use ".close()" method first.');
+		}else{
+			pageHTML.addClass(domClasses.modalActive);
+			modalTarget.addClass(domClasses.modalActive);
+			modal.focus();
+			bindClose();
+			modalStatus = true;
+		}
+		return stdReturn;
+	}
+
+	function hideModal(){
+
+		if(modalStatus){
+
+			pageHTML.removeClass(domClasses.modalActive);
+			modalTarget.removeClass(domClasses.modalActive);
+			clearElements();
+			unbindClose();
+			solveCallback();
+
+		}else{
+			printc('yzModal:: Modal alredy hidden. Please use ".open()" method first.');
+		}
+
+		return stdReturn;
+	}
+
+	function setHTML(htmlCode){
+		components.body.html(htmlCode);
+		return stdReturn;
+	}
+
+	function appendCode(htmlCode){
+		components.body.append(htmlCode);
+		return stdReturn;
+	}
+
+	function setFooter(htmlCode){
+		components.footer.html(htmlCode);
+		return stdReturn;
+	}
+
+	function returnStatus(){
+		return modalStatus;
+	}
+
+	function returnBody(){
+		return components.body;
+	}
+
+	function openLoader(message){
+
+		var message = message || 'Carregando... Por favor aguarde.';
+		var html = '<div class="modal-loader"><style>.modal-loader{display: block;position: absolute;top: 0;left: 0;width: 100%;height: 100%;background: rgba(255, 255, 255, 0.8);color: #333;text-align: center;z-index: 9;}.modal-loader-content{display: block;position: absolute;width: 100%;top: 50%;left: 0;height: 100px;margin-top: -50px;text-align: center;}.modal-loader-icon{font-size: 36px;margin-bottom: 20px;}.modal-loader-message{font-size: 16px;line-height: 22px;height: 44px;overflow: hidden;padding: 0 15px;}.modal-body{position: relative;}</style><div class="modal-loader-content"><i class="fa fa-spin fa-spinner modal-loader-icon"></i><p class="modal-loader-message">' + message + '</p></div></div>';
+
+		if(modalStatus){
+			closeLoader();
+			components.body.append(html);
+		}else{
+			printc('yzModal:: Modal must be open to call loader');
+		}
+
+		return stdReturn;
+	}
+
+	function closeLoader(){
+		if(modalStatus){
+			components.body.find('.modal-loader').remove();
+		}else{
+			printc('yzModal:: Modal must be open to close loader.');
+		}
+	}
+
+	function setCloseCallback(fx){
+		if(typeof(fx) == 'function'){
+			closeCallback = fx;
+			printc('yzModal:: Binded function callback');
+		}else{
+			printc('yzModal:: Param received for callback is not a function');
+		}
+		return stdReturn;
+	}
+
+	/* Métodos Públicos */
+	this.open = showModal;
+	this.close = hideModal;
+	this.status = returnStatus;
+	this.getBody = returnBody;
+	this.label = setLabel;
+	this.html = setHTML;
+	this.append = appendCode;
+	this.footer = setFooter;
+	this.closeCallback = setCloseCallback;
+	this.openLoader = openLoader;
+	this.closeLoader = closeLoader;
+
+  constructor();
+
+}
+
+
+
 headerOptsController();
 openUserOptions();
 headerSearchController();
 mainMenuController();
 switchTypeClientRegisterSell();
 boxCardController()
+

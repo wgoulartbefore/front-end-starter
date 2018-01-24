@@ -20,8 +20,7 @@
   <link rel="stylesheet" href="styles/main.css" type="text/css" media="screen, projection">
 </head>
 
-<body>
-
+<body class="modal-active">
   <div id="master-header" class="master-header">
     <nav class="header-opts-bar">
       <div class="holder">
@@ -444,14 +443,7 @@
     <section id="main-content">
       <div class="container">
 
-        <!--
-        <div class="include-services">
-          <a class="title-gen-small">
-           <i class="fa cart-plus"></i> Incluir Produtos ou Serviço
-          </a>
-        </div> -->
-
-        <div class="sales-products">
+        <nav class="sales-products">
           <a class="product">
             <img src="/images/icon-produtos-servicos.svg" height="66" alt="">
             Produtos Claro
@@ -476,7 +468,7 @@
             <img src="/images/icon-recarga.svg" height="66" alt="">
             Recarga
           </a>
-        </div>
+        </nav>
 
         <div class="card-container card-container--std">
           <div class="card-container__title">
@@ -702,6 +694,7 @@
         <!-- ./gen-box -->
 
       </div>
+
       <!-- ./container -->
     </section>
   </div>
@@ -710,7 +703,260 @@
   <div class="global-barrier"></div>
   <!-- End global-barrier!-->
 
+  <div class="modal">
+    <div class="modal__content">
+
+      <header class="modal__header">
+        <h4 class="title">Produtos e Serviços</h4>
+        <a class="bt-close">
+          <i class="fa fa-times"></i>
+        </a>
+      </header>
+
+      <section class="modal__body">
+        <form class="form-std form-std--sale">
+
+         <fieldset>
+           <legend> Aparelho/Serviços</legend>
+            <div class="form-line">
+                <div class="half-input">
+                  <label for="">Serial:</label>
+                  <input type="text" class="input-singleline" placeholder="Digite o serial">
+                </div>
+
+                <div class="half-input">
+                  <a href="" class="bt-main">Confirmar serial</a>
+                  <a href="" class="bt-error-alter to-right"> <i class="fa fa-search"></i> Procurar Produto</a>
+                </div>
+              </div>
+
+              <div class="form-line">
+                <div class="half-input">
+                  <label for="">Serviço:</label>
+                  <div class="half-input">
+                    <div class="fancy-select">
+                      <select>
+                        <option value="">Selecione um serviço</option>
+                        <option value="">Pós</option>
+                        <option value="">Controle</option>
+                        <option value="">Pré</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="half-input">
+                    <div class="fancy-select">
+                      <select>
+                        <option value="1">Alta</option>
+                        <option value="5">Troca de Aparelho</option>
+                        <option value="6">Migração com Troca de Aparelho</option>
+                        <option value="10">Troca de Simcard com Troca de Aparelho</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="half-input">
+                  <label for="">Novo Plano:</label>
+                  <div class="half-input">
+                    <div class="fancy-select">
+                      <select>
+                        <option value="">Selecione o DDD</option>
+                        <option value="">67</option>
+                        <option value="">11</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="half-input">
+                    <div class="fancy-select">
+                      <select>
+                        <option value="">Selecione um plano</option>
+                        <option value="">Claro CONTROLE 2,5GB - Cartão de Crédito - R$ 84,99</option>
+                        <option value="">Claro CONTROLE 1,5GB - Cartão de Crédito - R$ 84,99</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-line">
+                <div class="half-input">
+                  <label for="">Tabela de Preço:</label>
+                  <div class="fancy-select">
+                    <select>
+                      <option value="">Selecione uma opção</option>
+                      <option value="">Mais Claro</option>
+                      <option value="">Super Desconto</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="half-input">
+                  <div class="half-input">
+                    <label for="">Programa de Pontos:</label>
+
+                    <label class="form-radio">
+                      <input type="radio" name="programaDePontos">
+                      <span>Sim</span>
+                    </label>
+
+                    <label class="form-radio">
+                      <input type="radio" name="programaDePontos">
+                      <span>Não</span>
+                    </label>
+                  </div>
+
+                  <div class="half-input">
+                    <label for="">SVA:</label>
+                    <label class="form-radio">
+                      <input type="radio" name="SVA">
+                      <span>Sim</span>
+                    </label>
+
+                    <label class="form-radio">
+                      <input type="radio" name="SVA">
+                      <span>Não</span>
+                    </label>
+                  </div>
+
+                </div>
+              </div>
+
+              <div class="half-input">
+                <label for="">Seguro:</label>
+                <div class="half-input">
+                  <label class="form-radio">
+                    <input type="radio" name="programaDePontos">
+                    <span>Sim</span>
+                  </label>
+
+                  <label class="form-radio">
+                    <input type="radio" name="programaDePontos">
+                    <span>Não</span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="half-input">
+                <label for="">Seguro:</label>
+                <div class="half-input">
+                  <label class="form-radio">
+                    <input type="radio" name="programaDePontos">
+                    <span>Sim</span>
+                  </label>
+
+                  <label class="form-radio">
+                    <input type="radio" name="programaDePontos">
+                    <span>Não</span>
+                  </label>
+                </div>
+              </div>
+
+         </fieldset>
+
+        <fieldset>
+            <legend>Valores</legend>
+
+            <div class="form-line">
+              <div class="half-input">
+                <label for="">Valor:</label>
+                <input type="text" class="input-singleline" placeholder="Digite o serial">
+              </div>
+
+              <div class="half-input">
+                <a href="" class="bt-error-alter">Adicionar Claro Renova</a>
+              </div>
+            </div>
+
+            <div class="form-line">
+              <div class="half-input">
+                <div class="half-input">
+                  <label for="">Desconto:</label>
+                  <input type="text" class="input-singleline" placeholder="R$ 0,00">
+                </div>
+                <div class="half-input">
+                  <label for="">Adicional:</label>
+                  <input type="text" class="input-singleline" placeholder="R$ 0,00">
+                </div>
+              </div>
+
+              <div class="half-input">
+                <label for="">Garantia Estendida:</label>
+                <input type="text" class="input-singleline" placeholder="R$ 0,00">
+              </div>
+            </div>
+
+            <div class="form-line">
+              <div class="half-input">
+                <label for="">Outros:</label>
+                <input type="text" class="input-singleline" placeholder="Digite o serial">
+              </div>
+              <div class="fancy-select">
+                <select>
+                  <option selected="" value="">Escolha o dia do vencimento da fatura</option>
+                </select>
+              </div>
+            </div>
+
+          </fieldset>
+
+          <fieldset>
+            <legend>Linha</legend>
+
+            <div class="form-line">
+              <div class="half-input">
+                <label for="">Número da linha:</label>
+                <input type="text" class="input-singleline" placeholder="Digite o serial">
+              </div>
+              <div class="half-input">
+                <label for="">Nº da solicitação do GED:</label>
+                <input type="text" class="input-singleline" placeholder="Digite solicitação do GED">
+              </div>
+              <div class="half-input">
+                <a href="" class="bt-error-alter">Adicionar Claro Renova</a>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset>
+              <legend>Simcard</legend>
+
+              <div class="form-line">
+                <div class="half-input">
+                  <label for="">Serial Simcard:</label>
+                  <input type="text" class="input-singleline" placeholder="Digite o serial">
+                </div>
+
+                <div class="half-input">
+                  <a href="" class="bt-error-alter">Adicionar Claro Renova</a>
+                </div>
+              </div>
+
+              <div class="form-line">
+                <div class="half-input">
+                  <label for="">Valor Simcard:</label>
+                  <input type="text" class="input-singleline" placeholder="R$0,00">
+                </div>
+
+                <div class="half-input">
+                    <label for="">Desconto:</label>
+                    <input type="text" class="input-singleline" placeholder="0,00">
+                  </div>
+              </div>
+            </fieldset>
+
+        </form>
+      </section>
+
+      <footer class="modal__footer">
+        <a href="" class="bt-back to-left"> Voltar </a>
+        <a href="" class="bt-confirm to-right">Salvar</a>
+      </footer>
+
+    </div>
+  </div>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="scripts/app.js"></script>
+
 </body>
 </html>

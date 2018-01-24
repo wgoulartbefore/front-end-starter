@@ -1,97 +1,105 @@
-$name-modal-base: "yz-modal";
+$name-modal-base: "modal";
 $size-modal-std: 640px;
 $size-modal-small: 320px;
 $size-modal-big: 960px;
+$color-modal-bg: $color-grey-0;
+$color-modal-header-bg: $color-grey-100;
+$color-modal-footer-bg: $color-grey-100;
+$color-modal-close: $color-base-main;
+$color-modal-title: $color-grey-1000;
 
 .#{$name-modal-base} {
-    display: none;
-    position: fixed;
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1001;
+  padding: 2 * $size-components-padding;
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+
+  @include susy-breakpoint($screen-medium, 12) {
+    padding: 4 * $size-components-padding;
+  }
+
+  @include susy-breakpoint($screen-big, 16) {
+    padding: 6 * $size-components-padding;
+  }
+
+  @at-root {
+    .modal-active #{&} {
+      display: block;
+      overflow-y: auto;
+    }
+  }
+}
+
+.#{$name-modal-base + "__content"} {
+  display: block;
+  margin: auto;
+  box-shadow: 0 ($size-components-padding / 2) $size-components-padding rgba(#000000, 0.5);
+  background: $color-modal-bg;
+
+  @include susy-breakpoint($screen-medium, 12) {
+    max-width: $size-modal-std;
+  }
+
+  @include susy-breakpoint($screen-big, 16) {
+    max-width: $size-modal-big;
+  }
+}
+
+.#{$name-modal-base + "__header"} {
+  position: relative;
+  height: $size-components-height;
+  padding: 0 $size-components-height 0 $size-components-padding;
+  font-size: 16px;
+  line-height: $size-components-height;
+  border-bottom: 1px solid #CCC;
+  background: $color-modal-header-bg;
+
+  .title {
+    line-height: $size-components-height;
+    text-transform: uppercase;
+    color: $color-modal-title;
+    font-weight: 700;
+  }
+
+  .bt-close {
+    display: block;
+    position: absolute;
+    width: $size-components-height;
+    height: $size-components-height;
     top: 0;
     right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 1001;
-    padding: 2 * $size-components-padding;
-    overflow: hidden;
-    -webkit-overflow-scrolling: touch;
+    text-align: center;
+    color: $color-modal-close;
 
-    @include susy-breakpoint($screen-medium, 12){
-        padding: 4 * $size-components-padding;
+    &:active {
+      background: darken($color-modal-header-bg, 10%);
     }
-
-    @include susy-breakpoint($screen-big, 16){
-        padding: 6 * $size-components-padding;
-    }
-
-    @at-root {
-        .modal-active #{&} {
-            display: block;
-            overflow-y: auto;
-        }
-    }
-
+  }
 }
 
-.#{$name-modal-base + "-content"} {
-    display: block;
-    margin: auto;
-    box-shadow: 0 ($size-components-padding / 2) $size-components-padding #000;
-    background: $color-modal-bg;
-
-    @include susy-breakpoint($screen-medium, 12){
-        max-width: $size-modal-std;
-    }
+.#{$name-modal-base + "__body"} {
+  padding: $size-components-padding;
+  @extend %responsive-image;
+  @extend %clearfix;
 }
 
-.#{$name-modal-base + "-header"} {
-    position: relative;
-    height: $size-components-height;
-    padding: 0 $size-components-height 0 $size-components-padding;
-    font-size: 16px;
-    line-height: $size-components-height;
-    border-bottom: 1px solid #CCC;
-    background: $color-modal-header-bg;
-
-    .title {
-        @include ellipsis();
-        line-height: $size-components-height;
-        text-transform: uppercase;
-        color: $color-modal-title;
-    }
-
-    .bt-close {
-        display: block;
-        position: absolute;
-        width: $size-components-height;
-        height: $size-components-height;
-        top: 0;
-        right: 0;
-        text-align: center;
-        color: $color-modal-close;
-
-        &:active {
-            background: darken($color-modal-header-bg, 10%);
-        }
-    }
-
-}
-
-.#{$name-modal-base + "-body"} {
-    padding: $size-components-padding;
-    @extend %responsive-image;
-    @extend %clearfix;
-}
-
-.#{$name-modal-base + "-footer"} {
-    height: $size-components-height + 2 * $size-components-padding;
-    padding: $size-components-padding;
-    border-top: 1px solid #CCC;
-    text-align: right;
-    background: $color-modal-footer-bg;
+.#{$name-modal-base + "__footer"} {
+  // height: $size-components-height + 2 * $size-components-padding;
+  padding: $size-components-padding;
+  border-top: 1px solid #CCC;
+  text-align: right;
+  background: $color-modal-footer-bg;
+  @extend %clearfix;
 }
 
 @at-root {
-    .modal-active {
-        overflow: hidden;
-    }
+  .modal-active {
+    overflow: hidden;
+  }
 }
