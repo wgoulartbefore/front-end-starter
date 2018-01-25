@@ -204,3 +204,11 @@ ul.gen-text {
   text-transform: none;
   margin-bottom: $size-components-padding;
 }
+
+.text-mark-success {
+  float: left;
+  padding: 0 5px;
+  color: $color-grey-0;
+  background: $color-base-success;
+  font-weight: 700;
+}
