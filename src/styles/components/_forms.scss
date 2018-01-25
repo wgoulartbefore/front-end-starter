@@ -53,6 +53,7 @@
 
     @include susy-breakpoint($screen-big, 16) {
     }
+
   }
 
   fieldset {
@@ -64,6 +65,7 @@
     &.spacing-medium {
       padding: $size-components-padding;
     }
+
   }
 
   .form-line {
@@ -943,6 +945,7 @@ fieldset {
   }
 
   &--sale {
+
     .form-line {
       display: flex;
       align-items: flex-end;
@@ -960,6 +963,11 @@ fieldset {
       align-items: center;
       margin-bottom: 0;
     }
+
+  }
+
+  .form-checkbox-small {
+    height: auto;
   }
 
   .small-input {

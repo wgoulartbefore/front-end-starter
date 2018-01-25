@@ -33,6 +33,14 @@
   @extend %bm-horizontal;
 }
 
+.ml-base {
+  margin-left: $size-components-padding !important;
+}
+
+.mr-base {
+  margin-top: $size-components-padding !important;
+}
+
 //Text Align
 .text-justify {
   @extend %text-justify;

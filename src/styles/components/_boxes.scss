@@ -373,7 +373,40 @@
       &:nth-child(1n + 2) {
         margin-right: 0;
       }
-
     }
+  }
+}
+
+.wrapper-sva {
+  display: block;
+  width: 100%;
+  max-height: 200px;
+  overflow-y: auto;
+  background: $color-grey-0;
+  outline: 1px solid $color-grey-300;
+  @extend %clearfix;
+
+  &-group-title {
+    display: block;
+    font-weight: 700;
+    padding: ($size-components-padding / 2) $size-components-padding;
+    background: $color-grey-200;
+    @extend %clearfix;
+  }
+
+  @include susy-breakpoint($screen-big, 16) {
+    &-group {
+      display: flex;
+      padding: $size-components-padding;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .form-checkbox {
+      flex: 1 1 25%;
+      width: 200px;
+      height: auto;
+    }
+
   }
 }

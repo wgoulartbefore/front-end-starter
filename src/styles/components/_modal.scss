@@ -1,7 +1,7 @@
 $name-modal-base: "modal";
 $size-modal-std: 640px;
 $size-modal-small: 320px;
-$size-modal-big: 960px;
+$size-modal-big: 1185px;
 $color-modal-bg: $color-grey-0;
 $color-modal-header-bg: $color-grey-100;
 $color-modal-footer-bg: $color-grey-100;
@@ -10,7 +10,7 @@ $color-modal-title: $color-grey-1000;
 
 .#{$name-modal-base} {
   display: none;
-  position: fixed;
+  position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
@@ -31,7 +31,7 @@ $color-modal-title: $color-grey-1000;
   @at-root {
     .modal-active #{&} {
       display: block;
-      overflow-y: auto;
+
     }
   }
 }
@@ -85,12 +85,13 @@ $color-modal-title: $color-grey-1000;
 
 .#{$name-modal-base + "__body"} {
   padding: $size-components-padding;
+  max-height: 500px;
+  overflow-y: auto;
   @extend %responsive-image;
   @extend %clearfix;
 }
 
 .#{$name-modal-base + "__footer"} {
-  // height: $size-components-height + 2 * $size-components-padding;
   padding: $size-components-padding;
   border-top: 1px solid #CCC;
   text-align: right;
