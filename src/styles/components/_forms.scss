@@ -979,6 +979,7 @@ fieldset {
         margin-top: 0;
       }
     }
+
   }
 
   .form-checkbox-small {
@@ -988,6 +989,26 @@ fieldset {
   .small-input {
     display: flex;
     width: 50%;
+  }
+
+  .small-input-end {
+    display: flex;
+    width: 50%;
+    align-items: flex-end;
+    margin-right: 2%;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .autosize-input {
+    width: 70%;
+    margin-right: $size-components-padding;
+
+    &.big-size {
+      width: 80%;
+    }
   }
 
 }

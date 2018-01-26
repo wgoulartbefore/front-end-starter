@@ -707,7 +707,7 @@
     <div class="modal__content">
 
       <header class="modal__header">
-        <h4 class="title">Acessórios</h4>
+        <h4 class="title">Produto</h4>
         <a class="bt-close">
           <i class="fa fa-times"></i>
         </a>
@@ -716,28 +716,80 @@
       <section class="modal__body">
         <form class="form-std form-std--sale">
 
-          <div class="input-holder">
-            <label>Produto</label>
-            <div class="half-input">
-              <input type="text" class="input-singleline" placeholder="Digite o nome do acessório que procura">
+          <fieldset class="spacing-medium">
+            <div class="form-line">
+              <div class="half-input">
+                <label for="">Serial:</label>
+                <input type="text" class="input-singleline" placeholder="Digite o serial do produto">
+              </div>
+
+              <div class="half-input">
+                <a href="" class="bt-main">Confirmar serial</a>
+                <a href="" class="bt-error-alter ml-base"> <i class="fa fa-search"></i> Buscar produto</a>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="spacing-medium">
+            <div class="form-line">
+              <div class="to-left">
+                <label for="">Serial:</label>
+                 <p class="text-gen">45464595662194984312</p>
+              </div>
+
+              <div class="">
+                <label for="">Descrição:</label>
+                <p class="text-gen">	ALCATEL CELULARES ALCATEL PIXI 3 4.5 4G - Cor: Preto/Branco (SMARTPHONE LIGHT Novo)</p>
+              </div>
+
+              <div class="to-right">
+                <label for="">Valor:</label>
+                <p class="text-gen">R$ 549,00</p>
+              </div>
             </div>
 
-            <div class="half-input">
-              <a href="" class="bt-confirm"><i class="fa fa-search"></i> Buscar Acessório</a>
-            </div>
-          </div>
+            <div class="form-line">
+              <div class="half-input">
+                <label for="">Valor Garantia Estendida:</label>
+                <input type="text" class="input-singleline" placeholder="Digite o valor da garantia extendida">
+              </div>
 
-          <div class="form-line">
-            <div class="half-input">
-              <label for="">Serial:</label>
-              <input type="text" class="input-singleline" placeholder="Digite o serial do produto">
+              <div class="half-input">
+                <label for="">Valor Adicional:</label>
+                <input type="text" class="input-singleline" placeholder="R$ 0,00">
+              </div>
             </div>
 
-            <div class="half-input">
-              <a href="" class="bt-main">Confirmar serial</a>
-              <a href="" class="bt-error-alter ml-base"> <i class="fa fa-search"></i> Buscar produto</a>
+            <div class="form-line">
+              <div class="small-input-end">
+                <div class="autosize-input">
+                  <label for="">Valor Desconto: </label>
+                  <input type="text" class="input-singleline" placeholder="R$ 0,00">
+                </div>
+
+                <label class="form-checkbox form-checkbox-small">
+                  <input type="checkbox" name="cupomDesconto" checked=""> Cupom de desconto
+                </label>
+
+                <!-- <div class="half-input">
+                  <div class="label-inline">
+                    <label class="form-checkbox form-checkbox-small">
+                      <input type="checkbox" name="cupomDesconto" checked=""> Cupom de desconto
+                    </label>
+                  </div>
+                </div> -->
+              </div>
+
+              <div class="small-input-end">
+                <div class="autosize-input big-size">
+                  <label for="">Cupom :</label>
+                  <input type="text" class="input-singleline" placeholder="Digite o cupom de desconto">
+                </div>
+                <a href="" class="bt-main to-right"> Aplicar </a>
+              </div>
+
             </div>
-          </div>
+          </fieldset>
 
         </form>
       </section>
