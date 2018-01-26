@@ -963,6 +963,22 @@ fieldset {
       align-items: center;
       margin-bottom: 0;
     }
+
+    .spacing-medium {
+      .form-line {
+        &:first-child {
+          margin-top: 0;
+        }
+      }
+    }
+
+    .input-holder {
+      margin-top: $size-components-padding;
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
   }
 
   .form-checkbox-small {

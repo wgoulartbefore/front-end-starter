@@ -589,7 +589,6 @@
 
           <div class="card-container__content">
             <div class="sale-list sale-list--small">
-
               <div class="sale-list-item">
                 <p class="sale-list-item__text"> CAPA SILICONE APPLE IPHONE 6 PRETA COM TRANSPARENTE </p>
                 <p class="sale-list-item__text"> 1 </p>
@@ -707,7 +706,7 @@
     <div class="modal__content">
 
       <header class="modal__header">
-        <h4 class="title">Produtos e Serviços</h4>
+        <h4 class="title">Serviços</h4>
         <a class="bt-close">
           <i class="fa fa-times"></i>
         </a>
@@ -717,79 +716,54 @@
         <form class="form-std form-std--sale">
 
           <fieldset class="spacing-medium">
-            <legend> Aparelho/Serviços</legend>
-
-            <div class="form-line">
-              <div class="half-input">
-                <label for="">Serial:</label>
-                <input type="text" class="input-singleline" placeholder="Digite o serial do produto">
-              </div>
-
-              <div class="half-input">
-                <a href="" class="bt-main">Confirmar serial</a>
-                <a href="" class="bt-error-alter ml-base"> <i class="fa fa-search"></i> Buscar produto</a>
-              </div>
-            </div>
-
             <div class="form-line">
               <div class="half-input">
                 <label for="">Serviço:</label>
                 <div class="fancy-select">
-                  <select>
-                    <option value="">Selecione um serviço</option>
-                    <option value="">Pós</option>
-                    <option value="">Controle</option>
-                    <option value="">Pré</option>
+                  <select name="" id="">
+                    <option> Alta </option>
+                    <option> Troca de Plano </option>
+                    <option> Troca de Simcard </option>
+                    <option> Migração </option>
+                    <option> Seguro </option>
+                    <option> SVA </option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-line">
+              <div class="half-input">
+                <label for="">Plano Novo:</label>
+                <div class="fancy-select">
+                  <select name="" id="">
+                    <option> DDD </option>
+                    <option> 67 </option>
+                    <option> 65 </option>
+                    <option> 11 </option>
                   </select>
                 </div>
               </div>
 
               <div class="half-input">
                 <div class="fancy-select">
-                  <select>
-                    <option value="1">Alta</option>
-                    <option value="5">Troca de Aparelho</option>
-                    <option value="6">Migração com Troca de Aparelho</option>
-                    <option value="10">Troca de Simcard com Troca de Aparelho</option>
+                  <select name="" id="">
+                    <option> Pós </option>
+                    <option> Controle </option>
+                    <option> Pré </option>
                   </select>
                 </div>
               </div>
-            </div>
-
-            <div class="form-line">
-              <div class="half-input">
-                <label for="">Novo Plano:</label>
-
-                <div class="half-input">
-                  <div class="fancy-select">
-                    <select>
-                      <option value="">Selecione o DDD</option>
-                      <option value="">67</option>
-                      <option value="">11</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div class="half-input">
-                  <div class="fancy-select">
-                    <select>
-                      <option value="">Selecione um plano</option>
-                      <option value="">Claro CONTROLE 2,5GB - Cartão de Crédito - R$ 84,99</option>
-                      <option value="">Claro CONTROLE 1,5GB - Cartão de Crédito - R$ 84,99</option>
-                    </select>
-                  </div>
-                </div>
-
-              </div>
 
               <div class="half-input">
-                <label for="">Tabela de Preço:</label>
-
                 <div class="fancy-select">
-                  <select>
-                    <option value="">Selecione uma opção</option>
-                    <option value="">Mais Claro</option>
-                    <option value="">Super Desconto</option>
+                  <select name="" id="">
+                    <option value="909">INTERNET MOVEL 1GB - R$ 54,99</option>
+                    <option value="1229">INTERNET MOVEL 2GB - R$ 79,99</option>
+                    <option value="1232">INTERNET MOVEL 8GB - R$ 109,99</option>
+                    <option value="1234">INTERNET MOVEL 14GB - R$ 149,99</option>
+                    <option value="1236">INTERNET MOVEL 20GB - R$ 185,99</option>
+                    <option value="1132">INTERNET MOVEL 40GB - R$ 329,99</option>
                   </select>
                 </div>
               </div>
@@ -797,202 +771,59 @@
 
             <div class="form-line">
               <div class="half-input">
+                <label class="form-checkbox form-checkbox-small">Valor do Plano</label>
+                <p class="text-mark-success">R$ 54,99</p>
+              </div>
+
+              <div class="half-input">
+                <label class="form-checkbox form-checkbox-small">
+                  <input type="checkbox" name="contaDigital" checked> Conta Digital(COD)
+                </label>
+              </div>
+
+              <div class="half-input">
+                <label class="form-checkbox form-checkbox-small">
+                  <input type="checkbox" name="debitoAutomatico" checked> Débito automático
+                </label>
+              </div>
+            </div>
+
+            <div class="form-line">
+              <div class="half-input">
+                <div class="half-input">
+                  <label for="">Simcard:</label>
+                  <input type="text" class="input-singleline" placeholder="Digite o serial do simcard">
+                </div>
+                <div class="half-input">
+                  <a href="#" class="bt-main">Confirmar Serial</a>
+                </div>
+              </div>
+
+              <div class="half-input">
+                <div class="half-input">
+                  <p class="text-gen">
+                    Modelo: Micro SimCard 4G - (Não ativo)
+                  </p>
+                </div>
 
                 <div class="half-input">
-                  <label for="">Programa de Pontos:</label>
-                  <label class="form-radio">
-                    <input type="radio" name="programaDePontos0" checked>
-                    <span>Sim</span>
-                  </label>
-
-                  <label class="form-radio">
-                    <input type="radio" name="programaDePontos">
-                    <span>Não</span>
-                  </label>
-                </div>
-
-                <div class="half-input">
-                  <label for="">Pontos:</label>
-                  <input type="text" class="input-singleline" placeholder="Digite a quantidade de Pontos">
-                </div>
-
-                <div class="half-input">
-                  <label for="">Valor desconto:</label>
-                  <input type="text" class="input-singleline" placeholder="Digite o valor de ">
-                </div>
-              </div>
-
-              <div class="half-input">
-                <label for="">Descrição:</label>
-                <textarea class="input-multiline" cols="30" rows="10"></textarea>
-              </div>
-            </div>
-
-            <div class="form-line">
-
-              <div class="half-input">
-                <label for="">SVA:</label>
-
-                <label class="form-radio">
-                  <input type="radio" name="sva" checked>
-                  <span>Sim</span>
-                </label>
-
-                <label class="form-radio">
-                  <input type="radio" name="sva">
-                  <span>Não</span>
-                </label>
-              </div>
-
-              <div class="half-input">
-                <label for="">Valor Desconto: </label>
-                <input type="text" class="input-singleline" placeholder="R$ 0,00">
-              </div>
-
-
-            </div>
-
-            <div class="form-line">
-              <div class="wrapper-sva">
-                <h4 class="wrapper-sva-group-title">Grupo 1</h4>
-                <div class="wrapper-sva-group">
-                  <label class="form-checkbox">
-                    <input type="checkbox" name="svaItens"> NUVEM DE LIVROS
-                  </label>
-                  <label class="form-checkbox">
-                    <input type="checkbox" name="svaItens"> NUVEM DO JORNALEIRO
-                  </label>
-                  <label class="form-checkbox">
-                    <input type="checkbox" name="svaItens"> SEGUROS ZURICH
-                  </label>
-                  <label class="form-checkbox">
-                    <input type="checkbox" name="svaItens"> TURMA DA MÔNICA
-                  </label>
-                  <label class="form-checkbox">
-                    <input type="checkbox" name="svaItens"> VIVO KANTOO
-                  </label>
-                  <label class="form-checkbox">
-                    <input type="checkbox" name="svaItens"> VIVO MÚSICA 1 APARELHO
-                  </label>
-                  <label class="form-checkbox">
-                    <input type="checkbox" name="svaItens"> VIVO PLAYKIDS SEMANAL
-                  </label>
-
-                  <label class="form-checkbox">
-                    <input type="checkbox" name="svaItens"> VIVO PROTEGE
-                  </label>
-
-                  <label class="form-checkbox">
-                    <input type="checkbox" name="svaItens"> WATCHMUSIC
-                  </label>
-                  <label class="form-checkbox">
-                    <input type="checkbox" name="svaItens"> WATCHMUSIC SEMANAL
-                  </label>
-
-                </div>
-
-
-                <div class="wrapper-sva">
-                  <h4 class="wrapper-sva-group-title">Grupo 2</h4>
-
-                  <div class="wrapper-sva-group">
-                    <label class="form-checkbox">
-                      <input type="checkbox" name="svaItens"> Combo Vivo Travel
-                    </label>
-                    <label class="form-checkbox">
-                      <input type="checkbox" name="svaItens"> Pacote Vivo Travel Voz 50min
-                    </label>
-                    <label class="form-checkbox">
-                      <input type="checkbox" name="svaItens">   PCT PARA FIXO 250
-                    </label>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-            <!-- ./wrapper-sva -->
-
-            <div class="form-line">
-              <div class="half-input">
-                <label for="">Seguro:</label>
-
-                <label class="form-radio">
-                  <input type="radio" name="programaDePontos">
-                  <span>Sim</span>
-                </label>
-
-                <label class="form-radio">
-                  <input type="radio" name="programaDePontos">
-                  <span>Não</span>
-                </label>
-              </div>
-
-              <div class="half-input">
-                <label for="">Indenização/Custo Mensal:</label>
-                <div class="fancy-select">
-                  <select>
-                    <option value="">Selecione uma opção</option>
-                    <option value="">Multiproteção Celular de R$ 2500,00 até R$ 2999,99</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-
-          </fieldset>
-
-
-          <fieldset class="spacing-medium">
-            <legend>Linha</legend>
-
-            <div class="form-line">
-              <div class="half-input">
-                <label for="" class="to-left">Número da linha:</label>
-                <label class="form-checkbox form-checkbox-small to-right">
-                  <input type="checkbox" name="svaItens" checked> Portabilidade
-                </label>
-
-                <input type="text" class="input-singleline" placeholder="Digite o Número da linha">
-              </div>
-
-              <div class="half-input">
-                <label for=""> Número Portado: </label>
-                <input type="text" class="input-singleline" placeholder="Digite o Número Portado">
-              </div>
-
-              <div class="half-input">
-                <label for="">Nº da solicitação do GED:</label>
-                <input type="text" class="input-singleline" placeholder="Digite solicitação do GED">
-              </div>
-            </div>
-          </fieldset>
-
-          <fieldset class="spacing-medium">
-            <legend>Simcard</legend>
-
-            <div class="form-line">
-              <div class="half-input">
-                <label for="">Serial Simcard:</label>
-                <input type="text" class="input-singleline" placeholder="Digite o serial">
-              </div>
-
-              <div class="half-input">
-                <a href="" class="bt-main">Confirmar Serial</a>
-              </div>
-            </div>
-
-            <div class="form-line">
-              <div class="half-line">
-                <div class="half-input">
-                  <label for="">Valor Simcard:</label>
-                  <p class="text-mark-success">12,00</p>
+                  <label class="form-checkbox form-checkbox-small">Valor do SIMCARD</label>
+                  <p class="text-mark-success">R$ 10,00</p>
                 </div>
 
                 <div class="half-input">
                   <label for="">Desconto:</label>
-                  <input type="text" class="input-singleline" placeholder="R$ 0,00">
+                  <input type="text" class="input-singleline" placeholder="Digite o serial do simcard">
                 </div>
+
+                <div class="half-input">
+                  <label for="">Adicional:</label>
+                  <input type="text" class="input-singleline" placeholder="Digite o serial do simcard">
+                </div>
+
               </div>
             </div>
+
           </fieldset>
 
         </form>
