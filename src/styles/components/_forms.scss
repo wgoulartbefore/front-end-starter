@@ -982,6 +982,15 @@ fieldset {
 
   }
 
+  &--sale-payment {
+
+  }
+
+
+  .align-top {
+    align-items: flex-start;
+  }
+
   .form-checkbox-small {
     height: auto;
   }
@@ -1008,6 +1017,11 @@ fieldset {
 
     &.big-size {
       width: 80%;
+    }
+
+    &.medium-size {
+      width: 64%;
+      margin-right: auto;
     }
   }
 

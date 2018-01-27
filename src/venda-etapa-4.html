@@ -427,11 +427,11 @@
       <div class="sale-step">
         <p class="sale-step__details">
           Passo
-          <span class="sale-step-current">3 </span> de
+          <span class="sale-step-current">4 </span> de
           <span class="sale-step-last">4</span>
         </p>
         <div class="sale-step-progress">
-          <div class="progress-bar" style="width:60%"></div>
+          <div class="progress-bar" style="width:100%"></div>
         </div>
       </div>
 
@@ -443,253 +443,171 @@
     <section id="main-content">
       <div class="container">
 
-        <nav class="sales-products">
-          <a class="product">
-            <img src="/images/icon-produtos-servicos.svg" height="66" alt="">
-            Produtos Claro
-          </a>
 
-          <a class="product">
-            <img src="/images/icon-servicos.svg" height="66" alt="">
-            Serviços Claro
-          </a>
-
-          <a class="product">
-            <img src="/images/icon-acessorios.svg" height="66" alt="">
-            Acessórios
-          </a>
-
-          <a class="product">
-            <img src="/images/icon-produto.svg" height="66" alt="">
-            Produto
-          </a>
-
-          <a class="product">
-            <img src="/images/icon-recarga.svg" height="66" alt="">
-            Recarga
-          </a>
-        </nav>
 
         <div class="card-container card-container--std">
           <div class="card-container__title">
-            Produtos e Serviços
+            Pagamento
           </div>
 
           <div class="card-container__content">
-            <div class="sale-list sale-list--product-services">
-              <div class="sale-list-item">
-                <span class="sale-list-item__text">
-                  APPLE iPhone 7 Plus 32GB - Prata
-                </span>
-                <span class="sale-list-item__text">
-                  Troca de Aparelho
-                </span>
-                <span class="sale-list-item__text">
-                  Pós
-                </span>
-                <span class="sale-list-item__text">
-                  Internet Movel 40GB
-                </span>
-                <span class="sale-list-item__text">
-                  R$199,99
-                </span>
-                <span class="sale-list-item__action">
-                  <a href=""><i class="fa fa-edit sale-list-item__action-edit"></i></a>
-                  <a href=""><i class="fa fa-trash sale-list-item__action-trash"></i></a>
-                </span>
-              </div>
-
-              <div class="sale-list-item">
-                <span class="sale-list-item__text">
-                  MOTOROLA Moto G (3ª Geração) - Branco
-                </span>
-                <span class="sale-list-item__text">
-                  Alta
-                </span>
-                <span class="sale-list-item__text">
-                  Pós
-                </span>
-                <span class="sale-list-item__text">
-                  Internet Movel 2GB
-                </span>
-                <span class="sale-list-item__text">
-                  R$1199,99
-                </span>
-                <span class="sale-list-item__action">
-                  <a href=""><i class="fa fa-edit sale-list-item__action-edit"></i></a>
-                  <a href=""><i class="fa fa-trash sale-list-item__action-trash"></i></a>
-                </span>
-              </div>
-
-              <div class="sale-list-item">
-                <span class="sale-list-item__text">
-                  MOTOROLA Moto G5 Plus - Dourado
-                </span>
-                <span class="sale-list-item__text">
-                  Alta
-                </span>
-                <span class="sale-list-item__text">
-                  Controle
-                </span>
-                <span class="sale-list-item__text">
-                  Claro Controle 2GB - Cartão de Crédito
-                </span>
-                <span class="sale-list-item__text">
-                  R$1199,99
-                </span>
-                <span class="sale-list-item__action">
-                  <a href=""><i class="fa fa-edit sale-list-item__action-edit"></i></a>
-                  <a href=""><i class="fa fa-trash sale-list-item__action-trash"></i></a>
-                </span>
-              </div>
-
+            <div class="payment-select">
+              <a href="" class="bt-main"> <i class="fa fa-credit-card-alt"></i> Cartão</a>
+              <a href="" class="bt-main"> <i class="fa fa-dollar"></i> Dinheiro</a>
+              <a href="" class="bt-main"> <i class="fa fa-credit-card-alt"></i> Outros</a>
             </div>
+
+
+            <form class="form-std form-std--sale-payment">
+              <fieldset class="spacing-medium">
+                <legend for="">Cartão</legend>
+                <div class="form-line">
+                  <div class="half-input">
+                    <label>Tipo de Cartão:</label>
+                    <div class="fancy-select">
+                      <select>
+                        <option selected="" value="">Escolha a Bandeira do Cartão</option>
+                        <optgroup label="Cartão de Crédito">
+                          <option value="60">BRASIL PARC.</option>
+                          <option value="12">Cartão AMEX</option>
+                          <option value="18">Cartão Dacasa</option>
+                          <option value="5">Cartão Master</option>
+                          <option value="6">Cartão VISA</option>
+                          <option value="160">REDE Itaucard</option>
+                        </optgroup>
+                        <optgroup label="Cartão de Débito">
+                          <option value="24">Cartão MAESTRO</option>
+                          <option value="29">Visa Electron</option>
+                        </optgroup>
+                        <optgroup label="Crédito Loja">
+                          <option value="13">Cartão Loja</option>
+                        </optgroup>
+                        <optgroup label="Outros">
+                          <option value="51">Cartão BNDES</option>
+                        </optgroup>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-line ">
+                  <div class="half-input">
+                    <div class="half-input">
+                      <label for="">Valor:</label>
+                      <input type="text" class="input-singleline" placeholder="Digite o valor a pagar">
+                    </div>
+
+                    <div class="half-input">
+                      <label for="">Parcelar em :</label>
+                      <div class="fancy-select">
+                        <select name="" id="">
+                          <option value="">Selecione a quantidade de vezes</option>
+                          <option value="">1</option>
+                          <option value="">2</option>
+                          <option value="">3</option>
+                          <option value="">4</option>
+                          <option value="">5</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="half-input">
+                    <label for="">Nº de autorização cartão:</label>
+                    <input type="text" class="input-singleline" placeholder="Digite o número de autorização">
+                  </div>
+                </div>
+
+                <div class="form-line">
+                  <div class="half-input">
+                    <label for="">Observações:</label>
+                    <textarea class="input-multiline" cols="30" rows="10"></textarea>
+                  </div>
+                </div>
+
+              </fieldset>
+
+              <fieldset class="spacing-medium">
+                <legend for="">Dinheiro</legend>
+
+                <div class="form-line ">
+                  <div class="half-input">
+                    <label for="">Valor:</label>
+                    <input type="text" class="input-singleline" placeholder="Digite o valor a pagar">
+                  </div>
+                </div>
+
+                <div class="form-line">
+                  <div class="half-input">
+                    <label for="">Observações:</label>
+                    <textarea class="input-multiline" cols="30" rows="10"></textarea>
+                  </div>
+                </div>
+
+              </fieldset>
+
+              <fieldset class="spacing-medium">
+                <legend for="">Outro</legend>
+
+                <div class="form-line">
+                  <div class="half-input">
+                    <label>Forma de pagamento:</label>
+                    <div class="fancy-select">
+                      <select>
+                        <option selected="" value="">Escolha a forma de pagamento:</option>
+                        <optgroup label="Cheque">
+                          <option value="2">Cheque</option>
+                        </optgroup>
+                        <optgroup label="Outros">
+                          <option value="4">Boleto</option>
+                          <option value="37">Carne</option>
+                          <option value="142">Desc Fabricante</option>
+                          <option value="20">Produto</option>
+                          <option value="3">Promissória</option>
+                          <option value="70">Vale Troca</option>
+                          <option value="84">Vivo Renova</option>
+                        </optgroup>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-line">
+                  <div class="half-input">
+                    <div class="half-input">
+                      <label for="">Data de Vencimento:</label>
+                      <input type="date" class="input-singleline">
+                    </div>
+
+                    <div class="half-input">
+                      <label for="">Valor da parcela:</label>
+                      <input type="text" class="input-singleline" placeholder="Valor da parcela">
+                    </div>
+                  </div>
+
+                  <div class="half-input">
+                    <label for="">Nº do Documento:</label>
+                    <input type="text" class="input-singleline" placeholder="Digite o número do documento">
+                  </div>
+                </div>
+
+                <div class="form-line">
+                  <div class="half-input">
+                    <label for="">Observações:</label>
+                    <textarea class="input-multiline" cols="30" rows="10"></textarea>
+                  </div>
+                </div>
+
+              </fieldset>
+
+            </form>
           </div>
           <!-- Item Card -->
-        </div>
-
-        <div class="card-container card-container--std">
-          <div class="card-container__title"> Serviços </div>
-
-          <div class="card-container__content">
-            <div class="sale-list sale-list--services">
-              <div class="sale-list-item ">
-                <p class="sale-list-item__text">Alta</p>
-                <p class="sale-list-item__text">Pós</p>
-                <p class="sale-list-item__text">Internet Movel 1GB</p>
-                <p class="sale-list-item__text">67 99240-8800</p>
-                <p class="sale-list-item__text">R$ 0,00</p>
-                <p class="sale-list-item__action">
-                  <a href=""><i class="fa fa-edit sale-list-item__action-edit"></i></a>
-                  <a href=""><i class="fa fa-trash sale-list-item__action-trash"></i></a>
-                </p>
-              </div>
-
-              <div class="sale-list-item">
-                <p class="sale-list-item__text">Alta</p>
-                <p class="sale-list-item__text">Pós</p>
-                <p class="sale-list-item__text">Internet Movel 1GB</p>
-                <p class="sale-list-item__text">67 99240-8800</p>
-                <p class="sale-list-item__text">R$ 0,00</p>
-                <p class="sale-list-item__action">
-                  <a href=""><i class="fa fa-edit sale-list-item__action-edit"></i></a>
-                  <a href=""><i class="fa fa-trash sale-list-item__action-trash"></i></a>
-                </p>
-              </div>
-            </div>
-          </div>
-          <!-- Item Card -->
-        </div>
-        <!-- ./card-container -->
-
-        <div class="card-container card-container--std">
-          <div class="card-container__title">
-            Acessórios
-          </div>
-
-          <div class="card-container__content">
-            <div class="sale-list sale-list--small">
-
-              <div class="sale-list-item">
-                <p class="sale-list-item__text"> CAPA SILICONE APPLE IPHONE 6 PRETA COM TRANSPARENTE </p>
-                <p class="sale-list-item__text"> 1 </p>
-                <p class="sale-list-item__text"> R$10,00 </p>
-                <p class="sale-list-item__action">
-                  <a href=""><i class="fa fa-edit sale-list-item__action-edit"></i></a>
-                  <a href=""><i class="fa fa-trash sale-list-item__action-trash"></i></a>
-                </p>
-              </div>
-              <!-- Item Card -->
-
-              <div class="sale-list-item">
-                <p class="sale-list-item__text"> FONE SEM FIO </p>
-                <p class="sale-list-item__text"> 2 </p>
-                <p class="sale-list-item__text"> R$20,00 </p>
-                <p class="sale-list-item__action">
-                  <a href=""><i class="fa fa-edit sale-list-item__action-edit"></i></a>
-                  <a href=""><i class="fa fa-trash sale-list-item__action-trash"></i></a>
-                </p>
-              </div>
-              <!-- Item Card -->
-
-              <div class="sale-list-item">
-                <p class="sale-list-item__text"> CABO HDMI </p>
-                <p class="sale-list-item__text"> 3 </p>
-                <p class="sale-list-item__text"> 150,00 </p>
-                <p class="sale-list-item__action">
-                  <a href=""><i class="fa fa-edit sale-list-item__action-edit"></i></a>
-                  <a href=""><i class="fa fa-trash sale-list-item__action-trash"></i></a>
-                </p>
-              </div>
-              <!-- Item Card -->
-
-            </div>
-          </div>
-        </div>
-        <!-- ./card-container -->
-
-        <div class="card-container card-container--std">
-          <div class="card-container__title">
-            Produto
-          </div>
-
-          <div class="card-container__content">
-            <div class="sale-list sale-list--small">
-
-              <div class="sale-list-item">
-                <p class="sale-list-item__text"> ALCATEL PIXI 3 '4.5' 4G (SMARTPHONE LIGHT Novo) </p>
-                <p class="sale-list-item__text"> Preto/Branco </p>
-                <p class="sale-list-item__text"> R$549,00 </p>
-                <p class="sale-list-item__action">
-                  <a href=""><i class="fa fa-edit sale-list-item__action-edit"></i></a>
-                  <a href=""><i class="fa fa-trash sale-list-item__action-trash"></i></a>
-                </p>
-              </div>
-              <!-- Item Card -->
-
-            </div>
-          </div>
-        </div>
-        <!-- ./card-container -->
-
-        <div class="card-container card-container--std">
-          <div class="card-container__title">
-            Recarga
-          </div>
-
-          <div class="card-container__content">
-            <div class="sale-list sale-list--small">
-
-              <div class="sale-list-item">
-                <p class="sale-list-item__text"> Cartão Recarga </p>
-                <p class="sale-list-item__text"> 67 9240-0099 </p>
-                <p class="sale-list-item__text"> R$10,00 </p>
-                <p class="sale-list-item__action">
-                  <a href=""><i class="fa fa-edit sale-list-item__action-edit"></i></a>
-                  <a href=""><i class="fa fa-trash sale-list-item__action-trash"></i></a>
-                </p>
-              </div>
-              <!-- Item Card -->
-
-              <div class="sale-list-item">
-                <p class="sale-list-item__text"> Recarga Eletrônica </p>
-                <p class="sale-list-item__text"> 67 9240-0099 </p>
-                <p class="sale-list-item__text"> R$3,00 </p>
-                <p class="sale-list-item__action">
-                  <a href=""><i class="fa fa-edit sale-list-item__action-edit"></i></a>
-                  <a href=""><i class="fa fa-trash sale-list-item__action-trash"></i></a>
-                </p>
-              </div>
-              <!-- Item Card -->
-
-            </div>
-          </div>
         </div>
         <!-- ./card-container -->
 
         <div class="area-buttons">
           <a href="" class="bt-back"> Voltar </a>
-          <a href="" class="to-right bt-confirm ">Avançar</a>
+          <a href="" class="to-right bt-confirm ">Finalizar Compra</a>
         </div>
         <!-- ./gen-box -->
 
