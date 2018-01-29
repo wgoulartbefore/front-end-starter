@@ -20,7 +20,7 @@
   <link rel="stylesheet" href="styles/main.css" type="text/css" media="screen, projection">
 </head>
 
-<body>
+<body class="modal-active">
   <div id="master-header" class="master-header">
     <nav class="header-opts-bar">
       <div class="holder">
@@ -238,138 +238,7 @@
               <a>Usuários</a>
             </li>
             <li>
-              <a>Valor Aparelho Claro</a>
-            </li>
-            <li>
-              <a>Venda</a>
-            </li>
-          </ul>
-
-        </li>
-
-        <!-- <li class="menu-list__item">
-          <a class="menu-list__link">
-            <i class="fa fa-home"></i>
-            Início
-          </a>
-        </li> -->
-
-        <!-- <li class="menu-list__item menu-list--submenu ">
-          <a class="menu-list__link">
-            <i class="fa fa-question-circle"></i>
-            Ajuda
-          </a>
-          <ul class="submenu-list">
-            <li>
-              <a>Atendimento</a>
-            </li>
-            <li>
-              <a>Manual</a>
-            </li>
-          </ul>
-        </li> -->
-
-        <li class="menu-list__item menu-list--submenu ">
-          <a class="menu-list__link">
-            <i class="fa fa-shopping-cart"></i>
-            Venda
-          </a>
-          <ul class="submenu-list">
-            <li>
-              <a>Venda</a>
-            </li>
-            <li>
-              <a>Gestão documental</a>
-            </li>
-            <li>
-              <a>Campanhas</a>
-            </li>
-          </ul>
-        </li>
-
-        <li class="menu-list__item menu-list--submenu ">
-          <a class="menu-list__link">
-            <i class="fa fa-archive"></i>
-            Gestão de Estoque
-          </a>
-
-          <ul class="submenu-list">
-            <li>
-              <a>Acessório</a>
-            </li>
-            <li>
-              <a>Estoque</a>
-            </li>
-            <li>
-              <a>Produtos Open</a>
-            </li>
-            <li>
-              <a>Uso e Consumo</a>
-            </li>
-            <li>
-              <a>Valores</a>
-            </li>
-          </ul>
-        </li>
-
-        <li class="menu-list__item menu-list--submenu ">
-          <a class="menu-list__link">
-            <i class="fa fa-usd"></i>
-            Financeiro
-          </a>
-
-          <ul class="submenu-list">
-            <li>
-              <a>Baixa de títulos</a>
-            </li>
-            <li>
-              <a>Caixa</a>
-            </li>
-            <li>
-              <a>Contas a Pagar</a>
-            </li>
-            <li>
-              <a>Contas a Receber</a>
-            </li>
-            <li>
-              <a>Contas Bancárias</a>
-            </li>
-          </ul>
-        </li>
-
-        <li class="menu-list__item menu-list--submenu ">
-          <a class="menu-list__link">
-            <i class="fa fa-bar-chart"></i>
-            Relatórios
-          </a>
-
-          <ul class="submenu-list">
-            <li>
-              <a>Comissões</a>
-            </li>
-            <li>
-              <a>Estoque</a>
-            </li>
-            <li>
-              <a>Financeiro</a>
-            </li>
-            <li>
-              <a>Gerencial</a>
-            </li>
-            <li>
-              <a>Movimento</a>
-            </li>
-            <li>
-              <a>Pessoas</a>
-            </li>
-            <li>
-              <a>Remuneração</a>
-            </li>
-            <li>
-              <a>Vendas</a>
-            </li>
-            <li>
-              <a>Claro GO</a>
+              <a>Valor Aparelho Claro GO</a>
             </li>
           </ul>
         </li>
@@ -455,7 +324,6 @@
               <a href="" class="payment-method"> <i class="fa fa-ellipsis-h"></i> Outros</a>
             </nav>
 
-            <!--
             <form class="form-std form-std--sale-payment">
               <fieldset class="spacing-medium">
                 <legend for="">Cartão</legend>
@@ -488,7 +356,7 @@
                   </div>
                 </div>
 
-                <div class="form-line">
+                <div class="form-line ">
                   <div class="half-input">
                     <div class="half-input">
                       <label for="">Valor:</label>
@@ -540,6 +408,7 @@
                     <textarea class="input-multiline" cols="30" rows="10"></textarea>
                   </div>
                 </div>
+
               </fieldset>
 
               <fieldset class="spacing-medium">
@@ -595,183 +464,8 @@
                 </div>
 
               </fieldset>
-            </form> -->
 
-
-            <div class="card-container card-container--striped card-container--open">
-              <div class="card-container__title">
-                Cartão
-                <span class="card-container__title-close">
-                  <i class="fa fa-trash"></i>
-                </span>
-              </div>
-              <div class="card-container__content">
-                <form class="form-std form-std--sale-payment">
-                  <fieldset class="spacing-medium">
-                    <!-- <legend for="">Cartão</legend> -->
-                    <div class="form-line">
-                      <div class="half-input">
-                        <label>Tipo de Cartão:</label>
-                        <div class="fancy-select">
-                          <select>
-                            <option selected="" value="">Escolha a Bandeira do Cartão</option>
-                            <optgroup label="Cartão de Crédito">
-                              <option value="60">BRASIL PARC.</option>
-                              <option value="12">Cartão AMEX</option>
-                              <option value="18">Cartão Dacasa</option>
-                              <option value="5">Cartão Master</option>
-                              <option value="6">Cartão VISA</option>
-                              <option value="160">REDE Itaucard</option>
-                            </optgroup>
-                            <optgroup label="Cartão de Débito">
-                              <option value="24">Cartão MAESTRO</option>
-                              <option value="29">Visa Electron</option>
-                            </optgroup>
-                            <optgroup label="Crédito Loja">
-                              <option value="13">Cartão Loja</option>
-                            </optgroup>
-                            <optgroup label="Outros">
-                              <option value="51">Cartão BNDES</option>
-                            </optgroup>
-                          </select>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="form-line ">
-                      <div class="half-input">
-                        <div class="half-input">
-                          <label for="">Valor:</label>
-                          <input type="text" class="input-singleline" placeholder="Digite o valor a pagar">
-                        </div>
-
-                        <div class="half-input">
-                          <label for="">Parcelar em :</label>
-                          <div class="fancy-select">
-                            <select name="" id="">
-                              <option value="">Selecione a quantidade de vezes</option>
-                              <option value="">1</option>
-                              <option value="">2</option>
-                              <option value="">3</option>
-                              <option value="">4</option>
-                              <option value="">5</option>
-                            </select>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="half-input">
-                        <label for="">Nº de autorização cartão:</label>
-                        <input type="text" class="input-singleline" placeholder="Digite o número de autorização">
-                      </div>
-                    </div>
-
-                    <div class="form-line">
-                      <div class="half-input">
-                        <label for="">Observações:</label>
-                        <textarea class="input-multiline" cols="30" rows="10"></textarea>
-                      </div>
-                    </div>
-
-                  </fieldset>
-                  </form>
-              </div>
-            </div>
-
-            <div class="card-container card-container--striped card-container--open">
-              <div class="card-container__title">
-                Dinheiro
-                <span class="card-container__title-close">
-                  <i class="fa fa-trash"></i>
-                </span>
-              </div>
-              <div class="card-container__content">
-                <form class="form-std form-std--sale-payment">
-                  <fieldset class="spacing-medium">
-                    <!-- <legend for="">Dinheiro</legend> -->
-
-                    <div class="form-line ">
-                      <div class="half-input">
-                        <label for="">Valor:</label>
-                        <input type="text" class="input-singleline" placeholder="Digite o valor a pagar">
-                      </div>
-                    </div>
-
-                    <div class="form-line">
-                      <div class="half-input">
-                        <label for="">Observações:</label>
-                        <textarea class="input-multiline" cols="30" rows="10"></textarea>
-                      </div>
-                    </div>
-                  </fieldset>
-              </div>
-            </div>
-
-            <div class="card-container card-container--striped card-container--open">
-              <div class="card-container__title">
-                Outro
-                <span class="card-container__title-close">
-                  <i class="fa fa-trash"></i>
-                </span>
-              </div>
-
-              <div class="card-container__content">
-                <form class="form-std form-std--sale-payment">
-                  <fieldset class="spacing-medium">
-                    <legend for="">Outro</legend>
-
-                    <div class="form-line">
-                      <div class="half-input">
-                        <label>Forma de pagamento:</label>
-                        <div class="fancy-select">
-                          <select>
-                            <option selected="" value="">Escolha a forma de pagamento:</option>
-                            <optgroup label="Cheque">
-                              <option value="2">Cheque</option>
-                            </optgroup>
-                            <optgroup label="Outros">
-                              <option value="4">Boleto</option>
-                              <option value="37">Carne</option>
-                              <option value="142">Desc Fabricante</option>
-                              <option value="20">Produto</option>
-                              <option value="3">Promissória</option>
-                              <option value="70">Vale Troca</option>
-                              <option value="84">Claro Renova</option>
-                            </optgroup>
-                          </select>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="form-line">
-                      <div class="half-input">
-                        <div class="half-input">
-                          <label for="">Data de Vencimento:</label>
-                          <input type="date" class="input-singleline">
-                        </div>
-
-                        <div class="half-input">
-                          <label for="">Valor da parcela:</label>
-                          <input type="text" class="input-singleline" placeholder="Valor da parcela">
-                        </div>
-                      </div>
-
-                      <div class="half-input">
-                        <label for="">Nº do Documento:</label>
-                        <input type="text" class="input-singleline" placeholder="Digite o número do documento">
-                      </div>
-                    </div>
-
-                    <div class="form-line">
-                      <div class="half-input">
-                        <label for="">Observações:</label>
-                        <textarea class="input-multiline" cols="30" rows="10"></textarea>
-                      </div>
-                    </div>
-                  </fieldset>
-                </form>
-              </div>
-            </div>
-
+            </form>
           </div>
           <!-- Item Card -->
         </div>
@@ -792,6 +486,140 @@
 
   <div class="global-barrier"></div>
   <!-- End global-barrier!-->
+
+  <div class="modal">
+    <div class="modal__content">
+
+      <header class="modal__header">
+        <h4 class="title">Outros</h4>
+        <a class="bt-close">
+          <i class="fa fa-times"></i>
+        </a>
+      </header>
+
+      <section class="modal__body">
+        <form class="form-std form-std--sale-payment">
+
+          <div class="form-line">
+            <div class="half-input">
+              <label class="form-checkbox form-checkbox-small">
+                <input type="checkbox" name="debitoAutomatico" checked="">Pagamento em Lote
+              </label>
+            </div>
+          </div>
+
+          <fieldset class="spacing-medium">
+            <div class="form-line">
+
+              <div class="half-input">
+                <label>Data de Vencimento:</label>
+                <input type="date" class="input-singleline">
+              </div>
+
+              <div class="half-input">
+                <label for="">Forma de pagamento: </label>
+                <div class="fancy-select">
+                  <select>
+                    <option selected="" value="">Selecione a forma de pagamento</option>
+                    <optgroup label="Cheque">
+                      <option value="2" title="0">Cheque</option>
+                    </optgroup>
+                    <optgroup label="Outros">
+                      <option value="4" title="0">Boleto</option>
+                      <option value="37" title="0">Carne</option>
+                      <option value="142" title="0">Desc Fabricante</option>
+                      <option value="20" title="0">Produto</option>
+                      <option value="3" title="0">Promissória</option>
+                      <option value="70" title="0">Vale Troca</option>
+                      <option value="84" title="0">Claro Renova</option>
+                    </optgroup>
+                  </select>
+                </div>
+              </div>
+
+              <div class="half-input">
+                <label>Parcelar em:</label>
+                <div class="fancy-select">
+                  <select name="" id="">
+                    <option value="">Selecione a quantidade de vezes</option>
+                    <option value="">1</option>
+                    <option value="">2</option>
+                    <option value="">3</option>
+                    <option value="">4</option>
+                    <option value="">5</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- <a href="" class="bt-main">Adicionar</a> -->
+
+            </div>
+          </fieldset>
+
+
+
+          <fieldset class="spacing-medium">
+            <!-- <legend for="">Outro</legend> -->
+            <div class="form-line">
+              <div class="half-input">
+                <label>Forma de pagamento:</label>
+                <div class="fancy-select">
+                  <select>
+                    <option selected="" value="">Escolha a forma de pagamento:</option>
+                    <optgroup label="Cheque">
+                      <option value="2">Cheque</option>
+                    </optgroup>
+                    <optgroup label="Outros">
+                      <option value="4">Boleto</option>
+                      <option value="37">Carne</option>
+                      <option value="142">Desc Fabricante</option>
+                      <option value="20">Produto</option>
+                      <option value="3">Promissória</option>
+                      <option value="70">Vale Troca</option>
+                      <option value="84">Claro Renova</option>
+                    </optgroup>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-line">
+              <div class="half-input">
+                <div class="half-input">
+                  <label for="">Data de Vencimento:</label>
+                  <input type="date" class="input-singleline">
+                </div>
+
+                <div class="half-input">
+                  <label for="">Valor da parcela:</label>
+                  <input type="text" class="input-singleline" placeholder="Valor da parcela">
+                </div>
+              </div>
+
+              <div class="half-input">
+                <label for="">Nº do Documento:</label>
+                <input type="text" class="input-singleline" placeholder="Digite o número do documento">
+              </div>
+            </div>
+
+            <div class="form-line">
+              <div class="half-input">
+                <label for="">Observações:</label>
+                <textarea class="input-multiline" cols="30" rows="10"></textarea>
+              </div>
+            </div>
+          </fieldset>
+
+        </form>
+      </section>
+
+      <footer class="modal__footer">
+        <a href="" class="bt-back to-left"> Voltar </a>
+        <a href="" class="bt-confirm to-right">Adicionar</a>
+      </footer>
+
+    </div>
+  </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="scripts/app.js"></script>
