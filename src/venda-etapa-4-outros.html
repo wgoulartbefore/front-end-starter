@@ -498,7 +498,7 @@
       </header>
 
       <section class="modal__body">
-        <form class="form-std form-std--sale-payment">
+        <form class="form-std form-std--sale-payment form-std--sale">
 
           <div class="form-line">
             <div class="half-input">
@@ -510,16 +510,15 @@
 
           <fieldset class="spacing-medium">
             <div class="form-line">
-
               <div class="half-input">
-                <label>Data de Vencimento:</label>
+                <label for="">Data de Vencimento:</label>
                 <input type="date" class="input-singleline">
               </div>
 
               <div class="half-input">
-                <label for="">Forma de pagamento: </label>
+                <label for="">Forma de Pagamento:</label>
                 <div class="fancy-select">
-                  <select>
+                  <select name="" id="">
                     <option selected="" value="">Selecione a forma de pagamento</option>
                     <optgroup label="Cheque">
                       <option value="2" title="0">Cheque</option>
@@ -538,7 +537,7 @@
               </div>
 
               <div class="half-input">
-                <label>Parcelar em:</label>
+                <label for="">Parcelar em :</label>
                 <div class="fancy-select">
                   <select name="" id="">
                     <option value="">Selecione a quantidade de vezes</option>
@@ -551,8 +550,7 @@
                 </div>
               </div>
 
-              <!-- <a href="" class="bt-main">Adicionar</a> -->
-
+              <button href="" class="bt-main">  Adicionar </button>
             </div>
           </fieldset>
 

@@ -190,8 +190,6 @@ function switchTypeClientRegisterSell() {
   });
 }
 
-
-
 function openUserOptions() {
   const container = document.querySelector('.header-user-options');
   const global = document.querySelector(':not(.header-user-options)');
@@ -280,15 +278,6 @@ function headerOptsController() {
   });
 }
 
-// Função auxiliar de Logging
-function printc(msg){
-	try{
-		console.log(msg);
-	}
-	catch(err){
-	}
-}
-
 function boxCardController() {
   const activeClass = 'box-card--open';
 
@@ -314,7 +303,6 @@ function boxCardController() {
       }
   });
 }
-
 
 function ModalClass(){
 
@@ -403,7 +391,7 @@ function ModalClass(){
 
 	function showModal(){
 		if(modalStatus){
-			printc('yzModal:: Modal alredy visible. Please use ".close()" method first.');
+			printc('Modal alredy visible. Please use ".close()" method first.');
 		}else{
 			pageHTML.addClass(domClasses.modalActive);
 			modalTarget.addClass(domClasses.modalActive);
@@ -425,7 +413,7 @@ function ModalClass(){
 			solveCallback();
 
 		}else{
-			printc('yzModal:: Modal alredy hidden. Please use ".open()" method first.');
+			printc('Modal alredy hidden. Please use ".open()" method first.');
 		}
 
 		return stdReturn;
@@ -463,7 +451,7 @@ function ModalClass(){
 			closeLoader();
 			components.body.append(html);
 		}else{
-			printc('yzModal:: Modal must be open to call loader');
+			printc('Modal must be open to call loader');
 		}
 
 		return stdReturn;
@@ -473,16 +461,16 @@ function ModalClass(){
 		if(modalStatus){
 			components.body.find('.modal-loader').remove();
 		}else{
-			printc('yzModal:: Modal must be open to close loader.');
+			printc('Modal must be open to close loader.');
 		}
 	}
 
 	function setCloseCallback(fx){
 		if(typeof(fx) == 'function'){
 			closeCallback = fx;
-			printc('yzModal:: Binded function callback');
+			printc('Binded function callback');
 		}else{
-			printc('yzModal:: Param received for callback is not a function');
+			printc('Param received for callback is not a function');
 		}
 		return stdReturn;
 	}
@@ -503,8 +491,6 @@ function ModalClass(){
   constructor();
 
 }
-
-
 
 headerOptsController();
 openUserOptions();

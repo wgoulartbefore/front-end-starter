@@ -10,7 +10,6 @@
   transform: translateX(-100%);
   transition: transform $time-std-transition;
   z-index: 2;
-  // border-top: 1px solid $color-grey-1000;
 
   @at-root {
     .mobile-menu-active #{&} {
