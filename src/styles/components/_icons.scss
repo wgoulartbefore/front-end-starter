@@ -1,0 +1,36 @@
+$icon-path: "/images/";
+
+.icon-payment-boleto {
+  display: inline-block;
+  background-image: url('#{$icon-path}icon-pagamento-cartao.svg');
+  background-size: contain;
+  background-position: center center;
+}
+
+.icon-payment-boleto {
+  display: inline-block;
+  background-image: url('#{$icon-path}icon-pagamento-produto-servico.svg');
+  background-size: contain;
+  background-position: center center;
+}
+
+.icon-payment-boleto {
+  display: inline-block;
+  background-image: url('#{$icon-path}icon-pagamento-boleto.svg');
+  background-size: contain;
+  background-position: center center;
+}
+
+.icon-payment-boleto {
+  display: inline-block;
+  background-image: url('#{$icon-path}icon-pagamento-produto-servico.svg');
+  background-size: contain;
+  background-position: center center;
+}
+
+.icon-pagamento-recarga {
+  display: inline-block;
+  background-image: url('#{$icon-path}icon-pagamento-recarga.svg');
+  background-size: contain;
+  background-position: center center;
+}
