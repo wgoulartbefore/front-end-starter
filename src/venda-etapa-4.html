@@ -424,6 +424,17 @@
         <p class="title-page__subtitle">Venda de produtos e serviços.</p>
       </header>
 
+
+      <div class="sale-order">
+        <i class="sale-order__icon">
+          <div class="n-itens">20</div>
+        </i>
+        <p class="sale-order__price">
+          <span class="currency">R$</span>
+          <span class="value">10.000,00</span>
+        </p>
+      </div>
+
       <div class="sale-step">
         <p class="sale-step__details">
           Passo
@@ -444,21 +455,76 @@
     <section id="main-content">
       <div class="container">
 
-        <div class="card-container card-container--std">
+        <nav class="payment-select">
+          <a href="" class="payment-method">
+            <i class="icon-pagamento-cartao"></i> Cartão
+          </a>
+          <a href="" class="payment-method">
+            <i class="icon-pagamento-dinheiro"></i> Dinheiro
+          </a>
+          <a href="" class="payment-method">
+            <i class="icon-pagamento-outros"></i> Outros
+          </a>
+        </nav>
 
+        <div class="card-container card-container--std">
           <div class="card-container__title">
-            Pagamento
+            Formas de Pagamento
           </div>
 
           <div class="card-container__content">
-            <nav class="payment-select">
-              <a href="" class="payment-method">
-                <i class="icon-payment-card"></i>
-                <i class="fa fa-credit-card-alt"></i> Cartão</a>
-              <a href="" class="payment-method"> <i class="fa fa-dollar"></i> Dinheiro</a>
-              <a href="" class="payment-method"> <i class="fa fa-ellipsis-h"></i> Outros</a>
-            </nav>
+            <div class="sale-list sale-list--product-services">
+              <div class="sale-list-item">
+                <span class="sale-list-item__text">
+                  Cartão de Credito - Visa
+                </span>
+                <span class="sale-list-item__text">
+                  R$ 10,00
+                </span>
+                <span class="sale-list-item__action">
+                  <a href="">
+                    <i class="fa fa-edit sale-list-item__action-edit"></i>
+                  </a>
+                  <a href="">
+                    <i class="fa fa-trash sale-list-item__action-trash"></i>
+                  </a>
+                </span>
+              </div>
+              <div class="sale-list-item">
+                <span class="sale-list-item__text">
+                  Dinheiro
+                </span>
+                <span class="sale-list-item__text">
+                  R$ 1190,00
+                </span>
+                <span class="sale-list-item__action">
+                  <a href="">
+                    <i class="fa fa-edit sale-list-item__action-edit"></i>
+                  </a>
+                  <a href="">
+                    <i class="fa fa-trash sale-list-item__action-trash"></i>
+                  </a>
+                </span>
+              </div>
 
+              <div class="sale-list-item">
+                <span class="sale-list-item__text">
+                  Cartão da Loja
+                </span>
+                <span class="sale-list-item__text">
+                  R$ 99,00
+                </span>
+                <span class="sale-list-item__action">
+                  <a href="">
+                    <i class="fa fa-edit sale-list-item__action-edit"></i>
+                  </a>
+                  <a href="">
+                    <i class="fa fa-trash sale-list-item__action-trash"></i>
+                  </a>
+                </span>
+              </div>
+
+            </div>
           </div>
           <!-- Item Card -->
 

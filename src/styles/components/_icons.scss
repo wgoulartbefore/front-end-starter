@@ -1,36 +1,57 @@
 $icon-path: "/images/";
+$icon-height: 66px;
+$icon-width: 100%;
 
-.icon-payment-boleto {
+%icon-base-style {
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
   display: inline-block;
+  height: $icon-height;
+  width: $icon-width;
+}
+
+.icon-pagamento-cartao {
+  @extend %icon-base-style;
   background-image: url('#{$icon-path}icon-pagamento-cartao.svg');
-  background-size: contain;
-  background-position: center center;
+}
+
+.icon-pagamento-produtos-servicos {
+  @extend %icon-base-style;
+  background-image: url('#{$icon-path}icon-pagamento-produtos-servicos.svg');
 }
 
 .icon-payment-boleto {
-  display: inline-block;
-  background-image: url('#{$icon-path}icon-pagamento-produto-servico.svg');
-  background-size: contain;
-  background-position: center center;
-}
-
-.icon-payment-boleto {
-  display: inline-block;
+  @extend %icon-base-style;
   background-image: url('#{$icon-path}icon-pagamento-boleto.svg');
-  background-size: contain;
-  background-position: center center;
 }
 
-.icon-payment-boleto {
-  display: inline-block;
-  background-image: url('#{$icon-path}icon-pagamento-produto-servico.svg');
-  background-size: contain;
-  background-position: center center;
+.icon-pagamento-produto {
+  @extend %icon-base-style;
+  background-image: url('#{$icon-path}icon-pagamento-produto.svg');
+}
+
+.icon-pagamento-servicos {
+  @extend %icon-base-style;
+  background-image: url('#{$icon-path}icon-pagamento-servicos.svg');
 }
 
 .icon-pagamento-recarga {
-  display: inline-block;
+  @extend %icon-base-style;
   background-image: url('#{$icon-path}icon-pagamento-recarga.svg');
-  background-size: contain;
-  background-position: center center;
+}
+
+.icon-pagamento-acessorios {
+  @extend %icon-base-style;
+  background-image: url('#{$icon-path}icon-pagamento-acessorios.svg');
+}
+
+.icon-pagamento-dinheiro {
+  @extend %icon-base-style;
+  background-image: url('#{$icon-path}icon-pagamento-dinheiro.svg');
+}
+
+.icon-pagamento-outros {
+  @extend %icon-base-style;
+  background-image: url('#{$icon-path}icon-pagamento-outros.svg');
 }

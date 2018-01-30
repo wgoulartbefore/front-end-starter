@@ -185,37 +185,89 @@
 .payment-select {
   display: flex;
   justify-content: center;
-  margin-left: auto;
+  margin-bottom: $size-components-margin;
   margin-right: auto;
+  margin-left: auto;
 }
 
 .payment-method {
-  flex: 1 auto;
-  flex-direction: column;
-  padding: $size-components-margin;
+  align-self: center;
   background: $color-grey-0;
   border-radius: 2px;
-  border: 1px solid $color-grey-200;
-  font-size: 22px;
-  text-align: center;
+  color: $color-grey-900;
+  flex: 1 auto;
+  flex-direction: column;
   font-weight: 700;
-  margin-left: $size-components-padding;
-  transition: all .3s;
-
-  .fa {
-    display: block;
-    flex-wrap: wrap;
-    font-size: 30px;
-    margin-bottom: $size-components-padding;
-  }
+  justify-content: space-between;
+  margin-left: $size-components-margin;
+  padding: $size-components-margin;
+  text-align: center;
+  transition: all 0.5s cubic-bezier(0, 0, 0, 1.21);
 
   &:hover {
-    background: $color-base-main;
-    color: $color-grey-0;
+    transform: scale(1.05);
+    background: $color-grey-150;
+    color: $color-grey-1000;
   }
 
   &:first-child {
     margin-left: 0;
   }
+}
 
+.sale-order {
+  display: none;
+
+  &__icon {
+    display: block;
+    background-image: url("/images/icon-pagamento-carrinho.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    margin-right: $size-components-padding;
+    width: 100%;
+    height: 48px;
+
+    .n-itens {
+      @include adjust-font-size-to(12px);
+      align-items: center;
+      // background: $color-grey-1000;
+      background: $color-base-main;
+      border-radius: 50%;
+      color: $color-grey-0;
+      display: flex;
+      font-style: normal;
+      font-weight: 700;
+      text-align: center;
+      position: relative;
+      margin-left: auto;
+      justify-content: center;
+      right: -($size-std-padding);
+      height: $size-std-padding * 2;
+      width: $size-std-padding * 2;
+    }
+  }
+
+  &__price {
+    .currency {
+      font-size: 14px;
+      color: $color-grey-900;
+      font-weight: 700;
+    }
+
+    .value {
+      @include adjust-font-size-to(22px);
+      // color: $color-base-success;
+      color: $color-grey-900;
+      font-weight: 700;
+    }
+  }
+
+  @include susy-breakpoint($screen-big, 16) {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    right: 250px;
+    transform: translateY(-50%);
+  }
 }
