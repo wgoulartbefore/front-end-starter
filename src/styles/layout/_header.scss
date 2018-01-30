@@ -3,6 +3,8 @@
 
   @include susy-breakpoint($screen-medium, 12) {
     display: block;
+    margin-bottom: 0;
+
     .holder {
       @include container(12);
     }

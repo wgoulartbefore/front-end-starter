@@ -7,6 +7,7 @@
     line-height: 1.5;
     color: $color-grey-800;
     text-transform: uppercase;
+    font-weight: 700;
     margin-bottom: $size-components-padding / 2;
   }
 
@@ -29,19 +30,6 @@
           margin: 0;
         }
       }
-
-      // &:first-child {
-      //   margin-top: 0;
-      //   margin-right: $size-components-padding;
-      //
-      //   .half-input {
-      //     margin: 0;
-      //   }
-      // }
-      //
-      // .half-input {
-      //   margin: 0;
-      // }
 
     }
 
@@ -594,9 +582,10 @@ fieldset {
 
   label {
     display: block;
-    @include adjust-font-size-to(14px);
+    @include adjust-font-size-to(16px);
     line-height: 1.5;
     color: $color-grey-900;
+    font-weight: 70;
     margin-bottom: $size-components-padding / 2;
   }
 
