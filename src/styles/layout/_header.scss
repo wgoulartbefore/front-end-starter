@@ -230,6 +230,7 @@
   z-index: 10;
   transition: transform $time-std-transition;
   transform: translateY(-100%);
+
   .search-back,
   .search-submit {
     display: block;
@@ -244,23 +245,26 @@
     text-align: center;
     color: $color-header-mobile-search-text;
     background: none;
+
     span {
       display: none;
     }
   }
+
   .search-back {
     left: 0;
   }
   .search-submit {
     right: 0;
   }
+
   .input-search {
     display: block;
     width: 100%;
     border: none;
     background: none;
     height: $size-components-height;
-    padding: $size-components-padding;
+    padding: 0 $size-components-padding;
     font-size: 14px;
     line-height: ($size-components-height - (2 * $size-components-padding));
     color: $color-header-mobile-search-text;
