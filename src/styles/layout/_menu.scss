@@ -14,6 +14,7 @@
   @at-root {
     .mobile-menu-active #{&} {
       transform: translateX(0);
+      z-index: 13;
     }
   }
 
@@ -192,8 +193,8 @@
     height: 50px;
     min-height: $size-components-height;
     padding: $size-components-padding (($size-components-height - 22px) / 2);
-
     color: $color-grey-900;
+
     // background: shade($color-main-menu-bg, 5%);
     // background: $color-grey-150;
 
@@ -218,44 +219,39 @@
     min-width: $size-main-menu-width;
     box-shadow: none;
     overflow: visible;
-
-    // background: shade($color-main-menu-bg, 5%);
     background: $color-grey-150;
-
-    // border-bottom: 1px solid $color-main-menu-border;
-
-    // border-top: 1px solid #f2f2f2;
-    // border-bottom: 1px solid #dadada;
 
     li {
       text-align: left;
+      border-top: 1px solid $color-grey-800;
+      border-bottom: 1px solid $color-grey-1000;
+
+      &:first-child {
+        border-top: 1px solid shade($color-grey-900, 10%);
+      }
     }
 
     a {
-      background: $color-base-main;
+      background: $color-grey-900;
       color: $color-grey-0;
+
+      &:hover {
+        background: $color-grey-800;
+      }
     }
 
     .submenu-list {
       top: 0;
       left: 100%;
-      background: shade($color-main-menu-bg, 5%);
+      background: $color-grey-900;
 
-      li {
-        display: block;
-        border-top: 1px solid $color-main-menu-bg;
-        border-bottom: 1px solid shade($color-main-menu-bg, 25%);
-
-
-
-
-        &:first-child {
-          border-top: none;
-        }
-      }
+      // li {
+      //   display: block;
+      //   // border-top: 1px solid $color-main-menu-bg;
+      //   // border-bottom: 1px solid shade($color-main-menu-bg, 25%);
+      // }
 
     }
-
   }
 }
 
@@ -278,7 +274,8 @@
     }
 
     &:hover {
-      background: $color-grey-150;
+      background: $color-grey-900;
+      color: $color-grey-0;
     }
   }
 
@@ -298,7 +295,7 @@
     }
 
     &:hover {
-      background: $color-base-main;
+      background: $color-grey-900;
       color: $color-grey-0;
 
       .submenu-list {
@@ -308,11 +305,16 @@
       .bt-submenu-back {
         display: none;
       }
+
+      > a {
+        color: $color-grey-0;
+      }
+
     }
 
     .menu-list--submenu {
       > a {
-        background: $color-base-main;
+        background: $color-grey-900;
         color: $color-grey-0;
 
         &:after {

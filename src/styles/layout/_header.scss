@@ -1,10 +1,13 @@
 #master-header {
+  margin-bottom: $size-components-padding;
+
   @include susy-breakpoint($screen-medium, 12) {
     display: block;
     .holder {
       @include container(12);
     }
   }
+
   @include susy-breakpoint($screen-big, 16) {
     .holder {
       @include container(16);
@@ -19,11 +22,17 @@
   padding-bottom: $size-components-padding;
   transition: transform $time-std-transition;
   z-index: 3;
+
   @at-root {
     .mobile-menu-active #{&} {
       transform: translateX($size-main-menu-width);
     }
+
+    .mobile-search-active  #{&} {
+      z-index: 13;
+    }
   }
+
   @include susy-breakpoint($screen-big, 16) {
     padding: $size-components-padding 0;
     .container {
@@ -44,11 +53,13 @@
   background: rgb(191, 39, 27);
   transition: left $time-std-transition;
   z-index: 12;
+
   @at-root {
     .mobile-menu-active #{&} {
       left: $size-main-menu-width;
     }
   }
+
   .opt-mobile-menu,
   .opt-search {
     display: block;
@@ -61,12 +72,15 @@
     text-align: center;
     color: $color-header-mobile-opts-text;
   }
+
   .opt-mobile-menu {
     left: 0;
   }
+
   .opt-search {
     right: 0;
   }
+
   .page-title {
     display: block;
     font-size: 16px;
@@ -74,6 +88,7 @@
     color: $color-header-mobile-opts-text;
     @extend %ellipsis;
   }
+
   @include susy-breakpoint($screen-big, 16) {
     display: none;
   }
@@ -273,14 +288,18 @@
     -webkit-appearance: textfield;
     appearance: textfield;
   }
+
   .input-container {
     width: 100%;
   }
+
   @at-root {
     .mobile-search-active #{ &} {
       transform: translateY(0);
+      z-index: 12;
     }
   }
+
   @include susy-breakpoint($screen-big, 16) {
     display: flex;
     align-self: center;
@@ -311,10 +330,12 @@
   position: relative;
   align-items: center;
   margin-left: auto;
+
   .list-user-options {
     @include adjust-font-size-to(16px);
     color: $color-grey-0;
   }
+
   @include susy-breakpoint($screen-big, 16) {
     display: flex;
   }
@@ -322,16 +343,19 @@
 
 .header-user {
   position: relative;
+
   &-options {
     position: relative;
     color: $color-grey-0;
     padding-right: $size-components-padding * 2;
     font-weight: 700;
+
     &.options-open {
       &::after {
         content: "\f106";
       }
     }
+
     &::after {
       position: absolute;
       content: "\f107";
