@@ -26,12 +26,12 @@
     <nav class="header-opts-bar">
       <div class="holder">
         <ul class="header-opts-list">
-            <li class="header-opts-item">
-              <span id="relogioExpiraSessao" class="hasCountdown">
-                <span class="countdown_row countdown_amount">19:52</span>
-                <span class="countdown_row countdown_descr">A sessão expira em: </span>
-              </span>
-            </li>
+          <li class="header-opts-item">
+            <span id="relogioExpiraSessao" class="hasCountdown">
+              <span class="countdown_row countdown_amount">19:52</span>
+              <span class="countdown_row countdown_descr">A sessão expira em: </span>
+            </span>
+          </li>
 
           <li class="header-opts-item">
             <a class="header-opts-link">
@@ -455,19 +455,15 @@
             </div>
           </div>
 
-          <div class="form-line">
-              <label for="et_id">Nº:</label>
-              <input id="et_id" class="input-singleline" type="text" name="et_id">
-          </div>
 
-          <div class="form-line form-line--area-button">
-            <button type="submit" form="buscaTransferencias" class="bt-confirm">
-              <i class="fa fa-search"></i> Buscar
-            </button>
-            <a href="" class="filter-advanced gen-text-link text-center">Filtros Avançados</a>
-          </div>
 
           <div class="filter-search__advanced">
+
+            <div class="form-line">
+              <label for="et_id">Nº:</label>
+              <input id="et_id" class="input-singleline" type="text" name="et_id">
+            </div>
+
             <div class="form-line">
               <label for="et_nota_num">Nº Nota Fiscal:</label>
               <input id="et_nota_num" value="" class="input-singleline" type="text" name="et_nota_num">
@@ -494,12 +490,21 @@
               </div>
             </div>
 
-            <div class="form-line form-line--area-button">
-              <button type="submit" form="buscaTransferencias" class="bt-confirm">
-                <i class="fa fa-search"></i> Buscar
-              </button>
-            </div>
+            <!-- <div class="form-line form-line--area-button">
+                <button type="submit" form="buscaTransferencias" class="bt-confirm">
+                  <i class="fa fa-search"></i> Buscar
+                </button>
+              </div> -->
           </div>
+
+          <div class="form-line form-line--area-button">
+            <button type="submit" form="buscaTransferencias" class="bt-confirm">
+              <i class="fa fa-search"></i> Buscar
+            </button>
+            <a href="" class="filter-advanced gen-text-link text-center">Filtros Avançados</a>
+          </div>
+
+
         </form>
 
         <div class="area-buttons">

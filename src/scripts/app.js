@@ -500,7 +500,6 @@ function showFilter() {
     .addEventListener('click', (e) => {
       e.preventDefault();
       advancedFilter.classList.toggle('filter-search__advanced--open');
-      $('.filter-search__advanced').append(buttonSearch);
     })
 }
 
