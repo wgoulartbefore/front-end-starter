@@ -212,3 +212,21 @@ ul.gen-text {
   background: $color-base-success;
   font-weight: 700;
 }
+
+
+.gen-text-link {
+  display: block;
+  @include adjust-font-size-to(14px);
+  color: $color-text-gen;
+  margin-top: $size-std-padding / 2;
+  margin-bottom: $size-std-padding / 2;
+
+  a {
+    color: inherit
+  }
+
+  &:hover,
+  a:hover {
+    text-decoration: underline;
+  }
+}

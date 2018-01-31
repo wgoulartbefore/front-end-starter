@@ -492,10 +492,23 @@ function ModalClass(){
 
 }
 
+function showFilter() {
+  let advancedFilter = document.querySelector('.filter-search__advanced');
+  let buttonSearch = '<div class="form-line form-line--area-button"><button type="submit" form="buscaTransferencias" class="bt-confirm"><i class="fa fa-search"></i> Buscar</button></div>';
+
+  document.querySelector('.filter-advanced')
+    .addEventListener('click', (e) => {
+      e.preventDefault();
+      advancedFilter.classList.toggle('filter-search__advanced--open');
+      $('.filter-search__advanced').append(buttonSearch);
+    })
+}
+
+
 headerOptsController();
 openUserOptions();
 headerSearchController();
 mainMenuController();
 switchTypeClientRegisterSell();
-boxCardController()
-
+boxCardController();
+showFilter();
