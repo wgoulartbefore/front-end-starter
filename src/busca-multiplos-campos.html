@@ -29,7 +29,7 @@
           <li class="header-opts-item">
             <span id="relogioExpiraSessao" class="hasCountdown">
               <span class="countdown_row countdown_amount">19:52</span>
-              <span class="countdown_row countdown_descr">A sessão expira em: </span>
+            <span class="countdown_row countdown_descr">A sessão expira em: </span>
             </span>
           </li>
 
@@ -434,42 +434,40 @@
 
         <form class="filter-search">
           <div class="form-line">
-            <label for="filial">Filial:</label>
-            <div class="fancy-select">
-              <select name="" id="">
-                <option value="">Selectione uma Filial</option>
-                <option value="">Filial 1</option>
-                <option value="">Filial 2</option>
-              </select>
+            <div class="input-holder">
+              <label for="filial">Filial:</label>
+              <div class="fancy-select">
+                <select name="" id="">
+                  <option value="">Selectione uma Filial</option>
+                  <option value="">Filial 1</option>
+                  <option value="">Filial 2</option>
+                </select>
+              </div>
+            </div>
+            <div class="input-holder ">
+              <div class="half-input">
+                <label for="data_inicio">Data Inicial:</label>
+                <input id="data_inicio" value="" class="input-singleline datepicker" type="text" name="data_inicio">
+              </div>
+              <div class="half-input">
+                <label for="data_fum">Data Final:</label>
+                <input id="data_fum" value="" class="input-singleline datepicker" type="text" name="data_fim">
+              </div>
             </div>
           </div>
 
-          <div class="form-line">
-            <div class="half-input">
-              <label for="data_inicio">Data Inicial:</label>
-              <input id="data_inicio" value="" class="input-singleline datepicker" type="text" name="data_inicio">
-            </div>
-            <div class="half-input">
-              <label for="data_fum">Data Final:</label>
-              <input id="data_fum" value="" class="input-singleline datepicker" type="text" name="data_fim">
-            </div>
-          </div>
-
-
-
-          <div class="filter-search__advanced">
-
-            <div class="form-line">
+          <div class="form-line filter-search-advanced">
+            <div class="input-holder">
               <label for="et_id">Nº:</label>
               <input id="et_id" class="input-singleline" type="text" name="et_id">
             </div>
 
-            <div class="form-line">
+            <div class="input-holder">
               <label for="et_nota_num">Nº Nota Fiscal:</label>
               <input id="et_nota_num" value="" class="input-singleline" type="text" name="et_nota_num">
             </div>
 
-            <div class="form-line">
+            <div class="input-holder">
               <label for="fi_id_dest">Filial Destino:</label>
               <div class="fancy-select">
                 <select name="fi_id_dest" id="fi_id_dest">
@@ -479,7 +477,7 @@
               </div>
             </div>
 
-            <div class="form-line">
+            <div class="input-holder">
               <label for="et_ativo">Situação Fiscal:</label>
               <div class="fancy-select">
                 <select name="et_ativo" id="et_ativo">
@@ -489,21 +487,14 @@
                 </select>
               </div>
             </div>
-
-            <!-- <div class="form-line form-line--area-button">
-                <button type="submit" form="buscaTransferencias" class="bt-confirm">
-                  <i class="fa fa-search"></i> Buscar
-                </button>
-              </div> -->
           </div>
 
-          <div class="form-line form-line--area-button">
+          <div class="filter-search-area-button">
+            <a href="" class="filter-search-link">Filtros Avançados</a>
             <button type="submit" form="buscaTransferencias" class="bt-confirm">
               <i class="fa fa-search"></i> Buscar
             </button>
-            <a href="" class="filter-advanced gen-text-link text-center">Filtros Avançados</a>
           </div>
-
 
         </form>
 

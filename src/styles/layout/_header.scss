@@ -158,22 +158,26 @@
   &-item {
     position: relative;
     padding: 5px $size-components-padding;
+
     .hasCountdown {
       display: block;
       font-size: 12px;
       justify-content: flex-start;
       align-content: center;
       color: $color-grey-0;
+
       .countdown_amount {
         float: right;
         margin-left: 5px;
       }
     }
+
     &:first-child {
       margin-right: auto;
       padding: 0;
       align-self: center;
     }
+
     &.open-submenu {
       .header-opts-submenu {
         opacity: 1;
@@ -182,28 +186,32 @@
       }
     }
   }
+
   &-link {
     font-size: 14px;
     color: $color-grey-0;
     padding-bottom: $size-components-padding + 5;
+
     i {
       margin-right: 5px;
     }
   }
+
   &-submenu {
-    top: 40px;
+    top: 140%;
     width: 200%;
     right: 0;
     position: absolute;
     opacity: 0;
     visibility: hidden;
-    transform: translateY(-30px);
-    transition: all 0.3s ease-out;
+    transform: translateY(-10px);
+    transition: all 0.5s ease-out;
     background: $color-grey-0;
     color: $color-grey-900;
     padding: $size-components-padding;
     border-radius: 2px;
     box-shadow: 0 1px 2px rgba($color-pl-3, 0.2);
+
     &::before {
       content: "";
       width: 0;
@@ -215,22 +223,27 @@
       border-width: 10px 10px 10px 10px;
       border-color: transparent transparent $color-grey-0 transparent;
     }
+
   }
+
   &-title {
     display: block;
     @include adjust-font-size-to(14px);
     color: $color-base-main;
     font-weight: 700;
     margin-top: $size-components-padding;
+
     &:first-child {
       margin-top: 0;
     }
   }
+
   &-text {
     display: block;
     @include adjust-font-size-to(14px);
     color: $color-grey-900;
   }
+
 }
 
 .main-header-search {
@@ -369,46 +382,63 @@
       transform: translateY(-50%);
     }
   }
+
   &-submenu {
-    display: none;
+    // display: none;
     position: absolute;
     min-width: 300px;
     background: $color-grey-0;
-    padding: $size-components-padding;
-    margin: -15px;
+
     border-bottom: 1px solid $color-grey-100;
-    top: 55px;
-    right: 0;
+    top: 140%;
+    right: -($size-components-padding);
+    padding: $size-components-padding;
+    transform: translateY(-10px);
+
     border-radius: 2px;
     box-shadow: 1px 1px 2px rgba($color-grey-1000, 0.1);
+
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease-out;
+
     &::before {
       content: "";
       width: 0;
       height: 0;
       position: absolute;
-      top: -20px;
+      top: -19px;
       right: 13px;
       border: solid;
       border-width: 10px 10px 10px 10px;
       border-color: transparent transparent $color-grey-0 transparent;
     }
+
     &-item {
       @include adjust-font-size-to(14px);
       color: $color-grey-900;
+
       &:not(:last-child) {
         margin-bottom: $size-std-padding;
       }
     }
+
     a {
       @include adjust-font-size-to(16px);
       color: $color-base-main;
     }
+
     .fa {
       margin-left: 5px;
     }
-    .options-open+& {
-      display: block;
+
+    .options-open + & {
+      // display: block;
+      opacity: 1;
+      transform: translateY(0);
+      visibility: visible;
     }
+
   }
 }
 
