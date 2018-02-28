@@ -942,16 +942,14 @@
                 </div>
               </div>
             </div>
-
           </fieldset>
 
           <fieldset class="spacing-medium">
             <legend>Valores</legend>
-            <div class="form-line">
-              <div class="half-input">
-                <label class="form-checkbox form-checkbox-small">Valor: </label>
-                <p class="text-mark-success">R$ 54,99</p>
-              </div>
+
+            <div class="input-holder">
+              <label>Valor: </label>
+              <p class="text-mark-success">R$ 54,99</p>
             </div>
 
             <div class="form-line">
@@ -971,24 +969,6 @@
               </div>
             </div>
 
-            <div class="gr-3">
-              <div class="input-holder">
-                <label for="">&bsnb</label>
-                <div class="label-inline">
-                  <label class="form-checkbox form-checkbox-small">
-                    <input type="checkbox" name="cupomDesconto" checked=""> Cupom de desconto
-                  </label>
-                </div>
-              </div>
-
-              <div class="input-holder">
-                <label for="">Cupom:</label>
-                <input type="text" class="input-singleline" placeholder="Digite o cupom de desconto">
-              </div>
-
-              <a href="" class="bt-main to-right"> Aplicar </a>
-
-            </div>
             <div class="form-line">
               <div class="half-input">
                 <label for=""> Vencimento da fatura: </label>
@@ -1004,8 +984,17 @@
                   </select>
                 </div>
               </div>
-            </div>
 
+              <div class="half-input">
+                <label for="">Cupom de desconto:</label>
+                <div class="input-holder">
+                  <div class="form-line form-line--autosize">
+                    <input type="text" class="input-singleline" placeholder="Digite o cupom de desconto">
+                    <a href="" class="bt-main ml-base">Aplicar</a>
+                  </div>
+                </div>
+              </div>
+            </div>
           </fieldset>
 
           <fieldset class="spacing-medium">
@@ -1048,7 +1037,7 @@
             </div>
 
             <div class="form-line">
-              <div class="half-line">
+              <div class="half-input">
                 <div class="half-input">
                   <label for="">Valor Simcard:</label>
                   <p class="text-mark-success">12,00</p>
