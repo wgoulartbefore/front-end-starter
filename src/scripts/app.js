@@ -502,7 +502,21 @@ function showFilter() {
 
 // filter-search__advanced
 
+function cashierActive() {
+  let container = $('.cashier');
+  let cashierItem = $('.cashier-item');
 
+  let optsOpenClass = 'cashier-item-select';
+
+  $(document).on('click', '.cashier-item', function(event){
+    event.preventDefault();
+    cashierItem.removeClass(optsOpenClass)
+    $(this).addClass(optsOpenClass);
+  });
+
+
+
+}
 
 headerOptsController();
 openUserOptions();
@@ -511,3 +525,4 @@ mainMenuController();
 switchTypeClientRegisterSell();
 boxCardController();
 showFilter();
+cashierActive();
