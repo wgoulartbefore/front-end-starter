@@ -198,6 +198,18 @@ ul.gen-text {
   margin-bottom: 5px;
 }
 
+
+.text-details {
+  @include adjust-font-size-to(18px);
+  color: $color-grey-1000;
+  text-transform: none;
+  margin-bottom: 5px;
+
+  strong {
+    display: block;
+  }
+}
+
 .text-main-spacing {
   @include adjust-font-size-to(16px);
   color: $color-grey-1000;
