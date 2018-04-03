@@ -434,310 +434,163 @@
       <div class="container">
 
         <div class="gr-5">
-          <div class="cashier-item cashier-item-open">
-            <a class="cashier-item-icon">
-              <img src="/images/icon-caixa.svg" alt="" class="icon">
-              Abrir Caixa
-            </a>
-          </div>
-
-          <div class="cashier-item cashier-item-active">
-            <p class="cashier-item-number">Nº 77264</p>
-            <h4 class="cashier-item-title">
-              <small class="cashier-item-pdv">Centro</small>
-              Caixas Abertos
-            </h4>
-            <p class="cashier-item-date"><i class="fa fa-calendar"></i> 12/01/2018</p>
-
-            <ul class="actions-list">
-              <li><a href=""> Realizar Conferência</a></li>
-              <li><a href=""> Visializar Movimentos</a></li>
-              <li><a href=""> Fechar Caixa</a></li>
-              <li><a href=""> Remover Caixa</a></li>
-            </ul>
-          </div>
-
-          <div class="cashier-item">
-            <p class="cashier-item-number">Nº 77264</p>
-            <h4 class="cashier-item-title">
-              <small class="cashier-item-pdv">Centro</small>
-              Caixas Abertos
-            </h4>
-            <p class="cashier-item-date"><i class="fa fa-calendar"></i> 12/01/2018</p>
-
-            <ul class="actions-list">
-              <li><a href=""> Realizar Conferência</a></li>
-              <li><a href=""> Visializar Movimentos</a></li>
-              <li><a href=""> Fechar Caixa</a></li>
-              <li><a href=""> Remover Caixa</a></li>
-            </ul>
-          </div>
-
-          <div class="cashier-item">
-            <p class="cashier-item-number">Nº 77264</p>
-            <h4 class="cashier-item-title">
-              <small class="cashier-item-pdv">Centro</small>
-              Caixas Abertos
-            </h4>
-            <p class="cashier-item-date"><i class="fa fa-calendar"></i> 12/01/2018</p>
-
-            <ul class="actions-list">
-              <li><a href=""> Realizar Conferência</a></li>
-              <li><a href=""> Visializar Movimentos</a></li>
-              <li><a href=""> Fechar Caixa</a></li>
-              <li><a href=""> Remover Caixa</a></li>
-            </ul>
-          </div>
-
-          <div class="cashier-item">
-            <p class="cashier-item-number">Nº 77264</p>
-            <h4 class="cashier-item-title">
-              <small class="cashier-item-pdv">Centro</small>
-              Caixas Abertos
-            </h4>
-            <p class="cashier-item-date"><i class="fa fa-calendar"></i> 12/01/2018</p>
-
-
-            <ul class="actions-list">
-              <li><a href=""> Realizar Conferência</a></li>
-              <li><a href=""> Visializar Movimentos</a></li>
-              <li><a href=""> Fechar Caixa</a></li>
-              <li><a href=""> Remover Caixa</a></li>
-            </ul>
-          </div>
-
-          <div class="cashier-item">
-            <p class="cashier-item-number">Nº 77264</p>
-            <h4 class="cashier-item-title">
-              <small class="cashier-item-pdv">Centro</small>
-              Caixas Abertos
-            </h4>
-            <p class="cashier-item-date"><i class="fa fa-calendar"></i> 12/01/2018</p>
-
-            <ul class="actions-list">
-              <li><a href=""> Realizar Conferência</a></li>
-              <li><a href=""> Visializar Movimentos</a></li>
-              <li><a href=""> Fechar Caixa</a></li>
-              <li><a href=""> Remover Caixa</a></li>
-            </ul>
-          </div>
         </div>
 
-
-
-
-
-
-
-
-
-
-            <input type="hidden" id="fp_ids77264" name="fp_ids77264" value="">
-          </tbody>
-        </table>
         <!-- ./container -->
     </section>
     </div>
     <!-- End Global Content Holder!-->
 
-    <!--
+    <div class="modal">
+      <div class="modal__content">
 
-    <tr>
-      <td align="right" colspan="7">
-        <span id="btn77264" class="botaoMovimentoDetalhado bt-confirm ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" title="Clique aqui para fechar o caixa" onclick="$('#btn77264').hide(); $('#formAberturaCaixa #acao').val('fecharCaixa'); $('#formAberturaCaixa').attr('method', 'post'); document.getElementById('idCaixa').value = '77264'; return sys.httpMethod('../v2/caixa/aberto/fechar', document.getElementById('formAberturaCaixa'));"
-          role="button"><span class="ui-button-text">Fechar caixa</span></span>
-      </td>
-    </tr>
+        <header class="modal__header">
+          <h4 class="title">Conferência do Caixa</h4>
+          <a class="bt-close">
+            <i class="fa fa-times"></i>
+          </a>
+        </header>
 
-     <tr>
-      <td colspan="7">
-        <fieldset>
-          <legend>Deseja realizar a baixa das movimentações? (exceto dinheiro)</legend>
-          <input type="checkbox" name="baixar_77264" id="baixar_77264" checked="" value="1">
-          <label for="baixar_77264">Sim, realize a baixa das movimentações</label>
-        </fieldset>
+        <section class="modal__body">
+          <table class="table-striped">
+            <thead>
+              <tr>
+                <th rowspan="2"> Formas de Pagamento </th>
+                <th rowspan="2"> Valor de Abertura </th>
+                <th colspan="2" width="20%"> Financeiro </th>
+                <th colspan="2" width="20%"> Movimentos </th>
+                <th rowspan="2"> Valor <br> Contabilizado </th>
+                <th rowspan="2"> Saldo Final do <br> Caixa </th>
+                <th rowspan="2"> Diferença </th>
+              </tr>
+              <tr>
+                <th>Entrada</th>
+                <th>Saída</th>
+                <th>Entrada</th>
+                <th>Saída</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Dinheiro</td>
+                <td>R$ 941,91</td>
+                <td>R$ 0,00</td>
+                <td>R$ 0,00</td>
+                <td>R$ 0,00</td>
+                <td>R$ 0,00</td>
+                <td>R$ 0,00</td>
+                <td><input type="text" class="input-singleline" value="R$ R$ 0,00"></td>
+                <td>R$ 0,00</td>
+              </tr>
+              <tr>
+                <td>Cheque</td>
+                <td>R$ 941,91</td>
+                <td>R$ 0,00</td>
+                <td>R$ 0,00</td>
+                <td>R$ 0,00</td>
+                <td>R$ 4.598,00</td>
+                <td>R$ 0,00</td>
+                <td><input type="text" class="input-singleline" value="R$ 4.598,00"></td>
+                <td>R$ 0,00</td>
+              </tr>
 
-        <fieldset>
-          <legend>Deseja realizar um movimento de saída em dinheiro?</legend>
-          <input type="checkbox" name="mov_saida_77264" id="mov_saida_77264" value="1" onclick="if(this.checked) $('#movs_77264').slideDown(); else $('#movs_77264').slideUp();">
-          <label for="mov_saida_77264">Sim, vou fazer uma retirada em dinheiro do caixa</label>
-          <div id="movs_77264" style="display: none; padding-top: 5px;">
-            <select id="movs_con_id_77264" name="movs_con_id_77264" style="display: initial;"><option selected="" value="">Escolha a conta que será depositado o valor</option><option value="128">BANCO DO BRASIL - AG: 1251 CC: 307258</option><option value="129">BRADESCO - AG: 2921 CC: 27333</option><option value="134">CAIXINHA - AG: 1111 CC: 1111</option><option value="152">CEF - AG: 4515 CC: 350</option><option value="56">COFRE - AG: 0000 CC: 000000</option><option value="153">CONTAS A RECEBER - AG: 2222 CC: 2222</option><option value="131">ITAU CONTA CORRENTE - AG: 8548 CC: 11531</option><option value="132">ITAU GARANTIDA - AG: 8548 CC: 01600</option><option value="157">NEW CONTA - AG: 1231 CC: 321321</option><option value="130">SANTANDER - AG: 3891 CC: 13000134</option><option value="133">SANTANDER GARANTIDA - AG: 3891 CC: 290000000</option></select>
-            <i
-              id="movs_con_id_77264Info" class="fa fa-question-circle ajuda" style="display: none !important;" title=""></i>
-              <div class="fieldWarning hint--bottom hint--rounded hint--error" data-hint="" id="movs_con_id_77264Aviso"></div> <span>Valor: </span>
-              <input type="text" name="movs_valor_77264" id="movs_valor_77264" value="" size="10" maxlength="15" onkeypress="return(FormataReais(this,'.',',',event, 2));"> <span>Observação:</span>
-              <input type="text" name="movs_obs_77264" id="movs_obs_77264" value="" size="40" maxlength="">
+              <tr>
+                <td>REDE PARC MASTER</td>
+                <td>R$ 2.919,00</td>
+                <td>R$ 0,00</td>
+                <td>R$ 0,00</td>
+                <td>R$ 0,00</td>
+                <td>R$ 0,00</td>
+                <td>R$ 0,00</td>
+                <td><input type="text" class="input-singleline" value="R$ R$ 0,00"></td>
+                <td>R$ 0,00</td>
+              </tr>
+              <tr>
+                <td>SANT CRED MASTER</td>
+                <td>R$ 69,00</td>
+                <td>R$ 0,00</td>
+                <td>R$ 0,00</td>
+                <td>R$ 0,00</td>
+                <td>R$ 0,00</td>
+                <td>R$ 0,00</td>
+                <td><input type="text" class="input-singleline" value="R$ R$ 0,00"></td>
+                <td>R$ 0,00</td>
+              </tr>
+              <tr>
+                <td>SANT CRED VISA</td>
+                <td>R$ 69,00</td>
+                <td>R$ 0,00</td>
+                <td>R$ 0,00</td>
+                <td>R$ 0,00</td>
+                <td>R$ 0,00</td>
+                <td>R$ 0,00</td>
+                <td><input type="text" class="input-singleline" value="R$ R$ 0,00"></td>
+                <td>R$ 0,00</td>
+              </tr>
+              <tr>
+                <td>SANT DEB MASTER</td>
+                <td>R$ 0,00</td>
+                <td>R$ 0,00</td>
+                <td>R$ 0,00</td>
+                <td>R$ 0,00</td>
+                <td>R$ 0,00</td>
+                <td>R$ 0,00</td>
+                <td><input type="text" class="input-singleline" value="R$ R$ 0,00"></td>
+                <td>R$ 0,00</td>
+              </tr>
+              <tr>
+                <td>SANT DEB VISA</td>
+                <td>R$ 12,00</td>
+                <td>R$ 0,00</td>
+                <td>R$ 0,00</td>
+                <td>R$ 0,00</td>
+                <td>R$ 0,00</td>
+                <td>R$ 0,00</td>
+                <td><input type="text" class="input-singleline" value="R$ R$ 0,00"></td>
+                <td>R$ 0,00</td>
+              </tr>
+              <tr>
+                <td>SANT PARC MASTER</td>
+                <td>R$ 129,00</td>
+                <td>R$ 0,00</td>
+                <td>R$ 0,00</td>
+                <td>R$ 0,00</td>
+                <td>R$ 0,00</td>
+                <td>R$ 0,00</td>
+                <td><input type="text" class="input-singleline" value="R$ R$ 0,00"></td>
+                <td>R$ 0,00</td>
+              </tr>
+              <tr>
+                <td>SANT PARC VISA</td>
+                <td>R$ 2.499,00</td>
+                <td>R$ 0,00</td>
+                <td>R$ 0,00</td>
+                <td>R$ 0,00</td>
+                <td>R$ 0,00</td>
+                <td>R$ 0,00</td>
+                <td><input type="text" class="input-singleline" value="R$ R$ 0,00"></td>
+                <td>R$ 0,00</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="area-buttons">
+            <button class="bt-export"> Visualizar movimentos detalhados </button>
+            <button class="bt-export"> Visualizar movimentos resumidos </button>
+            <button class="bt-export"> Visualizar relatórios de pagamento deste PDV </button>
           </div>
-        </fieldset>
-        <fieldset>
-          <legend>Deseja realizar um movimento de entrada em dinheiro?</legend>
-          <input type="checkbox" name="mov_entrada_77264" id="mov_entrada_77264" value="1" onclick="if(this.checked) $('#move_77264').slideDown(); else $('#move_77264').slideUp();">
-          <label for="mov_entrada_77264">Sim, vou adicionar dinheiro ao caixa</label>
-          <div id="move_77264" style="display: none;padding-top: 5px;">
-            <select id="move_con_id_77264" name="move_con_id_77264" style="display: initial;"><option selected="" value="">Escolha a conta que será resgatado o valor</option><option value="128">BANCO DO BRASIL - AG: 1251 CC: 307258</option><option value="129">BRADESCO - AG: 2921 CC: 27333</option><option value="134">CAIXINHA - AG: 1111 CC: 1111</option><option value="152">CEF - AG: 4515 CC: 350</option><option value="56">COFRE - AG: 0000 CC: 000000</option><option value="153">CONTAS A RECEBER - AG: 2222 CC: 2222</option><option value="131">ITAU CONTA CORRENTE - AG: 8548 CC: 11531</option><option value="132">ITAU GARANTIDA - AG: 8548 CC: 01600</option><option value="157">NEW CONTA - AG: 1231 CC: 321321</option><option value="130">SANTANDER - AG: 3891 CC: 13000134</option><option value="133">SANTANDER GARANTIDA - AG: 3891 CC: 290000000</option></select>
-            <i
-              id="move_con_id_77264Info" class="fa fa-question-circle ajuda" style="display: none !important;" title=""></i>
-              <div class="fieldWarning hint--bottom hint--rounded hint--error" data-hint="" id="move_con_id_77264Aviso"></div> <span>Valor: </span>
-              <input type="text" name="move_valor_77264" id="move_valor_77264" value="" size="10" maxlength="15" onkeypress="return(FormataReais(this,'.',',',event, 2));"> <span>Observação:</span>
-              <input type="text" name="move_obs_77264" id="move_obs_77264" value="" size="40" maxlength=""> </div>
-        </fieldset>
-      </td>
-    </tr>
+        </section>
+
+        <footer class="modal__footer">
+          <a href="" class="bt-back to-left"> Voltar </a>
 
 
-    <tr>
-      <td colspan="7">
-        <span class="botaoMovimentoDetalhado ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" onclick="janela2(unescape('relMovimentoVisao.php?janela=1&amp;modo=1&amp;us_id=0&amp;fi_id=112&amp;cf_id=1&amp;des_tipo=Administrativa,Banc%E1ria,Operacional,Imposto&amp;visualizar=Despesas,Receitas,Ordens%20de%20Servi%E7o&amp;mov_campos_analitico=nome,us_nome,serial,pl_nome,qtde,valor_venda,valor_desconto,adicional,valor_venda_final,valor_outros,garantia_extendida&amp;data_inicio=12/01/2018&amp;data_fim=12/01/2018'),'600','1100');"
-          role="button"><span class="ui-button-text">Ver movimento detalhado deste caixa</span></span>&nbsp;
-        <span class="botaoMovimentoDetalhado ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" onclick="janela2(unescape('relMovimentoVisao.php?janela=1&amp;modo=2&amp;us_id=0&amp;fi_id=112&amp;cf_id=1&amp;des_tipo=Administrativa,Banc%E1ria,Operacional,Imposto&amp;visualizar=Despesas,Receitas,Ordens%20de%20Servi%E7o&amp;mov_campos_analitico=nome,us_nome,serial,pl_nome,qtde,valor_venda,valor_desconto,adicional,valor_venda_final,valor_outros,garantia_extendida&amp;data_inicio=12/01/2018&amp;data_fim=12/01/2018'),'600','1100');"
-          role="button"><span class="ui-button-text">Ver movimento resumido deste caixa</span></span>
-        <span class="botaoMovimentoDetalhado ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" onclick="janela2(unescape('relFormaPagamentoVisao.php?janela=1&amp;fi_id=112&amp;fp_id=&amp;movimentacao=Compra,Venda,Despesas,Receitas,Ordens de Serviço&amp;data_inicio=12/01/2018&amp;data_fim=12/01/2018'),'600','1100');"
-          role="button"><span class="ui-button-text">Ver relatório de forma de pagamento deste PDV</span></span>
-      </td>
-    </tr> -->
+          <a href="" class="bt-confirm">Lançar diferença de R$300,00</a>
+          <a href="" class="bt-confirm">Salvar</a>
+        </footer>
 
-      <div class="modal">
-        <div class="modal__content">
-
-          <header class="modal__header">
-            <h4 class="title">Conferência do Caixa</h4>
-            <a class="bt-close">
-              <i class="fa fa-times"></i>
-            </a>
-          </header>
-
-          <section class="modal__body">
-
-            <div class="cashied-card-details">
-              <h4 class="cashied-details-title">Informações do Caixa</h4>
-              <div class="cashier-details-content">
-                <div class="gr-5">
-
-                  <p class="cashier-details-item">
-                    <strong>Nº </strong>
-                    77264
-                  </p>
-
-                  <p class="cashier-details-item">
-                    <strong>Data </strong>
-                    12/01/2018
-                  </p>
-
-                  <p class="cashier-details-item">
-                    <strong>PDV:</strong>
-                    Centro
-                  </p>
-
-                  <p class="cashier-details-item">
-                    <strong>Caixa:</strong>
-                    Caixa Único
-                  </p>
-
-                  <p class="cashier-details-item">
-                    <strong>Saldo Atual:</strong>
-                    <span class="value">941,91</span>
-                  </p>
-
-                </div>
-              </div>
-            </div>
-
-<!--
-          <div class="cashier-report">
-            <div class="cashier-report-title">
-              <i class="fa fa-cash"></i> Dinheiro
-            </div>
-
-            <div class="">
-              <p class="label-mark"> Valor de Abertura </p>
-              <p class="price">R$ 941,91</p>
-            </div>
-
-            <div class="">
-              <p class="label-mark"> Entradas </p>
-              <p class="price">R$ 941,91</p>
-            </div>
-
-            <div class="">
-              <p class="label-mark"> Saidas </p>
-              <p class="price">R$ 941,91</p>
-            </div>
-
-            <div class="">
-              <p class="label-mark"> Saldo Atual </p>
-              <p class="price">R$ 30,1</p>
-            </div>
-
-            <div class="">
-              <p class="label-mark"> Saldo Atual </p>
-              <p class="price">R$ 30,1</p>
-            </div>
-
-            <div class="">
-              <p class="label-mark"> Saldo Atual </p>
-              <p class="price">R$ 30,1</p>
-            </div>
-          </div>
- -->
-
-            <table class="std-table table-striped table--cliente">
-              <thead>
-                <tr>
-                  <th title="Forma de pagamento">Forma de Pagamento</th>
-                  <th title="Consta o valor de fechamento do caixa do dia anterior a este, que é considerado o valor de abertura do caixa desta data">
-                    Valor de Abertura
-                  </th>
-                  <th title="Retirada ou acréscimo de recursos ao caixa. A movimentação de caixa geralmente é utilizada para retirar os valores para depósito em conta bancária ou acrescentar valores para facilitar o troco">
-                    Movimento de Entradas
-                  </th>
-                  <th title="Retirada ou acréscimo de recursos ao caixa. A movimentação de caixa geralmente é utilizada para retirar os valores para depósito em conta bancária ou acrescentar valores para facilitar o troco">
-                    Movimento de Saidas
-                  </th>
-                  <th title="Valor calculado automaticamente com base nas movimentações financeiras de entrada, como vendas e entradas em dinheiro desta data">
-                    Entradas de vendas
-                  </th>
-                  <th title="Valor calculado automaticamente com base nas movimentações financeiras de saída e baixa de pagamentos">
-                    Saídas de pagamentos
-                  </th>
-                  <th title="Valor que deverá ser inserido de acordo com o caixa real da loja, o valor será confrontado com as movimentações e a diferença será mostrada ao lado. O caixa só poderá ser encerrado quando os valores do caixa real e o do cálculo do Mercurio forem idênticos">
-                    Valor contabilizado
-                  </th>
-                  <th title="Diferença entre o caixa real e o cálculo realizado pelo Mercurio, o caixa só poderá ser fechado se não houver nenhuma diferença">
-                    Diferença
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-
-                <tr>
-                  <td>Dinheiro</td>
-                  <td>941,91</td>
-                  <td>0,00</td>
-                  <td>0,00</td>
-                  <td>0,00</td>
-                  <td>0,00</td>
-                  <td>
-                    <input type="text" class="input-singleline" name="cx_valor_contabil1_77264" id="cx_valor_contabil1_77264" value="0,00" size="10" maxlength="15" title="Digite o valor que está no caixa desta loja em Dinheiro ">
-                  </td>
-                  <td><span id="valorDif1_77264">0,00</span></td>
-                </tr>
-
-              </tbody>
-            </table>
-
-
-          </section>
-
-          <footer class="modal__footer">
-            <a href="" class="bt-back to-left"> Voltar </a>
-            <a href="" class="bt-confirm to-right">Salvar</a>
-          </footer>
-
-        </div>
       </div>
-
-
+    </div>
 
     <div class="global-barrier"></div>
     <!-- End global-barrier!-->

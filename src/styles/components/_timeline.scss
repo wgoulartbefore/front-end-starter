@@ -1,0 +1,120 @@
+.timeline {
+
+  &-header {
+    display: block;
+    margin-bottom: $size-components-margin;
+
+    &__prev,
+    &__next,
+    &__month,
+    &__today {
+      background: $color-grey-100;
+      color: $color-grey-900;
+      margin-right: $size-std-padding;
+    }
+
+    &__prev,
+    &__next {
+      padding: 5px 15px;
+      height: 30px;
+      font-size: 18px;
+      border: 1px solid $color-grey-400;
+    }
+
+    &__month {
+      background: transparent;
+      font-size: 20px;
+      font-weight: 700;
+    }
+  }
+
+  &-days {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+
+    // &::after {
+    //   content:"";
+    //   position: absolute;
+    //   background: $color-grey-400;
+    //   width: 99.8%;
+    //   height: 2px;
+    //   right: 0;
+    //   bottom: 6px;
+    //   left: 0;
+    // }
+  }
+
+  &__day {
+    position: relative;
+    // padding-bottom: $size-components-padding;
+    @include adjust-font-size-to(16px);
+    color: $color-grey-700;
+    font-weight: 700;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    z-index: 1;
+    flex: 1;
+    border-radius: 2px;
+    margin: 0 5px;
+    transition: all 0.2s;
+
+    // &::before {
+    //   content:"";
+    //   position: absolute;
+    //   background: $color-grey-0;
+    //   border: 1px solid $color-grey-400;
+    //   width: $size-components-padding;
+    //   height: $size-components-padding;
+    //   border-radius: 50%;
+    //   bottom: 0;
+    //   left: 50%;
+    //   transform: translateX(-50%);
+    // }
+
+    &:hover {
+      color: $color-grey-0;
+      background: $color-grey-400;
+      transform: scale(1.2);
+    }
+
+    &--active {
+      color: $color-grey-0;
+      background: $color-base-main;
+
+      // transform: scale(1.2) translateY(-2px);
+
+      // &::before {
+      //   background: $color-base-main;
+      //   border-color: $color-base-main;
+      // }
+
+      &:hover {
+        background: $color-base-main;
+      }
+    }
+
+    &--alert {
+      color: $color-grey-0;
+      background: $color-base-warning;
+
+      // &::before {
+      //   background: $color-base-warning;
+      //   border-color: $color-base-warning;
+      // }
+
+      &:hover {
+        background: $color-base-warning;
+      }
+    }
+
+  }
+
+  @include susy-breakpoint($screen-medium, 16) {
+    &-header {
+      display: flex;
+    }
+  }
+
+}

@@ -107,6 +107,11 @@
   @include createButtonAlter($color-base-error);
 }
 
+.bt-export {
+  @extend %std-button;
+  @include createButton(#3f63be);
+}
+
 .bt--small {
   padding-right: 10px;
   padding-left: 10px;
@@ -169,4 +174,3 @@
     padding: 10px $size-components-padding;
   }
 }
-

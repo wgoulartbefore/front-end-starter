@@ -1,192 +1,127 @@
+// .cashier-card {
+//   border-radius: 2px;
+//   background: $color-grey-0;
+//   padding: $size-components-padding;
+//   text-align: center;
+//   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+//   transition: all 0.5s cubic-bezier(0, 0, 0, 1.21);
+//
+//   &:hover {
+//     background: $color-grey-150;
+//     color: $color-grey-1000;
+//     transform: scale(1.05);
+//   }
+//
+//   &-title {
+//     display: block;
+//     @include adjust-font-size-to(18px);
+//     color: $color-grey-900;
+//     font-weight: 700;
+//     margin-top: $size-components-padding;
+//   }
+// }
+//
+//
+// .cashier-item {
+//   position: relative;
+//   background: $color-grey-0;
+//   padding: $size-components-padding 0;
+//   text-align: center;
+//   transition: all 0.5s cubic-bezier(0, 0, 0, 1.21);
+//   margin-bottom: $size-components-padding;
+//   border-radius: 2px;
+//   opacity: 0.5;
+//   cursor: pointer;
+//   box-shadow: 0 2px 10px -2px rgba(0,0,0,0.2);
+//
+//   &:hover {
+//     opacity: 1;
+//   }
+//
+//   &-date,
+//   &-number,
+//   &-pdv,
+//   &-title {
+//     display: block;
+//     font-weight: 700;
+//     padding: 0 $size-components-padding;
+//   }
+//
+//   &-open {
+//     opacity: 1;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//
+//     &.cashier-item-select {
+//       box-shadow: none;
+//     }
+//
+//     .cashier-item-icon {
+//       font-size: 22px;
+//       font-weight: 700;
+//       border-radius: 100%;
+//
+//       .fa,
+//       .icon {
+//         display: block;
+//         font-size: 34px;
+//         margin-left: auto;
+//         margin-right: auto;
+//         margin-bottom: $size-std-padding;
+//       }
+//     }
+//   }
+//
+//   &-number {
+//     @include adjust-font-size-to(14px);
+//     color: $color-grey-1000;
+//     text-transform: uppercase;
+//   }
+//
+//   &-title {
+//     background: $color-grey-100;
+//     @include adjust-font-size-to(20px);
+//     color: $color-grey-1000;
+//     padding: $size-components-padding;
+//     margin: $size-components-padding 0;
+//   }
+//
+//   &-pdv {
+//     @include adjust-font-size-to(14px);
+//     text-transform: uppercase;
+//   }
+//
+//   &-date {
+//     @include adjust-font-size-to(16px);
+//     color: $color-base-error;
+//   }
+//
+//   &-select {
+//     box-shadow: 0 0 0 3px $color-base-main;
+//     opacity: 1;
+//
+//     .cashier-item-title {
+//       background: $color-base-main;
+//       color: $color-grey-0;
+//     }
+//
+//     .actions-list {
+//       visibility: visible;
+//       opacity: 1;
+//       height: auto;
+//     }
+//   }
+//
+// }
+
+
+
 .cashier {
-  margin-bottom: $size-components-margin;
-}
-
-.cashier-card {
-  border-radius: 2px;
-  background: $color-grey-0;
-  padding: $size-components-padding;
-  text-align: center;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-  transition: all 0.5s cubic-bezier(0, 0, 0, 1.21);
-
-  &:hover {
-    background: $color-grey-150;
-    color: $color-grey-1000;
-    transform: scale(1.05);
+  &-list {
   }
-
-  &-title {
-    display: block;
-    @include adjust-font-size-to(18px);
-    color: $color-grey-900;
-    font-weight: 700;
-    margin-top: $size-components-padding;
-  }
-}
-
-.cashier-item {
-  position: relative;
-  background: $color-grey-0;
-  padding: $size-components-padding 0;
-  text-align: center;
-  transition: all 0.5s cubic-bezier(0, 0, 0, 1.21);
-  margin-bottom: $size-components-padding;
-  border-radius: 2px;
-  opacity: 0.5;
-  cursor: pointer;
-  box-shadow: 0 2px 10px -2px rgba(0,0,0,0.2);
-
-  &:hover {
-    opacity: 1;
-  }
-
-  &-date,
-  &-number,
-  &-pdv,
-  &-title {
-    display: block;
-    font-weight: 700;
-    padding: 0 $size-components-padding;
-  }
-
-  &-open {
-    opacity: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    &.cashier-item-select {
-      box-shadow: none;
-    }
-
-    .cashier-item-icon {
-      font-size: 22px;
-      font-weight: 700;
-      border-radius: 100%;
-
-      .fa,
-      .icon {
-        display: block;
-        font-size: 34px;
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: $size-std-padding;
-      }
-    }
-  }
-
-  &-number {
-    @include adjust-font-size-to(14px);
-    color: $color-grey-1000;
-    text-transform: uppercase;
-  }
-
-  &-title {
-    background: $color-grey-100;
-    @include adjust-font-size-to(20px);
-    color: $color-grey-1000;
-    padding: $size-components-padding;
-    margin: $size-components-padding 0;
-  }
-
-  &-pdv {
-    @include adjust-font-size-to(14px);
-    text-transform: uppercase;
-  }
-
-  &-date {
-    @include adjust-font-size-to(16px);
-    color: $color-base-error;
-  }
-
-  &-select {
-    box-shadow: 0 0 0 3px $color-base-main;
-    opacity: 1;
-
-    .cashier-item-title {
-      background: $color-base-main;
-      color: $color-grey-0;
-    }
-
-    .actions-list {
-      visibility: visible;
-      opacity: 1;
-      height: auto;
-    }
-  }
-
-}
-
-.actions-list {
-  position: absolute;
-  background: $color-grey-0;
-  width: 120%;
-  height: 0;
-  left: -10%;
-  top: 110%;
-  visibility: hidden;
-  border-radius: 2px;
-  opacity: 0;
-  transition: all 0.3s ease-in-out;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-  margin-bottom: $size-components-padding;
-  z-index: 1;
-
-  li {
-    display: block;
-    border-top: 1px solid $color-grey-100;
-  }
-
-  a {
-    display: block;
-    font-size: 1rem;
-    padding: 10px;
-    color: $color-grey-1000;
-
-    &:hover {
-      color: $color-base-main;
-    }
-
-  }
-
-  &::before {
-    content: "";
-    width: 0;
-    max-height: 0;
-    position: absolute;
-    top: -19px;
-    right: 50%;
-    transform: translateX(50%);
-    border: solid;
-    border-width: 10px 10px 10px 10px;
-    border-color: transparent transparent $color-grey-0 transparent;
-  }
-}
-
-.cashied-card-details {
-  display: block;
-  border: 1px solid $color-grey-200;
-  background: $color-grey-0;
-}
-
-.cashied-details-title {
-  background: $color-grey-200;
-  @include adjust-font-size-to(18px);
-  color: $color-grey-900;
-  font-weight: 700;
-  padding: $size-components-padding;
-}
-
-.cashier-details-content {
-  display: block;
-  padding: $size-components-padding;
-}
-
-.cashier-details-item {
-  @include adjust-font-size-to(16px);
-
-  strong {
-    display: block;
+  
+  &-item {
+    background: $color-grey-0;
   }
 }
