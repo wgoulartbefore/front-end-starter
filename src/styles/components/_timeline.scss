@@ -1,4 +1,6 @@
 .timeline {
+  padding-bottom: $size-components-padding;
+  border-bottom: 1px solid $color-grey-400;
 
   &-header {
     display: block;
@@ -16,15 +18,56 @@
     &__prev,
     &__next {
       padding: 5px 15px;
-      height: 30px;
+      height: 40px;
+      line-height: 30px;
       font-size: 18px;
-      border: 1px solid $color-grey-400;
+      border: 1px solid $color-grey-700;
+      background: transparent;
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    &__prev {
+      margin-right: 0;
+      border-right: 0;
     }
 
     &__month {
       background: transparent;
       font-size: 20px;
+      line-height: 40px;
       font-weight: 700;
+    }
+
+    &__legend {
+      margin-left: auto;
+      align-self: center;
+
+      span {
+        margin-left: $size-components-padding;
+
+        &::before {
+          content:"";
+          display: inline-block;
+          width: $size-components-padding;
+          height: $size-components-padding;
+          border-radius: 50%;
+          margin-right: $size-components-padding / 2;
+        }
+      }
+
+      .pending {
+        &::before {
+          background: $color-base-warning;
+        }
+      }
+
+      .active {
+        &::before {
+          background: #828282;
+        }
+      }
+
     }
   }
 
@@ -32,22 +75,10 @@
     display: flex;
     position: relative;
     justify-content: space-between;
-
-    // &::after {
-    //   content:"";
-    //   position: absolute;
-    //   background: $color-grey-400;
-    //   width: 99.8%;
-    //   height: 2px;
-    //   right: 0;
-    //   bottom: 6px;
-    //   left: 0;
-    // }
   }
 
   &__day {
     position: relative;
-    // padding-bottom: $size-components-padding;
     @include adjust-font-size-to(16px);
     color: $color-grey-700;
     font-weight: 700;
@@ -60,19 +91,6 @@
     margin: 0 5px;
     transition: all 0.2s;
 
-    // &::before {
-    //   content:"";
-    //   position: absolute;
-    //   background: $color-grey-0;
-    //   border: 1px solid $color-grey-400;
-    //   width: $size-components-padding;
-    //   height: $size-components-padding;
-    //   border-radius: 50%;
-    //   bottom: 0;
-    //   left: 50%;
-    //   transform: translateX(-50%);
-    // }
-
     &:hover {
       color: $color-grey-0;
       background: $color-grey-400;
@@ -80,29 +98,28 @@
     }
 
     &--active {
-      color: $color-grey-0;
-      background: $color-base-main;
+      // color: $color-grey-0;
+      // background: $color-base-main;
 
-      // transform: scale(1.2) translateY(-2px);
-
-      // &::before {
+      // &:hover {
       //   background: $color-base-main;
-      //   border-color: $color-base-main;
       // }
 
-      &:hover {
-        background: $color-base-main;
-      }
+      color: $color-grey-900;
+      height: 30px;
+      border: 2px solid $color-grey-900;;
+      line-height: 24px;
+      background: transparent;
+
+       &:hover {
+         background: transparent;
+         color: $color-grey-900;
+       }
     }
 
     &--alert {
       color: $color-grey-0;
       background: $color-base-warning;
-
-      // &::before {
-      //   background: $color-base-warning;
-      //   border-color: $color-base-warning;
-      // }
 
       &:hover {
         background: $color-base-warning;

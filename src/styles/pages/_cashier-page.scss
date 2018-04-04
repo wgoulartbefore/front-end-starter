@@ -21,7 +21,6 @@
 //   }
 // }
 //
-//
 // .cashier-item {
 //   position: relative;
 //   background: $color-grey-0;
@@ -112,16 +111,129 @@
 //       height: auto;
 //     }
 //   }
-//
 // }
 
-
-
 .cashier {
+
   &-list {
+    margin-top: $size-components-margin;
   }
-  
-  &-item {
+
+  &-card {
+    display: flex;
     background: $color-grey-0;
+    padding: $size-components-padding;
+    text-align: center;
+    box-shadow: 0 4px 10px -2px rgba(0,0,0,0.2);
+    transition: all 0.5s cubic-bezier(0, 0, 0, 1.21);
+    border-radius: 2px;
+    justify-content: center;
+    align-items: center;
+
+    &__title {
+      display: block;
+      @include adjust-font-size-to(18px);
+      color: $color-base-main;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    &__icon {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: $size-components-padding / 2;
+    }
+
+    &:hover {
+      background: $color-grey-150;
+      color: $color-grey-1000;
+      transform: scale(1.05);
+    }
   }
+
+  &-item {
+    position: relative;
+    background: $color-grey-0;
+    padding: $size-components-padding 0;
+    text-align: center;
+    margin-bottom: $size-components-padding;
+    cursor: pointer;
+    border-radius: 2px;
+    box-shadow: 0 4px 10px -2px rgba(0,0,0,0.2);
+    transition: all 0.5s cubic-bezier(0, 0, 0, 1.1);
+    border-top: 3px solid #828282;
+
+    &-number {
+      @include adjust-font-size-to(14px);
+      color: $color-grey-1000;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    &-pdv {
+      display: block;
+      @include adjust-font-size-to(16px);
+      text-transform: none;
+    }
+
+    &-title {
+      display: block;
+      @include adjust-font-size-to(20px);
+      background: $color-grey-100;
+      color: $color-grey-1000;
+      font-weight: 700;
+      padding: $size-components-padding;
+      margin: $size-components-padding 0;
+      text-transform: uppercase;
+    }
+
+    &-date {
+      @include adjust-font-size-to(16px);
+      color: $color-base-error;
+    }
+
+    &-active {
+      border-top-color: $color-base-warning;
+    }
+
+    .actions-list {
+      display: none;
+    }
+
+  }
+
+  &-switch {
+    margin-left: auto;
+    margin-bottom: $size-components-padding;
+  }
+}
+
+
+
+.filters-step {
+  display: block;
+  position: relative;
+  margin: $size-components-margin 0;
+  padding: $size-components-padding;
+  background: $color-grey-100;
+  border-radius: 2px;
+
+
+  &::before {
+    position: absolute;
+    content: "";
+    height: 2px;
+    background: $color-grey-400;
+    top: calc(50% + 10px);
+    left: 15px;
+    right: 15px;
+  }
+
+  .input-form {
+    margin-bottom: 0;
+  }
+
+
+
 }
