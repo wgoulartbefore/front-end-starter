@@ -1,5 +1,6 @@
 .timeline {
   padding-bottom: $size-components-padding;
+  padding-top: $size-components-padding;
   border-bottom: 1px solid $color-grey-400;
 
   &-header {
@@ -56,15 +57,21 @@
         }
       }
 
-      .pending {
+      .close {
         &::before {
-          background: $color-base-warning;
+          background: $color-grey-500;
         }
       }
 
-      .active {
+      .open {
         &::before {
-          background: #828282;
+          background: $color-base-success;
+        }
+      }
+
+      .pending{
+        &::before {
+          background: $color-base-warning;
         }
       }
 
@@ -94,20 +101,12 @@
     &:hover {
       color: $color-grey-0;
       background: $color-grey-400;
-      transform: scale(1.2);
     }
 
     &--active {
-      // color: $color-grey-0;
-      // background: $color-base-main;
-
-      // &:hover {
-      //   background: $color-base-main;
-      // }
-
       color: $color-grey-900;
       height: 30px;
-      border: 2px solid $color-grey-900;;
+      border: 2px solid $color-grey-900;
       line-height: 24px;
       background: transparent;
 
@@ -126,6 +125,15 @@
       }
     }
 
+    &--pending {
+      color: $color-grey-0;
+      background: $color-base-success;
+
+      &:hover {
+        background: $color-base-success;
+      }
+    }
+    
   }
 
   @include susy-breakpoint($screen-medium, 16) {
@@ -133,5 +141,4 @@
       display: flex;
     }
   }
-
 }

@@ -19,7 +19,6 @@ const isMobile = {
   }
 }
 
-
 function mobileScreen() {
   let mobileSize = 1280;
   let mobileState = true;
@@ -191,7 +190,6 @@ function switchTypeClientRegisterSell() {
   });
 }
 
-
 function openUserOptions() {
   let optsOpenClass = 'options-open';
 
@@ -208,7 +206,6 @@ function openUserOptions() {
     }, 1500);
   });
 }
-
 
 function headerSearchController() {
   const pageBody = $('body');
@@ -441,7 +438,6 @@ function ModalClass(){
 	}
 
 	function openLoader(message){
-
 		var message = message || 'Carregando... Por favor aguarde.';
 		var html = '<div class="modal-loader"><style>.modal-loader{display: block;position: absolute;top: 0;left: 0;width: 100%;height: 100%;background: rgba(255, 255, 255, 0.8);color: #333;text-align: center;z-index: 9;}.modal-loader-content{display: block;position: absolute;width: 100%;top: 50%;left: 0;height: 100px;margin-top: -50px;text-align: center;}.modal-loader-icon{font-size: 36px;margin-bottom: 20px;}.modal-loader-message{font-size: 16px;line-height: 22px;height: 44px;overflow: hidden;padding: 0 15px;}.modal-body{position: relative;}</style><div class="modal-loader-content"><i class="fa fa-spin fa-spinner modal-loader-icon"></i><p class="modal-loader-message">' + message + '</p></div></div>';
 
@@ -490,7 +486,6 @@ function ModalClass(){
 
 }
 
-
 function showFilter() {
   let advancedFilter = $('.filter-search-advanced');
 
@@ -500,21 +495,31 @@ function showFilter() {
   })
 }
 
-// filter-search__advanced
-
+// selectCashier
 function cashierActive() {
   let container = $('.cashier');
   let cashierItem = $('.cashier-item');
 
   let optsOpenClass = 'cashier-item-select';
 
-  $(document).on('click', '.cashier-item', function(event){
+  $(document).on('click', '.cashier-item', function(event) {
     event.preventDefault();
-    cashierItem.removeClass(optsOpenClass)
-    $(this).addClass(optsOpenClass);
+    cashierItem.removeClass(optsOpenClass);
+    $(this).toggleClass(optsOpenClass);
+
+    if (cashierItem.hasClass(optsOpenClass)) {
+    }
+    
   });
 
+  function offCashier() {
+    cashierItem.removeClass(optsOpenClass);
+    console.log('offCashier');
+  }
 
+  $(document).on('click', function(){
+     console.log('off');
+  });
 
 }
 

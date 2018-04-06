@@ -45,76 +45,9 @@
 //     font-weight: 700;
 //     padding: 0 $size-components-padding;
 //   }
-//
-//   &-open {
-//     opacity: 1;
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//
-//     &.cashier-item-select {
-//       box-shadow: none;
-//     }
-//
-//     .cashier-item-icon {
-//       font-size: 22px;
-//       font-weight: 700;
-//       border-radius: 100%;
-//
-//       .fa,
-//       .icon {
-//         display: block;
-//         font-size: 34px;
-//         margin-left: auto;
-//         margin-right: auto;
-//         margin-bottom: $size-std-padding;
-//       }
-//     }
-//   }
-//
-//   &-number {
-//     @include adjust-font-size-to(14px);
-//     color: $color-grey-1000;
-//     text-transform: uppercase;
-//   }
-//
-//   &-title {
-//     background: $color-grey-100;
-//     @include adjust-font-size-to(20px);
-//     color: $color-grey-1000;
-//     padding: $size-components-padding;
-//     margin: $size-components-padding 0;
-//   }
-//
-//   &-pdv {
-//     @include adjust-font-size-to(14px);
-//     text-transform: uppercase;
-//   }
-//
-//   &-date {
-//     @include adjust-font-size-to(16px);
-//     color: $color-base-error;
-//   }
-//
-//   &-select {
-//     box-shadow: 0 0 0 3px $color-base-main;
-//     opacity: 1;
-//
-//     .cashier-item-title {
-//       background: $color-base-main;
-//       color: $color-grey-0;
-//     }
-//
-//     .actions-list {
-//       visibility: visible;
-//       opacity: 1;
-//       height: auto;
-//     }
-//   }
-// }
+
 
 .cashier {
-
   &-list {
     margin-top: $size-components-margin;
   }
@@ -150,6 +83,7 @@
       color: $color-grey-1000;
       transform: scale(1.05);
     }
+
   }
 
   &-item {
@@ -162,7 +96,7 @@
     border-radius: 2px;
     box-shadow: 0 4px 10px -2px rgba(0,0,0,0.2);
     transition: all 0.5s cubic-bezier(0, 0, 0, 1.1);
-    border-top: 3px solid #828282;
+    border-top: 3px solid $color-grey-500;
 
     &-number {
       @include adjust-font-size-to(14px);
@@ -190,26 +124,105 @@
 
     &-date {
       @include adjust-font-size-to(16px);
-      color: $color-base-error;
     }
 
-    &-active {
-      border-top-color: $color-base-warning;
+    &-select {
+      .actions-list {
+        visibility: visible;
+        opacity: 1;
+        height: auto;
+      }
     }
 
-    .actions-list {
-      display: none;
+    &-close {
+      border-color: $color-grey-500;
     }
 
-  }
+    &-open {
+      border-color: $color-base-success;
+      box-shadow: 0 4px 10px -2px rgba(0,0,0,0.2),
+                  0 0 2px $color-base-success;
 
-  &-switch {
-    margin-left: auto;
-    margin-bottom: $size-components-padding;
+      &::before {
+        position: absolute;
+        content:"?";
+        width: 20px;
+        height: 20px;
+        background: $color-base-success;
+        left: 10px;
+        top: 10px;
+        border-radius: 50%;
+        font-weight: 700;
+        color: $color-grey-0;
+      }
+    }
+
+    &-pending {
+      border-color: $color-base-warning;
+      box-shadow: 0 4px 10px -2px rgba(0,0,0,0.2),
+                  0 0 2px $color-base-warning;
+
+      &::before {
+        position: absolute;
+        content:"?";
+        width: 20px;
+        height: 20px;
+        background: $color-base-warning;
+        left: 10px;
+        top: 10px;
+        border-radius: 50%;
+        font-weight: 700;
+        color: $color-grey-0;
+      }
+    }
+
   }
 }
 
+.actions-list {
+  display: block;
+  position: absolute;
+  box-shadow: 0 2px 10px -1px rgba(0,0,0,0.4);
+  transition: all 0.5s cubic-bezier(0, 0, 0, 1.1);
+  background: $color-grey-0;
+  width: 80%;
+  left: 50%;
+  z-index: 1;
+  top: 108%;
+  visibility: hidden;
+  height: auto;
+  opacity: 0;
+  border-radius: 2px;
+  transform: translateX(-50%);
 
+  a {
+    display: block;
+    color: $color-grey-900;
+    padding: 10px;
+    // font-weight: 700;
+
+    &:hover {
+      background-color: $color-grey-200;
+    }
+  }
+
+  &::after {
+    display: block;
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 1px solid $color-grey-0;
+    border-color: transparent transparent $color-grey-0 transparent;
+    border-width: 10px 10px 10px 10px;
+    width: 0;
+    height: 0;
+    color: $color-grey-0;
+    content: "";
+    z-index: 2;
+  }
+
+}
 
 .filters-step {
   display: block;
@@ -219,21 +232,7 @@
   background: $color-grey-100;
   border-radius: 2px;
 
-
-  &::before {
-    position: absolute;
-    content: "";
-    height: 2px;
-    background: $color-grey-400;
-    top: calc(50% + 10px);
-    left: 15px;
-    right: 15px;
-  }
-
   .input-form {
     margin-bottom: 0;
   }
-
-
-
 }

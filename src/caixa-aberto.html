@@ -440,18 +440,19 @@
             <p class="timeline-header__month">Abril</p>
 
             <div class="timeline-header__legend">
-              <span class="pending">Contém caixas em abertos</span>
-              <span class="active">Caixas Fechados</span>
+              <span class="close">Caixa Fechados</span>
+              <span class="open">Caixa Abertos</span>
+              <span class="pending">Caixas Abertos com atraso</span>
             </div>
           </div>
 
           <div class="timeline-days">
-            <a href="" class="timeline__day">1</a>
-            <a href="" class="timeline__day timeline__day--alert">2</a>
-            <a href="" class="timeline__day">3</a>
-            <a href="" class="timeline__day timeline__day--alert">4</a>
-            <a href="" class="timeline__day timeline__day--alert">5</a>
-            <a href="" class="timeline__day timeline__day--alert">6</a>
+            <a href="" class="timeline__day timeline__day--alert">1</a>
+            <a href="" class="timeline__day">2</a>
+            <a href="" class="timeline__day timeline__day--alert">3</a>
+            <a href="" class="timeline__day timeline__day">4</a>
+            <a href="" class="timeline__day timeline__day--pending">5</a>
+            <a href="" class="timeline__day timeline__day--pending">6</a>
             <a href="" class="timeline__day">7</a>
             <a href="" class="timeline__day timeline__day--active">8</a>
             <a href="" class="timeline__day">9</a>
@@ -517,171 +518,132 @@
           </div>
         </div>
 
-
         <div class="cashier-list">
           <div class="gr-4">
-                <!-- <div class="cashier-card">
-                  <a class="cashier-card__title">
-                      <img src="/images/icon-caixa.svg" alt="" class="cashier-card__icon">
-                      Abrir Caixa
-                  </a>
-                </div> -->
+            <div class="cashier-card">
+              <a class="cashier-card__title">
+                    <img src="/images/icon-caixa.svg" alt="" class="cashier-card__icon">
+                    Abrir Caixa
+                </a>
+            </div>
 
-                <div class="cashier-item cashier-item-active">
-                  <p class="cashier-item-number">Nº 77264</p>
-                  <h4 class="cashier-item-title">
-                    <small class="cashier-item-pdv">Centro</small>
-                    Caixa Único
-                  </h4>
+            <div class="cashier-item cashier-item-close">
+              <p class="cashier-item-number">Nº 77264</p>
 
-                  <p class="cashier-item-date"><i class="fa fa-calendar"></i> 04/04/2018</p>
+              <h4 class="cashier-item-title">
+                <small class="cashier-item-pdv">Centro</small>
+                Caixa Único
+              </h4>
 
-                  <ul class="actions-list">
-                    <li><a href=""> Realizar Conferência</a></li>
-                    <li><a href=""> Visializar Movimentos</a></li>
-                    <li><a href=""> Fechar Caixa</a></li>
-                    <li><a href=""> Remover Caixa</a></li>
-                  </ul>
-                </div>
-                <!-- ./cashier-item -->
+              <p class="cashier-item-date"><i class="fa fa-calendar"></i> 04/04/2018</p>
 
-                <div class="cashier-item">
-                  <p class="cashier-item-number">Nº 77264</p>
-                  <h4 class="cashier-item-title">
+              <nav class="actions-list">
+                <a href=""> Realizar Conferência</a>
+                <a href=""> Fechar Caixa</a>
+                <a href=""> Remover Caixa</a>
+              </nav>
+            </div>
+            <!-- ./cashier-item -->
+
+            <div class="cashier-item cashier-item-close">
+              <p class="cashier-item-number">Nº 77264</p>
+              <h4 class="cashier-item-title">
                     <small class="cashier-item-pdv">BANGU</small>
                     Caixa 1
                   </h4>
 
-                  <p class="cashier-item-date"><i class="fa fa-calendar"></i> 04/04/2018</p>
+              <p class="cashier-item-date"><i class="fa fa-calendar"></i> 04/04/2018</p>
 
-                  <ul class="actions-list">
-                    <li><a href=""> Realizar Conferência</a></li>
-                    <li><a href=""> Visializar Movimentos</a></li>
-                    <li><a href=""> Fechar Caixa</a></li>
-                    <li><a href=""> Remover Caixa</a></li>
-                  </ul>
-                </div>
-                <!-- ./cashier-item -->
+              <nav class="actions-list">
+                <a href=""> Visualizar Detalhes</a>
+                <a href=""> Realizar Conferência</a>
+                <a href=""> Reabrir Caixa</a>
+              </nav>
+            </div>
+            <!-- ./cashier-item -->
 
-                <div class="cashier-item">
-                  <p class="cashier-item-number">Nº 77264</p>
-                  <h4 class="cashier-item-title">
-                    <small class="cashier-item-pdv">ADMINISTRATIVO</small>
-                    Caixas 3
+            <div class="cashier-item cashier-item-open">
+              <p class="cashier-item-number">Nº 77264</p>
+              <h4 class="cashier-item-title">
+                    <small class="cashier-item-pdv">Centro</small>
+                    Administrativo
                   </h4>
 
-                  <p class="cashier-item-date"><i class="fa fa-calendar"></i> 04/04/2018</p>
+              <p class="cashier-item-date"><i class="fa fa-calendar"></i> 04/04/2018</p>
 
-                  <ul class="actions-list">
-                    <li><a href=""> Realizar Conferência</a></li>
-                    <li><a href=""> Visializar Movimentos</a></li>
-                    <li><a href=""> Fechar Caixa</a></li>
-                    <li><a href=""> Remover Caixa</a></li>
-                  </ul>
-                </div>
-                <!-- ./cashier-item -->
+              <nav class="actions-list">
+                <a href=""> Realizar Conferência</a>
+                <a href=""> Fechar Caixa</a>
+                <a href=""> Remover Caixa</a>
+              </nav>
 
-                <div class="cashier-item">
-                  <p class="cashier-item-number">Nº 77264</p>
-                  <h4 class="cashier-item-title">
+            </div>
+            <!-- ./cashier-item -->
+
+            <div class="cashier-item cashier-item-open">
+              <p class="cashier-item-number">Nº 77264</p>
+              <h4 class="cashier-item-title">
                     <small class="cashier-item-pdv">CASA SHOPPING</small>
                     Caixa Único
                   </h4>
 
-                  <p class="cashier-item-date"><i class="fa fa-calendar"></i> 04/04/2018</p>
+              <p class="cashier-item-date"><i class="fa fa-calendar"></i> 04/04/2018</p>
 
-                  <ul class="actions-list">
-                    <li><a href=""> Realizar Conferência</a></li>
-                    <li><a href=""> Visializar Movimentos</a></li>
-                    <li><a href=""> Fechar Caixa</a></li>
-                    <li><a href=""> Remover Caixa</a></li>
-                  </ul>
-                </div>
-                <!-- ./cashier-item -->
+              <nav class="actions-list">
+                <a href=""> Visualizar Detalhes</a>
+                <a href=""> Realizar Conferência</a>
+                <a href=""> Reabrir Caixa</a>
+              </nav>
+            </div>
+            <!-- ./cashier-item -->
 
-                <div class="cashier-item">
-                  <p class="cashier-item-number">Nº 77264</p>
-                  <h4 class="cashier-item-title">
-                    <small class="cashier-item-pdv">AMÉRICAS</small>
-                    Caixa Das Américas
+            <div class="cashier-item cashier-item-pending">
+              <p class="cashier-item-number">Nº 77264</p>
+              <h4 class="cashier-item-title">
+                    <small class="cashier-item-pdv">CASA SHOPPING</small>
+                    Caixa Único
                   </h4>
 
-                  <p class="cashier-item-date"><i class="fa fa-calendar"></i> 04/04/2018</p>
+              <p class="cashier-item-date"><i class="fa fa-calendar"></i> 03/04/2018</p>
 
-                  <ul class="actions-list">
-                    <li><a href=""> Realizar Conferência</a></li>
-                    <li><a href=""> Visializar Movimentos</a></li>
-                    <li><a href=""> Fechar Caixa</a></li>
-                    <li><a href=""> Remover Caixa</a></li>
-                  </ul>
-                </div>
-                <!-- ./cashier-item -->
+              <nav class="actions-list">
+                <a href=""> Visualizar Detalhes</a>
+                <a href=""> Realizar Conferência</a>
+                <a href=""> Reabrir Caixa</a>
+              </nav>
+            </div>
+            <!-- ./cashier-item -->
 
-                <div class="cashier-item">
-                  <p class="cashier-item-number">Nº 77264</p>
-                  <h4 class="cashier-item-title">
-                    <small class="cashier-item-pdv">Centro</small>
-                    Caixas Abertos
-                  </h4>
+            <div class="cashier-item cashier-item-close">
+              <p class="cashier-item-number">Nº 77264</p>
+              <h4 class="cashier-item-title">
+                <small class="cashier-item-pdv">CASA SHOPPING</small>
+                Caixa Único
+              </h4>
 
-                  <p class="cashier-item-date"><i class="fa fa-calendar"></i> 04/04/2018</p>
+              <p class="cashier-item-date"><i class="fa fa-calendar"></i> 04/04/2018</p>
 
-                  <ul class="actions-list">
-                    <li><a href=""> Realizar Conferência</a></li>
-                    <li><a href=""> Visializar Movimentos</a></li>
-                    <li><a href=""> Fechar Caixa</a></li>
-                    <li><a href=""> Remover Caixa</a></li>
-                  </ul>
-                </div>
-                <!-- ./cashier-item -->
+              <nav class="actions-list">
+                <a href=""> Visualizar Detalhes</a>
+                <a href=""> Realizar Conferência</a>
+                <a href=""> Reabrir Caixa</a>
+              </nav>
+              
+            </div>
+            <!-- ./cashier-item -->
 
-                <div class="cashier-item">
-                  <p class="cashier-item-number">Nº 77264</p>
-                  <h4 class="cashier-item-title">
-                    <small class="cashier-item-pdv">Centro</small>
-                    Caixas Abertos
-                  </h4>
-
-                  <p class="cashier-item-date"><i class="fa fa-calendar"></i> 04/04/2018</p>
-
-                  <ul class="actions-list">
-                    <li><a href=""> Realizar Conferência</a></li>
-                    <li><a href=""> Visializar Movimentos</a></li>
-                    <li><a href=""> Fechar Caixa</a></li>
-                    <li><a href=""> Remover Caixa</a></li>
-                  </ul>
-                </div>
-                <!-- ./cashier-item -->
-
-                <div class="cashier-item">
-                  <p class="cashier-item-number">Nº 77264</p>
-                  <h4 class="cashier-item-title">
-                    <small class="cashier-item-pdv">Centro</small>
-                    Caixas Abertos
-                  </h4>
-
-                  <p class="cashier-item-date"><i class="fa fa-calendar"></i> 04/04/2018</p>
-
-                  <ul class="actions-list">
-                    <li><a href=""> Realizar Conferência</a></li>
-                    <li><a href=""> Visializar Movimentos</a></li>
-                    <li><a href=""> Fechar Caixa</a></li>
-                    <li><a href=""> Remover Caixa</a></li>
-                  </ul>
-                </div>
-                <!-- ./cashier-item -->
-
-              </div>
+          </div>
         </div>
 
-      <div class="area-buttons">
-        <a href="" class="bt-back"> Voltar </a>
-        <a href="" class="to-right bt-confirm ">Avançar</a>
+        <div class="area-buttons">
+          <a href="" class="bt-back"> Voltar </a>
+          <a href="" class="to-right bt-confirm ">Avançar</a>
+        </div>
+        <!-- ./gen-box -->
+
       </div>
-      <!-- ./gen-box -->
-    </div>
-    <!-- ./container -->
-  </section>
+      <!-- ./container -->
+    </section>
   </div>
   <!-- End Global Content Holder!-->
 
