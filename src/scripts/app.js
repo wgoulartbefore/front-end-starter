@@ -499,28 +499,17 @@ function showFilter() {
 function cashierActive() {
   let container = $('.cashier');
   let cashierItem = $('.cashier-item');
-
   let optsOpenClass = 'cashier-item-select';
 
   $(document).on('click', '.cashier-item', function(event) {
-    event.preventDefault();
-    cashierItem.removeClass(optsOpenClass);
-    $(this).toggleClass(optsOpenClass);
-
-    if (cashierItem.hasClass(optsOpenClass)) {
+    if ( $(this).hasClass(optsOpenClass) ) {
+        // cashierItem.removeClass(optsOpenClass);
+        cashierItem.removeClass(optsOpenClass);
+    } else {
+        cashierItem.removeClass(optsOpenClass);
+        $(this).addClass(optsOpenClass);
     }
-    
   });
-
-  function offCashier() {
-    cashierItem.removeClass(optsOpenClass);
-    console.log('offCashier');
-  }
-
-  $(document).on('click', function(){
-     console.log('off');
-  });
-
 }
 
 headerOptsController();

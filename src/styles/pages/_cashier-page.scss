@@ -78,6 +78,7 @@
       margin-bottom: $size-components-padding / 2;
     }
 
+
     &:hover {
       background: $color-grey-150;
       color: $color-grey-1000;
@@ -176,6 +177,27 @@
       }
     }
 
+    &-pendencies {
+      position: absolute;
+
+      width: 20px;
+      height: 20px;
+      background: $color-base-success;
+      left: 10px;
+      top: 10px;
+      border-radius: 50%;
+      font-weight: 700;
+      color: $color-grey-0;
+
+      &::before {
+        content: "?";
+      }
+
+      .tooltip {
+        position: absolute;
+        
+      }
+    }
   }
 }
 
