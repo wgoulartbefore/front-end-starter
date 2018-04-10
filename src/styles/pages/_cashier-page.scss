@@ -46,7 +46,6 @@
 //     padding: 0 $size-components-padding;
 //   }
 
-
 .cashier {
   &-list {
     margin-top: $size-components-margin;
@@ -78,13 +77,11 @@
       margin-bottom: $size-components-padding / 2;
     }
 
-
     &:hover {
       background: $color-grey-150;
       color: $color-grey-1000;
       transform: scale(1.05);
     }
-
   }
 
   &-item {
@@ -140,32 +137,12 @@
     }
 
     &-open {
-      border-color: $color-base-success;
-      box-shadow: 0 4px 10px -2px rgba(0,0,0,0.2),
-                  0 0 2px $color-base-success;
-
-      &::before {
-        position: absolute;
-        content:"?";
-        width: 20px;
-        height: 20px;
-        background: $color-base-success;
-        left: 10px;
-        top: 10px;
-        border-radius: 50%;
-        font-weight: 700;
-        color: $color-grey-0;
-      }
-    }
-
-    &-pending {
       border-color: $color-base-warning;
-      box-shadow: 0 4px 10px -2px rgba(0,0,0,0.2),
-                  0 0 2px $color-base-warning;
+      box-shadow: 0 4px 10px -2px rgba(0,0,0,0.2), 0 0 2px $color-base-warning;
 
       &::before {
         position: absolute;
-        content:"?";
+        content: "?";
         width: 20px;
         height: 20px;
         background: $color-base-warning;
@@ -177,12 +154,29 @@
       }
     }
 
+    &-pending {
+      border-color: $color-pl-1;
+      box-shadow: 0 4px 10px -2px rgba(0,0,0,0.2), 0 0 2px $color-pl-1;
+
+      &::before {
+        position: absolute;
+        content: "?";
+        width: 20px;
+        height: 20px;
+        background: $color-pl-1;
+        left: 10px;
+        top: 10px;
+        border-radius: 50%;
+        font-weight: 700;
+        color: $color-grey-0;
+      }
+    }
+
     &-pendencies {
       position: absolute;
-
       width: 20px;
       height: 20px;
-      background: $color-base-success;
+      background: $color-grey-500;
       left: 10px;
       top: 10px;
       border-radius: 50%;
@@ -193,9 +187,11 @@
         content: "?";
       }
 
-      .tooltip {
-        position: absolute;
-        
+      &:hover {
+        .tooltip {
+          opacity: 1;
+          visibility: visible;
+        }
       }
     }
   }
@@ -222,7 +218,6 @@
     color: $color-grey-900;
     padding: 10px;
     // font-weight: 700;
-
     &:hover {
       background-color: $color-grey-200;
     }
@@ -242,6 +237,47 @@
     color: $color-grey-0;
     content: "";
     z-index: 2;
+  }
+}
+
+/* Tooltip */
+.tooltip {
+  display: block;
+  position: absolute;
+  width: 100%;
+  min-width: 200px;
+  background: rgba(17,17,17,.9);
+  border-radius: 2px;
+  color: $color-grey-0;
+  left: -10px;
+  top: -1100%;
+  padding: 10px;
+  text-align: left;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+  z-index: 1;
+
+  &__list {
+    padding-left: $size-components-padding;
+    color: $color-grey-0;
+  }
+
+  &__item {
+    @include adjust-font-size-to(16px);
+    color: $color-grey-0;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    border: 1px solid rgba(17,17,17,.9);
+    border-color: rgba(17,17,17,.9) transparent transparent transparent;
+    border-width: 10px;
+    bottom: -20px;
+    left: 10px;
   }
 
 }

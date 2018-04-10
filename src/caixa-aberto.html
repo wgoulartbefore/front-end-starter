@@ -437,26 +437,32 @@
           <div class="timeline-header">
             <a href="" class="timeline-header__prev fa fa-angle-left"></a>
             <a href="" class="timeline-header__next fa fa-angle-right"></a>
-            <p class="timeline-header__month">Abril</p>
+            <p class="timeline-header__month">Abril / 2018</p>
 
             <div class="timeline-header__legend">
-              <span class="close">Caixa Fechados</span>
+              <!-- <span class="close">Caixa Fechados</span>
               <span class="open">Caixa Abertos</span>
+              <span class="pending">Caixas Abertos com atraso</span> -->
+              <!-- <span class="open">Caixa Abertos</span> -->
+              <span class="close">Caixa Fechados</span>
               <span class="pending">Caixas Abertos com atraso</span>
             </div>
+
+            <a href="" class="bt-confirm to-left to-right">Abir novo caixa</a>
+
           </div>
 
           <div class="timeline-days">
-            <a href="" class="timeline__day timeline__day--alert">1</a>
-            <a href="" class="timeline__day">2</a>
-            <a href="" class="timeline__day timeline__day--alert">3</a>
-            <a href="" class="timeline__day timeline__day">4</a>
+            <a href="" class="timeline__day timeline__day--pending">1</a>
+            <a href="" class="timeline__day timeline__day--pending">2</a>
+            <a href="" class="timeline__day timeline__day--pending">3</a>
+            <a href="" class="timeline__day timeline__day--pending">4</a>
             <a href="" class="timeline__day timeline__day--pending">5</a>
-            <a href="" class="timeline__day ">6</a>
-            <a href="" class="timeline__day">7</a>
-            <a href="" class="timeline__day timeline__day--active">8</a>
-            <a href="" class="timeline__day">9</a>
-            <a href="" class="timeline__day ">10</a>
+            <a href="" class="timeline__day timeline__day--pending">6</a>
+            <a href="" class="timeline__day timeline__day--pending">7</a>
+            <a href="" class="timeline__day timeline__day--pending">8</a>
+            <a href="" class="timeline__day timeline__day--alert">9</a>
+            <a href="" class="timeline__day timeline__day--active">10</a>
             <a href="" class="timeline__day">11</a>
             <a href="" class="timeline__day">12</a>
             <a href="" class="timeline__day">13</a>
@@ -482,6 +488,7 @@
 
         <div class="filters-step">
           <div class="gr-3">
+
             <div class="input-form">
               <label for="">Filial:</label>
               <div class="fancy-select">
@@ -528,22 +535,12 @@
             </div> -->
 
             <div class="cashier-item cashier-item-close">
-              <div class="cashier-item-pendencies">
-                <div class="tooltip">
-                  <p>Contém produtos lançados sem NF-E</p>
-                  <p>Contẽm impeditivos para fechar caixa</p>
-                </div>
-              </div>
-
               <p class="cashier-item-number">Nº 77264</p>
-
               <h4 class="cashier-item-title">
                 <small class="cashier-item-pdv">Centro</small>
                 Caixa Único
               </h4>
-
-              <p class="cashier-item-date"><i class="fa fa-calendar"></i> 04/04/2018</p>
-
+              <!-- <p class="cashier-item-date"><i class="fa fa-calendar"></i> 04/04/2018</p> -->
               <nav class="actions-list">
                 <a href=""> Realizar Conferência</a>
                 <a href=""> Fechar Caixa</a>
@@ -555,11 +552,11 @@
             <div class="cashier-item cashier-item-close">
               <p class="cashier-item-number">Nº 77264</p>
               <h4 class="cashier-item-title">
-                    <small class="cashier-item-pdv">BANGU</small>
-                    Caixa 1
-                  </h4>
+                <small class="cashier-item-pdv">BANGU</small>
+                Caixa 1
+              </h4>
 
-              <p class="cashier-item-date"><i class="fa fa-calendar"></i> 04/04/2018</p>
+              <!-- <p class="cashier-item-date"><i class="fa fa-calendar"></i> 04/04/2018</p> -->
 
               <nav class="actions-list">
                 <a href=""> Visualizar Detalhes</a>
@@ -569,14 +566,14 @@
             </div>
             <!-- ./cashier-item -->
 
-            <div class="cashier-item ">
+            <div class="cashier-item">
               <p class="cashier-item-number">Nº 77264</p>
               <h4 class="cashier-item-title">
-                    <small class="cashier-item-pdv">Centro</small>
-                    Administrativo
-                  </h4>
+                <small class="cashier-item-pdv">Centro</small>
+                Administrativo
+              </h4>
 
-              <p class="cashier-item-date"><i class="fa fa-calendar"></i> 04/04/2018</p>
+              <!-- <p class="cashier-item-date"><i class="fa fa-calendar"></i> 04/04/2018</p> -->
 
               <nav class="actions-list">
                 <a href=""> Realizar Conferência</a>
@@ -588,13 +585,24 @@
             <!-- ./cashier-item -->
 
             <div class="cashier-item cashier-item-open">
+
+              <div class="cashier-item-pendencies">
+                <div class="tooltip">
+                  <ul class="tooltip__list">
+                    <li class="tooltip__item">Existem vendas sem cupom fiscal impresso, verifique em Cupom F. Venda</li>
+                    <li class="tooltip__item">Existem vendas sem nota fiscal para consumidor emitida, verifique em Venda</li>
+                    <li class="tooltip__item">Existem vendas sem NF-e autorizada, verifique na listagem de venda</li>
+                  </ul>
+                </div>
+              </div>
+
               <p class="cashier-item-number">Nº 77264</p>
               <h4 class="cashier-item-title">
                 <small class="cashier-item-pdv">CASA SHOPPING</small>
                 Caixa Único
               </h4>
 
-              <p class="cashier-item-date"><i class="fa fa-calendar"></i> 04/04/2018</p>
+              <!-- <p class="cashier-item-date"><i class="fa fa-calendar"></i> 04/04/2018</p> -->
 
               <nav class="actions-list">
                 <a href=""> Visualizar Detalhes</a>
@@ -605,13 +613,22 @@
             <!-- ./cashier-item -->
 
             <div class="cashier-item cashier-item-pending">
+
+              <div class="cashier-item-pendencies">
+                <div class="tooltip">
+                  <ul>
+                    <li><p class="gen-text-small">Existem vendas sem cupom fiscal impresso, verifique em Cupom F. Venda;</p></li>
+                    <li><p class="gen-text-small">Existem vendas sem nota fiscal para consumidor emitida, verifique em Venda</p></li>
+                    <li><p class="gen-text-small">Existem vendas sem NF-e autorizada, verifique na listagem de venda</p></li>
+                  </ul>
+                </div>
+              </div>
+
               <p class="cashier-item-number">Nº 77264</p>
               <h4 class="cashier-item-title">
                 <small class="cashier-item-pdv">CASA SHOPPING</small>
                 Caixa Único
               </h4>
-
-              <p class="cashier-item-date"><i class="fa fa-calendar"></i> 03/04/2018</p>
 
               <nav class="actions-list">
                 <a href=""> Visualizar Detalhes</a>
@@ -628,7 +645,7 @@
                 Caixa Único
               </h4>
 
-              <p class="cashier-item-date"><i class="fa fa-calendar"></i> 04/04/2018</p>
+              <!-- <p class="cashier-item-date"><i class="fa fa-calendar"></i> 04/04/2018</p> -->
 
               <nav class="actions-list">
                 <a href=""> Visualizar Detalhes</a>

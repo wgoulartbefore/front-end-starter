@@ -87,7 +87,7 @@
   &__day {
     position: relative;
     @include adjust-font-size-to(16px);
-    color: $color-grey-700;
+    color: $color-grey-400;
     font-weight: 700;
     height: 30px;
     line-height: 30px;
@@ -105,6 +105,7 @@
 
     &--active {
       color: $color-grey-900;
+      background: $color-grey-400;
       height: 30px;
       border: 2px solid $color-grey-900;
       line-height: 24px;
@@ -140,4 +141,5 @@
       display: flex;
     }
   }
+
 }
