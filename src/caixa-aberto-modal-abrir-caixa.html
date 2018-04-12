@@ -20,7 +20,7 @@
   <link rel="stylesheet" href="styles/main.css" type="text/css" media="screen, projection">
 </head>
 
-<body>
+<body class="modal-active">
   <div id="master-header" class="master-header">
     <nav class="header-opts-bar">
       <div class="holder">
@@ -652,36 +652,35 @@
           <a href="" class="bt-back"> Voltar </a>
 
           <nav class="pagination to-left to-right">
-              <p class="pagination__label">Total: 2 registro(s)
-                              , visualizando de 1 até 2.
-                      </p>
-              <ul class="pagination__list">
-                              <li class="pagination__item pagination__item--disabled">
-                          <a class="pagination__link" href="javascript:;" aria-label="Previous">
+            <p class="pagination__label">Total: 2 registro(s) , visualizando de 1 até 2.
+            </p>
+            <ul class="pagination__list">
+              <li class="pagination__item pagination__item--disabled">
+                <a class="pagination__link" href="javascript:;" aria-label="Previous">
                               <i class="fa fa-angle-double-left"></i>
                           </a>
-                      </li>
-                      <li class="pagination__item pagination__item--disabled">
-                          <a class="pagination__link" href="javascript:;" aria-label="Previous">
+              </li>
+              <li class="pagination__item pagination__item--disabled">
+                <a class="pagination__link" href="javascript:;" aria-label="Previous">
                               <i class="fa fa-chevron-left"></i>
                           </a>
-                      </li>
+              </li>
 
-                                              <li class="pagination__item  pagination__item--active ">
-                              <a class="pagination__link" href="javascript:getPage('http://localhost:8080/mercurio/v2/caixa/fechado/lista?page=1&amp;item=Caixa&amp;acao=buscaCaixa&amp;cx_data_inicio=14%2F03%2F2018','interface');">1</a>
-                          </li>
+              <li class="pagination__item  pagination__item--active ">
+                <a class="pagination__link" href="javascript:getPage('http://localhost:8080/mercurio/v2/caixa/fechado/lista?page=1&amp;item=Caixa&amp;acao=buscaCaixa&amp;cx_data_inicio=14%2F03%2F2018','interface');">1</a>
+              </li>
 
-                              <li class="pagination__item pagination__item--disabled">
-                          <a class="pagination__link" href="javascript:;" aria-label="Next">
+              <li class="pagination__item pagination__item--disabled">
+                <a class="pagination__link" href="javascript:;" aria-label="Next">
                               <i class="fa fa-chevron-right"></i>
                           </a>
-                      </li>
-                      <li class="pagination__item pagination__item--disabled">
-                          <a class="pagination__link" href="javascript:;" aria-label="Next">
+              </li>
+              <li class="pagination__item pagination__item--disabled">
+                <a class="pagination__link" href="javascript:;" aria-label="Next">
                               <i class="fa fa-angle-double-right"></i>
                           </a>
-                      </li>
-                      </ul>
+              </li>
+            </ul>
           </nav>
         </div>
         <!-- ./gen-box -->
@@ -691,6 +690,85 @@
     </section>
   </div>
   <!-- End Global Content Holder!-->
+
+  <div class="modal">
+    <div class="modal__content">
+
+      <header class="modal__header">
+        <h4 class="title">Abrir do Caixa</h4>
+        <a class="bt-close">
+            <i class="fa fa-times"></i>
+          </a>
+      </header>
+
+      <section class="modal__body">
+        <form action="" class="std-form">
+            <div class="gr-2">
+              <div class="input-form">
+                <label for="">Filial:</label>
+                <div class="fancy-select">
+                  <select name="" id="">
+                    <option value=""> Selecione uma Filial </option>
+                    <option value=""> Selecione uma Filial </option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="input-form">
+             <div class="gr-4">
+                <div class="input-form">
+                  <input type="checkbox" class="checkbox">
+                  <label for="">Filial 1 - Caixa 1</label>
+                </div>
+                <div class="input-form">
+                  <input type="checkbox" class="checkbox">
+                  <label for="">Filial 1 - Caixa 2</label>
+                </div>
+                <div class="input-form">
+                  <input type="checkbox" class="checkbox">
+                  <label for="">Filial 2 - Caixa 2</label>
+                </div>
+                <div class="input-form">
+                  <input type="checkbox" class="checkbox">
+                  <label for="">Filial 2 - Caixa 1</label>
+                </div>
+                <div class="input-form">
+                  <input type="checkbox" class="checkbox">
+                  <label for="">Filial 3 - Caixa 1</label>
+                </div>
+                <div class="input-form">
+                  <input type="checkbox" class="checkbox">
+                  <label for="">Filial 3 - Caixa 2</label>
+                </div>
+                <div class="input-form">
+                  <input type="checkbox" class="checkbox">
+                  <label for="">Filial 3 - Caixa 3</label>
+                </div>
+                <div class="input-form">
+                  <input type="checkbox" class="checkbox">
+                  <label for="">Filial 4 - Caixa 1</label>
+                </div>
+                <div class="input-form">
+                  <input type="checkbox" class="checkbox">
+                  <label for="">Filial 4 - Caixa 2</label>
+                </div>
+                <div class="input-form">
+                  <input type="checkbox" class="checkbox">
+                  <label for="">Filial 4 - Caixa 3</label>
+                </div>
+            </div>
+          </div>
+
+        </form>
+      </section>
+
+      <footer class="modal__footer">
+        <a href="" class="bt-back to-left"> Voltar </a>
+        <a href="" class="bt-confirm to-right">Abrir Caixa</a>
+      </footer>
+
+    </div>
+  </div>
 
   <div class="global-barrier"></div>
   <!-- End global-barrier!-->

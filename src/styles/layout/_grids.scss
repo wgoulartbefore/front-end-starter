@@ -76,7 +76,6 @@ $_fg_padding: 0 !default; // padding for column boxes. Set as desired, can overr
   }
 }
 
-
 // *** width override for a column *** //
 @mixin _fg_width($ratio, $gutter: $_fg_gutter) {
   $calc_percent: $ratio * 100%;
@@ -84,10 +83,11 @@ $_fg_padding: 0 !default; // padding for column boxes. Set as desired, can overr
   width: calc(#{$calc_percent} - #{$calc_gutter});
 };
 
-
 //
-@for $i from 1 through 12 {
-  .gr-#{$i} {
-    @include grid($i);
+@include susy-breakpoint($screen-medium, 12) {
+  @for $i from 1 through 12 {
+    .gr-#{$i} {
+      @include grid($i);
+    }
   }
 }

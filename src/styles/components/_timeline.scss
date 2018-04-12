@@ -1,24 +1,25 @@
 .timeline {
-  padding-bottom: $size-components-padding;
-  padding-top: $size-components-padding;
+  display: block;
   border-bottom: 1px solid $color-grey-400;
 
   &-header {
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
     margin-bottom: $size-components-margin;
 
-    &__prev,
-    &__next,
     &__month,
+    &__next,
+    &__prev,
     &__today {
       background: $color-grey-100;
       color: $color-grey-900;
       margin-right: $size-std-padding;
     }
 
-    &__prev,
-    &__next {
-      padding: 5px 15px;
+    &__next,
+    &__prev {
+      display: block;
+      padding: ($size-std-padding / 2) 15px;
       height: 40px;
       line-height: 30px;
       font-size: 18px;
@@ -33,6 +34,11 @@
       border-right: 0;
     }
 
+    &__prev {
+      margin-left: $size-components-padding;
+    }
+
+
     &__month {
       background: transparent;
       font-size: 20px;
@@ -41,14 +47,20 @@
     }
 
     &__legend {
-      margin-left: auto;
+      display: flex;
+      width: 100%;
+      flex-wrap: wrap;
       align-self: center;
+      justify-content: center;
+      order: 3;
 
       span {
+        display: block;
         margin-left: $size-components-padding;
+        margin-top: $size-components-padding;
 
         &::before {
-          content:"";
+          content: "";
           display: inline-block;
           width: $size-components-padding;
           height: $size-components-padding;
@@ -69,33 +81,43 @@
         }
       }
 
-      .pending{
+      .pending {
         &::before {
           background: $color-base-warning;
         }
       }
 
     }
+
+    .bt-confirm {
+      display: block;
+      width: 100%;
+      margin: $size-components-padding;
+    }
   }
 
   &-days {
     display: flex;
-    position: relative;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    background: $color-grey-0;
+    border-top: 3px solid $color-grey-400;
+    padding: $size-components-padding;
+    margin-top: 15px;
+    clear: both;
   }
 
   &__day {
     position: relative;
+    margin: ($size-std-padding / 2);
+    padding: ($size-std-padding / 2);
+    border-radius: 2px;
+    width: 30px;
+    height: 30px;
     @include adjust-font-size-to(16px);
     color: $color-grey-400;
     font-weight: 700;
-    height: 30px;
-    line-height: 30px;
     text-align: center;
     z-index: 1;
-    flex: 1;
-    border-radius: 2px;
-    margin: 0 5px;
     transition: all 0.2s;
 
     &:hover {
@@ -103,21 +125,24 @@
       background: $color-grey-400;
     }
 
-    &--active {
-      color: $color-grey-900;
-      background: $color-grey-400;
-      height: 30px;
-      border: 2px solid $color-grey-900;
-      line-height: 24px;
-      background: transparent;
-
-       &:hover {
-         background: transparent;
-         color: $color-grey-900;
-       }
+    &--close {
+      color: $color-grey-0;
+      background: $color-grey-500;
     }
 
-    &--alert {
+    &--active{
+      color: $color-grey-900;
+      background: $color-grey-500;
+      border: 1px solid $color-grey-900;
+      background: transparent;
+
+      &:hover {
+        background: transparent;
+        color: $color-grey-900;
+      }
+    }
+
+    &--pending {
       color: $color-grey-0;
       background: $color-base-warning;
 
@@ -126,7 +151,7 @@
       }
     }
 
-    &--pending {
+    &--open {
       color: $color-grey-0;
       background: $color-base-success;
 
@@ -136,10 +161,55 @@
     }
   }
 
-  @include susy-breakpoint($screen-medium, 16) {
-    &-header {
-      display: flex;
+  @include susy-breakpoint($screen-small, 6) {
+    .bt-confirm {
+      width: auto;
+      margin: 0;
+      order: 2;
+      margin-left: auto;
     }
   }
 
+  @include susy-breakpoint($screen-big, 16) {
+    padding-bottom: $size-components-padding;
+    padding-top: $size-components-padding;
+    border-bottom: 1px solid $color-grey-400;
+
+    &-header {
+      display: flex;
+
+      &__prev {
+        margin-left: 0;
+      }
+
+      &__legend {
+        width: auto;
+
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 0;
+
+        span {
+          display: initial;
+          margin-left: $size-components-padding;
+          margin-bottom: $size-components-padding;
+        }
+      }
+
+      .bt-confirm {
+        order: 3;
+        margin-left: auto;
+      }
+    }
+
+    &-days {
+      display: flex;
+      position: relative;
+      justify-content: space-between;
+      background: transparent;
+      border: 0;
+      padding: 0;
+    }
+
+  }
 }
