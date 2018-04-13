@@ -198,7 +198,6 @@ ul.gen-text {
   margin-bottom: 5px;
 }
 
-
 .text-details {
   @include adjust-font-size-to(18px);
   color: $color-grey-1000;
@@ -225,7 +224,6 @@ ul.gen-text {
   font-weight: 700;
 }
 
-
 .gen-text-link {
   display: block;
   @include adjust-font-size-to(14px);
@@ -241,4 +239,11 @@ ul.gen-text {
   a:hover {
     text-decoration: underline;
   }
+}
+
+.title-aside {
+  @include adjust-font-size-to(20px);
+  font-weight: 700;
+  color: #6A707E;
+  text-align: center;
 }

@@ -1,0 +1,606 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8">
+  <title>Mercurio</title>
+
+  <!-- IE Edge !-->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <!-- Mobile Viewport !-->
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+  <!-- Android Theme !-->
+  <meta name="theme-color" content="#4a245d">
+
+  <!-- Google Fonts !-->
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet">
+  <!-- Estilos Padrão !-->
+  <link rel="stylesheet" href="styles/main.css" type="text/css" media="screen, projection">
+</head>
+
+<body class="modal-active">
+  <div id="master-header" class="master-header">
+    <nav class="header-opts-bar">
+      <div class="holder">
+        <ul class="header-opts-list">
+          <li class="header-opts-item">
+            <span id="relogioExpiraSessao" class="hasCountdown">
+              <span class="countdown_row countdown_amount">19:52</span>
+            <span class="countdown_row countdown_descr">A sessão expira em: </span>
+            </span>
+          </li>
+
+          <li class="header-opts-item">
+            <a class="header-opts-link">
+              <i class="fa fa-phone"></i>
+              Atendimento Online
+            </a>
+          </li>
+
+          <li class="header-opts-item">
+            <a class="header-opts-link">
+              <i class="fa fa-question-circle"></i>
+              Ajuda
+            </a>
+
+            <div class="header-opts-submenu">
+              <a href="https://before.atlassian.net/servicedesk/customer/portal/2 " class="header-opts-text ">
+                Central do Cliente
+              </a>" class="header-opts-text"> Central do Cliente
+              </a>
+              <a href="" class="header-opts-text">
+                Manual
+              </a>
+            </div>
+          </li>
+
+          <li class="header-opts-item">
+            <a class="header-opts-link">
+              <i class="fa fa-info-circle"></i>
+              Informações
+            </a>
+            <div class="header-opts-submenu">
+              <h4 class="header-opts-title"> Tabela de preço: </h4>
+              <p class="header-opts-text">
+                Última atualização: 14/11/2017 08:17:33
+              </p>
+              <p class="header-opts-text">
+                Início da vigência: 14/11/2017
+              </p>
+
+              <h4 class="header-opts-title"> Telefones para suporte: </h4>
+              <a href="tel:0673352-3456" class="header-opts-text">
+                (067) 3352-3456
+              </a>
+              <a href="tel:0673230-0099" class="header-opts-text">
+                (067) 3230-0099
+              </a>
+
+              <h4 class="header-opts-title">Celulares para suporte:</h4>
+              <a href="tel:06799614-1046" class="header-opts-text">
+                (067) 99614-1046
+              </a>
+              <a href="tel:06799972-3456" class="header-opts-text">
+                (067) 99972-3456
+              </a>
+              <a href="tel:06798109-8602" class="header-opts-text">
+                (067) 98109-8602
+              </a>
+              <a href="tel:01196866-0077" class="header-opts-text">
+                (011) 96866-0077
+              </a>
+              <a href="tel:01199558-1504" class="header-opts-text">
+                (011) 99558-1504
+              </a>
+
+              <h4 class="header-opts-title">Celulares para comercial:</h4>
+              <a href="tel:06799904-8880" class="header-opts-text">
+                (067) 99904-8880
+              </a>
+              <a href="tel:06799958-8880" class="header-opts-text">
+                (067) 99958-8880
+              </a>
+
+              <a href="tel:01196390-9900" class="header-opts-text">
+                (011) 96390-9900
+              </a>
+
+              <p class="header-opts-title">Claro GO</p>
+              <p class="header-opts-title">Versão 2.2.181</p>
+            </div>
+
+          </li>
+
+          <li class="header-opts-item">
+            <a class="header-opts-link">
+              <i class="fa fa-bell"></i>
+              Notificações
+            </a>
+
+            <div class="header-opts-submenu">
+              <ul class="header-notification-list">
+                <li class="header-notification-item">
+                  <a href="" class="header-notification-link">
+                    <i class="header-notification-icon fa fa-bell"></i>
+                    <div class="header-notification-text">
+                      <p class="">Revista Claro Ligado - 219ª Edição - Diretoria de Lojas - Nacional</p>
+                      <date class="header-notification-date">12/12/2017 - 10:35</date>
+                    </div>
+                  </a>
+                </li>
+
+                <li class="header-notification-item">
+                  <a href="" class="header-notification-link">
+                    <i class="header-notification-icon fa fa-bell"></i>
+                    <div class="header-notification-text">
+                      <p class="">Revista Claro Ligado - 219ª Edição - Diretoria de Lojas - Nacional</p>
+                      <date class="header-notification-date">12/12/2017 - 10:35</date>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+        </ul>
+      </div>
+    </nav>
+    <!-- ./header-opts-bar -->
+
+    <!-- Main Header !-->
+    <header id="main-header" class="main-header">
+      <div class="container">
+        <h1 id="main-logo">
+          <a href="#">
+            <img src="/images/main-logo.svg" width="200" height="34" class="" alt="Logo da marca Mercurio" />
+            <span>Mercurio - Software de Gestão de Revendas Claro</span>
+          </a>
+        </h1>
+
+        <form class="main-header-search" role="search">
+          <div class="input-container">
+            <input type="text" class="input-search" placeholder="O que você procura?">
+          </div>
+          <button class="search-submit" type="submit">
+            <i class="fa fa-search"></i>
+            <span>Buscar</span>
+          </button>
+          <a id="bt-mobile-search-back" class="search-back">
+            <i class="fa fa-arrow-left"></i>
+          </a>
+        </form>
+
+        <nav class="main-header-user">
+          <a href="" class="header-user-options">Olá, Rafael Sandim</a>
+          <div class="header-user-submenu">
+            <p class="header-user-submenu-item">
+              <strong>Rafael Sandim | CELULARES S/A</strong>
+              <a class="fa fa-pencil-square-o"></a>
+            </p>
+            <p class="header-user-submenu-item">
+              <strong>E-mail:</strong> revenda@rafael.bom.br </p>
+            <p class="header-user-submenu-item">
+              <a href="">Deslogar</a>
+            </p>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <div class="header-mobile-opts">
+      <a id="bt-mobile-menu" class="opt-mobile-menu">
+        <i class="fa fa fa-bars"></i>
+      </a>
+      <a id="bt-mobile-search" class="opt-search">
+        <i class="fa fa-search"></i>
+      </a>
+      <h2 class="page-title"></h2>
+    </div>
+    <!-- End Main Header  !-->
+
+    <!-- Main Menu !-->
+    <nav id="main-menu">
+      <ul class="main-menu-mobile">
+        <li>
+          <a>
+            <i class="fa fa-user"></i>Notificações</a>
+        </li>
+        <li>
+          <a>
+            <i class="fa fa-list"></i> Meus Pedidos</a>
+        </li>
+        <li>
+          <a>
+            <i class="fa fa-phone"></i> Atendimento Online</a>
+        </li>
+      </ul>
+
+      <ul class="menu-list">
+        <li class="menu-list__item menu-list--submenu">
+          <a class="menu-list__link">
+            <i class="fa fa-tag"></i>
+            Acesso rápido
+          </a>
+
+          <ul class="submenu-list">
+            <li>
+              <a>Cliente</a>
+            </li>
+            <li>
+              <a>Compras</a>
+            </li>
+            <li>
+              <a>Fornecedor</a>
+            </li>
+            <li>
+              <a>Usuários</a>
+            </li>
+            <li>
+              <a>Valor Aparelho Claro</a>
+            </li>
+            <li>
+              <a>Venda</a>
+            </li>
+          </ul>
+
+        </li>
+
+        <li class="menu-list__item menu-list--submenu ">
+          <a class="menu-list__link">
+            <i class="fa fa-shopping-cart"></i>
+            Venda
+          </a>
+          <ul class="submenu-list">
+            <li>
+              <a>Venda</a>
+            </li>
+            <li>
+              <a>Gestão documental</a>
+            </li>
+            <li>
+              <a>Campanhas</a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="menu-list__item menu-list--submenu ">
+          <a class="menu-list__link">
+            <i class="fa fa-archive"></i>
+            Gestão de Estoque
+          </a>
+
+          <ul class="submenu-list">
+            <li>
+              <a>Acessório</a>
+            </li>
+            <li>
+              <a>Estoque</a>
+            </li>
+            <li>
+              <a>Produtos Open</a>
+            </li>
+            <li>
+              <a>Uso e Consumo</a>
+            </li>
+            <li>
+              <a>Valores</a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="menu-list__item menu-list--submenu ">
+          <a class="menu-list__link">
+            <i class="fa fa-usd"></i>
+            Financeiro
+          </a>
+
+          <ul class="submenu-list">
+            <li>
+              <a>Baixa de títulos</a>
+            </li>
+            <li>
+              <a>Caixa</a>
+            </li>
+            <li>
+              <a>Contas a Pagar</a>
+            </li>
+            <li>
+              <a>Contas a Receber</a>
+            </li>
+            <li>
+              <a>Contas Bancárias</a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="menu-list__item menu-list--submenu ">
+          <a class="menu-list__link">
+            <i class="fa fa-bar-chart"></i>
+            Relatórios
+          </a>
+
+          <ul class="submenu-list">
+            <li>
+              <a>Comissões</a>
+            </li>
+            <li>
+              <a>Estoque</a>
+            </li>
+            <li>
+              <a>Financeiro</a>
+            </li>
+            <li>
+              <a>Gerencial</a>
+            </li>
+            <li>
+              <a>Movimento</a>
+            </li>
+            <li>
+              <a>Pessoas</a>
+            </li>
+            <li>
+              <a>Remuneração</a>
+            </li>
+            <li>
+              <a>Vendas</a>
+            </li>
+            <li>
+              <a>Claro GO</a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="menu-list__item menu-list--submenu ">
+          <a class="menu-list__link">
+            <i class="fa fa-cog"></i>
+            Configurações
+          </a>
+          <ul class="submenu-list">
+            <li>
+              <a>Alíquotas</a>
+            </li>
+            <li>
+              <a>Comunicação</a>
+            </li>
+            <li>
+              <a>Metas e Comissões</a>
+            </li>
+            <li>
+              <a>Rede</a>
+            </li>
+            <li>
+              <a>Usuários</a>
+            </li>
+          </ul>
+        </li>
+
+      </ul>
+    </nav>
+    <!-- End Main Menu  ! -->
+  </div>
+
+  <section class="header-heading">
+    <div class="container">
+      <nav class="breadcrumb">
+        <ul class="breadcrumb__list">
+          <li class="breadcrumb__item">
+            <a href="" class="breadcrumb__link">Início</a>
+          </li>
+          <li class="breadcrumb__item">
+            <a href="" class="breadcrumb__link">Financeiro</a>
+          </li>
+          <li class="breadcrumb__item">
+            <a href="" class="breadcrumb__link">Caixa Aberto</a>
+          </li>
+        </ul>
+      </nav>
+
+      <header class="title-page">
+        <h2 class="title-page__title">Caixa Aberto</h2>
+        <p class="title-page__subtitle">Lista das informações dos caixas abertos.</p>
+      </header>
+
+    </div>
+  </section>
+
+  <!-- Global Holder!-->
+
+  <div id="content">
+    <section id="main-content">
+      <div class="container">
+
+        <div class="gr-5">
+        </div>
+
+        <!-- ./container -->
+    </section>
+    </div>
+    <!-- End Global Content Holder!-->
+
+    <div class="modal">
+      <div class="modal__content">
+
+        <header class="modal__header">
+          <h4 class="title">Visualisar Detalhes</h4>
+          <a class="bt-close">
+            <i class="fa fa-times"></i>
+          </a>
+        </header>
+
+        <section class="modal__body">
+
+          <fieldset class="cashier-modal-header">
+            <div class="gr-4">
+              <div class="form-line">
+                <label class="gen-text">Responsável pelo fechamento:</label>
+                <strong>GEORGE VICTOR AIRES DE SOUZA</strong>
+              </div>
+
+              <div class="form-line">
+                <label class="gen-text">Data da baixa:</label>
+                <strong> 11/04/2018</strong>
+              </div>
+
+              <div class="form-line">
+                <label class="gen-text">Total Contabilizado</label>
+                <strong>R$ 2.698,00</strong>
+              </div>
+
+              <div class="form-line">
+                <label class="gen-text">Saldo total do Caixa</label>
+                <strong>R$ 2.698,00</strong>
+              </div>
+            </div>
+          </fieldset>
+
+          <table class="table-striped">
+            <thead>
+              <tr>
+                <th rowspan="2"> Formas de Pagamento </th>
+                <th rowspan="2"> Valor de Abertura </th>
+                <th colspan="2" width="20%"> Financeiro </th>
+                <th colspan="2" width="20%"> Movimentos </th>
+                <th rowspan="2"> Valor <br> Contabilizado </th>
+                <th rowspan="2"> Saldo Final do <br> Caixa </th>
+                <th rowspan="2"> Diferença </th>
+              </tr>
+              <tr>
+                <th>Entrada</th>
+                <th>Saída</th>
+                <th>Entrada</th>
+                <th>Saída</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Dinheiro</td>
+                <td>R$ 941,91</td>
+                <td>R$ 0,00</td>
+                <td>R$ 0,00</td>
+                <td>R$ 0,00</td>
+                <td>R$ 0,00</td>
+                <td>R$ 0,00</td>
+                <td><input type="text" class="input-singleline" value="R$ R$ 0,00"></td>
+                <td>R$ 0,00</td>
+              </tr>
+              <tr>
+                <td>Cheque</td>
+                <td>R$ 941,91</td>
+                <td>R$ 0,00</td>
+                <td>R$ 0,00</td>
+                <td>R$ 0,00</td>
+                <td>R$ 4.598,00</td>
+                <td>R$ 0,00</td>
+                <td><input type="text" class="input-singleline" value="R$ 4.598,00"></td>
+                <td>R$ 0,00</td>
+              </tr>
+
+              <tr>
+                <td>REDE PARC MASTER</td>
+                <td>R$ 2.919,00</td>
+                <td>R$ 0,00</td>
+                <td>R$ 0,00</td>
+                <td>R$ 0,00</td>
+                <td>R$ 0,00</td>
+                <td>R$ 0,00</td>
+                <td><input type="text" class="input-singleline" value="R$ R$ 0,00"></td>
+                <td>R$ 0,00</td>
+              </tr>
+              <tr>
+                <td>SANT CRED MASTER</td>
+                <td>R$ 69,00</td>
+                <td>R$ 0,00</td>
+                <td>R$ 0,00</td>
+                <td>R$ 0,00</td>
+                <td>R$ 0,00</td>
+                <td>R$ 0,00</td>
+                <td><input type="text" class="input-singleline" value="R$ R$ 0,00"></td>
+                <td>R$ 0,00</td>
+              </tr>
+              <tr>
+                <td>SANT CRED VISA</td>
+                <td>R$ 69,00</td>
+                <td>R$ 0,00</td>
+                <td>R$ 0,00</td>
+                <td>R$ 0,00</td>
+                <td>R$ 0,00</td>
+                <td>R$ 0,00</td>
+                <td><input type="text" class="input-singleline" value="R$ R$ 0,00"></td>
+                <td>R$ 0,00</td>
+              </tr>
+              <tr>
+                <td>SANT DEB MASTER</td>
+                <td>R$ 0,00</td>
+                <td>R$ 0,00</td>
+                <td>R$ 0,00</td>
+                <td>R$ 0,00</td>
+                <td>R$ 0,00</td>
+                <td>R$ 0,00</td>
+                <td><input type="text" class="input-singleline" value="R$ R$ 0,00"></td>
+                <td>R$ 0,00</td>
+              </tr>
+              <tr>
+                <td>SANT DEB VISA</td>
+                <td>R$ 12,00</td>
+                <td>R$ 0,00</td>
+                <td>R$ 0,00</td>
+                <td>R$ 0,00</td>
+                <td>R$ 0,00</td>
+                <td>R$ 0,00</td>
+                <td><input type="text" class="input-singleline" value="R$ R$ 0,00"></td>
+                <td>R$ 0,00</td>
+              </tr>
+              <tr>
+                <td>SANT PARC MASTER</td>
+                <td>R$ 129,00</td>
+                <td>R$ 0,00</td>
+                <td>R$ 0,00</td>
+                <td>R$ 0,00</td>
+                <td>R$ 0,00</td>
+                <td>R$ 0,00</td>
+                <td><input type="text" class="input-singleline" value="R$ R$ 0,00"></td>
+                <td>R$ 0,00</td>
+              </tr>
+              <tr>
+                <td>SANT PARC VISA</td>
+                <td>R$ 2.499,00</td>
+                <td>R$ 0,00</td>
+                <td>R$ 0,00</td>
+                <td>R$ 0,00</td>
+                <td>R$ 0,00</td>
+                <td>R$ 0,00</td>
+                <td><input type="text" class="input-singleline" value="R$ R$ 0,00"></td>
+                <td>R$ 0,00</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="area-buttons">
+            <button class="bt-export"> Visualizar movimentos detalhados </button>
+            <button class="bt-export"> Visualizar movimentos resumidos </button>
+            <button class="bt-export"> Visualizar relatórios de pagamento deste PDV </button>
+          </div>
+        </section>
+
+        <footer class="modal__footer">
+          <a href="" class="bt-back to-left"> Voltar </a>
+
+
+          <a href="" class="bt-confirm">Lançar diferença de R$300,00</a>
+          <a href="" class="bt-confirm">Salvar</a>
+        </footer>
+
+      </div>
+    </div>
+
+    <div class="global-barrier"></div>
+    <!-- End global-barrier!-->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="scripts/app.js"></script>
+
+</body>
+
+</html>

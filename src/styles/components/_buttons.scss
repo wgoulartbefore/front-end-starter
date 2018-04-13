@@ -112,6 +112,15 @@
   @include createButton(#3f63be);
 }
 
+.bt-options {
+  @include adjust-font-size-to(16px);
+  padding: ( $size-std-padding / 2 )  $size-components-padding;
+  border: 1px solid $color-grey-400;
+  border-radius: 20px;
+  background: transparent;
+  color: $color-grey-900;
+}
+
 .bt--small {
   padding-right: 10px;
   padding-left: 10px;

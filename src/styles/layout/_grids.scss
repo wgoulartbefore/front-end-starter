@@ -43,7 +43,6 @@ $_fg_padding: 0 !default; // padding for column boxes. Set as desired, can overr
   }
 }
 
-
 // *** Set up grid with equal width columns *** //
 @mixin equal-grid($cols: 0, $gutter: $_fg_gutter, $padding: $_fg_padding) {
   box-sizing: border-box;
@@ -58,9 +57,11 @@ $_fg_padding: 0 !default; // padding for column boxes. Set as desired, can overr
     margin-left: $gutter * 1px;
     margin-bottom: $gutter * 1px;
     box-sizing: border-box;
+
     &.no-mb {
       margin-bottom: 0;
     }
+
   }
 
   $calc_percent: (1/$cols) * 100%;
@@ -69,7 +70,8 @@ $_fg_padding: 0 !default; // padding for column boxes. Set as desired, can overr
   > * {
     @if $cols == 1 {
       width: $calc_percent;
-      margin-left: 0;
+      // margin-left: 0;
+      margin-left: $gutter * 1px;
     } @else {
       width: calc(#{$calc_percent} - #{$calc_gutter_allowance});
     }
