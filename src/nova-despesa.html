@@ -107,7 +107,6 @@
               <p class="header-opts-title">Claro GO</p>
               <p class="header-opts-title">Versão 2.2.181</p>
             </div>
-
           </li>
           <li class="header-opts-item">
             <a class="header-opts-link">
@@ -396,6 +395,7 @@
       </ul>
     </nav>
     <!-- End Main Menu  ! -->
+
   </div>
 
   <section class="header-heading">
@@ -424,64 +424,66 @@
   <div id="content">
     <section id="main-content">
       <div class="container">
+        <div class="expense">
+          <form action="" class="expense__form">
+            <div class="form-line">
+              <div class="input-holder">
+                <label for="">Valor:</label>
+                <input type="text" class="input-singleline" placeholder="Valor">
+              </div>
+              <div class="input-holder">
+                <label for="">Data de Compensação:</label>
+                <input type="text" class="input-singleline" placeholder="Valor">
+              </div>
+              <div class="input-holder">
+                <label for="">Pago:</label>
+                <input type="checkbox">
+              </div>
+            </div>
 
-        <div class="card-box full--card">
-
-          <div class="expense">
-
-            <form action="" class="expense__form">
-              <div class="gr-3">
-                <div class="input-holder">
-                  <label for="">Valor:</label>
-                  <input type="text" class="input-singleline" placeholder="Valor">
-                </div>
-                <div class="input-holder">
-                  <label for="">Data de Compensação:</label>
-                  <input type="text" class="input-singleline" placeholder="Valor">
-                </div>
-                <div class="input-holder">
-                  <label for="">Pago:</label>
-                  <input type="checkbox">
+            <div class="form-line">
+              <div class="input-holder">
+                <label for="">Tipo de Despesa:</label>
+                <div class="fancy-select">
+                  <select name="" id="">
+                    <options>Selecione um tipo de Despesa</options>
+                    <options>2</options>
+                    <options>3</options>
+                    <options>4</options>
+                    <options>5</options>
+                  </select>
                 </div>
               </div>
-              <div class="gr-2">
-                <div class="input-holder">
-                  <label for="">Tipo de Despesa:</label>
-                  <div class="fancy-select">
-                    <select name="" id="">
-                      <options>Selecione um tipo de Despesa</options>
-                      <options>2</options>
-                      <options>3</options>
-                      <options>4</options>
-                      <options>5</options>
-                    </select>
-                  </div>
-                </div>
-                <div class="input-holder">
-                  <label for="">Caixa:</label>
-                  <div class="fancy-select">
-                    <select name="" id="">
-                      <options>Selecione um Caixa</options>
-                      <options>2</options>
-                      <options>3</options>
-                      <options>4</options>
-                      <options>5</options>
-                    </select>
-                  </div>
+              <div class="input-holder">
+                <label for="">Caixa:</label>
+                <div class="fancy-select">
+                  <select name="" id="">
+                    <options>Selecione um Caixa</options>
+                    <options>2</options>
+                    <options>3</options>
+                    <options>4</options>
+                    <options>5</options>
+                  </select>
                 </div>
               </div>
-              <div class="gr-1">
+            </div>
+            <div class="form-line">
+              <div class="input-holder">
+                <label for="">Descrição <small>opcional</small>:</label>
+                <input type="text" class="input-singleline" placeholder="">
+              </div>
+            </div>
+
+            <div class="expense__form-more-opions">
+              <div class="toogle-options">
+                <span class="text"> <i class="fa fa-angle-up"></i> Incluir mais informações </span>
+              </div>
+              <div class="form-line">
                 <div class="input-holder">
-                  <label for="">Descrição <small>opcional</small>:</label>
+                  <label for="">Fornecedor:</label>
                   <input type="text" class="input-singleline" placeholder="">
                 </div>
-              </div>
-              <div class="gr-2">
-                  <div class="input-holder">
-                    <label for="">Fornecedor:</label>
-                    <input type="text" class="input-singleline" placeholder="">
-                  </div>
-                <div class="gr-2">
+                <div class="form-line">
                   <div class="input-holder">
                     <label for="">Data de Competência:</label>
                     <input type="text" class="input-singleline" placeholder="">
@@ -493,34 +495,34 @@
                   </div>
                 </div>
               </div>
-              <div class="gr-1">
-                <a href="" class="bt-options">
-                  <i class="fa fa-plus"></i> Forma de Pagamento
-                </a>
-              </div>
-              <nav class="area-buttons">
-                <a href="" class="bt-confirm to-right">Salvar Despesa</a>
-              </nav>
-            </form>
+            </div>
 
-            <aside class="expense__sidebar">
-              <img src="../images/icon-despesas.svg" alt="" class="expense__sidebar__icon-despesa">
-              <h4 class="title-aside">Despesas Simplificadas</h4>
-              <p class="gen-text">
-                O lançamento das despesas foi simplificado, mas não perdeu seu poder de fogo. Basta clicar em ”Incluir mais informações" ou adicionar uma forma de pagamento para ver os seguintes ítens:
-              </p>
-              <ul class="list-disc">
-                <li>Dados do Forncecedor;</li>
-                <li>Nota Fiscal.</li>
-                <li>Formas de Pagamento.</li>
-                <li>Parcelamento Avançado.</li>
-                <li>E outros.</li>
-              </ul>
-            </aside>
-          </div>
+            <div class="form-line">
+              <a href="" class="bt-options">
+                <i class="fa fa-plus"></i> Forma de Pagamento
+              </a>
+            </div>
 
+            <nav class="area-buttons">
+              <a href="" class="bt-confirm to-right">Salvar Despesa</a>
+            </nav>
+          </form>
+
+          <aside class="expense__sidebar">
+            <img src="../images/icon-despesas.svg" alt="" class="expense__sidebar__icon-despesa">
+            <h4 class="title-aside">Despesas Simplificadas</h4>
+            <p class="gen-text">
+              O lançamento das despesas foi simplificado, mas não perdeu seu poder de fogo. Basta clicar em <strong>”Incluir mais informações"</strong> ou adicionar uma forma de pagamento para ver os seguintes ítens:
+            </p>
+            <ul class="list-disc">
+              <li>Dados do Forncecedor;</li>
+              <li>Nota Fiscal.</li>
+              <li>Formas de Pagamento.</li>
+              <li>Parcelamento Avançado.</li>
+              <li>E outros.</li>
+            </ul>
+          </aside>
         </div>
-
       </div>
       <!-- ./container -->
     </section>
@@ -532,7 +534,5 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="scripts/app.js"></script>
-
 </body>
-
 </html>
