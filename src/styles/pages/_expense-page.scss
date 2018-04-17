@@ -1,108 +1,158 @@
 .expense {
-  display: block;
-  background: $color-grey-0;
-  padding-top: $size-components-padding;
-  padding-bottom: $size-components-padding;
-  margin-bottom: $size-components-height;
-  @extend %clearfix;
+  &-container {
+    display: block;
+    background: $color-grey-0;
+    @extend %clearfix;
+  }
 
-    &__form,
-    &__sidebar {
+  &-form,
+  &-sidebar {
     @include span(full);
     padding: $size-components-padding;
   }
 
-  &__form {
-    display: block;
-
+  &-form {
     .form-line {
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-between;
-      margin-bottom: $size-components-padding;
-
-      .form-line {
-        margin-left: $size-components-padding;
-      }
-
-      label {
-        display: block;
-      }
     }
 
     .input-holder {
+      flex: 1 100%;
+      margin-bottom: $size-components-padding;
+    }
+
+    .half-input {
       flex: 1;
-      margin-left: $size-components-padding;
+    }
 
-      &:first-child {
-        margin-left: 0;
-      }
+    label {
+      display: block;
+    }
 
+    small {
+      position: relative;
+      color: $color-grey-400;
+    }
 
+    .bt-options{
+      margin-top: $size-components-padding;
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    .bt-confirm {
+      width: 100%;
     }
   }
 
-  &__form-more-opions {
-    display: block;
-    margin: $size-components-padding 0;
+  &-sidebar {
+    color: $color-grey-600;
+    text-align: center;
 
-    .toogle-options {
+    &__icon {
       display: block;
-      position: relative;
       margin-bottom: $size-components-padding;
+    }
 
-      .text {
-        position: relative;
-        background: $color-grey-0;
-        @include adjust-font-size-to(16px);
-        color: #B0BAC5;
-        padding-right: $size-components-padding;
-        cursor: pointer;
-        .fa {
-          font-size: 22px;
-        }
-      }
+    &__title,
+    &__text {
+      display: block;
+      margin-bottom: $size-components-padding;
+    }
 
-      &::before {
-        content:"";
-        position: absolute;
-        height: 1px;
-        width: 100%;
-        background: #B0BAC5;
-        top: 50%;
-        transform: translateY(-50%);
-        z-index: 0;
-      }
+    &__title {
+      @include adjust-font-size-to(20px);
+      font-weight: 700;
+    }
 
+    &__text {
+      @include adjust-font-size-to(16px);
+    }
+
+    .list-disc {
+      text-align: left;
+    }
+  }
+
+  &-link-more {
+    display: block;
+    width: 100%;
+    position: relative;
+    margin-bottom: $size-components-padding;
+
+    &__text {
+      position: relative;
+      padding-right: $size-components-padding;
+      background: $color-grey-0;
+      color: $color-grey-400;
+      z-index: 1;
+    }
+
+    .fa {
+      font-size: 20px;
+      background: $color-grey-0;
+      color: $color-grey-400;
+      padding-right: $size-components-padding;
+    }
+
+    &::before {
+      display: block;
+      width: 100%;
+      content:"";
+      position: absolute;
+      height: 1px;
+      width: 100%;
+      background: $color-grey-400;
+      top: 50%;
+      transform: translateY(50%);
+      z-index: 0;
     }
   }
 
   @include susy-breakpoint($screen-medium, 12) {
-    &__form {
+
+    &-form {
       @include span(8);
 
-      .bt-options {
-        margin-left: auto;
-        margin-right: auto;
+      .half-input {
+        display: flex;
+        align-self: stretch;
+        margin-left: $size-components-padding;
+
+        .input-holder {
+          flex: 1 auto;
+        }
+      }
+
+      .input-holder {
+        flex: 1;
+        margin-left: $size-components-padding;
+
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+
+      .bt-confirm {
         width: auto;
       }
     }
 
-    &__sidebar {
+    &-sidebar {
       @include span(4);
-      border-left: 1px solid #B0BAC5;
-      color: #B0BAC5;
-      text-align: center;
+    }
+  }
 
-      &__icon-despesa {
-        display: block;
-        margin: $size-components-padding auto;
-      }
+  @include susy-breakpoint($screen-big, 16) {
+    margin-bottom: $size-components-height;
 
-      .list-disc {
-        text-align: left;
-      }
+    &-form {
+      @include span(11 of 16);
     }
 
+    &-sidebar {
+      @include span(5 of 16);
+    }
   }
 }

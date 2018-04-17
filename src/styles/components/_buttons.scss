@@ -114,11 +114,18 @@
 
 .bt-options {
   @include adjust-font-size-to(16px);
-  padding: ( $size-std-padding / 2 )  $size-components-padding;
+  background: transparent;
   border: 1px solid $color-grey-400;
   border-radius: 20px;
-  background: transparent;
-  color: $color-grey-900;
+  color: $color-grey-600;
+  padding: ( $size-std-padding / 2 )  $size-components-padding;
+  transition: all .3s ease-in-out;
+
+  &:hover {
+    background: $color-grey-600;
+    border-color: $color-grey-600;
+    color: $color-grey-0;
+  }
 }
 
 .bt--small {

@@ -425,103 +425,99 @@
     <section id="main-content">
       <div class="container">
         <div class="expense">
-          <form action="" class="expense__form">
-            <div class="form-line">
-              <div class="input-holder">
-                <label for="">Valor:</label>
-                <input type="text" class="input-singleline" placeholder="Valor">
-              </div>
-              <div class="input-holder">
-                <label for="">Data de Compensação:</label>
-                <input type="text" class="input-singleline" placeholder="Valor">
-              </div>
-              <div class="input-holder">
-                <label for="">Pago:</label>
-                <input type="checkbox">
-              </div>
-            </div>
+          <div class="expense-container">
 
-            <div class="form-line">
-              <div class="input-holder">
-                <label for="">Tipo de Despesa:</label>
-                <div class="fancy-select">
-                  <select name="" id="">
-                    <options>Selecione um tipo de Despesa</options>
-                    <options>2</options>
-                    <options>3</options>
-                    <options>4</options>
-                    <options>5</options>
-                  </select>
-                </div>
-              </div>
-              <div class="input-holder">
-                <label for="">Caixa:</label>
-                <div class="fancy-select">
-                  <select name="" id="">
-                    <options>Selecione um Caixa</options>
-                    <options>2</options>
-                    <options>3</options>
-                    <options>4</options>
-                    <options>5</options>
-                  </select>
-                </div>
-              </div>
-            </div>
-            <div class="form-line">
-              <div class="input-holder">
-                <label for="">Descrição <small>opcional</small>:</label>
-                <input type="text" class="input-singleline" placeholder="">
-              </div>
-            </div>
-
-            <div class="expense__form-more-opions">
-              <div class="toogle-options">
-                <span class="text"> <i class="fa fa-angle-up"></i> Incluir mais informações </span>
-              </div>
+            <form action="" class="expense-form">
               <div class="form-line">
                 <div class="input-holder">
-                  <label for="">Fornecedor:</label>
-                  <input type="text" class="input-singleline" placeholder="">
+                  <label for="">Valor:</label>
+                  <input type="text" class="input-singleline" placeholder="Informe o valor da despesa">
                 </div>
-                <div class="form-line">
+                <div class="half-input">
                   <div class="input-holder">
-                    <label for="">Data de Competência:</label>
-                    <input type="text" class="input-singleline" placeholder="">
+                    <label for="">Data de Compensação:</label>
+                    <input type="text" class="input-singleline" placeholder="Informe a data da despesa">
                   </div>
-
                   <div class="input-holder">
-                    <label for="">Nota Fiscal:</label>
-                    <input type="text" class="input-singleline" placeholder="">
+                    <label for="">Pago:</label>
+                    <input type="checkbox">
                   </div>
                 </div>
               </div>
-            </div>
 
-            <div class="form-line">
-              <a href="" class="bt-options">
-                <i class="fa fa-plus"></i> Forma de Pagamento
-              </a>
-            </div>
+              <div class="form-line">
+                <div class="input-holder">
+                  <label for="">Tipo de Despesa:</label>
+                  <div class="fancy-select">
+                    <select name="">
+                      <option>Selecione um tipo de Despesa</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="input-holder">
+                  <label for="">Caixa:</label>
+                  <div class="fancy-select">
+                    <select name="" id="">
+                      <option>Selecione um Caixa</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
 
-            <nav class="area-buttons">
-              <a href="" class="bt-confirm to-right">Salvar Despesa</a>
-            </nav>
-          </form>
+              <div class="form-line">
+                <div class="input-holder">
+                  <label for="">Descrição <small> - opcional</small>:</label>
+                  <input type="text" class="input-singleline" placeholder="">
+                </div>
+              </div>
 
-          <aside class="expense__sidebar">
-            <img src="../images/icon-despesas.svg" alt="" class="expense__sidebar__icon-despesa">
-            <h4 class="title-aside">Despesas Simplificadas</h4>
-            <p class="gen-text">
-              O lançamento das despesas foi simplificado, mas não perdeu seu poder de fogo. Basta clicar em <strong>”Incluir mais informações"</strong> ou adicionar uma forma de pagamento para ver os seguintes ítens:
-            </p>
-            <ul class="list-disc">
-              <li>Dados do Forncecedor;</li>
-              <li>Nota Fiscal.</li>
-              <li>Formas de Pagamento.</li>
-              <li>Parcelamento Avançado.</li>
-              <li>E outros.</li>
-            </ul>
-          </aside>
+              <div class="form-line">
+                <div class="expense-link-more">
+                  <a class="expense-link-more__text"> <i class="fa fa-angle-up"></i> Incluir mais informações </a>
+                </div>
+              </div>
+
+              <div class="form-line">
+                <a href="" class="bt-options">
+                  <i class="fa fa-plus"></i> Forma de Pagamento
+                </a>
+              </div>
+
+              <nav class="area-buttons">
+                <a href="" class="bt-confirm to-right">Salvar Despesa</a>
+              </nav>
+
+            </form>
+
+            <aside class="expense-sidebar">
+
+              <i class="expense-sidebar__icon">
+                <img src="../images/icon-despesas.svg" alt="">
+              </i>
+
+              <h4 class="expense-sidebar__title">Despesas Simplificadas</h4>
+              <p class="expense-sidebar__text">
+                O lançamento das despesas foi simplificado, mas não perdeu seu poder de fogo. Basta clicar em <strong>”Incluir mais informações"</strong> ou adicionar uma forma de pagamento para ver os seguintes ítens:
+              </p>
+
+              <ul class="list-disc">
+                <li>Dados do forncecedor.</li>
+                <li>Nota fiscal.</li>
+                <li>Formas de pagamento.</li>
+                <li>Parcelamento avançado e outros.</li>
+              </ul>
+
+            </aside>
+
+          </div>
         </div>
       </div>
       <!-- ./container -->
