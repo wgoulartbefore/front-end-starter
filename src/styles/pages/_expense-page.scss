@@ -44,11 +44,17 @@
     .bt-confirm {
       width: 100%;
     }
+
+    &__accordion {
+      display: flex;
+      flex: 1;
+    }
   }
 
   &-sidebar {
     color: $color-grey-600;
     text-align: center;
+    border-top: 1px solid $color-grey-400;
 
     &__icon {
       display: block;
@@ -110,7 +116,39 @@
     }
   }
 
+  &-payments {
+    display: block;
+    margin: $size-components-padding 0;
+
+    &_link {
+      display: block;
+      text-align: right;
+      color: $color-grey-400;
+      margin-bottom: $size-components-padding;
+    }
+
+    &__item {
+      border: 1px solid $color-grey-400;
+      text-align: center;
+      padding: $size-components-padding * 2;
+      margin-bottom: $size-components-padding;
+    }
+
+    &__icon {
+      display: block;
+      margin-bottom: $size-components-padding;
+    }
+
+    &__text {
+      color: $color-grey-400;
+    }
+  }
+
   @include susy-breakpoint($screen-medium, 12) {
+
+    &-container {
+      padding: $size-components-padding 0;
+    }
 
     &-form {
       @include span(8);
@@ -137,10 +175,54 @@
       .bt-confirm {
         width: auto;
       }
+
+      &__accordion {
+
+        .form-line {
+          width: 100%;
+        }
+
+        .input-holder {
+          flex: 1 auto;
+        }
+      }
     }
 
     &-sidebar {
       @include span(4);
+      border: 0;
+      border-left: 1px solid $color-grey-400;
+    }
+
+    &-payments {
+      &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        text-align: center;
+        margin-left: -($size-components-padding);
+      }
+
+      &__item {
+        display: block;
+        flex: 1 0 auto;
+        padding: $size-components-padding * 2;
+        margin-left: $size-components-padding;
+        align-self: center;
+      }
+
+      &__icon {
+        display: flex;
+        align-self: center;
+        justify-content: center;
+        height: 80px;
+        margin-bottom: $size-components-padding;
+      }
+
+      &__text {
+        color: $color-grey-400;
+      }
+
     }
   }
 
@@ -154,5 +236,14 @@
     &-sidebar {
       @include span(5 of 16);
     }
+
+    &-payments {
+      &__item {
+        &:nth-child(even){
+          margin-right: 0;
+        }
+      }
+    }
   }
+
 }

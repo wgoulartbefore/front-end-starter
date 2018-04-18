@@ -449,7 +449,7 @@
                 <div class="input-holder">
                   <label for="">Tipo de Despesa:</label>
                   <div class="fancy-select">
-                    <select name="">
+                    <select name="" id="">
                       <option>Selecione um tipo de Despesa</option>
                       <option>2</option>
                       <option>3</option>
@@ -483,12 +483,68 @@
                 <div class="expense-link-more">
                   <a class="expense-link-more__text"> <i class="fa fa-angle-up"></i> Incluir mais informações </a>
                 </div>
+
+                <div class="expense-form__accordion">
+
+                  <div class="form-line">
+                    <div class="input-holder">
+                      <label for="">Fornecedor:</label>
+                      <input type="text" class="input-singleline" placeholder="Informe o Fornecedor">
+                    </div>
+
+                    <div class="input-holder">
+                      <label for="">Data de Competência:</label>
+                      <input type="text" class="input-singleline" placeholder="18/04/2018">
+                    </div>
+
+                    <div class="input-holder">
+                      <label for="">Nota Fiscal:</label>
+                      <input type="text" class="input-singleline" placeholder="">
+                    </div>
+
+                  </div>
+
+                </div>
               </div>
 
               <div class="form-line">
                 <a href="" class="bt-options">
                   <i class="fa fa-plus"></i> Forma de Pagamento
                 </a>
+              </div>
+
+              <div class="expense-payments">
+                <a class="expense-payments_link">Fechar formas de pagamento</a>
+
+                <div class="expense-payments__list">
+                  <div class="expense-payments__item">
+                    <span class="expense-payments__icon">
+                      <img src="../images/icon-dinheiro.svg" alt="">
+                    </span>
+                    <span class="expense-payments__text">Dinheiro</span>
+                  </div>
+
+                  <div class="expense-payments__item">
+                    <span class="expense-payments__icon">
+                      <img src="../images/icon-cartao.svg" alt="">
+                    </span>
+                    <span class="expense-payments__text">Cartão</span>
+                  </div>
+
+                  <div class="expense-payments__item">
+                    <span class="expense-payments__icon">
+                      <img src="../images/icon-boleto.svg" alt="">
+                    </span>
+                    <span class="expense-payments__text">Boleto</span>
+                  </div>
+
+                  <div class="expense-payments__item">
+                    <span class="expense-payments__icon">
+                      <img src="../images/icon-outros.svg" alt="">
+                    </span>
+                    <span class="expense-payments__text">Outros</span>
+                  </div>
+                </div>
               </div>
 
               <nav class="area-buttons">
@@ -516,11 +572,11 @@
               </ul>
 
             </aside>
-
           </div>
         </div>
       </div>
       <!-- ./container -->
+
     </section>
   </div>
   <!-- End Global Content Holder!-->
