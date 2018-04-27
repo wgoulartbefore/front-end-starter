@@ -17,7 +17,7 @@ const isMobile = {
   any: function () {
     return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
   }
-}
+};
 
 function mobileScreen() {
   let mobileSize = 1280;
@@ -27,7 +27,7 @@ function mobileScreen() {
   if (windowSize >= mobileSize) {
     mobileState = false;
   } else {
-    mobileState = true
+    mobileState = true;
   }
 
   return mobileState;
@@ -53,7 +53,7 @@ function mainMenuController() {
 
   function bindMenuClose() {
     $(document).on('keydown.mainmenu', function (e) {
-      if (e.which == 27) {
+      if (e.which === 27) {
         closeMenu();
         e.preventDefault();
       }
@@ -153,7 +153,7 @@ function switchTypeClientRegisterSell() {
 
   function hiddenElements() {
     $('.form-register > fieldset').each(function () {
-      this.classList.remove("is-visible");
+      this.classList.remove('is-visible');
     });
   }
 
@@ -193,14 +193,14 @@ function switchTypeClientRegisterSell() {
 function openUserOptions() {
   let optsOpenClass = 'options-open';
 
-  $(document).on('click', '.main-header-user', function(event) {
+  $(document).on('click', '.main-header-user', function (event) {
     let element = $(this);
 
     element.find('.header-user-options').toggleClass(optsOpenClass);
     event.preventDefault();
   });
 
-  $(document).on('mouseleave', '.main-header-user', function() {
+  $(document).on('mouseleave', '.main-header-user', function () {
     setTimeout(() => {
       $(this).find('.header-user-options').removeClass(optsOpenClass);
     }, 1500);
@@ -220,7 +220,7 @@ function headerSearchController() {
 
   function bindSearchClose() {
     $(document).on('keydown.mainmenu', function (e) {
-      if (e.which == 27) {
+      if (e.which === 27) {
         closeSearch();
         e.preventDefault();
       }
@@ -256,18 +256,18 @@ function headerSearchController() {
 }
 
 function headerOptsController() {
-    let optsItem = $('.header-opts-item');
-    let optsOpenClass = 'open-submenu';
+  let optsItem = $('.header-opts-item');
+  let optsOpenClass = 'open-submenu';
 
-    $(document).on('click', '.header-opts-item', function(event) {
-        let element = $(this);
-        optsItem.removeClass(optsOpenClass);
-        element.toggleClass(optsOpenClass);
-        event.preventDefault();
+  $(document).on('click', '.header-opts-item', function (event) {
+      let element = $(this);
+      optsItem.removeClass(optsOpenClass);
+      element.toggleClass(optsOpenClass);
+      event.preventDefault();
     });
 
-    $(document).on('mouseleave','.header-opts-item', function() {
-      setTimeout(function() {
+  $(document).on('mouseleave', '.header-opts-item', function () {
+      setTimeout(function () {
         $('.header-opts-item').removeClass(optsOpenClass);
       }, 180);
     });
@@ -277,66 +277,66 @@ function boxCardController() {
   const activeClass = 'box-card--open';
 
   function showContent(element) {
-      element.closest('.box-card').find('.box-card__content').slideDown();
-      element.closest('.box-card').addClass(activeClass);
+    element.closest('.box-card').find('.box-card__content').slideDown();
+    element.closest('.box-card').addClass(activeClass);
   }
 
   function hideContent(element) {
-      element.closest('.box-card').removeClass(activeClass);
-      element.closest('.box-card').find('.box-card__content').slideUp();
+    element.closest('.box-card').removeClass(activeClass);
+    element.closest('.box-card').find('.box-card__content').slideUp();
   }
 
   $(document).on('click', '.box-card__title', function (e) {
-      e.preventDefault();
-      let element = $(this);
-      element.closest('.box-card').toggleClass
+    e.preventDefault();
+    let element = $(this);
+    element.closest('.box-card').toggleClass;
 
-      if (element.closest('.box-card').hasClass(activeClass)) {
-          hideContent(element);
+    if (element.closest('.box-card').hasClass(activeClass)) {
+        hideContent(element);
       } else {
-          showContent(element);
+        showContent(element);
       }
   });
 }
 
-function ModalClass(){
+function ModalClass() {
 
-	var stdReturn = this;
-	var domClasses = {};
-	var components = {};
-	var modal = null;
-	var pageHTML = $('html');
-	var modalTarget = $('body');
-	var modalStatus = false;
-	var closeCallback = null;
-	var barrier = null;
+	  var stdReturn = this;
+	  var domClasses = {};
+	  var components = {};
+	  var modal = null;
+	  var pageHTML = $('html');
+	  var modalTarget = $('body');
+	  var modalStatus = false;
+	  var closeCallback = null;
+	  var barrier = null;
 
-	domClasses.modalActive = 'modal-active';
-	domClasses.container = 'modal';
-	domClasses.content = domClasses.container + '-content';
-	domClasses.header = domClasses.container + '-header';
-	domClasses.body = domClasses.container + '-body';
-	domClasses.footer = domClasses.container + '-footer';
-	domClasses.title = 'title';
-	domClasses.btclose = 'bt-close';
-	domClasses.globalBarrier = 'global-barrier';
+	  domClasses.modalActive = 'modal-active';
+	  domClasses.container = 'modal';
+	  domClasses.content = domClasses.container + '-content';
+	  domClasses.header = domClasses.container + '-header';
+	  domClasses.body = domClasses.container + '-body';
+	  domClasses.footer = domClasses.container + '-footer';
+	  domClasses.title = 'title';
+	  domClasses.btclose = 'bt-close';
+	  domClasses.globalBarrier = 'global-barrier';
 
 
-	modal = $('<div ></div>').addClass(domClasses.container);
-	barrier = $('.' + domClasses.globalBarrier);
+	  modal = $('<div ></div>').addClass(domClasses.container);
+	  barrier = $('.' + domClasses.globalBarrier);
 
-	components.content = $('<div></div>').addClass(domClasses.content);
-	components.header = $('<div></div>').addClass(domClasses.header);
-	components.body = $('<div></div>').addClass(domClasses.body);
-	components.footer = $('<div></div>').addClass(domClasses.footer);
-	components.title = $('<h4></h4>').addClass(domClasses.title);
-	components.btclose = $('<a><i class="fa fa-times"></i></a>').addClass(domClasses.btclose);
+	  components.content = $('<div></div>').addClass(domClasses.content);
+	  components.header = $('<div></div>').addClass(domClasses.header);
+	  components.body = $('<div></div>').addClass(domClasses.body);
+	  components.footer = $('<div></div>').addClass(domClasses.footer);
+	  components.title = $('<h4></h4>').addClass(domClasses.title);
+	  components.btclose = $('<a><i class="fa fa-times"></i></a>').addClass(domClasses.btclose);
 
-	function constructor(){
+	  function constructor() {
 
-		components.globalBarrier = $('.' + domClasses.globalBarrier);
+		  components.globalBarrier = $('.' + domClasses.globalBarrier);
 
-		modal
+		  modal
 			.append(components.content
 				.append(components.header
 					.append(components.title)
@@ -344,143 +344,143 @@ function ModalClass(){
 				)
 				.append(components.body)
 				.append(components.footer)
-			)
+			);
 
-		modalTarget.append(modal);
-		modal.on('click.modal', '.' + domClasses.btclose, hideModal);
+		  modalTarget.append(modal);
+		  modal.on('click.modal', '.' + domClasses.btclose, hideModal);
 
 	}
 
-	function clearElements(){
-		components.title.html('');
-		components.body.html('');
-		components.footer.html('');
-		modalStatus = false;
+	  function clearElements() {
+		  components.title.html('');
+		  components.body.html('');
+		  components.footer.html('');
+		  modalStatus = false;
 	}
 
-	function solveCallback(){
-		if(closeCallback != null){
-			closeCallback();
-			closeCallback = null;
+	  function solveCallback() {
+		  if (closeCallback !== null) {
+			  closeCallback();
+			  closeCallback = null;
 		}
 	}
 
-	function setLabel(title){
-		components.title.html(title);
-		return stdReturn;
+	  function setLabel(title) {
+		  components.title.html(title);
+		  return stdReturn;
 	}
 
-	function bindClose(){
-		$(document).on('keydown.mainmenu', function(e){
-			if(e.which == 27){
-				hideModal();
-				e.preventDefault();
+	  function bindClose() {
+		  $(document).on('keydown.mainmenu', function (e) {
+			  if (e.which === 27) {
+				  hideModal();
+				  e.preventDefault();
 			}
 		});
 	}
 
-	function unbindClose(){
-		$(document).off('keydown.modal');
+	  function unbindClose() {
+		  $(document).off('keydown.modal');
 	}
 
 
-	function showModal(){
-		if(modalStatus){
-			printc('Modal alredy visible. Please use ".close()" method first.');
-		}else{
-			pageHTML.addClass(domClasses.modalActive);
-			modalTarget.addClass(domClasses.modalActive);
-			modal.focus();
-			bindClose();
-			modalStatus = true;
+	  function showModal() {
+		  if (modalStatus) {
+			  printc('Modal alredy visible. Please use ".close()" method first.');
+		} else {
+			  pageHTML.addClass(domClasses.modalActive);
+			  modalTarget.addClass(domClasses.modalActive);
+			  modal.focus();
+			  bindClose();
+			  modalStatus = true;
 		}
-		return stdReturn;
+		  return stdReturn;
 	}
 
-	function hideModal(){
+	  function hideModal() {
 
-		if(modalStatus){
+		  if (modalStatus) {
 
-			pageHTML.removeClass(domClasses.modalActive);
-			modalTarget.removeClass(domClasses.modalActive);
-			clearElements();
-			unbindClose();
-			solveCallback();
+			  pageHTML.removeClass(domClasses.modalActive);
+			  modalTarget.removeClass(domClasses.modalActive);
+			  clearElements();
+			  unbindClose();
+			  solveCallback();
 
-		}else{
-			printc('Modal alredy hidden. Please use ".open()" method first.');
-		}
-
-		return stdReturn;
-	}
-
-	function setHTML(htmlCode){
-		components.body.html(htmlCode);
-		return stdReturn;
-	}
-
-	function appendCode(htmlCode){
-		components.body.append(htmlCode);
-		return stdReturn;
-	}
-
-	function setFooter(htmlCode){
-		components.footer.html(htmlCode);
-		return stdReturn;
-	}
-
-	function returnStatus(){
-		return modalStatus;
-	}
-
-	function returnBody(){
-		return components.body;
-	}
-
-	function openLoader(message){
-		var message = message || 'Carregando... Por favor aguarde.';
-		var html = '<div class="modal-loader"><style>.modal-loader{display: block;position: absolute;top: 0;left: 0;width: 100%;height: 100%;background: rgba(255, 255, 255, 0.8);color: #333;text-align: center;z-index: 9;}.modal-loader-content{display: block;position: absolute;width: 100%;top: 50%;left: 0;height: 100px;margin-top: -50px;text-align: center;}.modal-loader-icon{font-size: 36px;margin-bottom: 20px;}.modal-loader-message{font-size: 16px;line-height: 22px;height: 44px;overflow: hidden;padding: 0 15px;}.modal-body{position: relative;}</style><div class="modal-loader-content"><i class="fa fa-spin fa-spinner modal-loader-icon"></i><p class="modal-loader-message">' + message + '</p></div></div>';
-
-		if(modalStatus){
-			closeLoader();
-			components.body.append(html);
-		}else{
-			printc('Modal must be open to call loader');
+		} else {
+			  printc('Modal alredy hidden. Please use ".open()" method first.');
 		}
 
-		return stdReturn;
+		  return stdReturn;
 	}
 
-	function closeLoader(){
-		if(modalStatus){
-			components.body.find('.modal-loader').remove();
-		}else{
-			printc('Modal must be open to close loader.');
+	  function setHTML(htmlCode) {
+		  components.body.html(htmlCode);
+		  return stdReturn;
+	}
+
+	  function appendCode(htmlCode) {
+		  components.body.append(htmlCode);
+		  return stdReturn;
+	}
+
+	  function setFooter(htmlCode) {
+		  components.footer.html(htmlCode);
+		  return stdReturn;
+	}
+
+	  function returnStatus() {
+		  return modalStatus;
+	}
+
+	  function returnBody() {
+		  return components.body;
+	}
+
+	  function openLoader(message) {
+		  var message = message || 'Carregando... Por favor aguarde.';
+		  var html = '<div class="modal-loader"><style>.modal-loader{display: block;position: absolute;top: 0;left: 0;width: 100%;height: 100%;background: rgba(255, 255, 255, 0.8);color: #333;text-align: center;z-index: 9;}.modal-loader-content{display: block;position: absolute;width: 100%;top: 50%;left: 0;height: 100px;margin-top: -50px;text-align: center;}.modal-loader-icon{font-size: 36px;margin-bottom: 20px;}.modal-loader-message{font-size: 16px;line-height: 22px;height: 44px;overflow: hidden;padding: 0 15px;}.modal-body{position: relative;}</style><div class="modal-loader-content"><i class="fa fa-spin fa-spinner modal-loader-icon"></i><p class="modal-loader-message">' + message + '</p></div></div>';
+
+		  if (modalStatus) {
+			  closeLoader();
+			  components.body.append(html);
+		} else {
+			  printc('Modal must be open to call loader');
+		}
+
+		  return stdReturn;
+	}
+
+	  function closeLoader() {
+		  if (modalStatus) {
+			  components.body.find('.modal-loader').remove();
+		} else {
+			  printc('Modal must be open to close loader.');
 		}
 	}
 
-	function setCloseCallback(fx){
-		if(typeof(fx) == 'function'){
-			closeCallback = fx;
-			printc('Binded function callback');
-		}else{
-			printc('Param received for callback is not a function');
+	  function setCloseCallback(fx) {
+		  if (typeof(fx) === 'function') {
+			  closeCallback = fx;
+			  printc('Binded function callback');
+		} else {
+			  printc('Param received for callback is not a function');
 		}
-		return stdReturn;
+		  return stdReturn;
 	}
 
 	/* Métodos Públicos */
-	this.open = showModal;
-	this.close = hideModal;
-	this.status = returnStatus;
-	this.getBody = returnBody;
-	this.label = setLabel;
-	this.html = setHTML;
-	this.append = appendCode;
-	this.footer = setFooter;
-	this.closeCallback = setCloseCallback;
-	this.openLoader = openLoader;
-	this.closeLoader = closeLoader;
+	  this.open = showModal;
+	  this.close = hideModal;
+	  this.status = returnStatus;
+	  this.getBody = returnBody;
+	  this.label = setLabel;
+	  this.html = setHTML;
+	  this.append = appendCode;
+	  this.footer = setFooter;
+	  this.closeCallback = setCloseCallback;
+	  this.openLoader = openLoader;
+	  this.closeLoader = closeLoader;
 
   constructor();
 
@@ -492,7 +492,7 @@ function showFilter() {
   $(document).on('click', '.filter-search-link', (event) => {
     event.preventDefault();
     advancedFilter.toggleClass('filter-search-advanced--open');
-  })
+  });
 }
 
 // selectCashier
@@ -501,13 +501,13 @@ function cashierActive() {
   let cashierItem = $('.cashier-item');
   let optsOpenClass = 'cashier-item-select';
 
-  $(document).on('click', '.cashier-item', function(event) {
+  $(document).on('click', '.cashier-item', function (event) {
     if ( $(this).hasClass(optsOpenClass) ) {
         // cashierItem.removeClass(optsOpenClass);
-        cashierItem.removeClass(optsOpenClass);
+      cashierItem.removeClass(optsOpenClass);
     } else {
-        cashierItem.removeClass(optsOpenClass);
-        $(this).addClass(optsOpenClass);
+      cashierItem.removeClass(optsOpenClass);
+      $(this).addClass(optsOpenClass);
     }
   });
 }

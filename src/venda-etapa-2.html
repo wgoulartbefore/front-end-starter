@@ -442,58 +442,57 @@
   <!-- Global Holder!-->
   <div id="global-holder">
     <section id="main-content">
+
       <div class="container">
-
         <div class="card-container card-container--std">
-
           <div class="card-container__title">
             Buscar dados do Cliente
           </div>
-
           <div class="card-container__content">
-            <form class="form-std form-std--sale-clientes">
-
-              <div class="form-line">
-                <label for=""><strong class="gen-text">Dados do Cliente:</strong></label>
-                <input type="text" class="input-singleline" placeholder="Pesquise pelo CPF ou CNPJ do Cliente..">
+            <form class="form-std form-std--singup-client">
+              <div class="form-line form-line--button">
+                <label>CPF:</label>
+                <div class="input-holder">
+                  <input type="text" class="input-singleline" placeholder="Pesquise os dados pelo CPF ou CNPJ do cliente...">
+                  <button class="bt-confirm"><i class="fa fa-search"></i> Buscar </button>
+                </div>
               </div>
 
-              <div class="form-line form-line--autosize">
-                <label for=""><strong class="gen-text">Dados do Cliente:</strong></label>
-                <input type="text" class="input-singleline" placeholder="Pesquise pelo CPF ou CNPJ do Cliente..">
-                <a href="" class="bt-edit"><i class="fa fa-edit"></i> Editar Cadastro</a>
+              <div class="form-line form-line--button">
+                <div class="input-holder">
+                  <!--<input type="text" class="input-singleline" placeholder="Rafael de Jesus Sandim" value="" disabled>-->
+                  <p class="text">Rafael de Jesus Sandim</p>
+                  <button class="bt-edit"><i class="fa fa-edit"></i> Editar Cliente</button>
+                </div>
               </div>
 
-              <div class="form-line">
-                <label for=""><strong class="gen-text">Score do Cliente:</strong></label>
+              <div class="form-line form-line--button">
+                <label>Nome do cliente:</label>
+                <div class="input-holder">
+                  <input type="text" class="input-singleline" placeholder="Informe o nome do cliente">
+                  <button class="bt-main"><i class="fa fa-user-plus"></i> Cadastrar cliente</button>
+                </div>
+              </div>
+
+              <div class="form-line score-cliente">
+                <label> Score do Cliente: </label>
                 <div class="fancy-select">
-                  <select id="score" name="score"><option value="0">Consulta não realizada</option>
+                  <select id="score" name="score">
+                    <option value="0">Consulta não realizada</option>
                     <option value="1">Aprovado com restrição</option>
                     <option selected="" value="2">Aprovado</option>
                     <option value="3">Reprovado</option>
                   </select>
                 </div>
               </div>
-
-              <div class="form-line">
-                <fieldset class="spacing-medium text-center">
-                  <p class="gen-text"><strong>Deseja Cadastrar Cliente?</strong></p>
-                    <div class="form-line form-line--center">
-                      <a href="" class="bt-main"><i class="fa fa-user-plus"></i> Cadastrar Cliente</a>
-                    </div>
-                </fieldset>
-              </div>
-
             </form>
           </div>
         </div>
-
         <div class="area-buttons">
           <a href="" class="bt-back"> Voltar </a>
           <a href="" class="to-right bt-confirm ">Avançar</a>
         </div>
         <!-- ./gen-box -->
-
       </div>
       <!-- ./container -->
     </section>

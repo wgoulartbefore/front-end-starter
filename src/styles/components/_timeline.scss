@@ -27,17 +27,22 @@
       background: transparent;
       font-size: 20px;
       font-weight: 700;
+
+      &--disable {
+        color: $color-grey-400;
+        pointer-events: none;
+        border-color: $color-grey-400;
+      }
     }
 
     &__prev {
       margin-right: 0;
-      border-right: 0;
-    }
-
-    &__prev {
       margin-left: $size-components-padding;
     }
 
+    &__next {
+      border-left: 0;
+    }
 
     &__month {
       background: transparent;
@@ -114,7 +119,7 @@
     width: 30px;
     height: 30px;
     @include adjust-font-size-to(16px);
-    color: $color-grey-400;
+    color: $color-grey-800;
     font-weight: 700;
     text-align: center;
     z-index: 1;
@@ -130,11 +135,14 @@
       background: $color-grey-500;
     }
 
-    &--active{
-      color: $color-grey-900;
+    &--close {
+      color: $color-grey-0;
       background: $color-grey-500;
-      border: 1px solid $color-grey-900;
-      background: transparent;
+    }
+
+    &--disable {
+      color: $color-grey-400;
+      pointer-events: none;
 
       &:hover {
         background: transparent;

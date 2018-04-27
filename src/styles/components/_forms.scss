@@ -1101,6 +1101,44 @@ fieldset {
     }
   }
 
+  &--singup-client {
+    display: block;
+
+    label {
+      display: block;
+      font-weight: 700;
+    }
+
+    .form-line {
+      margin-bottom: $size-components-padding;
+    }
+
+    .input-holder {
+      display: flex;
+    }
+
+    p,
+    .user-name-text {
+      display: block;
+      width: 100%;
+      font-size: 18px;
+      line-height: 40px;
+      border-bottom: 1px solid $color-grey-400;
+    }
+
+    [class^="bt-"] {
+      flex: 1 auto;
+      min-width: 220px;
+      margin-left: $size-components-padding;
+    }
+
+    @include susy-breakpoint($screen-medium, 12) {
+      width: 50%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+  }
 }
 
 .form-line--autosize {
