@@ -11,7 +11,7 @@
 
   .header {
     position: relative;
-    padding-right: ($size-components-height + ($size-components-padding / 2));
+    padding-right: ($size-components-height  ($size-components-padding / 2));
   }
 
   .title {
@@ -88,6 +88,52 @@
     @include susy-breakpoint($screen-big, 16) {
       @include span(16);
     }
+  }
+}
+
+.feedback-message {
+  display: block;
+  background: rgba($color-base-success, .1);
+  color: $color-base-success;
+  font-weight: 700;
+  border: 1px solid $color-base-success;
+  padding: $size-std-padding;
+
+  height: 0;
+  transform: translateY(-100%);
+  visibility: hidden;
+
+  text-align: center;
+  transition: all 1.5s;
+  border-radius: 2px;
+
+  &--open {
+    animation: 1300ms feedbackShowAndHidden;
+    opacity: 1;
+    height: auto;
+    transform: translateY(0);
+    visibility: visible;
+    margin-top: $size-std-padding;
+    margin-bottom: $size-std-padding;
+  }
+}
+
+@keyframes feedbackShowAndHidden {
+  0% {
+    opacity: 0;
+    transform: translateY(-50%);
+    visibility: hidden;
+  }
+
+  50% {
+    opacity: 0.7;
+    transform: translateY(10%);
+    visibility: visible;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 

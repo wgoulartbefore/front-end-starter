@@ -116,14 +116,14 @@
     margin: ($size-std-padding / 2);
     padding: ($size-std-padding / 2);
     border-radius: 2px;
-    width: 30px;
+    width: 28px;
     height: 30px;
     @include adjust-font-size-to(16px);
     color: $color-grey-800;
     font-weight: 700;
     text-align: center;
     z-index: 1;
-    transition: all 0.2s;
+    transition: all 0.3s;
 
     &:hover {
       color: $color-grey-0;
