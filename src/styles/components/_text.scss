@@ -247,3 +247,33 @@ ul.gen-text {
   color: #6A707E;
   text-align: center;
 }
+
+
+.header-details-page {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: right;
+
+  &__title {
+    @include adjust-font-size-to(24px);
+    color: $color-grey-900;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    &--pending {
+      color: $color-base-warning;
+    }
+
+    &--done {
+      color: $color-base-success;
+    }
+  }
+
+  &__text {
+    @include adjust-font-size-to(16px);
+    color: $color-grey-900;
+  }
+}

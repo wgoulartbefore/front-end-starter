@@ -41,6 +41,7 @@
       line-height: 18px;
     }
   }
+  
   @include susy-breakpoint($screen-medium, 12) {
     .title {
       font-size: 16px;
@@ -104,7 +105,7 @@
   visibility: hidden;
 
   text-align: center;
-  transition: all 1.5s;
+  transition: height .5s ease-out, transform .3s ease-out;
   border-radius: 2px;
 
   &--open {
@@ -115,6 +116,7 @@
     visibility: visible;
     margin-top: $size-std-padding;
     margin-bottom: $size-std-padding;
+    transition: all .5s ease-out;
   }
 }
 

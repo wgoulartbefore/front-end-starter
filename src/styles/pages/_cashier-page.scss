@@ -46,7 +46,7 @@
     border-radius: 2px;
     box-shadow: 0 4px 10px -2px rgba(0,0,0,0.2);
     transition: all 0.5s cubic-bezier(0, 0, 0, 1.1);
-    border-top: 3px solid $color-grey-500;
+    border-top: 5px solid $color-grey-500;
 
     &-number {
       @include adjust-font-size-to(14px);
@@ -73,11 +73,11 @@
     }
 
     &-text {
-      @include adjust-font-size-to(14px);
+      @include adjust-font-size-to(16px);
 
       strong {
         display: block;
-        @include adjust-font-size-to(16px);
+        @include adjust-font-size-to(18px);
       }
     }
 
