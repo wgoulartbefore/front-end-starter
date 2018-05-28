@@ -199,7 +199,7 @@
       border: 0;
       border-color:$color-grey-0;
       height: $size-components-padding * 2;
-      width: $size-components-padding * 2;
+      min-width: $size-components-padding * 2;
       text-align: center;
     }
 
@@ -209,6 +209,15 @@
       line-height: 30px;
       font-weight: 300;
       padding: 0;
+
+      &:hover {
+        background-color: $color-grey-100;
+      }
+
+      &:last-child {
+        padding-right: $size-components-padding;
+        padding-left: $size-components-padding;
+      }
 
       &--active {
         background-color: $color-base-main;
