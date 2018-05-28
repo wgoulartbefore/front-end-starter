@@ -512,6 +512,15 @@ function cashierActive() {
   });
 }
 
+function showInstallments() {
+  let advancedFilter = $('.filter-search-advanced');
+
+  $(document).on('click', '.filter-search-link', (event) => {
+    event.preventDefault();
+    advancedFilter.toggleClass('filter-search-advanced--open');
+  });
+}
+
 headerOptsController();
 openUserOptions();
 headerSearchController();

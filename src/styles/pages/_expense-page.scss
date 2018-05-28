@@ -4,11 +4,13 @@
     background: $color-grey-0;
     @extend %clearfix;
   }
+
   &-form,
   &-sidebar {
     @include span(full);
     padding: $size-components-padding;
   }
+
   &-form {
     .form-line {
       display: flex;
@@ -101,6 +103,7 @@
     display: block;
     width: 100%;
     margin: $size-components-padding 0;
+
     &_link {
       display: block;
       text-align: right;
@@ -113,6 +116,7 @@
         color: $color-grey-800;
       }
     }
+
     &__item {
       border: 1px solid $color-grey-400;
       text-align: center;
@@ -120,27 +124,35 @@
       margin-bottom: $size-components-padding;
       transition-duration: 0.3s;
       transition-property: color, background-color;
+
       &:hover {
         background-color: $color-grey-100;
         .expense-payments__text {
           color: $color-base-main;
         }
       }
+
     }
+
     &__icon {
       display: block;
       margin-bottom: $size-components-padding;
     }
+
     &__text {
       color: $color-grey-400;
       transition-duration: 0.5s;
     }
+
   }
+
   @include susy-breakpoint($screen-medium, 12) {
     &-container {
       padding: $size-components-padding 0;
     }
+
     &-form {
+
       @include span(8);
       .half-input {
         display: flex;
@@ -150,6 +162,7 @@
           flex: 1 auto;
         }
       }
+
       .input-holder {
         flex: 1;
         margin-left: $size-components-padding;
@@ -157,9 +170,11 @@
           margin-left: 0;
         }
       }
+
       .bt-confirm {
         width: auto;
       }
+
       &__accordion {
         .form-line {
           width: 100%;
@@ -169,11 +184,13 @@
         }
       }
     }
+
     &-sidebar {
       @include span(4);
       border: 0;
       border-left: 1px solid $color-grey-400;
     }
+
     &-payments {
       &__list {
         display: flex;
@@ -201,14 +218,17 @@
       }
     }
   }
+
   @include susy-breakpoint($screen-big, 16) {
     margin-bottom: $size-components-height;
     &-form {
       @include span(11 of 16);
     }
+
     &-sidebar {
       @include span(5 of 16);
     }
+
     &-payments {
       &__item {
         &:nth-child(even) {
@@ -216,6 +236,7 @@
         }
       }
     }
+
   }
 }
 
@@ -223,6 +244,7 @@
   display: block;
   width: 100%;
   margin: $size-components-margin 0;
+
   &__header {
     display: block;
     padding: ($size-components-padding / 2) $size-components-padding;
@@ -230,105 +252,49 @@
     background: $color-base-background;
     margin-bottom: $size-components-padding;
   }
+
   &__title {
     @include adjust-font-size-to(16px);
     color: $color-grey-800;
     font-weight: 700;
   }
+
   &__remove {
     float: right;
     color: $color-grey-600;
   }
+
   &__content {
     display: block;
   }
 }
 
-.payment-installment {
+.installments {
   display: block;
   position: relative;
   width: 100%;
-  margin-left: $size-components-padding;
 
-  &__header {
-    display: flex;
-    width: 100%;
-  }
-
+  &__header,
   &__content {
     display: block;
-    padding: $size-components-padding;
   }
 
   &__title {
     position: relative;
     @include adjust-font-size-to(18px);
     color: #5779C9;
-    padding-left: $size-components-padding * 2;
   }
 
   &__remove {
-    margin-left: auto;
-    color: $color-grey-400;
-  }
-
-  .icon-parcelamento {
-    position: absolute;
-    left: 0;
-    top: 0;
-  }
-
-  &--open {
-    &::before {
-      content: "";
-      position: absolute;
-      width: 30px;
-      height: 100%;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      background: $color-grey-200;
-      z-index: 0;
-    }
-
-    .payment-installment__title {
-      color: #6A707E;
-    }
-
-    .payment-installment__content {
-      margin-left: $size-components-margin * 2;
-    }
-  }
-
-  &__table {
-    border: 0;
-    text-align: left;
-    width: 100%;
-
-    tr {
-      border-top: 1px solid $color-grey-200;
-
-      &:first-child {
-        border-top: 0;
-      }
-    }
-
-    td {
-      color: #6A707E;
-      vertical-align: middle;
-      padding: ($size-components-padding / 2) 0;
-    }
+    display: block;
+    margin: $size-components-padding 0;
   }
 
   &__switch-value {
-    display: flex;
     float: right;
-    justify-content: flex-end;
 
     .text {
-      font-size: 14px;
-      padding: 0 $size-components-padding / 2;
-      border-radius: 2px;
+      padding: $size-components-padding / 2;
 
       &--active {
         background: #5779C9;
@@ -336,4 +302,255 @@
       }
     }
   }
+
+  @include susy-breakpoint($screen-big, 16) {
+    margin-left: $size-components-padding;
+
+    &__header {
+      display: flex;
+      width: 100%;
+    }
+
+    &__title {
+      position: relative;
+      @include adjust-font-size-to(18px);
+      color: #5779C9;
+      padding-left: $size-components-padding * 2;
+    }
+
+    &__content {
+      padding: $size-components-padding 0;
+    }
+
+    &__remove {
+      margin-left: auto;
+      color: $color-grey-400;
+      cursor: pointer;
+    }
+
+    &--open {
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 30px;
+        height: 100%;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        background: $color-grey-200;
+        z-index: 0;
+      }
+
+      .installments__title {
+        color: #6A707E;
+      }
+
+      .installments__content {
+        margin-left: $size-components-margin * 2;
+      }
+
+    }
+
+    &__switch-value {
+      display: flex;
+      float: right;
+      justify-content: flex-end;
+
+      .text {
+        font-size: 14px;
+        padding: 0 $size-components-padding / 2;
+        border-radius: 2px;
+
+        &--active {
+          background: #5779C9;
+          color: $color-grey-0;
+        }
+      }
+    }
+
+    .icon-parcelamento {
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+    &-list {
+      display: block;
+      width: 100%;
+      &__header {
+        display: flex;
+        justify-content: space-between;
+        text-align: left;
+      }
+      &__items {
+        display: block;
+      }
+      &__item {
+        display: flex;
+        padding: ($size-components-padding / 2) 0;
+        border-top: 1px solid $color-grey-200;
+        justify-content: space-between;
+        &:first-child {
+          border-top: 0;
+        }
+        &--amount {
+          justify-content: center;
+          strong {
+            margin-right: $size-components-padding;
+          }
+        }
+      }
+      &__text {
+        display: flex;
+        margin-left: $size-components-padding;
+        color: #6A707E;
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+      &__input {
+        width: auto;
+        padding: 5px;
+        border-radius: 5px;
+        height: auto;
+        border: 1px solid;
+        border-color: $color-grey-0;
+        transition: all .3s;
+        &:focus {
+          border-color: $color-grey-400;
+          &+.refresh-value {
+            opacity: 1;
+          }
+        }
+      }
+      .refresh-value {
+        display: block;
+        opacity: 0;
+        color: #5779C9;
+        margin-left: $size-components-padding / 2;
+        transition: opacity .3s;
+      }
+    }
+  }
+
+  &-list {
+    display: block;
+
+    &__item {
+      display: block;
+      padding: ($size-components-padding / 2) 0;
+      border-top: 1px solid $color-grey-200;
+
+      &--amount {
+       justify-content: center;
+
+        strong {
+          margin-right: $size-components-padding;
+        }
+      }
+    }
+
+    &__text {
+      display: block;
+      width: 100%;
+      color: #6A707E;
+      text-align: center;
+      margin-bottom: $size-components-padding;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+
+    &__input {
+      display: block;
+      width: 100%;
+      border-color: $color-grey-0;
+      transition: all .3s;
+
+      &:focus {
+        border-color: $color-grey-400;
+
+        & + .refresh-value {
+          opacity: 1;
+        }
+      }
+    }
+
+    .refresh-value {
+      display: block;
+      opacity: 0;
+      color: #5779C9;
+      margin-left: $size-components-padding / 2;
+      transition: opacity .3s;
+    }
+
+  }
+}
+
+.expense-form {
+  background: $color-grey-100;
+}
+
+// New Expense
+.expense {
+  display: block;
+  background: $color-grey-0;
+  padding: $size-components-padding;
+  @extend %clearfix;
+
+  @include susy-breakpoint($screen-big, 16) {
+  }
+
+}
+
+.expense-table {
+  width: 100%;
+  color: #6A707E;
+
+  &-actions-link {
+    display: flex;
+    justify-content: flex-end;
+
+    .link {
+      padding: $size-components-padding;
+
+      &:hover {
+        text-decoration: underline;
+      }
+
+      &-filter {
+        color: #5779C9;
+      }
+      &-select {
+        color: $color-base-success;
+      }
+      &-new {
+        color: $color-base-error;
+      }
+
+    }
+  }
+
+  thead {
+    background-color:#F5F5F5;
+    text-align: left;
+  }
+
+  th,
+  td {
+    border-top: 1px solid #DDEAF7;
+    padding: $size-components-padding + 5;
+  }
+
+  &--pending {
+    background: #FFFBE8;
+  }
+
+  &--delayed {
+    background: #FFE8E8;
+    color: #D32E28;
+  }
+
 }

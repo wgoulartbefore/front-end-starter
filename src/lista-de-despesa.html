@@ -425,300 +425,256 @@
   <div id="content">
     <section id="main-content">
       <div class="container">
-        <div class="expense">
-          <div class="expense-container">
+        <n class="expense">
 
-            <section class="expense-content">
-              <form action="" class="expense-form">
-                <div class="form-line">
-                  <div class="input-holder">
-                    <label for="">Valor:</label>
-                    <input type="text" class="input-singleline" placeholder="Informe o valor da despesa">
+          <nav class="expense-table-actions-link">
+            <a href="#" class="link link-filter">Filtros avançados</a>
+            <a href="#" class="link link-select">Marcar selecionadas como paga</a>
+            <a href="#" class="link link-new">Nova despesa</a>
+          </nav>
+
+          <table class="expense-table">
+            <thead>
+              <tr>
+                <th>
+                  <input type="checkbox" class="checkbox">
+                </th>
+                <th>
+                  Vencimento
+                </th>
+                <th>
+                  Compensação
+                </th>
+                <th>
+                  Descrição
+                </th>
+                <th>
+                  Valor
+                </th>
+                <th>
+                  Pago
+                </th>
+                <th>
+                  &nbsp;
+                </th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>
+                  <input type="checkbox" class="checkbox">
+                </td>
+                <td>11/04/2018</td>
+                <td>11/04/2018</td>
+                <td>Conta de Energia</td>
+                <td>R$ 3.200,00</td>
+                <td>
+                  <input type="checkbox" class="checkbox"> </td>
+                <td>
+                  <div class="action-table">
+                    <i class="fa fa-ellipsis-v"></i>
                   </div>
-                  <div class="half-input">
-                    <div class="input-holder">
-                      <label for="">Data de Compensação:</label>
-                      <input type="text" class="input-singleline" placeholder="Informe a data da despesa">
-                    </div>
-                    <div class="input-holder">
-                      <label for="">Pago:</label>
-                      <input type="checkbox">
-                    </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <input type="checkbox" class="checkbox">
+                </td>
+                <td>11/04/2018</td>
+                <td>11/04/2018</td>
+                <td>Conta de Energia</td>
+                <td>R$ 3.200,00</td>
+                <td>
+                  <input type="checkbox" class="checkbox"> </td>
+                <td>
+                  <div class="action-table">
+                    <i class="fa fa-ellipsis-v"></i>
                   </div>
-                </div>
-                <div class="form-line">
-                  <div class="input-holder">
-                    <label for="">Tipo de Despesa:</label>
-                    <div class="fancy-select">
-                      <select name="" id="">
-                        <option>Selecione um tipo de Despesa</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                      </select>
-                    </div>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <input type="checkbox" class="checkbox">
+                </td>
+                <td>11/04/2018</td>
+                <td>11/04/2018</td>
+                <td>Conta de Energia</td>
+                <td>R$ 3.200,00</td>
+                <td>
+                  <input type="checkbox" class="checkbox"> </td>
+                <td>
+                  <div class="action-table">
+                    <i class="fa fa-ellipsis-v"></i>
                   </div>
-                  <div class="input-holder">
-                    <label for="">Caixa:</label>
-                    <div class="fancy-select">
-                      <select name="" id="">
-                        <option>Selecione um Caixa</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                      </select>
-                    </div>
+                </td>
+              </tr>
+
+              <tr class="expense-table--pending">
+                <td>
+                  <input type="checkbox" class="checkbox">
+                </td>
+                <td>11/04/2018</td>
+                <td>11/04/2018</td>
+                <td>Conta de Energia</td>
+                <td>R$ 3.200,00</td>
+                <td>
+                  <input type="checkbox" class="checkbox"> </td>
+                <td>
+                  <div class="action-table">
+                    <i class="fa fa-ellipsis-v"></i>
                   </div>
-                </div>
-                <div class="form-line">
-                  <div class="input-holder">
-                    <label for="">Descrição
-                      <small> - opcional</small>:</label>
-                    <input type="text" class="input-singleline" placeholder="">
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <input type="checkbox" class="checkbox">
+                </td>
+                <td>11/04/2018</td>
+                <td>11/04/2018</td>
+                <td>2/5 - Conta de Energia - Fazenda Alegria</td>
+                <td>R$ 3.200,00</td>
+                <td>
+                  <input type="checkbox" class="checkbox"> </td>
+                <td>
+                  <div class="action-table">
+                    <i class="fa fa-ellipsis-v"></i>
                   </div>
-                </div>
-                <div class="form-line">
-                  <div class="expense-link-more">
-                    <a class="expense-link-more__text">
-                      <i class="fa fa-angle-up"></i> Incluir mais informações </a>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <input type="checkbox" class="checkbox">
+                </td>
+                <td>11/04/2018</td>
+                <td>11/04/2018</td>
+                <td>Conta de Energia</td>
+                <td>R$ 3.200,00</td>
+                <td>
+                  <input type="checkbox" class="checkbox"> </td>
+                <td>
+                  <div class="action-table">
+                    <i class="fa fa-ellipsis-v"></i>
                   </div>
+                </td>
+              </tr>
 
-                  <div class="expense-form__accordion">
-                    <div class="form-line">
-                      <div class="input-holder">
-                        <label for="">Fornecedor:</label>
-                        <input type="text" class="input-singleline" placeholder="Informe o Fornecedor">
-                      </div>
-
-                      <div class="input-holder">
-                        <label for="">Data de Competência:</label>
-                        <input type="text" class="input-singleline" placeholder="18/04/2018">
-                      </div>
-
-                      <div class="input-holder">
-                        <label for="">Nota Fiscal:</label>
-                        <input type="text" class="input-singleline" placeholder="">
-                      </div>
-                    </div>
+              <tr>
+                <td>
+                  <input type="checkbox" class="checkbox">
+                </td>
+                <td>11/04/2018</td>
+                <td>11/04/2018</td>
+                <td>Conta de Energia</td>
+                <td>R$ 3.200,00</td>
+                <td>
+                  <input type="checkbox" class="checkbox"> </td>
+                <td>
+                  <div class="action-table">
+                    <i class="fa fa-ellipsis-v"></i>
                   </div>
+                </td>
+              </tr>
 
-                  <!-- -->
-                  <div class="payments-method">
-                    <header class="payments-method__header">
-                      <h4 class="payments-method__title">Boleto
-                        <a href="#" class="payments-method__remove">
-                          <i class="fa fa-trash"></i>
-                        </a>
-                      </h4>
-                    </header>
-
-                    <div class="payments-method__content">
-                      <div class="form-line">
-                        <div class="input-holder">
-                          <label for=""> Número do Documento</label>
-                          <input type="text" class="input-singleline" value="">
-                        </div>
-
-                        <div class="input-holder">
-                          <label for=""> Valor</label>
-                          <input type="text" class="input-singleline" value="">
-                        </div>
-
-                        <div class="input-holder">
-                          <label for=""> Data de Pagamento</label>
-                          <input type="text" class="input-singleline" value="">
-                        </div>
-
-                        <div class="input-holder">
-                          <label for="">Pago</label>
-                          <input type="checkbox" value="">
-                        </div>
-                      </div>
-
-                      <div class="form-line">
-                        <div class="input-holder">
-                          <label for=""> Vencimento: </label>
-                          <input type="text" class="input-singleline" value="">
-                        </div>
-
-                        <div class="input-holder">
-                          <label for=""> Conta: </label>
-                          <input type="text" class="input-singleline" value="">
-                        </div>
-                      </div>
-
-                      <div class="form-line">
-                        <div class="input-holder">
-                          <label for="">Descrição
-                            <small> - opcional</small>:</label>
-                          <input type="text" class="input-singleline" placeholder="">
-                        </div>
-                      </div>
-
-                    </div>
+              <tr>
+                <td>
+                  <input type="checkbox" class="checkbox">
+                </td>
+                <td>11/04/2018</td>
+                <td>11/04/2018</td>
+                <td>Conta de Energia</td>
+                <td>R$ 3.200,00</td>
+                <td>
+                  <input type="checkbox" class="checkbox"> </td>
+                <td>
+                  <div class="action-table">
+                    <i class="fa fa-ellipsis-v"></i>
                   </div>
+                </td>
+              </tr>
 
-                  <div class="payment-installment payment-installment--open">
-                    <div class="payment-installment__header">
-                      <a class="payment-installment__title">
-                        <i class="icon-parcelamento">
-                          <img src="../images/icon-parcelamento.svg" alt="">
-                        </i> Parcelamento
-                      </a>
-                      <a href="" class="payment-installment__remove">remover parcelamento</a>
-                    </div>
-                    <div class="payment-installment__content">
-                      <div class="gr-2">
-                        <div class="input-holder">
-                          <label for="">
-                            Valor:
-                            <div class="payment-installment__switch-value">
-                              <span href="" class="text text--active">Total</span>
-                              <span href="" class="text">Parcela</span>
-                            </div>
-                          </label>
-                          <input type="text" class="input-singleline" placeholder="R$ 3.000,00">
-                        </div>
-                        <div class="input-holder">
-                          <label for="">
-                            Número de parcelas:
-                          </label>
-                          <div class="fancy-select">
-                            <select name="" id="">
-                              <option value="">Selecione o número de parcelas desejado</option>
-                              <option value="">Selecione o número de parcelas desejado</option>
-                              <option value="">Selecione o número de parcelas desejado</option>
-                              <option value="">Selecione o número de parcelas desejado</option>
-                            </select>
-                          </div>
-                        </div>
-                      </div>
-
-                      <table class="payment-installment__table">
-                        <thead>
-                          <th> Parcelas </th>
-                          <th> Data </th>
-                          <th> Valor </th>
-                          <th> Pago </th>
-                          <th> </th>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td>1/3</td>
-                            <td>11/04/2018</td>
-                            <td> R$ 1.000,00</td>
-                            <td>
-                              <div class="checkbox">
-                                <input type="checkbox">
-                              </div>
-                            </td>
-                            <td>
-                              <a href="" class="payment_installmente__remove fa fa-trash"></a>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>2/3</td>
-                            <td>11/04/2018</td>
-                            <td> R$ 1.000,00</td>
-                            <td>
-                              <div class="checkbox">
-                                <input type="checkbox">
-                              </div>
-                            </td>
-                            <td>
-                              <a href="" class="payment_installmente__remove fa fa-trash"></a>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>3/3</td>
-                            <td>11/04/2018</td>
-                            <td> R$ 1.000,00</td>
-                            <td>
-                              <div class="checkbox">
-                                <input type="checkbox">
-                              </div>
-                            </td>
-                            <td>
-                              <a href="" class="payment_installmente__remove fa fa-trash"></a>
-                            </td>
-                          </tr>
-                          <tr class="payment_installmente__table__sum"></tr>
-                        </tbody>
-                      </table>
-                    </div>
+              <tr class="expense-table--delayed">
+                <td>
+                  <input type="checkbox" class="checkbox">
+                </td>
+                <td>11/04/2018</td>
+                <td>11/04/2018</td>
+                <td>Conta de Energia</td>
+                <td>R$ 3.200,00</td>
+                <td>
+                  <input type="checkbox" class="checkbox">
+                </td>
+                <td>
+                  <div class="action-table">
+                    <i class="fa fa-ellipsis-v"></i>
                   </div>
+                </td>
+              </tr>
 
-                  <!-- button more payments -->
-                  <div class="form-line">
-                    <a href="" class="bt-options">
-                      <i class="fa fa-plus"></i> Forma de Pagamento
-                    </a>
+              <tr>
+                <td>
+                  <input type="checkbox" class="checkbox">
+                </td>
+                <td>11/04/2018</td>
+                <td>11/04/2018</td>
+                <td>Conta de Energia</td>
+                <td>R$ 3.200,00</td>
+                <td>
+                  <input type="checkbox" class="checkbox">
+                </td>
+                <td>
+                  <div class="action-table">
+                    <i class="fa fa-ellipsis-v"></i>
                   </div>
+                </td>
+              </tr>
 
-                  <!-- payment methods -->
-                  <div class="expense-payments">
-                    <a class="expense-payments_link">Fechar formas de pagamento</a>
-                    <div class="expense-payments__list">
-                      <div class="expense-payments__item">
-                        <span class="expense-payments__icon">
-                          <img src="../images/icon-dinheiro.svg" alt="">
-                        </span>
-                        <span class="expense-payments__text">Dinheiro</span>
-                      </div>
-                      <div class="expense-payments__item">
-                        <span class="expense-payments__icon">
-                          <img src="../images/icon-cartao.svg" alt="">
-                        </span>
-                        <span class="expense-payments__text">Cartão</span>
-                      </div>
-                      <div class="expense-payments__item">
-                        <span class="expense-payments__icon">
-                          <img src="../images/icon-boleto.svg" alt="">
-                        </span>
-                        <span class="expense-payments__text">Boleto</span>
-                      </div>
-                      <div class="expense-payments__item">
-                        <span class="expense-payments__icon">
-                          <img src="../images/icon-outros.svg" alt="">
-                        </span>
-                        <span class="expense-payments__text">Outros</span>
-                      </div>
-                    </div>
-                  </div>
+            </tbody>
+          </table>
 
-                  <nav class="area-buttons">
-                    <a href="" class="bt-confirm to-right">Salvar Despesa</a>
-                  </nav>
-                </div>
+          <nav class="pagination pagination--clean">
+            <ul class="pagination__list">
+              <li class="pagination__item">
+                <a href="" class="pagination__link pagination__link--active">1</a>
+              </li>
+              <li class="pagination__item">
+                <a href="" class="pagination__link">2</a>
+              </li>
+              <li class="pagination__item">
+                <a href="" class="pagination__link">3</a>
+              </li>
+              <li class="pagination__item">
+                <a href="" class="pagination__link">4</a>
+              </li>
 
-              </form>
-            </section>
+              <li class="pagination__item">
+                <a href="" class="pagination__link">5</a>
+              </li>
 
-            <aside class="expense-sidebar">
-              <i class="expense-sidebar__icon">
-                <img src="../images/icon-despesas.svg" alt="">
-              </i>
+              <li class="pagination__item">
+                <a href="" class="pagination__link"> <div class="fa fa-chevron-right"></div> </a>
+              </li>
 
-              <h4 class="expense-sidebar__title">Despesas Simplificadas</h4>
-              <p class="expense-sidebar__text">
-                O lançamento das despesas foi simplificado, mas não perdeu seu poder de fogo. Basta clicar em
-                <strong>”Incluir mais informações"</strong> ou adicionar uma forma de pagamento para ver os seguintes ítens.
-              </p>
+              <li class="pagination__item">
+                <a href="" class="pagination__link">última</a>
+              </li>
 
-              <ul class="list-disc">
-                <li>Dados do forncecedor.</li>
-                <li>Nota fiscal.</li>
-                <li>Formas de pagamento.</li>
-                <li>Parcelamento avançado e outros.</li>
-              </ul>
-            </aside>
+            </ul>
+          </nav>
 
-          </div>
+          <nav class="expense-table-actions-link">
+            <a href="#" class="link link-filter">Filtros avançados</a>
+            <a href="#" class="link link-select">Marcar selecionadas como paga</a>
+            <a href="#" class="link link-new">Nova despesa</a>
+          </nav>
+
         </div>
       </div>
       <!-- ./container -->
+
     </section>
   </div>
   <!-- End Global Content Holder!-->
@@ -728,6 +684,11 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="scripts/app.js"></script>
+
 </body>
 
 </html>
+
+
+
+

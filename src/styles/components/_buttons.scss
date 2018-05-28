@@ -181,7 +181,6 @@
     &:last-child {
       border-right: 1px solid $color-grey-400;
     }
-
   }
 
   &__link {
@@ -189,4 +188,37 @@
     color: inherit;
     padding: 10px $size-components-padding;
   }
+
+  &--clean {
+    justify-content: center;
+    margin-top: $size-components-margin;
+    margin-bottom: $size-components-margin;
+
+    .pagination__item {
+      background: $color-grey-0;
+      border: 0;
+      border-color:$color-grey-0;
+      height: $size-components-padding * 2;
+      width: $size-components-padding * 2;
+      text-align: center;
+    }
+
+    .pagination__link {
+      @include adjust-font-size-to(18px);
+      color: $color-grey-600;
+      line-height: 30px;
+      font-weight: 300;
+      padding: 0;
+
+      &--active {
+        background-color: $color-base-main;
+        color: $color-grey-0;
+        font-weight: 700;
+      }
+    }
+
+  }
 }
+
+
+

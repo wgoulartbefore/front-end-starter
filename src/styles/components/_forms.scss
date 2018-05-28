@@ -828,10 +828,6 @@ fieldset {
 
     .goals-form-bonus {
       border-bottom:  1px solid $color-base-main;
-
-      &__currency {}
-      &__value {
-      }
     }
 
   }
@@ -1067,6 +1063,12 @@ fieldset {
 
     .input-holder {
       display: flex;
+      position: relative;
+
+      &--autosize {
+        float: left;
+        width: calc(100% - 235px);
+      }
     }
 
     .client-info {
