@@ -502,12 +502,12 @@
 
   @include susy-breakpoint($screen-big, 16) {
   }
-
 }
 
 .expense-table {
   width: 100%;
   color: #6A707E;
+  overflow-x: auto;
 
   &-actions-link {
     display: flex;
@@ -540,6 +540,7 @@
 
   th,
   td {
+    position: relative;
     border-top: 1px solid #DDEAF7;
     padding: $size-components-padding + 5;
   }
@@ -553,4 +554,64 @@
     color: #D32E28;
   }
 
+  .action-table {
+    cursor: pointer;
+
+    &--open {
+      .action-submenu {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+
+  .action-submenu {
+    position: absolute;
+    background: $color-grey-0;
+    box-shadow: 0 0 4px -2px rgba(0, 0, 0, 0.45);
+    border: 1px solid #DDEAF7;
+    border-radius: 4px;
+    width: 150px;
+    right: 15px;
+    top: 90%;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1;
+    transition: opacity .2s, visibility 0.3s ease-in-out;
+
+    &::before {
+      content:"";
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      background: $color-grey-0;
+      border: 1px solid #DDEAF7;
+      border-bottom: 0;
+      border-left: 0;
+      right: 15px;
+      top: -8px;
+      transform: rotate(-45deg);
+    }
+  }
+
+  li {
+    padding: ($size-components-padding/2) $size-components-padding;
+    border-top: 1px solid #DDEAF7;
+    text-align: left;
+
+    &:first-child {
+      border: 0;
+    }
+  }
+
+  .action-submenu-link {
+    display: block;
+    color:#6A707E;
+
+    &:hover {
+      color: $color-grey-800;
+    }
+  }
+
 }
+

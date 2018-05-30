@@ -223,6 +223,10 @@
         background-color: $color-base-main;
         color: $color-grey-0;
         font-weight: 700;
+
+        &:hover {
+          background-color: $color-base-main;
+        }
       }
     }
 

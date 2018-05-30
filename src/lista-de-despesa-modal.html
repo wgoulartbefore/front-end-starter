@@ -20,7 +20,7 @@
   <link rel="stylesheet" href="styles/main.css" type="text/css" media="screen, projection">
 </head>
 
-<body>
+<body class="modal-active">
   <div id="master-header" class="master-header">
     <nav class="header-opts-bar">
       <div class="holder">
@@ -485,6 +485,7 @@
                   </div>
                 </td>
               </tr>
+
               <tr>
                 <td>
                   <input type="checkbox" class="checkbox">
@@ -763,10 +764,81 @@
   <div class="global-barrier"></div>
   <!-- End global-barrier!-->
 
+  <div class="modal modal--clean">
+    <div class="modal__content">
+
+      <header class="modal__header">
+        <a class="bt-close">
+          <i class="fa fa-times"></i>
+        </a>
+      </header>
+
+      <section class="modal__body">
+        <div class="gr-4">
+          <div class="input-holder">
+            <label for="">Valor:</label>
+            <strong>R$ 3456,78</strong>
+          </div>
+
+          <div class="input-holder">
+            <label for="">Tipo de Transação:</label>
+            <strong>Energia Elétrica</strong>
+          </div>
+
+          <div class="input-holder">
+            <label for="">Data de Compensação:</label>
+            <strong>02/05/2018</strong>
+          </div>
+
+          <div class="input-holder">
+            <label for="">Pago:</label>
+            <input type="checkbox" class="checkbox">
+          </div>
+        </div>
+
+        <div class="gr-2">
+          <div class="input-holder">
+            <label for="">Caixa:</label>
+<p>
+  <strong>Caixa Administrativo</strong>
+</p>
+
+          </div>
+
+          <div class="input-holder">
+            <label for="">Descrição:</label>
+            <strong> - </strong>
+          </div>
+        </div>
+
+        <div class="gr-3">
+          <div class="input-holder">
+            <label for="">Fornecedor:</label>
+            <strong>02/05/2018</strong>
+          </div>
+
+          <div class="input-holder">
+            <label for="">Data de Competência:</label>
+            <strong>02/05/2018</strong>
+          </div>
+
+          <div class="input-holder">
+            <label for="">Nota Fiscal:</label>
+            <strong> 1234444455 </strong>
+          </div>
+        </div>
+      </section>
+
+      <footer class="modal__footer">
+        <a class="bt-back to-left"> Excluir Despesa </a>
+        <a class="bt-confirm to-right"> Salvar </a>
+      </footer>
+
+    </div>
+  </div>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="scripts/app.js"></script>
 
 </body>
 </html>
-
-

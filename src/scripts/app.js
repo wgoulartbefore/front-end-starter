@@ -521,6 +521,42 @@ function showInstallments() {
   });
 }
 
+function showInstallments() {
+  let advancedFilter = $('.filter-search-advanced');
+
+  $(document).on('click', '.filter-search-link', (event) => {
+    event.preventDefault();
+    advancedFilter.toggleClass('filter-search-advanced--open');
+  });
+}
+
+
+function toggleActionsExpenseList() {
+  $(document).on('click', '.action-table', function (event) {
+    let dropDown = $(this);
+    let optsOpenClass = 'action-table--open';
+
+    console.log(this);
+
+
+    if ($(this).hasClass(optsOpenClass)) {
+      $(this).removeClass(optsOpenClass);
+    } else {
+      $('.action-table').removeClass(optsOpenClass);
+      $(this).addClass(optsOpenClass);
+    }
+
+    $(document).on('click', function (event) {
+      if (dropDown !== event.target) {
+        $('.action-table').removeClass(optsOpenClass);
+      }
+    });
+
+    event.stopPropagation();
+  });
+}
+
+
 headerOptsController();
 openUserOptions();
 headerSearchController();
@@ -529,3 +565,4 @@ switchTypeClientRegisterSell();
 boxCardController();
 showFilter();
 cashierActive();
+toggleActionsExpenseList();
