@@ -135,6 +135,16 @@
   height: 30px;
 }
 
+.bt-link-error {
+  @extend %std-button;
+  background-color: transparent;
+  color: $color-base-error;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
 .pagination {
   display: flex;
   align-items: center;
@@ -232,6 +242,3 @@
 
   }
 }
-
-
-

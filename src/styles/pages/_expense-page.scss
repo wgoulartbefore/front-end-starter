@@ -613,5 +613,37 @@
     }
   }
 
+  &--clean {
+    width: auto;
+
+    &,
+    th,
+    td {
+      border: 0;
+      padding: $size-std-padding $size-components-padding;
+    }
+  }
 }
 
+.expense-details-modal {
+  justify-content: space-between;
+
+  label,
+  strong {
+    display: block;
+  }
+
+  label {
+    color: #6A707E;
+  }
+
+  .checkbox {
+    pointer-events: none;
+  }
+}
+
+.expense-details-payment {
+  padding-left: $size-components-padding;
+  border-left: 2px solid $color-grey-200;
+  margin-left: $size-components-padding;
+}

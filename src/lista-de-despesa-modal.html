@@ -764,73 +764,167 @@
   <div class="global-barrier"></div>
   <!-- End global-barrier!-->
 
-  <div class="modal modal--clean">
+  <div class="modal">
     <div class="modal__content">
 
       <header class="modal__header">
+        <h4 class="title">Conta de Energia</h4>
         <a class="bt-close">
           <i class="fa fa-times"></i>
         </a>
       </header>
 
       <section class="modal__body">
-        <div class="gr-4">
-          <div class="input-holder">
-            <label for="">Valor:</label>
-            <strong>R$ 3456,78</strong>
+        <div class="expense-details-modal">
+          <div class="gr-4">
+            <div class="input-holder">
+              <label for="">Valor:</label>
+              <strong>R$ 3456,78</strong>
+            </div>
+
+            <div class="input-holder">
+              <label for="">Tipo de Transação:</label>
+              <strong>Energia Elétrica</strong>
+            </div>
+
+            <div class="input-holder">
+              <label for="">Data de Compensação:</label>
+              <strong>02/05/2018</strong>
+            </div>
+
+            <div class="input-holder">
+              <label for="">Pago:</label>
+              <input type="checkbox" class="checkbox">
+            </div>
           </div>
 
-          <div class="input-holder">
-            <label for="">Tipo de Transação:</label>
-            <strong>Energia Elétrica</strong>
+          <div class="gr-4">
+            <div class="input-holder">
+              <label for="">Caixa:</label>
+              <div class="gen-text-1"></div>
+              <strong>Caixa Administrativo</strong>
+            </div>
+
+            <div class="input-holder">
+              <label for="">Descrição:</label>
+              <strong> - </strong>
+            </div>
           </div>
 
-          <div class="input-holder">
-            <label for="">Data de Compensação:</label>
-            <strong>02/05/2018</strong>
+          <div class="gr-4">
+            <div class="input-holder">
+              <label for="">Fornecedor:</label>
+              <strong>Caixa Administrativo</strong>
+            </div>
+
+            <div class="input-holder">
+              <label for="">Data de Competência:</label>
+              <strong>02/05/2018</strong>
+            </div>
+
+            <div class="input-holder">
+              <label for="">Nota Fiscal:</label>
+              <strong> 1234444455 </strong>
+            </div>
           </div>
 
-          <div class="input-holder">
-            <label for="">Pago:</label>
-            <input type="checkbox" class="checkbox">
-          </div>
-        </div>
+          <label for="">Formas de Pagamento</label>
+          <div class="expense-details-payment">
+            <div class="gr-4">
 
-        <div class="gr-2">
-          <div class="input-holder">
-            <label for="">Caixa:</label>
-<p>
-  <strong>Caixa Administrativo</strong>
-</p>
+              <div class="input-holder">
+                <label for="">Tipo:</label>
+                <strong>Boleto</strong>
+              </div>
 
-          </div>
+              <div class="input-holder">
+                <label for="">Valor:</label>
+                <strong>R$ 3456,78</strong>
+              </div>
 
-          <div class="input-holder">
-            <label for="">Descrição:</label>
+              <div class="input-holder">
+                <label for="">Data de Compensação</label>
+                <strong>02/05/2018</strong>
+              </div>
+
+              <div class="input-holder">
+                <label for="">Pago</label>
+                <input type="checkbox" class="checkbox">
+              </div>
+            </div>
+
+            <div class="gr-4">
+              <div class="input-holder">
+                <label for="">Número do Documento</label>
+                <strong>988934457237747</strong>
+              </div>
+
+              <div class="input-holder">
+                <label for="">Vencimento</label>
+                <strong>R$ 3456,78</strong>
+              </div>
+
+              <div class="input-holder">
+                <label for="">Conta</label>
+                <strong>Ag. 1212 CC. 123443 - Banco do Brasil</strong>
+              </div>
+            </div>
+
+            <label for="">Descição</label>
             <strong> - </strong>
-          </div>
-        </div>
 
-        <div class="gr-3">
-          <div class="input-holder">
-            <label for="">Fornecedor:</label>
-            <strong>02/05/2018</strong>
-          </div>
 
-          <div class="input-holder">
-            <label for="">Data de Competência:</label>
-            <strong>02/05/2018</strong>
-          </div>
+            <div class="expense-installment-details">
+              <h4 class=""> Parcelas  </h4>
+              <table class="expense-table expense-table--clean">
+                <tr>
+                  <td>1/5</td>
+                  <td>11/04/2018</td>
+                  <td> R$ 1.000,00</td>
+                  <td> <input type="checkbox" class="checkbox"> </td>
+                </tr>
 
-          <div class="input-holder">
-            <label for="">Nota Fiscal:</label>
-            <strong> 1234444455 </strong>
+                <tr>
+                  <td>2/5</td>
+                  <td>11/04/2018</td>
+                  <td> R$ 1.000,00</td>
+                  <td>
+                    <input type="checkbox" class="checkbox"> </td>
+                </tr>
+
+                <tr>
+                  <td>3/5</td>
+                  <td>11/04/2018</td>
+                  <td> R$ 1.000,00</td>
+                  <td>
+                    <input type="checkbox" class="checkbox"> </td>
+                </tr>
+
+                <tr>
+                  <td>4/5</td>
+                  <td>11/04/2018</td>
+                  <td> R$ 1.000,00</td>
+                  <td>
+                    <input type="checkbox" class="checkbox"> </td>
+                </tr>
+
+                <tr>
+                  <td>5/5</td>
+                  <td>11/04/2018</td>
+                  <td> R$ 1.000,00</td>
+                  <td>
+                    <input type="checkbox" class="checkbox"> </td>
+                </tr>
+
+              </table>
+            </div>
+
           </div>
         </div>
       </section>
 
       <footer class="modal__footer">
-        <a class="bt-back to-left"> Excluir Despesa </a>
+        <a class="bt-link-error to-left"> Excluir Despesa </a>
         <a class="bt-confirm to-right"> Salvar </a>
       </footer>
 
