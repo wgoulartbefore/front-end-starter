@@ -592,6 +592,7 @@
       top: -8px;
       transform: rotate(-45deg);
     }
+
   }
 
   li {
@@ -614,13 +615,25 @@
   }
 
   &--clean {
-    width: auto;
+    width: 100%;
+    overflow: auto;
 
     &,
     th,
     td {
       border: 0;
-      padding: $size-std-padding $size-components-padding;
+      padding: 0;
+    }
+
+    @include susy-breakpoint($screen-medium, 12) {
+      width: auto;
+
+      &,
+      th,
+      td {
+        padding: $size-std-padding $size-components-padding;
+      }
+
     }
   }
 }
@@ -640,10 +653,42 @@
   .checkbox {
     pointer-events: none;
   }
+
+  .input-holder {
+    margin-bottom: $size-components-padding;
+
+    &.expense-status {
+      display: flex;
+      flex: 0 1;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+  }
+
+  .expense-installment-details-title {
+    display: flex;
+    @include adjust-font-size-to(18px);
+    color: $color-grey-600;
+    margin-top: $size-components-padding;
+    font-weight: 700;
+
+    .expense-payments__icon {
+      width: 21px;
+      height: 29px;
+      margin-right: $size-components-padding / 2;
+    }
+
+  }
+
 }
 
 .expense-details-payment {
-  padding-left: $size-components-padding;
   border-left: 2px solid $color-grey-200;
-  margin-left: $size-components-padding;
+  padding-left: $size-components-padding;
+
+
+  @include susy-breakpoint($screen-medium, 12) {
+    margin-left: $size-components-padding;
+  }
+
 }

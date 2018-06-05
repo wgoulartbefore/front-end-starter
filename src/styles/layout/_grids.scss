@@ -61,17 +61,18 @@ $_fg_padding: 0 !default; // padding for column boxes. Set as desired, can overr
     &.no-mb {
       margin-bottom: 0;
     }
-
   }
 
   $calc_percent: (1/$cols) * 100%;
   $calc_gutter_allowance: $gutter * 1px;
+
 
   > * {
     @if $cols == 1 {
       width: $calc_percent;
       // margin-left: 0;
       margin-left: $gutter * 1px;
+
     } @else {
       width: calc(#{$calc_percent} - #{$calc_gutter_allowance});
     }
@@ -90,6 +91,15 @@ $_fg_padding: 0 !default; // padding for column boxes. Set as desired, can overr
   @for $i from 1 through 12 {
     .gr-#{$i} {
       @include grid($i);
+
+      @for $j from 1 through 12 {
+        > .is-#{$j} {
+          flex: none;
+          $percent: percentage( $j / 12);
+          width: calc(#{$percent} - 16px);
+        }
+      }
+
     }
   }
 }
