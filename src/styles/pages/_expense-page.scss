@@ -12,67 +12,85 @@
   }
 
   &-form {
+
     .form-line {
       display: flex;
       flex-wrap: wrap;
       width: 100%;
     }
-    .input-holder {
-      flex: 1 100%;
-      margin-bottom: $size-components-padding;
-    }
+
+    // .input-holder {
+    //   flex: 1 100%;
+    //   margin-bottom: $size-components-padding;
+    // }
+
     .half-input {
       flex: 1;
     }
+
     label {
       display: block;
     }
+
     small {
+      font-size: 12px;
       position: relative;
       color: $color-grey-400;
     }
+
     .bt-options {
       margin-top: $size-components-padding;
       margin-right: auto;
       margin-left: auto;
     }
+
     .bt-confirm {
       width: 100%;
     }
+
     &__accordion {
       display: flex;
       flex: 1;
     }
+
   }
+
   &-sidebar {
     color: $color-grey-600;
     text-align: center;
     border-top: 1px solid $color-grey-400;
+
     &__icon {
       display: block;
       margin-bottom: $size-components-padding;
     }
+
     &__text,
     &__title {
       display: block;
       margin-bottom: $size-components-padding;
     }
+
     &__title {
       @include adjust-font-size-to(20px);
       font-weight: 700;
     }
+
     &__text {
       @include adjust-font-size-to(16px);
     }
+
     .list-disc {
       text-align: left;
     }
   }
+
   &-link-more {
     display: block;
     width: 100%;
     position: relative;
     margin-bottom: $size-components-padding;
+
     &__text {
       position: relative;
       padding-right: $size-components-padding;
@@ -80,12 +98,14 @@
       color: $color-grey-400;
       z-index: 1;
     }
+
     .fa {
       font-size: 20px;
       background: $color-grey-0;
       color: $color-grey-400;
       padding-right: $size-components-padding;
     }
+
     &::before {
       display: block;
       width: 100%;
@@ -99,6 +119,7 @@
       z-index: 0;
     }
   }
+
   &-payments {
     display: block;
     width: 100%;
@@ -152,24 +173,25 @@
     }
 
     &-form {
-
       @include span(8);
+
       .half-input {
         display: flex;
         align-self: stretch;
         margin-left: $size-components-padding;
-        .input-holder {
-          flex: 1 auto;
-        }
+
+        // .input-holder {
+        //   flex: 1 auto;
+        // }
       }
 
-      .input-holder {
-        flex: 1;
-        margin-left: $size-components-padding;
-        &:first-child {
-          margin-left: 0;
-        }
-      }
+      // .input-holder {
+      //   flex: 1;
+      //   margin-left: $size-components-padding;
+      //   &:first-child {
+      //     margin-left: 0;
+      //   }
+      // }
 
       .bt-confirm {
         width: auto;
@@ -183,15 +205,17 @@
           flex: 1 auto;
         }
       }
+
     }
 
     &-sidebar {
       @include span(4);
       border: 0;
-      border-left: 1px solid $color-grey-400;
+      border-left: 1px solid rgba($color-grey-400, 0.5);
     }
 
     &-payments {
+
       &__list {
         display: flex;
         flex-wrap: wrap;
@@ -199,6 +223,7 @@
         text-align: center;
         margin-left: -($size-components-padding);
       }
+
       &__item {
         display: block;
         flex: 1 0 auto;
@@ -217,6 +242,7 @@
         color: $color-grey-400;
       }
     }
+
   }
 
   @include susy-breakpoint($screen-big, 16) {
@@ -238,6 +264,7 @@
     }
 
   }
+
 }
 
 .payments-method {
@@ -489,10 +516,6 @@
   }
 }
 
-.expense-form {
-  background: $color-grey-100;
-}
-
 // New Expense
 .expense {
   display: block;
@@ -685,7 +708,6 @@
 .expense-details-payment {
   border-left: 2px solid $color-grey-200;
   padding-left: $size-components-padding;
-
 
   @include susy-breakpoint($screen-medium, 12) {
     margin-left: $size-components-padding;

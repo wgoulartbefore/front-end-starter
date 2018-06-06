@@ -309,6 +309,7 @@ select {
     flex: 0 0 auto;
   }
 }
+
 input[type=checkbox] {
   background-color: #eee;
   box-shadow: 0 0 0 1px #ddd;
@@ -320,7 +321,42 @@ input[type=checkbox] {
   border-radius: 20px;
   -webkit-appearance: none;
   -moz-appearance: none;
-  appearance: none
+  appearance: none;
+
+  &.checkbox-std {
+    width: 20px;
+    border-radius: 4px;
+    background: $color-grey-0;
+
+    &:checked {
+      background: $color-grey-0;
+
+      &::before {
+        color: $color-base-success;
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    &:before {
+      opacity: 0;
+
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: $color-grey-0;
+      box-shadow: none;
+      border-radius: 4px;
+      transform: translateX(0);
+
+      color: $color-base-success;
+      font-family: FontAwesome;
+      font-size: 16px;
+      line-height: 20px;
+      text-align: center;
+      content: "\f00c";
+    }
+  }
 }
 
 input[type=checkbox]:before {
@@ -335,7 +371,7 @@ input[type=checkbox]:before {
   transform: translateX(0)
 }
 
-input[type=checkbox]+label {
+input[type=checkbox] + label {
   font-size: 1rem;
   margin-left: 10px
 }
@@ -347,7 +383,6 @@ input[type=checkbox]:checked {
 input[type=checkbox]:checked:before {
   transform: translateX(100%)
 }
-
 
 input[type="radio"] {
   position: relative;
@@ -407,6 +442,7 @@ input[type="radio"] {
 
   @include susy-breakpoint($screen-big, 16) {
   }
+
 }
 
 .basic-search {

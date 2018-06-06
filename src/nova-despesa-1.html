@@ -433,67 +433,93 @@
             <div class="expense-form">
 
               <div class="gr-3">
-                <div class="form-line">
-
-                  <div class="input-holder">
-                    <label for="">Valor:</label>
-                    <input type="text" class="input-singleline" placeholder="Informe o valor da despesa">
-                  </div>
-                  <div class="input-holder">
-                    <label for="">Data de Compensação:</label>
-                    <input type="text" class="input-singleline" placeholder="Informe a data da despesa">
-                  </div>
-                  <div class="input-holder">
-                    <label for="">Pago:</label>
-                    <input type="checkbox">
-                  </div>
-
+                <div class="input-holder is-6">
+                  <label for="">Valor</label>
+                  <input type="text" class="input-singleline" placeholder="Informe o valor da despesa">
+                </div>
+                <div class="input-holder is-5">
+                  <label for="">Data de Compensação</label>
+                  <input type="text" class="input-singleline" placeholder="Informe a data da despesa">
+                </div>
+                <div class="input-holder is-1">
+                  <label for="">Pago</label>
+                  <input type="checkbox">
                 </div>
               </div>
 
               <div class="gr-2">
-                <div class="form-line">
-
-                  <div class="input-holder">
-                    <label for="">Tipo de despesa:</label>
-                    <div class="fancy-select">
-                      <select name="" id="">
-                        <option>Selecione um tipo de Despesa</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                      </select>
-                    </div>
+                <div class="input-holder is-6">
+                  <label for="">Tipo de despesa</label>
+                  <div class="fancy-select">
+                    <select name="" id="">
+                      <option>Selecione um tipo de Despesa</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                    </select>
                   </div>
+                </div>
 
-                  <div class="input-holder">
-                    <label for="">Caixa:</label>
-                    <div class="fancy-select">
-                      <select name="" id="">
-                        <option>Selecione um tipo de Despesa</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                      </select>
-                    </div>
+                <div class="input-holder is-6">
+                  <label for="">Caixa</label>
+                  <div class="fancy-select">
+                    <select name="" id="">
+                      <option>Selecione um tipo de Despesa</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                    </select>
                   </div>
-
                 </div>
               </div>
 
-              <div class="form-line">
+              <div class="gr-1">
                 <div class="input-holder">
-                  <label for="">Tipo de despesa:</label>
+                  <label for="">Descrição <small> - opcional</small></label>
                   <input type="text" class="input-singleline">
                 </div>
               </div>
 
+              <div class="expense-link-more">
+                <a class="expense-link-more__text">
+                  <i class="fa fa-angle-up"></i> Incluir mais informações </a>
+              </div>
+
+              <div class="expense-more-details">
+                <div class="gr-3">
+
+                  <div class="input-holder is-6">
+                    <label for="">Fornecedor</label>
+                      <div class="fancy-select">
+                        <select name="" id="">
+                          <option>Selecione o Fornecedor</option>
+                          <option>2</option>
+                          <option>3</option>
+                          <option>4</option>
+                          <option>5</option>
+                        </select>
+                    </div>
+                  </div>
+
+                  <div class="input-holder is-3">
+                    <label for="">Data de Competência</label>
+                    <input type="text" class="input-singleline" value="27/04/2018" placeholder="27/04/2018">
+                  </div>
+
+                  <div class="input-holder is-3">
+                    <label for="">Nota Fiscal</label>
+                    <input type="text" class="input-singleline">
+                  </div>
+
+                </div>
+              </div>
             </div>
+
           </section>
 
-          <!-- <aside class="expense-sidebar">
+          <aside class="expense-sidebar">
             <figure class="expense-sidebar__icon">
               <img src="../images/icon-despesas.svg" alt="">
             </figure>
@@ -510,7 +536,7 @@
               <li>Formas de pagamento.</li>
               <li>Parcelamento avançado e outros.</li>
             </ul>
-          </aside> -->
+          </aside>
 
         </div>
       </div>

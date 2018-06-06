@@ -28,7 +28,7 @@
           <li class="header-opts-item">
             <span id="relogioExpiraSessao" class="hasCountdown">
               <span class="countdown_row countdown_amount">19:52</span>
-              <span class="countdown_row countdown_descr">A sessão expira em: </span>
+            <span class="countdown_row countdown_descr">A sessão expira em: </span>
             </span>
           </li>
           <li class="header-opts-item">
@@ -53,6 +53,7 @@
               </a>
             </div>
           </li>
+
           <li class="header-opts-item">
             <a class="header-opts-link">
               <i class="fa fa-info-circle"></i>
@@ -108,6 +109,7 @@
               <p class="header-opts-title">Versão 2.2.181</p>
             </div>
           </li>
+
           <li class="header-opts-item">
             <a class="header-opts-link">
               <i class="fa fa-bell"></i>
@@ -422,356 +424,164 @@
   </section>
 
   <!-- Global Holder!-->
-  <div id="content">
-    <section id="main-content">
-      <div class="container">
-        <div class="expense">
+  <section id="main-content">
+    <div class="container">
+      <div class="expense">
+        <div class="expense-container">
 
-          <nav class="expense-table-actions-link">
-            <div class="to-left">
-              <a href="#" class="link link-filter to-left">Filtros avançados</a>
-              <a href="#" class="link link-select to-left">Marcar selecionadas como paga</a>
-              <a href="#" class="link link-new to-left">Nova despesa</a>
+          <section class="expense-content">
+            <div class="expense-form">
+
+              <div class="gr-3">
+                <div class="input-holder is-6">
+                  <label for="">Valor</label>
+                  <input type="text" class="input-singleline" placeholder="Informe o valor da despesa">
+                </div>
+                <div class="input-holder is-5">
+                  <label for="">Data de Compensação</label>
+                  <input type="text" class="input-singleline" placeholder="Informe a data da despesa">
+                </div>
+                <div class="input-holder is-1">
+                  <label for="">Pago</label>
+                  <input type="checkbox">
+                </div>
+              </div>
+
+              <div class="gr-2">
+                <div class="input-holder is-6">
+                  <label for="">Tipo de despesa</label>
+                  <div class="fancy-select">
+                    <select name="" id="">
+                      <option>Selecione um tipo de Despesa</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="input-holder is-6">
+                  <label for="">Caixa</label>
+                  <div class="fancy-select">
+                    <select name="" id="">
+                      <option>Selecione um tipo de Despesa</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="gr-1">
+                <div class="input-holder">
+                  <label for="">Descrição <small> - opcional</small></label>
+                  <input type="text" class="input-singleline">
+                </div>
+              </div>
+
+              <!-- Incluir mais informações -->
+
+              <div class="expense-link-more">
+                <a class="expense-link-more__text">
+                  <i class="fa fa-angle-up"></i> Incluir mais informações </a>
+              </div>
+
+              <div class="expense-more-details">
+                <div class="gr-3">
+                  <div class="input-holder is-6">
+                    <label for="">Fornecedor</label>
+                      <div class="fancy-select">
+                        <select name="" id="">
+                          <option>Selecione o Fornecedor</option>
+                          <option>2</option>
+                          <option>3</option>
+                          <option>4</option>
+                          <option>5</option>
+                        </select>
+                    </div>
+                  </div>
+
+                  <div class="input-holder is-3">
+                    <label for="">Data de Competência</label>
+                    <input type="text" class="input-singleline" value="27/04/2018" placeholder="27/04/2018">
+                  </div>
+
+                  <div class="input-holder is-3">
+                    <label for="">Nota Fiscal</label>
+                    <input type="text" class="input-singleline">
+                  </div>
+                </div>
+              </div>
+
+              <!-- Forma de pagamento -->
+              <div class="form-line">
+                <a href="" class="bt-options">
+                  <i class="fa fa-plus"></i> Forma de Pagamento
+                </a>
+              </div>
+
+              <div class="expense-payments">
+                <a class="expense-payments_link">Fechar formas de pagamento</a>
+                <div class="expense-payments__list">
+                  <div class="expense-payments__item">
+                    <span class="expense-payments__icon">
+                      <img src="../images/icon-dinheiro.svg" alt="">
+                    </span>
+                    <span class="expense-payments__text">Dinheiro</span>
+                  </div>
+                  <div class="expense-payments__item">
+                    <span class="expense-payments__icon">
+                      <img src="../images/icon-cartao.svg" alt="">
+                    </span>
+                    <span class="expense-payments__text">Cartão</span>
+                  </div>
+                  <div class="expense-payments__item">
+                    <span class="expense-payments__icon">
+                      <img src="../images/icon-boleto.svg" alt="">
+                    </span>
+                    <span class="expense-payments__text">Boleto</span>
+                  </div>
+                  <div class="expense-payments__item">
+                    <span class="expense-payments__icon">
+                      <img src="../images/icon-outros.svg" alt="">
+                    </span>
+                    <span class="expense-payments__text">Outros</span>
+                  </div>
+                </div>
+              </div>
+
+              <button class="bt-confirm to-right">Salvar Despesa</button>
+
             </div>
+          </section>
 
-            <a href="#" class="link link-new to-right"> <i class="fa fa-trash"></i> Excluir despesas selecionadas </a>
+          <aside class="expense-sidebar">
+            <figure class="expense-sidebar__icon">
+              <img src="../images/icon-despesas.svg" alt="">
+            </figure>
 
-          </nav>
+            <h4 class="expense-sidebar__title">Despesas Simplificadas</h4>
+            <p class="expense-sidebar__text">
+              O lançamento das despesas foi simplificado, mas não perdeu seu poder de fogo. Basta clicar em
+              <strong>”Incluir mais informações"</strong> ou adicionar uma forma de pagamento para ver os seguintes ítens.
+            </p>
 
-          <table class="expense-table">
-            <thead>
-              <tr>
-                <th>
-                  <input type="checkbox" class="checkbox-std">
-                </th>
-                <th>
-                  Vencimento
-                </th>
-                <th>
-                  Compensação
-                </th>
-                <th>
-                  Descrição
-                </th>
-                <th>
-                  Valor
-                </th>
-                <th>
-                  Quitado
-                </th>
-                <th>
-                  &nbsp;
-                </th>
-              </tr>
-            </thead>
-
-            <tbody>
-              <tr>
-                <td>
-<input type="checkbox" class="checkbox-std">
-
-                </td>
-                <td>11/04/2018</td>
-                <td>11/04/2018</td>
-                <td>Conta de Energia</td>
-                <td>R$ 3.200,00</td>
-                <td>
-                  <p class="text-sucess"><i class="fa fa-check"></i></p> </td>
-                <td>
-                  <div class="action-table">
-                    <i class="fa fa-ellipsis-v"></i>
-                    <ul class="action-submenu">
-                      <li>
-                        <a href="" class="action-submenu-link"><i class="fa fa-edit"></i> Editar</a>
-                      </li>
-                      <li>
-                        <a href="" class="action-submenu-link"> <i class="fa fa-trash"></i> Remover</a>
-                      </li>
-                    </ul>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td>
-<input type="checkbox" class="checkbox-std">
-
-                </td>
-                <td>11/04/2018</td>
-                <td>11/04/2018</td>
-                <td>Conta de Energia</td>
-                <td>R$ 3.200,00</td>
-                <td>
-                  <p class="text-sucess"><i class="fa fa-check"></i></p> </td>
-                <td>
-                  <div class="action-table">
-                    <i class="fa fa-ellipsis-v"></i>
-                    <ul class="action-submenu">
-                      <li>
-                        <a href="" class="action-submenu-link"><i class="fa fa-edit"></i> Editar</a>
-                      </li>
-                      <li>
-                        <a href="" class="action-submenu-link"> <i class="fa fa-trash"></i> Remover</a>
-                      </li>
-                    </ul>
-                  </div>
-                </td>
-              </tr>
-
-              <tr>
-                <td>
-<input type="checkbox" class="checkbox-std">
-
-                </td>
-                <td>11/04/2018</td>
-                <td>11/04/2018</td>
-                <td>Conta de Energia</td>
-                <td>R$ 3.200,00</td>
-                <td>
-                  <p class="text-sucess"><i class="fa fa-check"></i></p> </td>
-                <td>
-                  <div class="action-table">
-                    <i class="fa fa-ellipsis-v"></i>
-                    <ul class="action-submenu">
-                      <li>
-                        <a href="" class="action-submenu-link"><i class="fa fa-edit"></i> Editar</a>
-                      </li>
-                      <li>
-                        <a href="" class="action-submenu-link"> <i class="fa fa-trash"></i> Remover</a>
-                      </li>
-                    </ul>
-                  </div>
-                </td>
-              </tr>
-
-              <tr class="expense-table--pending">
-                <td>
-                  <input type="checkbox" class="checkbox-std">
-                </td>
-                <td>11/04/2018</td>
-                <td>11/04/2018</td>
-                <td>Conta de Energia</td>
-                <td>R$ 3.200,00</td>
-                <td>
-                  <p class="text-sucess"><i class="fa fa-check"></i></p> </td>
-                <td>
-                  <div class="action-table">
-                    <i class="fa fa-ellipsis-v"></i>
-                    <ul class="action-submenu">
-                      <li>
-                        <a href="" class="action-submenu-link"><i class="fa fa-edit"></i> Editar</a>
-                      </li>
-                      <li>
-                        <a href="" class="action-submenu-link"> <i class="fa fa-trash"></i> Remover</a>
-                      </li>
-                    </ul>
-                  </div>
-                </td>
-              </tr>
-
-              <tr>
-                <td>
-<input type="checkbox" class="checkbox-std">
-
-                </td>
-                <td>11/04/2018</td>
-                <td>11/04/2018</td>
-                <td>2/5 - Conta de Energia - Fazenda Alegria</td>
-                <td>R$ 3.200,00</td>
-                <td>
-                  <p class="text-sucess"><i class="fa fa-check"></i></p> </td>
-                <td>
-                  <div class="action-table">
-                    <i class="fa fa-ellipsis-v"></i>
-                    <ul class="action-submenu">
-                      <li>
-                        <a href="" class="action-submenu-link"><i class="fa fa-edit"></i> Editar</a>
-                      </li>
-                      <li>
-                        <a href="" class="action-submenu-link"> <i class="fa fa-trash"></i> Remover</a>
-                      </li>
-                    </ul>
-                  </div>
-                </td>
-              </tr>
-
-              <tr>
-                <td>
-<input type="checkbox" class="checkbox-std">
-
-                </td>
-                <td>11/04/2018</td>
-                <td>11/04/2018</td>
-                <td>Conta de Energia</td>
-                <td>R$ 3.200,00</td>
-                <td>
-                  <p class="text-sucess"><i class="fa fa-check"></i></p> </td>
-                <td>
-                  <div class="action-table">
-                    <i class="fa fa-ellipsis-v"></i>
-                    <ul class="action-submenu">
-                      <li>
-                        <a href="" class="action-submenu-link"><i class="fa fa-edit"></i> Editar</a>
-                      </li>
-                      <li>
-                        <a href="" class="action-submenu-link"> <i class="fa fa-trash"></i> Remover</a>
-                      </li>
-                    </ul>
-                  </div>
-                </td>
-              </tr>
-
-              <tr>
-                <td>
-<input type="checkbox" class="checkbox-std">
-
-                </td>
-                <td>11/04/2018</td>
-                <td>11/04/2018</td>
-                <td>Conta de Energia</td>
-                <td>R$ 3.200,00</td>
-                <td>
-                  <p class="text-sucess"><i class="fa fa-check"></i></p> </td>
-                <td>
-                  <div class="action-table">
-                    <i class="fa fa-ellipsis-v"></i>
-                    <ul class="action-submenu">
-                      <li>
-                        <a href="" class="action-submenu-link"><i class="fa fa-edit"></i> Editar</a>
-                      </li>
-                      <li>
-                        <a href="" class="action-submenu-link"> <i class="fa fa-trash"></i> Remover</a>
-                      </li>
-                    </ul>
-                  </div>
-                </td>
-              </tr>
-
-              <tr>
-                <td>
-<input type="checkbox" class="checkbox-std">
-
-                </td>
-                <td>11/04/2018</td>
-                <td>11/04/2018</td>
-                <td>Conta de Energia</td>
-                <td>R$ 3.200,00</td>
-                <td>
-                  <p class="text-sucess"><i class="fa fa-check"></i></p> </td>
-                <td>
-                  <div class="action-table">
-                    <i class="fa fa-ellipsis-v"></i>
-                    <ul class="action-submenu">
-                      <li>
-                        <a href="" class="action-submenu-link"><i class="fa fa-edit"></i> Editar</a>
-                      </li>
-                      <li>
-                        <a href="" class="action-submenu-link"> <i class="fa fa-trash"></i> Remover</a>
-                      </li>
-                    </ul>
-                  </div>
-                </td>
-              </tr>
-
-              <tr class="expense-table--delayed">
-                <td>
-<input type="checkbox" class="checkbox-std">
-
-                </td>
-                <td>11/04/2018</td>
-                <td>11/04/2018</td>
-                <td>Conta de Energia</td>
-                <td>R$ 3.200,00</td>
-                <td>
-                  <p class="text-sucess"><i class="fa fa-check"></i></p>
-                </td>
-                <td>
-                  <div class="action-table">
-                    <i class="fa fa-ellipsis-v"></i>
-                    <ul class="action-submenu">
-                      <li>
-                        <a href="" class="action-submenu-link"><i class="fa fa-edit"></i> Editar</a>
-                      </li>
-                      <li>
-                        <a href="" class="action-submenu-link"> <i class="fa fa-trash"></i> Remover</a>
-                      </li>
-                    </ul>
-                  </div>
-                </td>
-              </tr>
-
-              <tr>
-                <td>
-<input type="checkbox" class="checkbox-std">
-
-                </td>
-                <td>11/04/2018</td>
-                <td>11/04/2018</td>
-                <td>Conta de Energia</td>
-                <td>R$ 3.200,00</td>
-                <td>
-                  <p class="text-sucess"><i class="fa fa-check"></i></p>
-                </td>
-                <td>
-                  <div class="action-table">
-                    <i class="fa fa-ellipsis-v"></i>
-                    <ul class="action-submenu">
-                      <li>
-                        <a href="" class="action-submenu-link"><i class="fa fa-edit"></i> Editar</a>
-                      </li>
-                      <li>
-                        <a href="" class="action-submenu-link"> <i class="fa fa-trash"></i> Remover</a>
-                      </li>
-                    </ul>
-                  </div>
-                </td>
-              </tr>
-
-            </tbody>
-          </table>
-
-          <nav class="pagination pagination--clean">
-
-            <ul class="pagination__list">
-              <li class="pagination__item">
-                <a href="" class="pagination__link pagination__link--active">1</a>
-              </li>
-              <li class="pagination__item">
-                <a href="" class="pagination__link">2</a>
-              </li>
-              <li class="pagination__item">
-                <a href="" class="pagination__link">3</a>
-              </li>
-              <li class="pagination__item">
-                <a href="" class="pagination__link">4</a>
-              </li>
-
-              <li class="pagination__item">
-                <a href="" class="pagination__link">5</a>
-              </li>
-
-              <li class="pagination__item">
-                <a href="" class="pagination__link"> <div class="fa fa-chevron-right"></div> </a>
-              </li>
-
-              <li class="pagination__item">
-                <a href="" class="pagination__link">última</a>
-              </li>
+            <ul class="list-disc">
+              <li>Dados do forncecedor.</li>
+              <li>Nota fiscal.</li>
+              <li>Formas de pagamento.</li>
+              <li>Parcelamento avançado e outros.</li>
             </ul>
-
-          </nav>
-
-          <nav class="expense-table-actions-link">
-            <a href="#" class="link link-filter">Filtros avançados</a>
-            <a href="#" class="link link-select">Marcar selecionadas como paga</a>
-            <a href="#" class="link link-new">Nova despesa</a>
-          </nav>
+          </aside>
 
         </div>
       </div>
-      <!-- ./container -->
-
-    </section>
-  </div>
+    </div>
+    <!-- ./container -->
+  </section>
   <!-- End Global Content Holder!-->
 
   <div class="global-barrier"></div>
@@ -779,8 +589,5 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="scripts/app.js"></script>
-
 </body>
 </html>
-
-
