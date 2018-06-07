@@ -132,6 +132,7 @@
       margin-bottom: $size-components-padding;
       transition-duration: 0.3s;
       transition-property: all;
+
       &:hover {
         text-decoration: underline;
         color: $color-grey-800;
@@ -139,6 +140,7 @@
     }
 
     &__item {
+      position: relative;
       border: 1px solid $color-grey-400;
       text-align: center;
       padding: $size-components-padding * 2;
@@ -148,9 +150,38 @@
 
       &:hover {
         background-color: $color-grey-100;
+        cursor: pointer;
+
         .expense-payments__text {
           color: $color-base-main;
         }
+      }
+
+      &--active {
+        background-color: $color-grey-50;
+        border-color: rgba($color-base-main, 0.6);
+
+        &:hover {
+          background-color: $color-grey-50;
+        }
+
+        .expense-payments__text {
+          color: $color-base-main;
+        }
+      }
+
+      .n-itens {
+        position: absolute;
+        width: $size-components-margin;
+        height: $size-components-margin;
+        background-color: $color-base-main;
+        @include adjust-font-size-to(12);
+        color: $color-grey-0;
+        font-weight: 700;
+        line-height: $size-components-margin;
+        border-radius: 50%;
+        top: -($size-components-padding - 5);
+        right: -($size-components-padding - 5);
       }
 
     }
@@ -531,6 +562,8 @@
   width: 100%;
   color: #6A707E;
   overflow-x: auto;
+  border: 1px solid #DDEAF7;
+
 
   &-actions-link {
     display: flex;
@@ -565,7 +598,13 @@
   td {
     position: relative;
     border-top: 1px solid #DDEAF7;
-    padding: $size-components-padding + 5;
+    padding: $size-components-padding;
+  }
+
+  &:hover {
+    td {
+      background: $color-grey-100;
+    }
   }
 
   &--pending {
@@ -712,5 +751,4 @@
   @include susy-breakpoint($screen-medium, 12) {
     margin-left: $size-components-padding;
   }
-
 }
