@@ -28,7 +28,7 @@
           <li class="header-opts-item">
             <span id="relogioExpiraSessao" class="hasCountdown">
               <span class="countdown_row countdown_amount">19:52</span>
-            <span class="countdown_row countdown_descr">A sessão expira em: </span>
+              <span class="countdown_row countdown_descr">A sessão expira em: </span>
             </span>
           </li>
           <li class="header-opts-item">
@@ -477,13 +477,14 @@
 
               <div class="gr-1">
                 <div class="input-holder">
-                  <label for="">Descrição <small> - opcional</small></label>
+                  <label for="">Descrição
+                    <small> - opcional</small>
+                  </label>
                   <input type="text" class="input-singleline">
                 </div>
               </div>
 
               <!-- Incluir mais informações -->
-
               <div class="expense-link-more">
                 <a class="expense-link-more__text">
                   <i class="fa fa-angle-up"></i> Incluir mais informações </a>
@@ -493,14 +494,14 @@
                 <div class="gr-3">
                   <div class="input-holder is-6">
                     <label for="">Fornecedor</label>
-                      <div class="fancy-select">
-                        <select name="" id="">
-                          <option>Selecione o Fornecedor</option>
-                          <option>2</option>
-                          <option>3</option>
-                          <option>4</option>
-                          <option>5</option>
-                        </select>
+                    <div class="fancy-select">
+                      <select name="" id="">
+                        <option>Selecione o Fornecedor</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                      </select>
                     </div>
                   </div>
 
@@ -516,21 +517,15 @@
                 </div>
               </div>
 
-              <!-- Forma de pagamento -->
-              <div class="form-line">
-                <a href="" class="bt-options">
-                  <i class="fa fa-plus"></i> Forma de Pagamento
-                </a>
-              </div>
-
               <div class="expense-payments">
                 <a class="expense-payments_link">Fechar formas de pagamento</a>
                 <div class="expense-payments__list">
-                  <div class="expense-payments__item">
+                  <div class="expense-payments__item expense-payments__item--active">
                     <span class="expense-payments__icon">
                       <img src="../images/icon-dinheiro.svg" alt="">
                     </span>
                     <span class="expense-payments__text">Dinheiro</span>
+                    <span class="n-itens">1</span>
                   </div>
                   <div class="expense-payments__item">
                     <span class="expense-payments__icon">
@@ -551,6 +546,190 @@
                     <span class="expense-payments__text">Outros</span>
                   </div>
                 </div>
+              </div>
+
+              <!-- Bloco do tipo de pagamento - Cartão-->
+              <div class="payments-method">
+                <header class="payments-method__header">
+                  <h4 class="payments-method__title">Cartão
+                    <a href="#" class="payments-method__remove">
+                      <i class="fa fa-trash"></i>
+                    </a>
+                  </h4>
+                </header>
+
+                <div class="payments-method__content">
+                  <div class="gr-3">
+                    <div class="input-holder is-7">
+                      <label for=""> Valor: </label>
+                      <input type="text" class="input-singleline">
+                    </div>
+
+                    <div class="input-holder is-4">
+                      <label for=""> Vencimento de Fatura: </label>
+                      <input type="text" class="input-singleline" value="">
+                    </div>
+
+                    <div class="input-holder is-1">
+                      <label for=""> Pago: </label>
+                      <input type="checkbox" class="checkbox">
+                    </div>
+                  </div>
+
+                  <div class="gr-3">
+                    <div class="input-holder is-4">
+                      <label for=""> Nº de autorização do cartão </label>
+                      <input type="text" class="input-singleline">
+                    </div>
+
+                    <div class="input-holder is-3">
+                      <label for=""> Data de pagamento: </label>
+                      <input type="text" class="input-singleline">
+                    </div>
+
+                    <div class="input-holder is-5">
+                      <label for=""> Conta: </label>
+                      <div class="fancy-select">
+                        <select name="" id="">
+                          <option value="">01 - AG: 0000 CC: 0000111</option>
+                          <option value="">02 - AG: 1100 CC: 0000222</option>
+                          <option value="">03 - AG: 2200 CC: 0000333</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="gr-1">
+                    <div class="input-holder">
+                      <label for="">Observação:
+                        <small> - opcional</small>
+                      </label>
+                      <input type="text" class="input-singleline"></input>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+              <!-- Parcelamento -->
+              <div class="installments installments--open">
+                <div class="installments__header">
+                  <a class="installments__title">
+                    <i class="icon-parcelamento">
+                      <img src="../images/icon-parcelamento.svg" alt="">
+                    </i> incluir parcelamento
+                  </a>
+                  <a href="" class="installments__remove">remover parcelamento</a>
+                </div>
+                <div class="installments__content">
+                  <div class="gr-2">
+                    <div class="input-holder">
+                      <label for="">
+                        <strong>Valor:</strong>
+                        <div class="installments__switch-value">
+                          <span href="" class="text text--active">Total</span>
+                          <span href="" class="text">Parcela</span>
+                        </div>
+                      </label>
+                      <input type="text" class="input-singleline" placeholder="R$ 3.000,00">
+                    </div>
+                    <div class="input-holder">
+                      <label for="">
+                        Número de parcelas:
+                      </label>
+                      <div class="fancy-select">
+                        <select name="" id="">
+                          <option value="">Selecione o número de parcelas desejado</option>
+                          <option value="">1x</option>
+                          <option value="">2x</option>
+                          <option value="">3x</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+
+                  <table class="expense-table expense-table--installments expense-table--editable">
+                    <thead>
+                      <tr>
+                        <th> Parcelas </th>
+                        <th> Data </th>
+                        <th> Valor </th>
+                        <th> Pago </th>
+                        <th> </th>
+                      </tr>
+                    </thead>
+
+                    <tbody>
+                      <tr>
+                        <td>1/3</td>
+                        <td>
+                          <input type="text" class="input-singleline" placeholder="11/04/2018">
+                          <span class="small-reload-value">
+                            <i class="fa fa-refresh"></i> Atualizar parcelas</span>
+                        </td>
+                        <td> R$ 1.000,00</td>
+                        <td>
+                          <div class="checkbox">
+                            <input type="checkbox">
+                          </div>
+                        </td>
+                        <td>
+                          <a href="" class="payment_installmentse__remove fa fa-trash"></a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>2/3</td>
+                        <td>
+                          <input type="text" class="input-singleline" placeholder="11/04/2018">
+
+                        </td>
+                        <td> R$ 1.000,00</td>
+                        <td>
+                          <div class="checkbox">
+                            <input type="checkbox">
+                          </div>
+                        </td>
+                        <td>
+                          <a href="" class="payment_installmentse__remove fa fa-trash"></a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>3/3</td>
+                        <td>
+                          <input type="text" class="input-singleline" placeholder="11/04/2018">
+
+                        </td>
+                        <td> R$ 1.000,00</td>
+                        <td>
+                          <div class="checkbox">
+                            <input type="checkbox">
+                          </div>
+                        </td>
+                        <td>
+                          <a href="" class="payment_installmentse__remove fa fa-trash"></a>
+                        </td>
+                      </tr>
+
+                      <tr class="payment_installmentse__table__sum">
+                        <td colspan="5">
+                          <p class="text-center">
+                            <strong>Total: </strong>
+                            R$ 3.000,00
+                          </p>
+                        </td>
+                      </tr>
+
+                    </tbody>
+                  </table>
+
+                </div>
+              </div>
+
+              <!-- button More payments -->
+              <div class="form-line">
+                <a href="" class="bt-options">
+                  <i class="fa fa-plus"></i> Adicionar Pagamento
+                </a>
               </div>
 
               <button class="bt-confirm to-right">Salvar Despesa</button>
@@ -590,4 +769,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="scripts/app.js"></script>
 </body>
+
 </html>
+

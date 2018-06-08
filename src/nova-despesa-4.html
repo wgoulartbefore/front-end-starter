@@ -546,6 +546,46 @@
                 </div>
               </div>
 
+              <!-- Bloco do tipo de pagamento - Dinheiro -->
+              <div class="payments-method">
+                <header class="payments-method__header">
+                  <h4 class="payments-method__title">Dinheiro
+                    <a href="#" class="payments-method__remove">
+                      <i class="fa fa-trash"></i>
+                    </a>
+                  </h4>
+                </header>
+
+                <div class="payments-method__content">
+                  <div class="gr-3">
+                    <div class="input-holder is-6">
+                      <label for=""> Valor:</label>
+                      <input type="text" class="input-singleline" value="">
+                    </div>
+
+                    <div class="input-holder is-5">
+                      <label for=""> Data de pagamento: </label>
+                      <input type="text" class="input-singleline" value="">
+                    </div>
+                    <div class="input-holder is-1">
+                      <label for=""> Pago: </label>
+                      <input type="checkbox" class="checkbox">
+                    </div>
+                  </div>
+
+                  <div class="gr-1">
+                    <div class="input-holder">
+                      <label for="">Observação:
+                        <small> - opcional</small>
+                      </label>
+                      <textarea type="text" class="input-multiline"></textarea>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+
               <!-- Bloco do tipo de pagamento - BOleto-->
               <div class="payments-method">
                 <header class="payments-method__header">
@@ -729,22 +769,22 @@
                 </div>
               </div>
 
-              <div class="payment-installment payment-installment--open">
-                <div class="payment-installment__header">
-                  <a class="payment-installment__title">
+              <!-- Parcelamento -->
+              <div class="installments">
+                <div class="installments__header">
+                  <a class="installments__title">
                     <i class="icon-parcelamento">
                       <img src="../images/icon-parcelamento.svg" alt="">
-                      </i> Parcelamento
+                    </i> incluir parcelamento
                   </a>
-                  <a href="" class="payment-installment__remove">remover parcelamento</a>
+                  <a href="" class="installments__remove">remover parcelamento</a>
                 </div>
-                <div class="payment-installment__content">
-                  <strong>Valor:</strong>
-
+                <div class="installments__content">
                   <div class="gr-2">
                     <div class="input-holder">
                       <label for="">
-                        <div class="payment-installment__switch-value">
+                        <strong>Valor:</strong>
+                        <div class="installments__switch-value">
                           <span href="" class="text text--active">Total</span>
                           <span href="" class="text">Parcela</span>
                         </div>
@@ -758,15 +798,15 @@
                       <div class="fancy-select">
                         <select name="" id="">
                           <option value="">Selecione o número de parcelas desejado</option>
-                          <option value="">Selecione o número de parcelas desejado</option>
-                          <option value="">Selecione o número de parcelas desejado</option>
-                          <option value="">Selecione o número de parcelas desejado</option>
+                          <option value="">1x</option>
+                          <option value="">2x</option>
+                          <option value="">3x</option>
                         </select>
                       </div>
                     </div>
                   </div>
 
-                  <table class="expense-table">
+                  <table class="expense-table  expense-table--installments">
                     <thead>
                       <tr>
                         <th> Parcelas </th>
@@ -788,7 +828,7 @@
                           </div>
                         </td>
                         <td>
-                          <a href="" class="payment_installmente__remove fa fa-trash"></a>
+                          <a href="" class="payment_installmentse__remove fa fa-trash"></a>
                         </td>
                       </tr>
                       <tr>
@@ -801,7 +841,7 @@
                           </div>
                         </td>
                         <td>
-                          <a href="" class="payment_installmente__remove fa fa-trash"></a>
+                          <a href="" class="payment_installmentse__remove fa fa-trash"></a>
                         </td>
                       </tr>
                       <tr>
@@ -814,11 +854,11 @@
                           </div>
                         </td>
                         <td>
-                          <a href="" class="payment_installmente__remove fa fa-trash"></a>
+                          <a href="" class="payment_installmentse__remove fa fa-trash"></a>
                         </td>
                       </tr>
 
-                      <tr class="payment_installmente__table__sum">
+                      <tr class="payment_installmentse__table__sum">
                         <td colspan="5">
                           <p class="text-center">
                             <strong>Total: </strong>

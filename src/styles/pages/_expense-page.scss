@@ -262,6 +262,7 @@
         margin-left: $size-components-padding;
         align-self: center;
       }
+
       &__icon {
         display: flex;
         align-self: center;
@@ -269,15 +270,23 @@
         height: 80px;
         margin-bottom: $size-components-padding;
       }
+
       &__text {
         color: $color-grey-400;
       }
+
+      &__title {
+        @include adjust-font-size-to(16);
+        color: #5779C9;
+      }
+
     }
 
   }
 
   @include susy-breakpoint($screen-big, 16) {
     margin-bottom: $size-components-height;
+
     &-form {
       @include span(11 of 16);
     }
@@ -345,7 +354,16 @@
 
   &__remove {
     display: block;
-    margin: $size-components-padding 0;
+    margin-bottom: $size-components-padding;
+  }
+
+  &__remove,
+  &__content {
+    opacity: 0;
+    height: 0;
+    transform: translateY(-100%);
+    visibility: hidden;
+    transition: all .3s ease-in-out;
   }
 
   &__switch-value {
@@ -358,6 +376,16 @@
         background: #5779C9;
         color: $color-grey-0;
       }
+    }
+  }
+
+  &--open {
+    .installments__remove,
+    .installments__content {
+      opacity: 1;
+      height: auto;
+      transform: translateY(0);
+      visibility: visible;
     }
   }
 
@@ -395,7 +423,7 @@
         height: 100%;
         top: 0;
         bottom: 0;
-        left: 0;
+        left: -2px;
         background: $color-grey-200;
         z-index: 0;
       }
@@ -409,6 +437,8 @@
       }
 
     }
+
+
 
     &__switch-value {
       display: flex;
@@ -490,6 +520,7 @@
         transition: opacity .3s;
       }
     }
+
   }
 
   &-list {
@@ -545,6 +576,7 @@
     }
 
   }
+
 }
 
 // New Expense
@@ -563,7 +595,6 @@
   color: #6A707E;
   overflow-x: auto;
   border: 1px solid #DDEAF7;
-
 
   &-actions-link {
     display: flex;
@@ -601,9 +632,9 @@
     padding: $size-components-padding;
   }
 
-  &:hover {
+  tr:hover {
     td {
-      background: $color-grey-100;
+      background: $color-grey-50;
     }
   }
 
@@ -614,6 +645,25 @@
   &--delayed {
     background: #FFE8E8;
     color: #D32E28;
+  }
+
+  &--installments {
+    th,
+    td {
+      padding: ($size-components-padding / 2) $size-components-padding;
+    }
+  }
+
+  &--editable {
+   .input-singleline {
+      display: inline-block;
+      width: 120px;
+      height: 26px;
+      border: 1px solid #B0BAC5;
+      margin-right: 5px;
+    }
+
+
   }
 
   .action-table {
@@ -698,6 +748,7 @@
 
     }
   }
+
 }
 
 .expense-details-modal {
