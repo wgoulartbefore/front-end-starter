@@ -120,6 +120,22 @@
     }
   }
 
+  &-more-details {
+    visibility: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition: opacity .3s linear,
+    max-height .1s ease-in-out;
+
+    &--open {
+      max-height: 100%;
+      visibility: visible;
+      opacity: 1;
+      transition: all .3s ease-in-out;
+    }
+
+  }
+
   &-payments {
     display: block;
     width: 100%;
@@ -149,7 +165,7 @@
       transition-property: color, background-color;
 
       &:hover {
-        background-color: $color-grey-100;
+        background-color: $color-grey-50;
         cursor: pointer;
 
         .expense-payments__text {
@@ -158,11 +174,11 @@
       }
 
       &--active {
-        background-color: $color-grey-50;
+        background-color: $color-grey-100;
         border-color: rgba($color-base-main, 0.6);
 
         &:hover {
-          background-color: $color-grey-50;
+          background-color: $color-grey-100;
         }
 
         .expense-payments__text {

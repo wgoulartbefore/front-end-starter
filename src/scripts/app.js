@@ -1,3 +1,5 @@
+import { EAFNOSUPPORT } from "constants";
+
 const isMobile = {
   Android: function () {
     return navigator.userAgent.match(/Android/i);
@@ -530,7 +532,6 @@ function showInstallments() {
   });
 }
 
-
 function toggleActionsExpenseList() {
   $(document).on('click', '.action-table', function (event) {
     let dropDown = $(this);
@@ -557,6 +558,50 @@ function toggleActionsExpenseList() {
 }
 
 
+function toggleElements(el, target, toggleClass ) {
+  var element = `$(${el})`;
+  var target = `$(${target})`;
+
+  if (element.hasClass(toggleClass)) {
+    target.removeClass(toggleClass);
+  } else {
+    target.removeClass(toggleClass);
+    target.addClass(toggleClass);
+  }
+}
+
+function showMoreLabelsExpense() {
+  let linkDetails = $('.expense-more-details');
+  let iconDown = 'fa-angle-down';
+  let iconUp = 'fa-angle-up';
+  let classShowDetails = 'expense-more-details--open';
+
+  $(document).on('click', '.expense-link-more__text', function (event) {
+    let el = $(this);
+
+    toggleElements(linkDetails, linkDetails)
+
+    if (linkDetails.hasClass(classShowDetails)) {
+      linkDetails.removeClass(classShowDetails);
+
+    } else {
+      linkDetails.removeClass(classShowDetails);
+      linkDetails.addClass(classShowDetails);
+    }
+
+  });
+}
+
+function selectMethodPayments() {
+  $(document).on('click', '.expense-payments__item', function(evet) {
+    let el = $(this)
+    let openClass = 'expense-payments__item--active'
+
+    $('.expense-payments__item').removeClass(openClass);
+    el.addClass(openClass);
+  })
+}
+
 headerOptsController();
 openUserOptions();
 headerSearchController();
@@ -566,3 +611,6 @@ boxCardController();
 showFilter();
 cashierActive();
 toggleActionsExpenseList();
+showMoreLabelsExpense();
+selectMethodPayments();
+
