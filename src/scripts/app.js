@@ -571,7 +571,7 @@ function toggleElements(el, target, toggleClass ) {
 }
 
 function showMoreLabelsExpense() {
-  let linkDetails = $('.expense-more-details');
+  let linkDetails = '.expense-more-details';
   let iconDown = 'fa-angle-down';
   let iconUp = 'fa-angle-up';
   let classShowDetails = 'expense-more-details--open';
@@ -579,15 +579,16 @@ function showMoreLabelsExpense() {
   $(document).on('click', '.expense-link-more__text', function (event) {
     let el = $(this);
 
-    toggleElements(linkDetails, linkDetails)
+    toggleElements(linkDetails, linkDetails, classShowDetails)
 
-    if (linkDetails.hasClass(classShowDetails)) {
-      linkDetails.removeClass(classShowDetails);
 
-    } else {
-      linkDetails.removeClass(classShowDetails);
-      linkDetails.addClass(classShowDetails);
-    }
+    // if (linkDetails.hasClass(classShowDetails)) {
+    //   linkDetails.removeClass(classShowDetails);
+
+    // } else {
+    //   linkDetails.removeClass(classShowDetails);
+    //   linkDetails.addClass(classShowDetails);
+    // }
 
   });
 }
