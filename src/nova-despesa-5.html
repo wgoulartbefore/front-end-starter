@@ -520,20 +520,20 @@
               </div>
 
               <div class="expense-payments">
-                <a class="expense-payments_link">Fechar formas de pagamento</a>
                 <div class="expense-payments__list">
-                  <div class="expense-payments__item expense-payments__item--active">
+                  <a class="expense-payments_link">Fechar formas de pagamento</a>
+                  <div class="expense-payments__item ">
                     <span class="expense-payments__icon">
                       <img src="../images/icon-dinheiro.svg" alt="">
                     </span>
                     <span class="expense-payments__text">Dinheiro</span>
-                    <span class="n-itens">1</span>
                   </div>
-                  <div class="expense-payments__item">
+                  <div class="expense-payments__item expense-payments__item--active">
                     <span class="expense-payments__icon">
                       <img src="../images/icon-cartao.svg" alt="">
                     </span>
                     <span class="expense-payments__text">Cartão</span>
+                    <span class="n-itens">1</span>
                   </div>
                   <div class="expense-payments__item">
                     <span class="expense-payments__icon">
@@ -547,6 +547,13 @@
                     </span>
                     <span class="expense-payments__text">Outros</span>
                   </div>
+                </div>
+
+                <!-- button More payments -->
+                <div class="form-line">
+                  <a data-payment="add-payment" class="bt-options">
+                    <i class="fa fa-plus"></i> Adicionar Pagamento
+                  </a>
                 </div>
               </div>
 
@@ -725,13 +732,6 @@
                   </table>
 
                 </div>
-              </div>
-
-              <!-- button More payments -->
-              <div class="form-line">
-                <a href="" class="bt-options">
-                  <i class="fa fa-plus"></i> Adicionar Pagamento
-                </a>
               </div>
 
               <button class="bt-confirm to-right">Salvar Despesa</button>

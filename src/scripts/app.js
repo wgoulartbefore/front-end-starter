@@ -1,4 +1,3 @@
-import { EAFNOSUPPORT } from "constants";
 
 const isMobile = {
   Android: function () {
@@ -557,21 +556,23 @@ function toggleActionsExpenseList() {
   });
 }
 
+// function toggleElements(el, target, toggleClass ) {
+//   var element = `$('${el}')`;
+//   var target = `$('${target}')`;
 
-function toggleElements(el, target, toggleClass ) {
-  var element = `$(${el})`;
-  var target = `$(${target})`;
+//   console.log(element)
+//   console.log(target)
 
-  if (element.hasClass(toggleClass)) {
-    target.removeClass(toggleClass);
-  } else {
-    target.removeClass(toggleClass);
-    target.addClass(toggleClass);
-  }
-}
+//   if (element.hasClass(toggleClass)) {
+//     target.removeClass(toggleClass);
+//   } else {
+//     target.removeClass(toggleClass);
+//     target.addClass(toggleClass);
+//   }
+// }
 
 function showMoreLabelsExpense() {
-  let linkDetails = '.expense-more-details';
+  let linkDetails = $('.expense-more-details');
   let iconDown = 'fa-angle-down';
   let iconUp = 'fa-angle-up';
   let classShowDetails = 'expense-more-details--open';
@@ -579,17 +580,16 @@ function showMoreLabelsExpense() {
   $(document).on('click', '.expense-link-more__text', function (event) {
     let el = $(this);
 
-    toggleElements(linkDetails, linkDetails, classShowDetails)
-
-
-    // if (linkDetails.hasClass(classShowDetails)) {
-    //   linkDetails.removeClass(classShowDetails);
-
-    // } else {
-    //   linkDetails.removeClass(classShowDetails);
-    //   linkDetails.addClass(classShowDetails);
-    // }
-
+    if (linkDetails.hasClass(classShowDetails)) {
+      linkDetails.removeClass(classShowDetails);
+      el.find('.fa').removeClass(iconDown)
+      el.find('.fa').addClass(iconUp)
+    } else {
+      linkDetails.removeClass(classShowDetails);
+      linkDetails.addClass(classShowDetails);
+      el.find('.fa').removeClass(iconUp)
+      el.find('.fa').addClass(iconDown)
+    }
   });
 }
 
@@ -603,6 +603,33 @@ function selectMethodPayments() {
   })
 }
 
+function togglePaymentMethods() {
+  $(document).on('click', '.expense-payments_link', function(event) {
+    let el = $(this)
+    let openClass = 'expense-payments__item--active'
+
+    $('.expense-payments__list').toggleClass('expense-payments__list--active');
+  });
+}
+
+function hiddenPaymentMethods() {
+  $(document).on('click', '.expense-payments_link', function (event) {
+    let el = $(this)
+    let openClass = 'expense-payments__item--active'
+
+    $('.expense-payments__list').removeClass('expense-payments__list--active');
+  });
+}
+
+function showPaymentMethods() {
+  $(document).on('click', '[data-payment="add-payment"]', function (event) {
+    let el = $(this)
+    let activeClass = 'expense-payments__list--active';
+
+    $('.expense-payments__list').addClass(activeClass);
+  });
+}
+
 headerOptsController();
 openUserOptions();
 headerSearchController();
@@ -614,4 +641,5 @@ cashierActive();
 toggleActionsExpenseList();
 showMoreLabelsExpense();
 selectMethodPayments();
-
+togglePaymentMethods();
+showPaymentMethods();
