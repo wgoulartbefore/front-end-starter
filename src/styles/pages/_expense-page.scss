@@ -371,6 +371,7 @@
   display: block;
   position: relative;
   width: 100%;
+  transition: all 0.3s ease-in-out;
 
   &__header,
   &__content {
@@ -392,9 +393,10 @@
   &__content {
     opacity: 0;
     height: 0;
-    transform: translateY(-100%);
     visibility: hidden;
-    transition: all .3s ease-in-out;
+    transition: transform .3s ease-in-out,
+    height .3s ease-in-out,
+    opacity .1s linear;
   }
 
   &__switch-value {
@@ -415,8 +417,8 @@
     .installments__content {
       opacity: 1;
       height: auto;
-      transform: translateY(0);
       visibility: visible;
+      transition: all .5s ease-in-out;
     }
   }
 
@@ -446,13 +448,12 @@
     }
 
     &--open {
-
       &::before {
         content: "";
         position: absolute;
         width: 30px;
         height: 100%;
-        top: 0;
+        top: 40px;
         bottom: 0;
         left: -2px;
         background: $color-grey-200;
@@ -468,8 +469,6 @@
       }
 
     }
-
-
 
     &__switch-value {
       display: flex;
@@ -694,7 +693,9 @@
       margin-right: 5px;
     }
 
-
+    .small-reload-value {
+      color: #5779C9;
+    }
   }
 
   .action-table {

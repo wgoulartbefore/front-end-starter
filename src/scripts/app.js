@@ -630,6 +630,32 @@ function showPaymentMethods() {
   });
 }
 
+function showInstallmentPaymentMethods() {
+  $(document).on('click', '.installments__title', function (event) {
+    let el = $(this)
+    let activeClass = 'installments--open';
+
+    $('.installments').addClass(activeClass);
+  });
+
+  $(document).on('click', '.installments__remove', function (event) {
+    let el = $(this)
+    let activeClass = 'installments--open';
+
+    $('.installments').removeClass(activeClass);
+  });
+}
+
+function changeValueInstallmenteType() {
+  $(document).on('click', '.installments__switch-value .text', function (event) {
+    let el = $(this);
+    let activeClass = 'text--active';
+
+    $('.installments__switch-value .text').removeClass(activeClass)
+    $(el).addClass(activeClass)
+  });
+}
+
 headerOptsController();
 openUserOptions();
 headerSearchController();
@@ -643,3 +669,5 @@ showMoreLabelsExpense();
 selectMethodPayments();
 togglePaymentMethods();
 showPaymentMethods();
+showInstallmentPaymentMethods();
+changeValueInstallmenteType();
