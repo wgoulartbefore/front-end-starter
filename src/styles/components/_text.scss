@@ -278,9 +278,13 @@ ul.gen-text {
   }
 }
 
-
 .text-sucess {
   color: $color-base-success;
+  text-align: center;
+}
+
+.text-warning {
+  color: $color-base-warning;
   text-align: center;
 }
 
@@ -288,3 +292,5 @@ ul.gen-text {
   color: $color-base-error;
   text-align: center;
 }
+
+

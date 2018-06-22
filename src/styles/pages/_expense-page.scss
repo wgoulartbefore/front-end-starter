@@ -621,17 +621,23 @@
 }
 
 .expense-table {
+  display: block;
   width: 100%;
   color: #6A707E;
   overflow-x: auto;
   border: 1px solid #DDEAF7;
 
+  $this: &;
+
   &-actions-link {
     display: flex;
     justify-content: flex-end;
+    flex-wrap: wrap;
+    justify-content: center;
 
     .link {
       padding: $size-components-padding;
+      width: 100%;
 
       &:hover {
         text-decoration: underline;
@@ -648,6 +654,15 @@
       }
 
     }
+
+    @include susy-breakpoint($screen-medium, 12) {
+      flex-wrap: no-wrap;
+
+      .link {
+        width: auto;
+      }
+    }
+
   }
 
   thead {
@@ -660,21 +675,47 @@
     position: relative;
     border-top: 1px solid #DDEAF7;
     padding: $size-components-padding;
+    vertical-align: middle;
   }
 
-  tr:hover {
-    td {
-      background: $color-grey-50;
+  tr {
+    &:hover {
+      td {
+        background: $color-grey-50;
+      }
+    }
+
+    &.expense-table--pending {
+      &:hover {
+        td {
+          background: #FFFBE8;
+        }
+      }
+    }
+
+    &.expense-table--delayed {
+      &:hover{
+        td {
+          background: #FFE8E8;
+        }
+      }
     }
   }
 
   &--pending {
     background: #FFFBE8;
+
+    td {
+      color: darken($color-base-warning, 10);
+    }
   }
 
   &--delayed {
     background: #FFE8E8;
-    color: #D32E28;
+
+    td {
+      color: darken($color-base-error, 10);
+    }
   }
 
   &--installments {
@@ -779,6 +820,10 @@
       }
 
     }
+  }
+
+  @include susy-breakpoint($screen-big, 16) {
+    display: table;
   }
 
 }

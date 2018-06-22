@@ -38,7 +38,15 @@
 }
 
 .mr-base {
+  margin-right: $size-components-padding !important;
+}
+
+.mt-base {
   margin-top: $size-components-padding !important;
+}
+
+.mb-base {
+  margin-bottom: $size-components-padding !important;
 }
 
 //Text Align
