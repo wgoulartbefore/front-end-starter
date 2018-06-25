@@ -432,30 +432,106 @@
           <section class="expense-content">
             <div class="expense-form">
 
-              <div class="gr-4">
-                <div class="input-holder">
-                  <label for="">Meta (R$)</label>
-                  <input type="text" class="input-singleline" placeholder="R$">
-                </div>
-                <div class="input-holder">
-                  <label for="">Bonificação em (R$):</label>
-                  <input type="text" class="input-singleline" placeholder="Informe o valor da despesa">
-                </div>
-                <div class="input-holder">
-                  <label for="">Bonificação em (%):</label>
-                  <input type="text" class="input-singleline" placeholder="Informe o valor da despesa">
-                </div>
-              </div>
+              <h4 class="title-medium">Ativação Controle</h4>
+              <p class="gen-text">Considera todos os planos Controle</p>
 
-              <table class="std-table">
+
+              <table class="std-table table--goals">
                 <thead>
-                  <th>
-                    <input type="checkbox" class="checkbox-std">
-                  </th>
-                  <th>Meta (R$)</th>
-                  <th>Bonificação em (R$)</th>
-                  <th>Bonificação em (%)</th>
-                  <th>&nbsp;</th>
+                  <tr>
+                    <th colspan="5">Bonificação para Vendedores</th>
+                  </tr>
+                  <tr>
+                    <th>
+                      <input type="checkbox" class="checkbox-std">
+                    </th>
+                    <th>Meta (R$)</th>
+                    <th>Bonificação em (R$)</th>
+                    <th>Bonificação em (%)</th>
+                    <th>&nbsp;</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <input type="checkbox" class="checkbox-std">
+                    </td>
+                    <td>
+                      <input type="text" class="input-singleline" placeholder="Meta em R$">
+                    </td>
+                    <td>
+                      <input type="text" class="input-singleline" placeholder="faixa de Bonificação em R$">
+                    </td>
+                    <td>
+                      <input type="text" class="input-singleline" placeholder="Faixa de Bonificação %">
+                    </td>
+                    <td>
+                      <a class="text-error"> <i class="fa fa-trash"></i> </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="checkbox" class="checkbox-std">
+                    </td>
+                    <td>
+                      <input type="text" class="input-singleline" placeholder="Informe a meta">
+                    </td>
+                    <td>
+                      <input type="text" class="input-singleline" placeholder="Informe a faixa de Bonificação">
+                    </td>
+                    <td>
+                      <input type="text" class="input-singleline" placeholder="Informe a faixa de Bonificação">
+                    </td>
+                    <td>
+                      <a class="text-error">
+                        <i class="fa fa-trash"></i>
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="checkbox" class="checkbox-std">
+                    </td>
+                    <td>
+                      <input type="text" class="input-singleline" placeholder="Informe a meta">
+                    </td>
+                    <td>
+                      <input type="text" class="input-singleline" placeholder="Informe a faixa de Bonificação">
+                    </td>
+                    <td>
+                      <input type="text" class="input-singleline" placeholder="Informe a faixa de Bonificação">
+                    </td>
+                    <td>
+                      <a class="text-error">
+                        <i class="fa fa-trash"></i>
+                      </a>
+                    </td>
+                  </tr>
+                </tbody>
+                <tfoot>
+                  <tr>
+                    <td colspan="5" class="text-right">
+                      <button class="bt-error-alter mr-base">Remover Faixas</button>
+                      <button class="bt-confirm">Adicionar Faixa</button>
+                    </td>
+                  </tr>
+                </tfoot>
+              </table>
+
+              <table class="std-table table--goals">
+                <thead>
+                  <tr>
+                    <th colspan="5">Bonificação para Gerente</th>
+                  </tr>
+                  <tr>
+                    <th>
+                      <input type="checkbox" class="checkbox-std">
+                    </th>
+                    <th>Meta (R$)</th>
+                    <th>Bonificação em (R$)</th>
+                    <th>Bonificação em (%)</th>
+                    <th>&nbsp;</th>
+                  </tr>
                 </thead>
                 <tbody>
                   <tr>
@@ -472,13 +548,16 @@
                       <input type="text" class="input-singleline" placeholder="Informe a faixa de Bonificação">
                     </td>
                     <td>
-                      <button class="bt-error-alter mr-base"> <i class="fa fa-remove"></i> </button>
+                      <a class="text-error">
+                        <i class="fa fa-trash"></i>
+                      </a>
                     </td>
                   </tr>
                 </tbody>
                 <tfoot>
                   <tr>
                     <td colspan="5" class="text-right">
+                      <button class="bt-error-alter mr-base">Remover Faixas</button>
                       <button class="bt-confirm">Adicionar Faixa</button>
                     </td>
                   </tr>
@@ -493,17 +572,15 @@
               <img src="../images/icon-despesas.svg" alt="">
             </figure>
 
-            <h4 class="expense-sidebar__title">Despesas Simplificadas</h4>
+            <h4 class="expense-sidebar__title">Metas e Comissões</h4>
             <p class="expense-sidebar__text">
-              O lançamento das despesas foi simplificado, mas não perdeu seu poder de fogo. Basta clicar em
-              <strong>”Incluir mais informações"</strong> ou adicionar uma forma de pagamento para ver os seguintes ítens.
+               O cadastro das metas e bonificações da sua revenda foi simplificado.
             </p>
 
             <ul class="list-disc">
-              <li>Dados do forncecedor.</li>
-              <li>Nota fiscal.</li>
-              <li>Formas de pagamento.</li>
-              <li>Parcelamento avançado e outros.</li>
+              <li>Informações de metas atuais da sua revenda</li>
+              <li>Configuração de metas de produtos e serviços de forma personalizada.</li>
+              <li>Cadastro de metas e faixas de bonificações.</li>
             </ul>
           </aside>
 
