@@ -419,7 +419,6 @@
   }
 
   @include susy-breakpoint($screen-big, 16) {
-    margin-left: $size-components-padding;
 
     &__header {
       display: flex;

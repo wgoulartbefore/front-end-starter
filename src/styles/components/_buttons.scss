@@ -60,6 +60,16 @@
   @include createButton($color-base-neutral);
 }
 
+.bt-confirm-alter {
+  @extend %std-button;
+  @include createButtonAlter($color-base-success);
+}
+
+.bt-error-alter {
+  @extend %std-button;
+  @include createButtonAlter($color-base-error);
+}
+
 .bt-neutral-alter {
   @extend %std-button;
   @include createButtonAlter($color-base-neutral);
