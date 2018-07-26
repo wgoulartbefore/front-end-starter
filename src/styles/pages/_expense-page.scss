@@ -19,10 +19,6 @@
       width: 100%;
     }
 
-    // .input-holder {
-    //   flex: 1 100%;
-    //   margin-bottom: $size-components-padding;
-    // }
 
     .half-input {
       flex: 1;
@@ -452,7 +448,7 @@
         content: "";
         position: absolute;
         width: 30px;
-        height: 100%;
+        height: calc(100% - 55px);
         top: 40px;
         bottom: 0;
         left: -2px;

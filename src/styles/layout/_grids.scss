@@ -103,3 +103,35 @@ $_fg_padding: 0 !default; // padding for column boxes. Set as desired, can overr
     }
   }
 }
+
+
+$column-gap: 0.75rem;
+.columns {
+  display: flex;
+}
+
+.column {
+  display: block;
+  flex-basis: 0;
+  flex-grow: 1;
+  flex-shrink: 1;
+  padding: $column-gap;
+  &.is-center {
+    justify-content: center;
+    align-items: center;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  &.no-padding {
+    padding: 0;
+  }
+  @for $i from 1 through 12 {
+    &.is-#{$i} {
+      flex: none;
+      width: percentage($i / 12);
+    }
+    &.is-offset-#{$i} {
+      margin-left: percentage($i / 12);
+    }
+  }
+}

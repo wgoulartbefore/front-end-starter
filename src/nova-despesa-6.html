@@ -28,7 +28,7 @@
           <li class="header-opts-item">
             <span id="relogioExpiraSessao" class="hasCountdown">
               <span class="countdown_row countdown_amount">19:52</span>
-              <span class="countdown_row countdown_descr">A sessão expira em: </span>
+            <span class="countdown_row countdown_descr">A sessão expira em: </span>
             </span>
           </li>
           <li class="header-opts-item">
@@ -434,80 +434,26 @@
 
               <div class="gr-3">
                 <div class="input-holder is-6">
-                  <label for="">Valor: <small style="color: red; font-size: 16px">*</small></label>
+                  <label for="">Valor:</label>
                   <input type="text" class="input-singleline" placeholder="Informe o valor da despesa">
                 </div>
-
                 <div class="input-holder is-5">
-<label for="">Data de Compensação:
-  <small style="color: red; font-size: 16px">*</small>
-</label>
+                  <label for="">Data da Despesa:</label>
                   <input type="text" class="input-singleline" placeholder="Informe a data da despesa">
                 </div>
-
                 <div class="input-holder is-1">
-                  <label for="">Pago</label>
+                  <label for="">Pago:</label>
                   <input type="checkbox">
                 </div>
               </div>
 
               <div class="gr-2">
-                <div class="input-holder is-6">
-<label for="">Tipo de despesa:
-  <small style="color: red; font-size: 16px">*</small>
-</label>
-                  <div class="fancy-select">
-                    <select name="" id="">
-                      <option>Selecione um tipo de Despesa</option>
-                      <option>2</option>
-                      <option>3</option>
-                      <option>4</option>
-                      <option>5</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div class="input-holder is-6">
-<label for="">Caixa:
-  <small style="color: red; font-size: 16px">*</small>
-</label>
-                  <div class="fancy-select">
-                    <select name="" id="">
-                      <option>Selecione um tipo de Despesa</option>
-                      <option>2</option>
-                      <option>3</option>
-                      <option>4</option>
-                      <option>5</option>
-                    </select>
-                  </div>
-                </div>
-              </div>
-
-              <div class="gr-1">
-                <div class="input-holder">
-                  <label for="">Descrição
-                    <small> - opcional</small>
-                  </label>
-                  <input type="text" class="input-singleline">
-                </div>
-              </div>
-
-              <!-- Incluir mais informações -->
-              <div class="expense-link-more">
-                <a class="expense-link-more__text">
-                  <i class="fa fa-angle-up"></i> Incluir mais informações </a>
-              </div>
-
-              <div class="expense-more-details">
-                <div class="gr-3">
-
-                  <div class="input-holder is-6">
-<label for="">Fornecedor:
-  <small style="color: red; font-size: 16px">*</small>
-</label>
+                <div class="columns is-6">
+                  <div class="column no-padding input-holder">
+                    <label for="">Tipo de despesa:</label>
                     <div class="fancy-select">
                       <select name="" id="">
-                        <option>Selecione o Fornecedor</option>
+                        <option>Selecione uma Despesa</option>
                         <option>2</option>
                         <option>3</option>
                         <option>4</option>
@@ -516,251 +462,115 @@
                     </div>
                   </div>
 
-                  <div class="input-holder is-3">
-<label for="">Data de Competência:
-  <small style="color: red; font-size: 16px">*</small>
-</label>
-                    <input type="text" class="input-singleline" value="27/04/2018" placeholder="27/04/2018">
-                  </div>
+                  <div class="input-holder ml-base">
+                    <label for="">&nbsp;</label>
+                    <button class="bt-main text-error" style="
+    font-weight: 700;
+    padding: 0 15px;
+    text-transform: initial;
+    /* margin-top: 5px; */
+"><span class="gen-text" style="
+    color: #fff;
+    font-weight: 700;
+">Novo Registro</span>
 
-                  <div class="input-holder is-3">
-                    <label for="">Nota Fiscal</label>
-                    <input type="text" class="input-singleline">
+</button>
                   </div>
 
                 </div>
+                <!-- ./despesa -->
+
+    <div class="columns is-6">
+                  <div class="column no-padding input-holder">
+                    <label for="">Fornecedor:</label>
+                    <div class="fancy-select">
+                      <select name="" id="">
+                        <option>Selecione um Fornecedor</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="input-holder ml-base">
+                    <label for="">&nbsp;</label>
+                    <button class="bt-main text-error" style="
+    font-weight: 700;
+    padding: 0 15px;
+    text-transform: initial;
+    /* margin-top: 5px; */
+"><span class="gen-text" style="
+    color: #fff;
+    font-weight: 700;
+">Novo Registro</span>
+
+</button>
+                  </div>
+                </div>
+
+
               </div>
 
-              <div class="expense-payments">
-                <div class="expense-payments__list">
-                  <a class="expense-payments_link">Fechar formas de pagamento</a>
-                  <div class="expense-payments__item ">
-                    <span class="expense-payments__icon">
-                      <img src="../images/icon-dinheiro.svg" alt="">
-                    </span>
-                    <span class="expense-payments__text">Dinheiro</span>
-                  </div>
-                  <div class="expense-payments__item expense-payments__item--active">
-                    <span class="expense-payments__icon">
-                      <img src="../images/icon-cartao.svg" alt="">
-                    </span>
-                    <span class="expense-payments__text">Cartão</span>
-                    <span class="n-itens">1</span>
-                  </div>
-                  <div class="expense-payments__item">
-                    <span class="expense-payments__icon">
-                      <img src="../images/icon-boleto.svg" alt="">
-                    </span>
-                    <span class="expense-payments__text">Boleto</span>
-                  </div>
-                  <div class="expense-payments__item">
-                    <span class="expense-payments__icon">
-                      <img src="../images/icon-outros.svg" alt="">
-                    </span>
-                    <span class="expense-payments__text">Outros</span>
+              <div class="gr-2">
+
+                 <div class="input-holder is-6">
+                  <label for="">Filial:</label>
+                  <div class="fancy-select">
+                    <select name="" id="">
+                      <option>Selecione uma Filial</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                    </select>
                   </div>
                 </div>
 
-                <!-- button More payments -->
-                <div class="form-line">
-                  <a data-payment="add-payment" class="bt-options">
-                    <i class="fa fa-plus"></i> Adicionar Pagamento
-                  </a>
+
+                <!-- ./despesa -->
+                <!-- ./fornecedor -->
+
+
+              <div class="input-holder ">
+                  <label for="">Caixa:</label>
+                  <div class="fancy-select">
+                    <select name="" id="">
+                      <option>Selecione um Caixa</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                    </select>
+                  </div>
+                </div></div>
+
+              <div class="gr-2">
+    <div class="input-holder">
+                  <label for="">Funcionario
+
+
+                  </label>
+                  <div class="fancy-select">
+                    <select name="" id="">
+                      <option>Selecione uma Filial</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                    </select>
+                  </div>
+
                 </div>
+<div class="input-holder is-6">
+                  <label for="">Nota Fiscal:</label>
+                  <input type="text" class="input-singleline">
+                </div>
+
+
+
               </div>
-
-              <!-- Bloco do tipo de pagamento - Cartão-->
-              <div class="payments-method">
-                <header class="payments-method__header">
-                  <h4 class="payments-method__title">Cartão
-                    <a href="#" class="payments-method__remove">
-                      <i class="fa fa-trash"></i>
-                    </a>
-                  </h4>
-                </header>
-
-                <div class="payments-method__content">
-                  <div class="gr-3">
-                    <div class="input-holder is-7">
-<label for=""> Valor:
-  <small style="color: red; font-size: 16px">*</small>
-</label>
-                      <input type="text" class="input-singleline">
-                    </div>
-
-                    <div class="input-holder is-4">
-                      <label for=""> Data de Vencimento: <small style="color: red; font-size: 16px">*</small></label>
-                      <input type="text" class="input-singleline" value="">
-                    </div>
-
-                    <div class="input-holder is-1">
-                      <label for=""> Pago: </label>
-                      <input type="checkbox" class="checkbox">
-                    </div>
-                  </div>
-
-                  <div class="gr-3">
-                    <div class="input-holder is-4">
-                      <label for=""> Nº de autorização do cartão : <small style="color: red; font-size: 16px">*</small></label>
-                      <input type="text" class="input-singleline">
-                    </div>
-
-                    <div class="input-holder is-3">
-                      <label for=""> Data de pagamento: <small style="color: red; font-size: 16px">*</small></label>
-                      <input type="text" class="input-singleline">
-                    </div>
-
-                    <div class="input-holder is-5">
-<label for=""> Conta: :
-  <small style="color: red; font-size: 16px">*</small>
-</label>
-                      <div class="fancy-select">
-                        <select name="" id="">
-                          <option value="">01 - AG: 0000 CC: 0000111</option>
-                          <option value="">02 - AG: 1100 CC: 0000222</option>
-                          <option value="">03 - AG: 2200 CC: 0000333</option>
-                        </select>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="gr-1">
-                    <div class="input-holder">
-                      <label for="">Observação:
-                        <small> - opcional</small>
-                      </label>
-                      <input type="text" class="input-singleline"></input>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-
-              <!-- Parcelamento -->
-              <div class="installments">
-                <div class="installments__header">
-                  <a class="installments__title">
-                    <i class="icon-parcelamento">
-                      <img src="../images/icon-parcelamento.svg" alt="">
-                    </i> incluir parcelamento
-                  </a>
-                  <a class="installments__remove">remover parcelamento</a>
-                </div>
-                <div class="installments__content">
-                  <div class="gr-2">
-                    <div class="input-holder">
-                      <label for="">
-                        <strong>Valor:</strong>
-                        <div class="installments__switch-value">
-                          <span href="" class="text text--active">Total</span>
-                          <span href="" class="text">Parcela</span>
-                        </div>
-                      </label>
-                      <input type="text" class="input-singleline" placeholder="R$ 3.000,00">
-                    </div>
-                    <div class="input-holder">
-                      <label for="">
-                        Número de parcelas:
-                      </label>
-                      <div class="fancy-select">
-                        <select name="" id="">
-                          <option value="">Selecione o número de parcelas desejado</option>
-                          <option value="">1x</option>
-                          <option value="">2x</option>
-                          <option value="">3x</option>
-                        </select>
-                      </div>
-                    </div>
-                  </div>
-
-                  <table class="expense-table expense-table--installments expense-table--editable">
-                    <thead>
-                      <tr>
-                        <th> Parcelas </th>
-                        <th> Data </th>
-                        <th> Valor </th>
-                        <th> Pago </th>
-                        <th> </th>
-                      </tr>
-                    </thead>
-
-                    <tbody>
-                      <tr>
-                        <td>1/3</td>
-                        <td>
-                          <input type="text" class="input-singleline" placeholder="11/04/2018">
-
-                        </td>
-                        <td>
-                          R$ 1.000,00
-                          <!-- <span class="small-reload-value">
-                            <i class="fa fa-refresh"></i> Atualizar parcela</span> -->
-                        </td>
-                        <td>
-                          <div class="checkbox">
-                            <input type="checkbox">
-                          </div>
-                        </td>
-                        <td>
-                          <a href="" class="payment_installmentse__remove fa fa-trash"></a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>2/3</td>
-                        <td>
-                          <input type="text" class="input-singleline" placeholder="11/04/2018">
-
-                        </td>
-                        <td> R$ 1.000,00</td>
-                        <td>
-                          <div class="checkbox">
-                            <input type="checkbox">
-                          </div>
-                        </td>
-                        <td>
-                          <a href="" class="payment_installmentse__remove fa fa-trash"></a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>3/3</td>
-                        <td>
-                          <input type="text" class="input-singleline" placeholder="11/04/2018">
-                        </td>
-                        <td> R$ 1.000,00</td>
-                        <td>
-                          <div class="checkbox">
-                            <input type="checkbox">
-                          </div>
-                        </td>
-                        <td>
-                          <a href="" class="payment_installmentse__remove fa fa-trash"></a>
-                        </td>
-                      </tr>
-
-                      <tr class="payment_installmentse__table__sum">
-                        <td colspan="5">
-                          <p class="text-center">
-                            <strong>Total: </strong>
-                            R$ 3.000,00
-                            <!-- <span class="small-reload-value"><i class="fa fa-refresh"></i> Atualizar parcelas</span> -->
-                          </p>
-                        </td>
-                      </tr>
-
-                    </tbody>
-                  </table>
-
-                </div>
-              </div>
-
-              <div class="form-line">
-                <a data-payment="add-payment" class="bt-options">
-                  <i class="fa fa-plus"></i> Adicionar Pagamento
-                </a>
-              </div>
-
-              <button class="bt-confirm to-right">Salvar Despesa</button>
-
             </div>
           </section>
 
@@ -796,6 +606,4 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="scripts/app.js"></script>
 </body>
-
 </html>
-
